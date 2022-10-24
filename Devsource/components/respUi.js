@@ -7,8 +7,19 @@ export default function RespUi({p,v,e,fns,idx,cAns})
 {
     const [clicked,setclicked]= useState(false);
     function velar(){
-      setclicked(!clicked);
+      
+        if(fns==true){
+       
+            if(clicked==false)
+            {
+
+               setclicked(!clicked);
         
+            }
+        }else
+        {
+            setclicked(!clicked);
+        }
     }
     if(p.f!=""){
 
@@ -17,7 +28,12 @@ export default function RespUi({p,v,e,fns,idx,cAns})
     <View style={[estilo.prCont,
     fns==false?
     p.f==cAns?{backgroundColor:'lightgreen'}:{backgroundColor:'white'}:
-    p.val==0?{backgroundColor:'lightgreen'}:{backgroundColor:'red'}]}>
+    //acabou
+    p.f==cAns && clicked==true?
+    p.val==0?{backgroundColor:'lightgreen'}:{backgroundColor:'red'}:
+     p.f!=cAns? 
+     p.val==0?{backgroundColor:'lightgreen'}:{backgroundColor:'white'}:
+     {backgroundColor:'white'}]}>
           
          <Text style={estilo.texto}>{p.f} </Text>
          </View>

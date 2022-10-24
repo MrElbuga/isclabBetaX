@@ -35,11 +35,6 @@ const bindex = (nr) => {
    
   setIndex(nr);
   setCurAns(Tdados[nr].currA);
-  console.log(' ');
-  console.log(`------------[${nr}]---------------`);
-
-  console.log("Index: "+JSON.stringify (Tdados[idx]));
-
 
 };
 
@@ -54,7 +49,7 @@ const trocarR = (pr)=>
   const nR = [...Tdados];
   nR[idx].setEscolha(pr.f);
   setCurAns(nR[idx].currA);
-  console.log(JSON.stringify (nR[idx]));
+  //console.log(JSON.stringify (nR[idx]));
 
   if(pr.val==0)
   {
