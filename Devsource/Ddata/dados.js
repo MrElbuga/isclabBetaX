@@ -3,17 +3,23 @@ class Prg
 {
 
    
-   constructor(prg,a,b,c,d,e)
+   constructor(dados)
    {  
-       this.prg = prg;
-       this.a = a;
-       this.b = b;
-       this.c = c;
-       if(typeof(d)=='undefined'){d='';}else{ this.d = d;}
-       this.e = e;
+       this.prg = dados.prg;
+       this.a = dados.a;
+       this.b = dados.b;
+       this.c = dados.c;
+      this.d=dados.d;
+       this.e = dados.e;
        this.currA=' ';
        this.valor=0;
-       this.imgs = [];
+       this.imgs = dados.imgs;
+
+          if(typeof (this.a) == 'undefined'){this.a={f:''};}
+          if(typeof (this.b) == 'undefined'){this.b={f:''};}
+          if(typeof (this.c) == 'undefined'){this.c={f:''};}
+          if(typeof (this.d) == 'undefined'){this.d={f:''};}
+          if(typeof (this.e) == 'undefined'){this.e={f:''};}
    }
 
 
@@ -73,61 +79,51 @@ class aln
    [
     //new Prg('a',"oque this?",'istoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoisto','nada','makima'),
     //new Prg('e',"oque makima?",'lady','istoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoisto','chain','manga','demon')
-    new Prg("oque this?",new aln('aa'),new aln('nada',0),new aln('makima')),
-    new Prg("food===?",new aln('bebe'),new aln('agua'),new aln('comida',0)),
-    new Prg("Rn ==?",new aln('React'),new aln('React-native',0),new aln('frame')),
-    new Prg("oque makima?",new aln('lady'),new aln('woman'),new aln('chain'),new aln('manga'),new aln('demon',0))
+    new Prg({prg:"oque this?",a:new aln('aa'),b:new aln('nada',0),d:new aln('makima'),imgs:[require('../imagem/PSK-1.jpg'),require('../imagem/digital.jpg'),require('../imagem/PSK-1.jpg')]}),
+    new Prg({prg:"food===?",a:new aln('bebe'),b:new aln('agua'),c:new aln('comida',0)}),
+    new Prg({prg:"Rn ==?",a:new aln('React'),b:new aln('React-native',0),c:new aln('frame')}),
+    new Prg({prg:"oque makima?",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
 
    ];
-   pdados.forEach((e,i)=>
-   {
-    //console.log(pdados[i].a.f);
-    if(typeof (pdados[i].b) == 'undefined'){pdados[i].b={f:''};}
-    if(typeof (pdados[i].c) == 'undefined'){pdados[i].c={f:''};}
-    if(typeof (pdados[i].d) == 'undefined'){pdados[i].d={f:''};}
-    if(typeof (pdados[i].e) == 'undefined'){pdados[i].e={f:''};}
-
-
-    
-   })
+   
 
 
    //s_Functions
 
-   function s_currPgFecther(id)
+   function s_currPgFecther(lista,id)
    {
       let avbPergs = [];
 
-      if(pdados[id].a?.f!=null)
+      if(lista[id].a?.f!=null)
         {
-            avbPergs.push(pdados[id].a);
+            avbPergs.push(lista[id].a);
         }
-        if(pdados[id].b?.f!=null)
+        if(lista[id].b?.f!=null)
         {
-            avbPergs.push(pdados[id].b);
+            avbPergs.push(lista[id].b);
         }
-        if(pdados[id].c?.f!=null)
+        if(lista[id].c?.f!=null)
         {
-            avbPergs.push(pdados[id].c);
+            avbPergs.push(lista[id].c);
         }
-        if(pdados[id].d?.f!=null)
+        if(lista[id].d?.f!=null)
         {
-            avbPergs.push(pdados[id].d);
+            avbPergs.push(lista[id].d);
         }
-        if(pdados[id].e?.f!=null)
+        if(lista[id].e?.f!=null)
         {
-            avbPergs.push(pdados[id].e);
+            avbPergs.push(lista[id].e);
         }
 
         return avbPergs;
    }
 
-   function s_currPgSorter(id,tmn,avbPergs)
+   function s_currPgSorter(lista,id,tmn,avbPergs)
    {
     for (let y = 0; y < 1; y++) 
         {
             let np;
-            let la,lb,lc,ld,le,p;
+            let la,lb,lc,ld,le,p,limg;
   
             for (let x = 0; x < tmn; x++) {
                  let rn = parseInt( Math.random()*avbPergs.length);
@@ -135,6 +131,7 @@ class aln
                {
                   case 0: 
                  la = avbPergs[rn];
+                 limg=lista[id].imgs;
                  avbPergs.splice(rn,1);
                break;
                   case 1: 
@@ -159,10 +156,10 @@ class aln
             }
 
            
-                    np = new Prg(pdados[id].prg,la,lb,lc,ld,le);
-                  /*  console.log(pdados[id]);
+                    np = new Prg({prg:lista[id].prg,a:la,b:lb,c:lc,d:ld,e:le,imgs:limg});
+                    console.log(lista[id]);
                     console.log('/////////////////////////////');
-                    console.log(np);*/
+                    console.log(np);
                    
                 return np;
            //np = new Prg(pdados[0].prg);
@@ -187,17 +184,17 @@ class aln
 
 //Final array
 let fArray=[];
-   function sortear()
+   function sortear(lista)
    {
 
        let newP = [];
-       for(let z=0;z<pdados.length;z++)
+       for(let z=0;z<lista.length;z++)
        {
        
         let id=z;
-        let avbPergs = s_currPgFecther(id);
+        let avbPergs = s_currPgFecther(lista,id);
         let tmn = avbPergs.length;
-        let curr_P = s_currPgSorter(id,tmn,avbPergs);
+        let curr_P = s_currPgSorter(lista,id,tmn,avbPergs);
        // console.log('FmFMFMFM');
         newP.push(curr_P);
 
@@ -208,7 +205,7 @@ let fArray=[];
    }
 
 
-  fArray= sortear();
+  //fArray= sortear();
 //mostrarTUdo(fArray,pdados);
   
 
