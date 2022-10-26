@@ -93,7 +93,7 @@ const bindex = (nr) => {
 const correc =()=>
 {
     setFinish(!finish);
-    //console.log("estado: "+finish);
+    //c onsole.log("estado: "+finish);
 }
 
 const novo =(i)=>{
