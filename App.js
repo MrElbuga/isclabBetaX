@@ -5,7 +5,7 @@ import { Text, View,Button,StyleSheet, ScrollView,TouchableOpacity, FlatList, Sa
 //import RespUi from './Devsource/components/respUi';
 import estilo from './Devsource/estilo';
 //Dados
-import {pdfl,pdados,sortear} from './Devsource/Ddata/dados';
+import {sortear} from './Devsource/Ddata/dados';
 import { todos } from './Devsource/Ddata/testes';
 import RespUi from './Devsource/components/respUi';
 import BtnIndex from './Devsource/components/btnIndex';
@@ -65,7 +65,7 @@ const repetir = ()=>
   setFinish(false);
   setCurAns('');
   setVwponto(false);
-  setVprovas(false);
+ 
 
 }
 
@@ -168,7 +168,7 @@ const trocarR = (pr)=>
                     {/* Menu pause*/}
                     <Modal visible={t_ponto}>
                       <View style={estilo.container}>
-                        <Text>Seus valores: {pontos} de  {Tdados.length-1}: exame tomorrow!!!!</Text>
+                        <Text>Seus valores: {pontos} de  {Tdados.length-1}: Epa,exame tomorrow!!!!</Text>
 
                                <Button title= 'Ver Correccao' onPress={()=>{setVwponto(false);setFinish(true);}}/>
                                <Button title= 'Escolher testes'  onPress={()=>{setVprovas(true);}}/>

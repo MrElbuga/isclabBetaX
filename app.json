@@ -2,12 +2,17 @@
   "expo": {
     "name": "isclabBeta",
     "slug": "isclabBeta",
+    "icon": "./Devsource/testespics/Isclablogo.png",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ],
     "android": {
-      "package": "com.cNrTheLazy.isclabBeta"
+      "package": "com.cNrTheLazy.isclabBeta",
+      "adaptiveIcon": {
+        "foregroundImage": "./Devsource/testespics/Isclablogo.png",
+        "backgroundColor": "#FFFFFF"
+      }
     }
   }
 }

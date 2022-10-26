@@ -77,22 +77,22 @@ class aln
  //export 
   let pdados = 
    [
-    //new Prg('a',"oque this?",'istoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoisto','nada','makima'),
+   ` //new Prg('a',"oque this?",'istoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoisto','nada','makima'),
     //new Prg('e',"oque makima?",'lady','istoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoisto','chain','manga','demon')
     new Prg({prg:"oque this?",a:new aln('aa'),b:new aln('nada',0),d:new aln('makima'),imgs:[require('../imagem/PSK-1.jpg'),require('../imagem/digital.jpg'),require('../imagem/PSK-1.jpg')]}),
     new Prg({prg:"food===?",a:new aln('bebe'),b:new aln('agua'),c:new aln('comida',0)}),
     new Prg({prg:"Rn ==?",a:new aln('React'),b:new aln('React-native',0),c:new aln('frame')}),
     new Prg({prg:"oque makima?",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
-
+`
    ];
 
    let pdfl = [
-    new Prg({prg:'c',a:new aln('a'),b:new aln('b'),c:new aln('c',0),d:new aln(''),e:new aln(' '),imgs:[]}),
+    `new Prg({prg:'c',a:new aln('a'),b:new aln('b'),c:new aln('c',0),d:new aln(''),e:new aln(' '),imgs:[]}),
     new Prg({prg:'d',a:new aln('a'),b:new aln('b'),c:new aln('c'),d:new aln('d',0),e:new aln(''),imgs:[]}),
     new Prg({prg:'e',a:new aln(''),b:new aln(''),c:new aln('a'),d:new aln('b'),e:new aln('e',0),imgs:[]}),
     new Prg({prg:'a',a:new aln('a',0),b:new aln(''),c:new aln(''),d:new aln('b'),e:new aln('c'),imgs:[]}),
     new Prg({prg:'b',a:new aln(''),b:new aln('b',0),c:new aln('a'),d:new aln('c'),e:new aln(''),imgs:[]})
-     ];
+     `];
    
 
    
@@ -219,7 +219,7 @@ let fArray=[];
 //mostrarTUdo(fArray,pdados);
   
 
-export{pdados,sortear,pdfl,Prg,aln};
+export{sortear,Prg,aln};
 
 //const lula = new Prg("oque this?",new aln('aa'),new aln('nada',0),new aln('makima'));
 //lula.setValor(12);
