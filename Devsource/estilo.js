@@ -15,7 +15,7 @@ export  default    StyleSheet.create({
         fontSize: 15,
         fontWeight:'300',
         padding:'5%'
-  
+   
     },
 provas:{
   backgroundColor:'cyan',

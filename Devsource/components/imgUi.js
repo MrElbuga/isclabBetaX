@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React,  { useState } from "react";
 import { StyleSheet, ScrollView,Image,View } from "react-native";
 
 export default function ImgUi({i})
