@@ -16,8 +16,16 @@ export  default    StyleSheet.create({
         fontWeight:'300'
         
   
-    }
-,
+    },
+provas:{
+  backgroundColor:'cyan',
+  borderRadius:2,
+   borderWidth: 3,
+   height: 200,
+   width:130,paddingLeft:'10%',fontWeight:'bold',paddingTop:'10%',fontSize:25
+
+},
+
    prCont:
    {
     backgroundColor:'white',

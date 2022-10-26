@@ -5,7 +5,7 @@ import { Text, View,Button,StyleSheet, ScrollView,TouchableOpacity, FlatList, Sa
 //import RespUi from './Devsource/components/respUi';
 import estilo from './Devsource/estilo';
 //Dados
-import {pdados,sortear} from './Devsource/Ddata/dados';
+import {pdfl,pdados,sortear} from './Devsource/Ddata/dados';
 import RespUi from './Devsource/components/respUi';
 import BtnIndex from './Devsource/components/btnIndex';
 import ImgUi from './Devsource/components/imgUi';
@@ -16,7 +16,7 @@ export default function App() {
 const [cnt, setCount] = useState(0);
 const [idx, setIndex] = useState(0);
 
-const [Tdados,setDados] = useState(sortear(pdados));
+const [Tdados,setDados] = useState(sortear(pdfl));
 const [Timg,setTimg] = useState(Tdados[idx].imgs);
 const [finish,setFinish] = useState(false);
 const [c_Ans,setCurAns] = useState('x');
@@ -24,6 +24,8 @@ const [c_Ans,setCurAns] = useState('x');
 
 //Teste
 const [t_ponto,setVwponto]= useState(false);
+const [t_provas,setVprovas]= useState(false);
+
 const [pontos,setPontos]= useState(0);
 //const Tdados = sortear();
 
@@ -53,8 +55,10 @@ const contarP=()=>
 
 const repetir = ()=>
 {
+  setFinish(false);
   setCurAns(' ');
   setDados(sortear);
+  setVwponto(false);
 }
 
 //Indice dos botoes
@@ -118,14 +122,37 @@ const trocarR = (pr)=>
       {/* Cima*/}
       <View style={{flex:1.8,width:'100%',backgroundColor: 'red',overflow:'hidden',top:'7%'}}>
 
-
+                    {/* Menu Testes*/}
+ 
+                    <Modal visible={t_provas}>
+                        <View style={{flex:1}}>
+                        <Text style={{paddingLeft:'10%',fontWeight:'bold',paddingTop:'10%',fontSize:20}}> Escolha Testes de Bd1</Text>
+                          <Button title='Fechar' onPress={()=>{setVprovas(false);}}></Button>
+                        <FlatList
+                            horizontal={true}
+                              data={ Tdados}
+                              renderItem = {({item,index})=>
+                               {
+                                 return (
+                                  <TouchableOpacity>
+                                     <View style={{paddingTop: '10%',flex:1}}>
+                                      <Text  style={estilo.provas}>Teste:{index}</Text>
+                                      </View>
+                                      </TouchableOpacity>
+                                   )
+                               }}
+                            />
+                        </View>
+                    </Modal>
+                       
+                    {/* Menu pause*/}
                     <Modal visible={t_ponto}>
                       <View style={estilo.container}>
                         <Text>Pontos: {pontos}</Text>
 
                                <Button title= 'Ver Correccao' onPress={()=>{setVwponto(false);setFinish(true);}}/>
-                               <Button title= 'Menu' />
-                               <Button title= 'Repetir' onPress={()=>{repetir();setFinish(false);setVwponto(false);}}/>
+                               <Button title= 'Menu'  onPress={()=>{setVprovas(true);}}/>
+                               <Button title= 'Repetir' onPress={()=>{repetir();}}/>
 
                                
                       </View>

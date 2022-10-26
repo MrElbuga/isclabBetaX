@@ -85,6 +85,24 @@ class aln
     new Prg({prg:"oque makima?",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
 
    ];
+
+   let pdfl = 
+   [
+    new Prg({prg:"1",a:new aln('aa'),b:new aln('nada',0),d:new aln('makima')}),
+    new Prg({prg:"2",a:new aln('bebe'),b:new aln('agua'),c:new aln('comida',0)}),
+    new Prg({prg:"3",a:new aln('React'),b:new aln('React-native',0),c:new aln('frame')}),
+    new Prg({prg:"4",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
+    ,new Prg({prg:"5",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
+    ,new Prg({prg:"6",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
+    ,new Prg({prg:"7",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
+    ,new Prg({prg:"9",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
+    ,new Prg({prg:"10",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
+    ,new Prg({prg:"11",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
+    ,new Prg({prg:"12",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
+    
+   ];
+   
+
    
 
 
@@ -209,7 +227,7 @@ let fArray=[];
 //mostrarTUdo(fArray,pdados);
   
 
-export{pdados,sortear};
+export{pdados,sortear,pdfl,Prg,aln};
 
 //const lula = new Prg("oque this?",new aln('aa'),new aln('nada',0),new aln('makima'));
 //lula.setValor(12);
