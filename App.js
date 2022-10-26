@@ -60,9 +60,10 @@ const contarP=()=>
 
 const repetir = ()=>
 {
+  setDados(sortear(todos[iteste]));
+  bindex(0);
   setFinish(false);
   setCurAns('');
-  setDados(sortear(todos[iteste]));
   setVwponto(false);
   setVprovas(false);
 
@@ -78,7 +79,7 @@ const bindex = (nr) => {
   setCurAns(Tdados[nr].currA);
   if(typeof (Tdados[nr].imgs)=='object'){
   setTimg(Tdados[nr].imgs);
-  //console.log('Objecto');
+ 
   }else
   {
     console.log('nada');
@@ -93,6 +94,18 @@ const correc =()=>
 {
     setFinish(!finish);
     //console.log("estado: "+finish);
+}
+
+const novo =(i)=>{
+  setDados(sortear(todos[i]));
+console.log('Nr:'+iteste);
+  bindex(0);
+  setFinish(false);
+  setCurAns('');
+  setVwponto(false);
+  setVprovas(false);
+
+
 }
 
 const trocarR = (pr)=>
@@ -141,7 +154,7 @@ const trocarR = (pr)=>
                               renderItem = {({item,index})=>
                                {
                                  return (
-                                  <TouchableOpacity onPress={()=>{repetir() ;setTeste(index);}}>
+                                  <TouchableOpacity onPress={()=>{setTeste(index);novo(index);}}>
                                      <View style={{paddingTop: '10%',flex:1}}>
                                       <Text  style={estilo.provas}>Teste:{index+1}</Text>
                                       </View>
@@ -169,7 +182,7 @@ const trocarR = (pr)=>
                   <ScrollView style={{backgroundColor:'pink',paddingLeft:2}}>
                      {/*<View style ={{flex:1,backgroundColor:'lightblue'}}>*/}
                           <Text style={estilo.texto}>
-                          {Tdados[idx].prg}  Teste:{iteste}
+                          {Tdados[idx].prg}  Teste:{iteste+1}
                           </Text>  
                              <Button title='Terminar' onPress={ ()=>{contarP();setVwponto(true) }}></Button>
                              <FlatList

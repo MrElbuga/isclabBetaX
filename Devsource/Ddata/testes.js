@@ -317,7 +317,7 @@ let teste1 = [
         new Prg({prg:`16.O diagrama entidade-relação acima representa as entidades ALUNO e TURMA. Cada elemento
         em ALUNO pode ser matriculado em M turmas. E, cada TURMA pode ter N alunos matriculados.
         com base nessas informações, assinale a opção que indica a(s) tabela(s) necessária(s) 
-        para representar o modelo e o(s) seu(s)nome(s).`,a:new aln(`três tabelas, denominadas ALUNO, MATRICULA e TURMA `,0),b:new aln(` uma tabela, denominada MATRICULA `),c:new aln(`uma, tabela denominada ALUNO_MATRICULA `),d:new aln(`duas tabelas, denominadas ALUNO e TURMA `),e:new aln(`duas tabelas, denominadas ALUNO e MATRICULA`),imgs:[]})
+        para representar o modelo e o(s) seu(s)nome(s).`,a:new aln(`três tabelas, denominadas ALUNO, MATRICULA e TURMA `,0),b:new aln(` uma tabela, denominada MATRICULA `),c:new aln(`uma, tabela denominada ALUNO_MATRICULA `),d:new aln(`duas tabelas, denominadas ALUNO e TURMA `),e:new aln(`duas tabelas, denominadas ALUNO e MATRICULA`),imgs:[require('../testespics/teste2.16.jpeg')]})
          ];
 
          let teste3 = [
@@ -352,7 +352,7 @@ let teste1 = [
             new Prg({prg:`7. Considere o esquema relacional abaixo, no qual matrícula é a chave primária.
             VEICULO (matricula, cor, modelo, marca, ano, valor) 
             Qual é a expressão em álgebra relacional a ser aplicada sobre esse esquema, de forma a obter 
-            as matriculas dos VEICULOS com ano igual a 2016 e valor menor que 9000?`,a:new aln(`θ  matricula (θ  ano = 2016; valor <9000)`),b:new aln(`θ  matricula (π [teta] valor < 9000 AND ano = 2016) `),c:new aln(`θ  matricula (π valor < 9000 AND ano = 2016 (VEICULO))`),d:new aln(`π matricula (θ ano=2016 AND valor < 9000 (VEICULO)) `,0),e:new aln(`π matricula (π ano - 2016; πvalor < 9000 (VEICULO)) `),imgs:[]}),
+            as matriculas dos VEICULOS com ano igual a 2016 e valor menor que 9000?`,a:new aln(`θ  matricula (θ  ano = 2016; valor <9000)`),b:new aln(`θ  matricula (π [teta] valor < 9000 AND ano = 2016) `),c:new aln(`θ  matricula (π valor < 9000 AND ano = 2016 (VEICULO))`),d:new aln(`π matricula (θ ano=2016 AND valor < 9000 (VEICULO)) `,0),e:new aln(`π matricula (π ano - 2016; πvalor < 9000 (VEICULO)) `),imgs:[require('../testespics/teste3.7.jpg')]}),
             new Prg({prg:`8. Identifique se são verdadeiras (V) ou falsas (F) as afirmativas abaixo sobre o diagrama Entidade
             Relação (ER). 
             
@@ -362,7 +362,7 @@ let teste1 = [
             () Modela a implementação. Assinale a alternativa que indica a sequência correcta, de cima para baixo.`,a:new aln(`V-V-V-V`),b:new aln(`V-V-F-F`),c:new aln(`V-F-V-F`,0),d:new aln(`F-V-F-V`),e:new aln(`F-F-V-V`),imgs:[]}),
             new Prg({prg:`9. Considere o seguinte diagrama entidade-relação de uma base de dados relacional:
             
-            A partir desse diagrama (abaixo ), é correcto afirmar que: `,a:new aln(`o relacionamento presente no diagrama é do tipo ternário. `),b:new aln(`um depósito pode possuir vários produtos. `,0),c:new aln(`o número de entidades presentes no relacionamento Depósito deve ser ímpar. `),d:new aln(`um depósito deve possuir um número par de produtos.`),e:new aln(`um produto pode estar associado a mais de um depósito.`),imgs:[]}),
+            A partir desse diagrama (abaixo ), é correcto afirmar que: `,a:new aln(`o relacionamento presente no diagrama é do tipo ternário. `),b:new aln(`um depósito pode possuir vários produtos. `,0),c:new aln(`o número de entidades presentes no relacionamento Depósito deve ser ímpar. `),d:new aln(`um depósito deve possuir um número par de produtos.`),e:new aln(`um produto pode estar associado a mais de um depósito.`),imgs:[require('../testespics/teste3.9.jpg')]}),
             new Prg({prg:`E. Eliminar as dependências multivaloradas (DMV) não triviais de uma tabela, projetando-as para
             tabelas menores separadas e, assim, eliminar as anomalias de actualização associadas às DMVS 
             é objectivo da :`,a:new aln(`1FN `),b:new aln(`2FN `),c:new aln(`3FN`),d:new aln(`4FN`,0),e:new aln(`5FN `),imgs:[]}),
@@ -404,7 +404,7 @@ let teste4 = [
     III. Pedidos e Detalhes do Pedido = 1:N.
     IV. Detalhes do Pedido e Pedidos = N:N 
     
-    É correcto o que consta em:`,a:new aln(` II, III e IV, apenas. `),b:new aln(`I, II, III e IV. `),c:new aln(`I e II, apenas.`),d:new aln(`II e IV, apenas.`),e:new aln(`I e III, apenas.`,0),imgs:[]}),
+    É correcto o que consta em:`,a:new aln(` II, III e IV, apenas. `),b:new aln(`I, II, III e IV. `),c:new aln(`I e II, apenas.`),d:new aln(`II e IV, apenas.`),e:new aln(`I e III, apenas.`,0),imgs:[require('../testespics/teste4.5.jpg')]}),
     new Prg({prg:`6. Considere as afirmativas abaixo sobre a modelação entidade relacionamento.
     
     I - Entidades fracas são aquelas onde seu identificador é composto não somente pelos seus atributos,
