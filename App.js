@@ -6,6 +6,7 @@ import { Text, View,Button,StyleSheet, ScrollView,TouchableOpacity, FlatList, Sa
 import estilo from './Devsource/estilo';
 //Dados
 import {pdfl,pdados,sortear} from './Devsource/Ddata/dados';
+import { todos } from './Devsource/Ddata/testes';
 import RespUi from './Devsource/components/respUi';
 import BtnIndex from './Devsource/components/btnIndex';
 import ImgUi from './Devsource/components/imgUi'; 
@@ -15,8 +16,10 @@ import ImgUi from './Devsource/components/imgUi';
 export default function App() {
 const [cnt, setCount] = useState(0);
 const [idx, setIndex] = useState(0);
+const [iteste,setTeste]= useState(0);
 
-const [Tdados,setDados] = useState(sortear(pdfl));
+
+const [Tdados,setDados] = useState(sortear(todos[iteste]));
 const [Timg,setTimg] = useState(Tdados[idx].imgs);
 const [finish,setFinish] = useState(false);
 const [c_Ans,setCurAns] = useState('x');
@@ -27,6 +30,8 @@ const [t_ponto,setVwponto]= useState(false);
 const [t_provas,setVprovas]= useState(false);
 
 const [pontos,setPontos]= useState(0);
+
+
 //const Tdados = sortear();
 
 // State to store count value
@@ -57,8 +62,10 @@ const repetir = ()=>
 {
   setFinish(false);
   setCurAns('');
-  setDados(sortear);
+  setDados(sortear(todos[iteste]));
   setVwponto(false);
+  setVprovas(false);
+
 }
 
 //Indice dos botoes
@@ -71,7 +78,7 @@ const bindex = (nr) => {
   setCurAns(Tdados[nr].currA);
   if(typeof (Tdados[nr].imgs)=='object'){
   setTimg(Tdados[nr].imgs);
-  console.log('Objecto');
+  //console.log('Objecto');
   }else
   {
     console.log('nada');
@@ -127,16 +134,16 @@ const trocarR = (pr)=>
                     <Modal visible={t_provas}>
                         <View style={{flex:1}}>
                         <Text style={{paddingLeft:'10%',fontWeight:'bold',paddingTop:'10%',fontSize:20}}> Escolha Testes de Bd1</Text>
-                          <Button title='Fechar' onPress={()=>{setVprovas(false);}}></Button>
+                          <Button title='Voltar' onPress={()=>{setVprovas(false);}}></Button>
                         <FlatList
                             horizontal={true}
-                              data={ Tdados}
+                              data={ todos}
                               renderItem = {({item,index})=>
                                {
                                  return (
-                                  <TouchableOpacity>
+                                  <TouchableOpacity onPress={()=>{repetir() ;setTeste(index);}}>
                                      <View style={{paddingTop: '10%',flex:1}}>
-                                      <Text  style={estilo.provas}>Teste:{index}</Text>
+                                      <Text  style={estilo.provas}>Teste:{index+1}</Text>
                                       </View>
                                       </TouchableOpacity>
                                    )
@@ -148,19 +155,21 @@ const trocarR = (pr)=>
                     {/* Menu pause*/}
                     <Modal visible={t_ponto}>
                       <View style={estilo.container}>
-                        <Text>Pontos: {pontos}</Text>
+                        <Text>Seus valores: {pontos} de  {Tdados.length-1}: exame tomorrow!!!!</Text>
 
                                <Button title= 'Ver Correccao' onPress={()=>{setVwponto(false);setFinish(true);}}/>
-                               <Button title= 'Menu'  onPress={()=>{setVprovas(true);}}/>
+                               <Button title= 'Escolher testes'  onPress={()=>{setVprovas(true);}}/>
                                <Button title= 'Repetir' onPress={()=>{repetir();}}/>
 
                                
                       </View>
                     </Modal>
-                <ScrollView style={{backgroundColor:'pink',flex:1,paddingLeft:'0.1%',overflow:'scroll'}}>
-                      <View style ={{height:'100%',backgroundColor:'lightblue',width:'100%'}}>
-                          <Text style={[estilo.texto,{padding:'5%'}]}>
-                          {Tdados[idx].prg} {Tdados[idx].valor } {c_Ans}
+                    
+                    <View style={{ height: "89.6%" }}>
+                  <ScrollView style={{backgroundColor:'pink',paddingLeft:2}}>
+                     {/*<View style ={{flex:1,backgroundColor:'lightblue'}}>*/}
+                          <Text style={estilo.texto}>
+                          {Tdados[idx].prg}  Teste:{iteste}
                           </Text>  
                              <Button title='Terminar' onPress={ ()=>{contarP();setVwponto(true) }}></Button>
                              <FlatList
@@ -180,8 +189,18 @@ const trocarR = (pr)=>
   </ScrollView> */}
 
 
-                      </View> 
+                   
+
+
+
+
+
+
+
+
+                    
                 </ScrollView>
+                </View>
 
       </View>
       {/* Baixo*/}

@@ -13,8 +13,8 @@ export  default    StyleSheet.create({
     
         color: 'blue',
         fontSize: 15,
-        fontWeight:'300'
-        
+        fontWeight:'300',
+        padding:'5%'
   
     },
 provas:{
@@ -22,7 +22,7 @@ provas:{
   borderRadius:2,
    borderWidth: 3,
    height: 200,
-   width:130,paddingLeft:'10%',fontWeight:'bold',paddingTop:'10%',fontSize:25
+   width:130,paddingLeft:'4%',fontWeight:'bold',paddingTop:'10%',fontSize:25
 
 },
 
