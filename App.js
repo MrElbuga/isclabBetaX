@@ -93,7 +93,7 @@ const correc =()=>
 {
     setFinish(!finish);
     //console.log("estado: "+finish);
-}
+} 
 
 const trocarR = (pr)=>
 {
