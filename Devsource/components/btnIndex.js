@@ -16,7 +16,7 @@ export default function BtnIndex({e,t,idx,fns,correc})
             idx==t?{backgroundColor:'lightgreen'}:
             correc.currA!=' '?{backgroundColor:'cyan'}:{backgroundColor:'white'}
             ,{height:'80%',paddingLeft:20}]}>
-            {t}</Text>
+            {t+1}</Text>
         </TouchableOpacity>
     );
     

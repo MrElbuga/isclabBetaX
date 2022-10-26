@@ -8,7 +8,7 @@ import estilo from './Devsource/estilo';
 import {pdfl,pdados,sortear} from './Devsource/Ddata/dados';
 import RespUi from './Devsource/components/respUi';
 import BtnIndex from './Devsource/components/btnIndex';
-import ImgUi from './Devsource/components/imgUi';
+import ImgUi from './Devsource/components/imgUi'; 
 
 
 
@@ -56,7 +56,7 @@ const contarP=()=>
 const repetir = ()=>
 {
   setFinish(false);
-  setCurAns(' ');
+  setCurAns('');
   setDados(sortear);
   setVwponto(false);
 }
@@ -160,7 +160,7 @@ const trocarR = (pr)=>
                 <ScrollView style={{backgroundColor:'pink',flex:1,paddingLeft:'0.1%',overflow:'scroll'}}>
                       <View style ={{height:'100%',backgroundColor:'lightblue',width:'100%'}}>
                           <Text style={[estilo.texto,{padding:'5%'}]}>
-                                {Tdados[idx].prg} {Tdados[idx].valor } {c_Ans}
+                          {Tdados[idx].prg} {Tdados[idx].valor } {c_Ans}
                           </Text>  
                              <Button title='Terminar' onPress={ ()=>{contarP();setVwponto(true) }}></Button>
                              <FlatList
@@ -195,12 +195,12 @@ const trocarR = (pr)=>
       <RespUi cAns={ c_Ans } p={Tdados[idx].c} fns={finish} v={finish} e={()=>{trocarR(Tdados[idx].c)}}/>
       <RespUi cAns={ c_Ans } p={Tdados[idx].d} fns={finish} v={finish} e={()=>{trocarR(Tdados[idx].d)}}/>
       <RespUi cAns={ c_Ans } p={Tdados[idx].e} fns={finish} v={finish} e={()=>{trocarR(Tdados[idx].e)}}/>
-
+       <View style={{height:'10%',width:'100%'}}></View>
         </ScrollView>
         </View>
 
         <View style={[estilo.prCont,{backgroundColor:'skyblue',height:"30%",top:'3%',
-        paddingTop:'1.5%'}]}>
+        paddingTop:'2%'}]}>
     
        <FlatList
        horizontal={true}

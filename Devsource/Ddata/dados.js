@@ -86,21 +86,13 @@ class aln
 
    ];
 
-   let pdfl = 
-   [
-    new Prg({prg:"1",a:new aln('aa'),b:new aln('nada',0),d:new aln('makima')}),
-    new Prg({prg:"2",a:new aln('bebe'),b:new aln('agua'),c:new aln('comida',0)}),
-    new Prg({prg:"3",a:new aln('React'),b:new aln('React-native',0),c:new aln('frame')}),
-    new Prg({prg:"4",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
-    ,new Prg({prg:"5",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
-    ,new Prg({prg:"6",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
-    ,new Prg({prg:"7",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
-    ,new Prg({prg:"9",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
-    ,new Prg({prg:"10",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
-    ,new Prg({prg:"11",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
-    ,new Prg({prg:"12",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
-    
-   ];
+   let pdfl = [
+    new Prg({prg:'c',a:new aln('a'),b:new aln('b'),c:new aln('c',0),d:new aln(''),e:new aln(' '),imgs:[]}),
+    new Prg({prg:'d',a:new aln('a'),b:new aln('b'),c:new aln('c'),d:new aln('d',0),e:new aln(''),imgs:[]}),
+    new Prg({prg:'e',a:new aln(''),b:new aln(''),c:new aln('a'),d:new aln('b'),e:new aln('e',0),imgs:[]}),
+    new Prg({prg:'a',a:new aln('a',0),b:new aln(''),c:new aln(''),d:new aln('b'),e:new aln('c'),imgs:[]}),
+    new Prg({prg:'b',a:new aln(''),b:new aln('b',0),c:new aln('a'),d:new aln('c'),e:new aln(''),imgs:[]})
+     ];
    
 
    
@@ -175,9 +167,9 @@ class aln
 
            
                     np = new Prg({prg:lista[id].prg,a:la,b:lb,c:lc,d:ld,e:le,imgs:limg});
-                    console.log(lista[id]);
-                    console.log('/////////////////////////////');
-                    console.log(np);
+                    //console.log(lista[id]);
+                   // console.log('/////////////////////////////');
+                   // console.log(np);
                    
                 return np;
            //np = new Prg(pdados[0].prg);

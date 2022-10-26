@@ -13,7 +13,7 @@ export default function RespUi({p,v,e,fns,idx,cAns})
             if(clicked==false)
             {
 
-               setclicked(!clicked);
+               //setclicked(!clicked);
         
             }
         }else
@@ -29,11 +29,11 @@ export default function RespUi({p,v,e,fns,idx,cAns})
     fns==false?
     p.f==cAns?{backgroundColor:'lightgreen'}:{backgroundColor:'white'}:
     //acabou
-    p.f==cAns && clicked==true?
-    p.val==0?{backgroundColor:'lightgreen'}:{backgroundColor:'red'}:
-     p.f!=cAns? 
-     p.val==0?{backgroundColor:'lightgreen'}:{backgroundColor:'white'}:
-     {backgroundColor:'white'}]}>
+    p.f==cAns?
+     p.val==0?{backgroundColor:'lightgreen'}:{backgroundColor:'red'}:
+     //Not clicked
+     p.val==0?{backgroundColor:'lightgreen'}:
+    {backgroundColor:'white'}]}>
           
          <Text style={estilo.texto}>{p.f} </Text>
          </View>
