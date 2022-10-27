@@ -179,10 +179,13 @@ const trocarR = (pr)=>
                     </Modal>
                     
                     <View style={{ height: "89.6%" }}>
+                    <Text style={[estilo.texto,{fontWeight:'900',alignSelf:'center'}]}>
+                           Teste {iteste+1}
+                          </Text> 
                   <ScrollView style={{backgroundColor:'pink',paddingLeft:2}}>
                      {/*<View style ={{flex:1,backgroundColor:'lightblue'}}>*/}
                           <Text style={estilo.texto}>
-                          {Tdados[idx].prg}  Teste:{iteste+1}
+                          {Tdados[idx].prg} 
                           </Text>  
                              <Button title='Terminar' onPress={ ()=>{contarP();setVwponto(true) }}></Button>
                              <FlatList

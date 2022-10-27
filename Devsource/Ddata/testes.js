@@ -518,7 +518,7 @@ let teste4 = [
          precise estar associada a outra entidade identificadora. ,0`),e:new aln(``),imgs:[]})
          ]
  
-         let test6 = [
+         let teste6 = [
             new Prg({prg:`26. Uma entidade A está associada a, no máximo, uma entidade B. Uma entidade B, contudo,
              pode estar associada a qualquer número (zero ou muitos) de entidades A.'`,a:new aln(`Um - para - muitos.`),b:new aln(`Um - para - um.`),c:new aln(`Muitos - para - muitos.`),d:new aln(`Muitos para - um.,0`),e:new aln(` `),imgs:[]}),
             new Prg({prg:`27. As restrições de integridade de dados são usadas para:'`,a:new aln(`Controlar quem tem permissão para acessar os dados`),b:new aln(`Certificar que registos duplicados não são inseridos na tabela,0`),c:new aln(`Melhorar a qualidade dos dados inseridos numa específica propriedade `),d:new aln(`Impedir que os utilizadores alterem os valores armazenados na tabela`),e:new aln(``),imgs:[]}),
@@ -543,17 +543,17 @@ let teste4 = [
             new Prg({prg:`34. A restrição de participação de uma entidade num relacionamento pode ser total ou parcial.
             Ela depende da:'`,a:new aln(`cardinalidade mínima.,0`),b:new aln(`cardinalidade máxima. `),c:new aln(``),d:new aln(``),e:new aln(``),imgs:[]}),
             new Prg({prg:`35. Analise o diagrama Entidade Relacionamento abaixo
-            Com base neste diagrama, pode-se afirmar que:'`,a:new aln(`o telefone é um atributo simples. `),b:new aln(`um apartamento pertence, necessariamente, a um e só um condomínio. ,0`),c:new aln(`o atributo endereço é derivado. D. vários condominios possuem, no mínimo, um apartamento.`),d:new aln(`apartamento é uma entidade forte.`),e:new aln(``),imgs:[]}),
+            Com base neste diagrama, pode-se afirmar que:'`,a:new aln(`o telefone é um atributo simples. `),b:new aln(`um apartamento pertence, necessariamente, a um e só um condomínio. ,0`),c:new aln(`o atributo endereço é derivado. D. vários condominios possuem, no mínimo, um apartamento.`),d:new aln(`apartamento é uma entidade forte.`),e:new aln(``),imgs:[require(`../testespics/teste21.35.jpg`)]}),
             new Prg({prg:`36. Considere a seguinte tabela de uma base de dados.
             FUNCIONARIO (COD_FUNC, NOME, COD_DEP, SAL) 
             Uma expressão da álgebra relacional representando a tabela formada pelos códigos,
             (COD_FUNC) e nomes (NOME) dos funcionários que ganham salário (SAL) entre 3000 e 6000 MT 
-            e trabalham no departamento de código 3 é :'`,a:new aln(`(veja imagem)II cod_func, nome (o cod_dep=3 AND sal>=3000 AND sal<=6000 (Funcionario)) ,0`),b:new aln(`(veja imagem)II (0 sal>=3000 AND sal<=6000 (Funcionario)) `),c:new aln(`(veja imagem)O cod_dep (II sal>=3000 AND sal<=6000 (Funcionario)) `),d:new aln(`(veja imagem)II (o cod_dep=3 AND sal>=3000 AND sal<= 6000 (cod_func, nome))`),e:new aln(`(veja imagem)O cod_func, nome (II cod dep= 3 AND sal>=3000 AND sal<6000 (Funcionario)) `),imgs:[]}),
+            e trabalham no departamento de código 3 é :'`,a:new aln(`(veja imagem)II cod_func, nome (o cod_dep=3 AND sal>=3000 AND sal<=6000 (Funcionario)) ,0`),b:new aln(`(veja imagem)II (0 sal>=3000 AND sal<=6000 (Funcionario)) `),c:new aln(`(veja imagem)O cod_dep (II sal>=3000 AND sal<=6000 (Funcionario)) `),d:new aln(`(veja imagem)II (o cod_dep=3 AND sal>=3000 AND sal<= 6000 (cod_func, nome))`),e:new aln(`(veja imagem)O cod_func, nome (II cod dep= 3 AND sal>=3000 AND sal<6000 (Funcionario)) `),imgs:[require(`../testespics/teste21.36.jpg`)]}),
             new Prg({prg:`37. A Figura 1 a seguir exibe duas relaçoes que fazem parte de uma base de dados relacional.
             sobre essas relacoes foi aplicada uma sequência de operações da Algebra
             Relacional, que resultou na relação exibida na Figura 2:
             
-            Qual sequência de operações é compatível com a relação resultante? '`,a:new aln(`(da 2 imagem )`),b:new aln(`(da 2 imagem ),0`),c:new aln(`(da 2 imagem )`),d:new aln(`(da 2 imagem )`),e:new aln(``),imgs:[]}),
+            Qual sequência de operações é compatível com a relação resultante? '`,a:new aln(`(da 2 imagem )`),b:new aln(`(da 2 imagem ),0`),c:new aln(`(da 2 imagem )`),d:new aln(`(da 2 imagem )`),e:new aln(``),imgs:[require(`../testespics/teste21.37.jpg`),require(`../testespics/teste21.37b.jpg`)]}),
             new Prg({prg:`38. Considere a expressão de Algebra Relacional
              Q salario>10000 AND dept_id=101 (Empregado) 
              Quais os campos são mostrados na saída? '`,a:new aln(`Salario, dept_id `),b:new aln(`Empregado `),c:new aln(`Salario`),d:new aln(`Todos os campos da relação empregado ,0`),e:new aln(``),imgs:[]}),
@@ -612,9 +612,9 @@ let teste4 = [
             WHERE comissao IS NOT NULL 
             ORDER BY 2;
             (ou veja na imagem abaixo)'`,a:new aln(`Listar o apelido, titulo e percentagem de comissão, para todos os empregados que
-            uma comissão ordenados por titulo. `),b:new aln(`Listar todos os dados dos empregados que não tem comissão ordenados por 2 `),c:new aln(`Listas todos os dados de tabela Empregado ordenados por 2.`),d:new aln(`Todas as afirmações acima.`),e:new aln(`Nenhuma das alternativas. ,0`),imgs:[]})
+            uma comissão ordenados por titulo. `),b:new aln(`Listar todos os dados dos empregados que não tem comissão ordenados por 2 `),c:new aln(`Listas todos os dados de tabela Empregado ordenados por 2.`),d:new aln(`Todas as afirmações acima.`),e:new aln(`Nenhuma das alternativas. ,0`),imgs:[require(`../testespics/teste21.50.jpg`)]})
              ]
 
-     let todos= [teste1,teste2,teste3,teste4];
+     let todos= [teste1,teste2,teste3,teste4,teste5,teste6];
 
      export{todos};
