@@ -135,12 +135,12 @@ const trocarR = (pr)=>
     //<RespUi resp ={'G G Games'}/>
     
     <View style={estilo.container}>
-    {  <StatusBar style="auto"/> }
+    {  <StatusBar style='dark'/> }
 
       {/*<Text style = {estilo.texto}>Cnr games ,Light!</Text>*/}
       
       {/* Cima*/}
-      <View style={{flex:1.8,width:'100%',backgroundColor: 'red',overflow:'hidden',top:'7%'}}>
+      <View style={{flex:1.8,borderTopWidth:5,width:'100%',backgroundColor: 'red',overflow:'hidden',top:'3%'}}>
 
                     {/* Menu Testes*/}
  
@@ -167,8 +167,8 @@ const trocarR = (pr)=>
                        
                     {/* Menu pause*/}
                     <Modal visible={t_ponto}>
-                      <View style={estilo.container}>
-                        <Text>Seus valores: {pontos} de  {Tdados.length-1}: Epa,exame tomorrow!!!!</Text>
+                      <View style={[estilo.container,{borderTopLeftRadius:2}]}>
+                        <Text style={{bottom:'5%',fontSize:15,borderBottomWidth:2,fontWeight:'bold'}}>Seus valores: {pontos} de  {Tdados.length-1}: Epa,exame hoje!!!!</Text>
 
                                <Button title= 'Ver Correccao' onPress={()=>{setVwponto(false);setFinish(true);}}/>
                                <Button title= 'Escolher testes'  onPress={()=>{setVprovas(true);}}/>
@@ -178,16 +178,16 @@ const trocarR = (pr)=>
                       </View>
                     </Modal>
                     
-                    <View style={{ height: "89.6%" }}>
+                    <View style={{ height: "95.4%" }}>
                     <Text style={[estilo.texto,{fontWeight:'900',alignSelf:'center'}]}>
-                           Teste {iteste+1}
+                           Teste nr {iteste+1}
                           </Text> 
-                  <ScrollView style={{backgroundColor:'pink',paddingLeft:2}}>
+                  <ScrollView style={{borderTopWidth:5,borderTopColor:'darkred',backgroundColor:'pink',paddingLeft:2}}>
                      {/*<View style ={{flex:1,backgroundColor:'lightblue'}}>*/}
                           <Text style={estilo.texto}>
                           {Tdados[idx].prg} 
                           </Text>  
-                             <Button title='Terminar' onPress={ ()=>{contarP();setVwponto(true) }}></Button>
+                             <Button title='Entregar!' onPress={ ()=>{contarP();setVwponto(true) }}></Button>
                              <FlatList
                              horizontal={true}
                               data={ Timg}

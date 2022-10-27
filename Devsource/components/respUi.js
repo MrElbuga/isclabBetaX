@@ -27,7 +27,7 @@ export default function RespUi({p,v,e,fns,idx,cAns})
     <TouchableOpacity onPress={()=> {e();velar();}}>
     <View style={[estilo.prCont,
     fns==false?
-    p.f==cAns?{backgroundColor:'lightgreen'}:{backgroundColor:'white'}:
+    p.f==cAns?{backgroundColor:'lightgreen',borderLeftWidth:13,borderLeftColor:'pink'}:{backgroundColor:'white'}:
     //acabou
     p.f==cAns?
      p.val==0?{backgroundColor:'lightgreen'}:{backgroundColor:'red'}:

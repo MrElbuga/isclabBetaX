@@ -463,115 +463,115 @@ let teste4 = [
      ];
 
      let teste5 = [
-        new Prg({prg:`1. OSGBD actua como uma interface entre:`,a:new aln(`Dados e o SGBD`),b:new aln(`Aplicação e SQL`),c:new aln(`Aplicação de base de dados e a base de dados,0`),d:new aln(`O utilizador e o software.`),e:new aln(` `),imgs:[]}),
-        new Prg({prg:`2. A seguir estão as funções de um SGBD, excepto:`,a:new aln(`criar e processar formulários.,0`),b:new aln(`criar base de dados`),c:new aln(`processar dados`),d:new aln(`administrar base de dados`),e:new aln(``),imgs:[]}),
+        new Prg({prg:`1. OSGBD actua como uma interface entre:`,a:new aln(`Dados e o SGBD`),b:new aln(`Aplicação e SQL`),c:new aln(`Aplicação de base de dados e a base de dados`,0),d:new aln(`O utilizador e o software.`),e:new aln(` `),imgs:[]}),
+        new Prg({prg:`2. A seguir estão as funções de um SGBD, excepto:`,a:new aln(`criar e processar formulários.`,0),b:new aln(`criar base de dados`),c:new aln(`processar dados`),d:new aln(`administrar base de dados`),e:new aln(``),imgs:[]}),
         new Prg({prg:`3. Aplicações são programas que interagem directamente com a base de dados.
         `,a:new aln(`Verdadeiro
-        ,0`),b:new aln(`Falso
+        `,0),b:new aln(`Falso
         `),c:new aln(``),d:new aln(``),e:new aln(``),imgs:[]}),
         new Prg({prg:`4. Antes de 1970, todos os dados eram armazenados em arquivos separados, a maioria armazenados em rolos de fita magnética.
-        `,a:new aln(`Verdadeiro,0`),b:new aln(`Falso`),c:new aln(``),d:new aln(``),e:new aln(``),imgs:[]}),
+        `,a:new aln(`Verdadeiro`,0),b:new aln(`Falso`),c:new aln(``),d:new aln(``),e:new aln(``),imgs:[]}),
         new Prg({prg:`5. Um sistema de gestão de base de dados (SGBD) é um
-        `,a:new aln(`Sistema de hardware usado para criar, manter, e providenciar acesso controlado à base de dados.`),b:new aln(`Sistema de hardware usado para criar, manter, e providenciar acesso não controlado à base de dados.`),c:new aln(`Sistema de software usado para criar, manter, e providenciar acesso controlado à base de dados.,0`),d:new aln(`Sistema de software usado para criar, manter, e providenciar acesso não controlado à base`),e:new aln(``),imgs:[]}),
+        `,a:new aln(`Sistema de hardware usado para criar, manter, e providenciar acesso controlado à base de dados.`),b:new aln(`Sistema de hardware usado para criar, manter, e providenciar acesso não controlado à base de dados.`),c:new aln(`Sistema de software usado para criar, manter, e providenciar acesso controlado à base de dados.`,0),d:new aln(`Sistema de software usado para criar, manter, e providenciar acesso não controlado à base`),e:new aln(``),imgs:[]}),
         new Prg({prg:`6. Administrador de dados é responsável por
-        `,a:new aln(`Desenho físico da base de dados`),b:new aln(`Gestão de problemas técnicos no ambiente de base de dados`),c:new aln(`Gestão geral de recursos de dados numa organização,0`),d:new aln(`Escrita de programas de aplicação`),e:new aln(``),imgs:[]}),
+        `,a:new aln(`Desenho físico da base de dados`),b:new aln(`Gestão de problemas técnicos no ambiente de base de dados`),c:new aln(`Gestão geral de recursos de dados numa organização`,0),d:new aln(`Escrita de programas de aplicação`),e:new aln(``),imgs:[]}),
         new Prg({prg:`7. Algumas vantagens da abordagem de base de dados incluem tudo, menos:
-        `,a:new aln(`Redundância mínima de dados `),b:new aln(`Melhoramento da consistência de dados `),c:new aln(`Melhoramento de partilha de dados`),d:new aln(`Dependência programa-dados ,0`),e:new aln(``),imgs:[]}),
+        `,a:new aln(`Redundância mínima de dados `),b:new aln(`Melhoramento da consistência de dados `),c:new aln(`Melhoramento de partilha de dados`),d:new aln(`Dependência programa-dados `,0),e:new aln(``),imgs:[]}),
         new Prg({prg:`O ciclo de vida de desenvolvimento de sistemas não pode ser usado com a implementação
-        da base de dados.`,a:new aln(`Verdadeiro`),b:new aln(`Falso ,0`),c:new aln(``),d:new aln(``),e:new aln(``),imgs:[]}),
-        new Prg({prg:`9.De quem é a função de determinar os requisitos e desenho para uma base de dados?`,a:new aln(`Analista de base de dados. ,0`),b:new aln(`Administrador de base de dados. `),c:new aln(`Ambos A e B.`),d:new aln(`Nem A nem B. `),e:new aln(``),imgs:[]}),
+        da base de dados.`,a:new aln(`Verdadeiro`),b:new aln(`Falso `,0),c:new aln(``),d:new aln(``),e:new aln(``),imgs:[]}),
+        new Prg({prg:`9.De quem é a função de determinar os requisitos e desenho para uma base de dados?`,a:new aln(`Analista de base de dados. `,0),b:new aln(`Administrador de base de dados. `),c:new aln(`Ambos A e B.`),d:new aln(`Nem A nem B. `),e:new aln(``),imgs:[]}),
         new Prg({prg:`10. Vistas do utilizador são incluídas como parte de que esquema?
-        `,a:new aln(`Interno `),b:new aln(`Conceptual `),c:new aln(`Externo,0`),d:new aln(`Nenhuma das opções`),e:new aln(``),imgs:[]}),
+        `,a:new aln(`Interno `),b:new aln(`Conceptual `),c:new aln(`Externo`,0),d:new aln(`Nenhuma das opções`),e:new aln(``),imgs:[]}),
         new Prg({prg:`11. Qual das seguintes actividades de base de dados requerem um conhecimento específico de
-        um SGBD? `,a:new aln(`Modelação dos dados da empresa `),b:new aln(`Modelo conceptual de dados `),c:new aln(`Desenho lógico da base de dados`),d:new aln(` Desenho físico e logico  da base de dados.,0`),e:new aln(``),imgs:[]}),
+        um SGBD? `,a:new aln(`Modelação dos dados da empresa `),b:new aln(`Modelo conceptual de dados `),c:new aln(`Desenho lógico da base de dados`),d:new aln(` Desenho físico e logico  da base de dados.`,0),e:new aln(``),imgs:[]}),
         new Prg({prg:`12. A primeira etapa no desenvolvimento da base de dados e:
-        `,a:new aln(`Modelação dos dados da empresa ,0`),b:new aln(`Desenho lógico da base de dados `),c:new aln(`Desenho físico da base de dados e definição`),d:new aln(`Implementação da base de dados `),e:new aln(``),imgs:[]}),
+        `,a:new aln(`Modelação dos dados da empresa `,0),b:new aln(`Desenho lógico da base de dados `),c:new aln(`Desenho físico da base de dados e definição`),d:new aln(`Implementação da base de dados `),e:new aln(``),imgs:[]}),
         new Prg({prg:`13. Qual das seguintes alternativas é um conjunto de um ou mais atributos 
-        tomado colectivamente para identificar exclusivamente um registo?`,a:new aln(`Chave Candidata `),b:new aln(`SubChave`),c:new aln(`SuperChave,0`),d:new aln(`Chave Estrangeira `),e:new aln(``),imgs:[]}),
+        tomado colectivamente para identificar exclusivamente um registo?`,a:new aln(`Chave Candidata `),b:new aln(`SubChave`),c:new aln(`SuperChave`,0),d:new aln(`Chave Estrangeira `),e:new aln(``),imgs:[]}),
         new Prg({prg:`14. Considere os atributos ID, CIDADE E NOME. Qual deles pode ser considerado u
-        superchave? `,a:new aln(`NOME `),b:new aln(`ID ,0`),c:new aln(`CIDADE`),d:new aln(`CIDADE, ID `),e:new aln(``),imgs:[]}),
+        superchave? `,a:new aln(`NOME `),b:new aln(`ID `,0),c:new aln(`CIDADE`),d:new aln(`CIDADE, ID `),e:new aln(``),imgs:[]}),
         new Prg({prg:`15. Uma restrição de integridade _______exige que os valores que apareceem em 
         atributos especificados de qualquer tupla na relação de referência também aparecem em  atributos especificados de, 
-        pelo menos, uma tupla na relação referenciada. `,a:new aln(` Referencial. ,0`),b:new aln(`Referenciada.`),c:new aln(`Específica.`),d:new aln(`Primária. `),e:new aln(``),imgs:[]}),
+        pelo menos, uma tupla na relação referenciada. `,a:new aln(` Referencial. `,0),b:new aln(`Referenciada.`),c:new aln(`Específica.`),d:new aln(`Primária. `),e:new aln(``),imgs:[]}),
         new Prg({prg:`16. Qual dos seguintes é uma linguagem procedural?
-        `,a:new aln(`Cálculo Relacional de Domínio. `),b:new aln(`Cálculo Relacional de Tupla. `),c:new aln(`Álgebra Relacional,0`),d:new aln(`Linguagem de Consulta. `),e:new aln(``),imgs:[]}),
+        `,a:new aln(`Cálculo Relacional de Domínio. `),b:new aln(`Cálculo Relacional de Tupla. `),c:new aln(`Álgebra Relacional`,0),d:new aln(`Linguagem de Consulta. `),e:new aln(``),imgs:[]}),
         new Prg({prg:`17. A operação mais comumente usada em álgebra relacional para projectar um conjunto de tupla de uma relação é:
-        `,a:new aln(`junção.`),b:new aln(`projecção.`),c:new aln(`selecção.,0`),d:new aln(`união.`),e:new aln(``),imgs:[]}),
-        new Prg({prg:`18. Qual das alternativas a seguir é uma operação fundamental em álgebra relacional?`,a:new aln(`Intersecção`),b:new aln(`Junção natural`),c:new aln(`Assignação`),d:new aln(`Nenhuma das mencionadas,0`),e:new aln(``),imgs:[]}),
+        `,a:new aln(`junção.`),b:new aln(`projecção.`),c:new aln(`selecção.`,0),d:new aln(`união.`),e:new aln(``),imgs:[]}),
+        new Prg({prg:`18. Qual das alternativas a seguir é uma operação fundamental em álgebra relacional?`,a:new aln(`Intersecção`),b:new aln(`Junção natural`),c:new aln(`Assignação`),d:new aln(`Nenhuma das mencionadas`,0),e:new aln(``),imgs:[]}),
         new Prg({prg:`19. Na operação selecção o/a______aparece  no subscrito e o/a____ 
-        aparece entre parêntesis depois do sigma.`,a:new aln(` Predicado, relação.,0`),b:new aln(`Relação, Predicado.`),c:new aln(`Operação, Predicado.`),d:new aln(`Relação, Operação.`),e:new aln(``),imgs:[]}),
+        aparece entre parêntesis depois do sigma.`,a:new aln(` Predicado, relação.`,0),b:new aln(`Relação, Predicado.`),c:new aln(`Operação, Predicado.`),d:new aln(`Relação, Operação.`),e:new aln(``),imgs:[]}),
         new Prg({prg:`20. Junção natural é igual a:
-        `,a:new aln(`Produto Cartesiano.,0`),b:new aln(`Combinação de União e Produto Cartesiano.`),c:new aln(`Combinação de selecção e Produto Cartesiano.`),d:new aln(`Combinação de projeção e Produto Cartesiano.`),e:new aln(``),imgs:[]}),
+        `,a:new aln(`Produto Cartesiano.`,0),b:new aln(`Combinação de União e Produto Cartesiano.`),c:new aln(`Combinação de selecção e Produto Cartesiano.`),d:new aln(`Combinação de projeção e Produto Cartesiano.`),e:new aln(``),imgs:[]}),
         new Prg({prg:`21. Entidade é um(a):
-        `,a:new aln(`Objecto da relação.`),b:new aln(`Modelo de trabalho.`),c:new aln(`Coisa do mundo real.,0`),d:new aln(`Modelo da relação. `),e:new aln(``),imgs:[]}),
+        `,a:new aln(`Objecto da relação.`),b:new aln(`Modelo de trabalho.`),c:new aln(`Coisa do mundo real.`,0),d:new aln(`Modelo da relação. `),e:new aln(``),imgs:[]}),
         new Prg({prg:`22. Um relacionamento mantido entre duas entidades é chamado de binário
-        `,a:new aln(`Verdadeiro,0`),b:new aln(`Falso `),c:new aln(``),d:new aln(``),e:new aln(``),imgs:[]}),
+        `,a:new aln(`Verdadeiro`,0),b:new aln(`Falso `),c:new aln(``),d:new aln(``),e:new aln(``),imgs:[]}),
         new Prg({prg:`23. O atributo nome pode ser estruturado como um atributo que consiste de primeiro nome, 
-        inicial do meio e sobrenome. Este tipo de atributo é chamado de:`,a:new aln(`Atributo Simples`),b:new aln(`Atributo Composto,0`),c:new aln(`Atributo Multivalor`),d:new aln(`Atributo Derivado`),e:new aln(``),imgs:[]}),
+        inicial do meio e sobrenome. Este tipo de atributo é chamado de:`,a:new aln(`Atributo Simples`),b:new aln(`Atributo Composto`,0),c:new aln(`Atributo Multivalor`),d:new aln(`Atributo Derivado`),e:new aln(``),imgs:[]}),
         new Prg({prg:`24. Se estiver a coleccionar e armazenar informação sobre a sua colecção de músicas, um álbum
-        poderia ser considerado um(a) ________`,a:new aln(`Relação`),b:new aln(`Entidade,0`),c:new aln(`Instância`),d:new aln(`Atributo`),e:new aln(``),imgs:[]}),
+        poderia ser considerado um(a) ________`,a:new aln(`Relação`),b:new aln(`Entidade`,0),c:new aln(`Instância`),d:new aln(`Atributo`),e:new aln(``),imgs:[]}),
         new Prg({prg:` A respeito de entidades, relacionamentos e tipos de chave, assinale a opção correcta.`,a:new aln(`Uma entidade fraca não possui seus próprios atributos chave.`),b:new aln(`Toda relação deve possuir somente uma chave primária de atributo único.`),c:new aln(`Um identificador ou chave é usado para determinar exclusivamente 
         uma instância de um relacionamento entre entidades.`),d:new aln(`Uma entidade forte existe na base de dados e possui atributos que a identificam sem que ela
-         precise estar associada a outra entidade identificadora. ,0`),e:new aln(``),imgs:[]}),
+         precise estar associada a outra entidade identificadora. `,0),e:new aln(``),imgs:[]}),
         new Prg({prg:` A respeito de entidades, relacionamentos e tipos de chave, assinale a opção correcta.`,a:new aln(`Uma entidade fraca não possui seus próprios atributos chave.`),b:new aln(`Toda relação deve possuir somente uma chave primária de atributo único.`),c:new aln(`Um identificador ou chave é usado para determinar exclusivamente 
         uma instância de um relacionamento entre entidades.`),d:new aln(`Uma entidade forte existe na base de dados e possui atributos que a identificam sem que ela
-         precise estar associada a outra entidade identificadora. ,0`),e:new aln(``),imgs:[]})
-         ]
+         precise estar associada a outra entidade identificadora. `,0),e:new aln(``),imgs:[]})
+         ];
  
          let teste6 = [
             new Prg({prg:`26. Uma entidade A está associada a, no máximo, uma entidade B. Uma entidade B, contudo,
-             pode estar associada a qualquer número (zero ou muitos) de entidades A.'`,a:new aln(`Um - para - muitos.`),b:new aln(`Um - para - um.`),c:new aln(`Muitos - para - muitos.`),d:new aln(`Muitos para - um.,0`),e:new aln(` `),imgs:[]}),
-            new Prg({prg:`27. As restrições de integridade de dados são usadas para:'`,a:new aln(`Controlar quem tem permissão para acessar os dados`),b:new aln(`Certificar que registos duplicados não são inseridos na tabela,0`),c:new aln(`Melhorar a qualidade dos dados inseridos numa específica propriedade `),d:new aln(`Impedir que os utilizadores alterem os valores armazenados na tabela`),e:new aln(``),imgs:[]}),
+             pode estar associada a qualquer número (zero ou muitos) de entidades A.'`,a:new aln(`Um - para - muitos.`),b:new aln(`Um - para - um.`),c:new aln(`Muitos - para - muitos.`),d:new aln(`Muitos para - um.`,0),e:new aln(` `),imgs:[]}),
+            new Prg({prg:`27. As restrições de integridade de dados são usadas para:'`,a:new aln(`Controlar quem tem permissão para acessar os dados`),b:new aln(`Certificar que registos duplicados não são inseridos na tabela`,0),c:new aln(`Melhorar a qualidade dos dados inseridos numa específica propriedade `),d:new aln(`Impedir que os utilizadores alterem os valores armazenados na tabela`),e:new aln(``),imgs:[]}),
             new Prg({prg:`28.Qual das seguintes opcões pode ser resolvida através da imposição de uma restrição de integridade referencial? 
             '`,a:new aln(`Todos os números de telefone devem incluir o código da área`),b:new aln(`certos campos são obrigatórios (tais como o endereço de email ou número de telefone)
             antes que o registo seja aceite `),c:new aln(`Informação sobre o cliente deve ser conhecida antes de algum item ser vendido ao
-            mesmo,0`),d:new aln(`De seguida, inserindo a quantidade do pedido, o utilizador deve introduzir um número e
+            mesmo`,0),d:new aln(`De seguida, inserindo a quantidade do pedido, o utilizador deve introduzir um número e
             não algum texto (i.e., 12 em vez de ‘doze') `),e:new aln(``),imgs:[]}),
             new Prg({prg:`29. Considere num Telefone, que pode ter um ou mais valores. Tratar num_Telefone como ______
             permite uma pessoa ter vários números de telefone (incluindo zero) associado a ela 
-            '`,a:new aln(`Entidade,0`),b:new aln(`Atributo`),c:new aln(`Relação`),d:new aln(`Valora`),e:new aln(``),imgs:[]}),
+            '`,a:new aln(`Entidade`,0),b:new aln(`Atributo`),c:new aln(`Relação`),d:new aln(`Valora`),e:new aln(``),imgs:[]}),
             new Prg({prg:`30. Dados os modelos básicos ER e relacional, qual das seguintes alternativas está
-            INCORRECTA? '`,a:new aln(`Um atributo de uma entidade pode ter mais do que um valor `),b:new aln(`Um atributo de uma entidade pode ser composto`),c:new aln(`Numa linha de uma tabela relacional, um atributo pode ter mais do que um valor,0`),d:new aln(`Numa linha de uma tabela relacional, um atributo pode ter exactamente um valor ou um NULL `),e:new aln(``),imgs:[]}),
+            INCORRECTA? '`,a:new aln(`Um atributo de uma entidade pode ter mais do que um valor `),b:new aln(`Um atributo de uma entidade pode ser composto`),c:new aln(`Numa linha de uma tabela relacional, um atributo pode ter mais do que um valor`,0),d:new aln(`Numa linha de uma tabela relacional, um atributo pode ter exactamente um valor ou um NULL `),e:new aln(``),imgs:[]}),
             new Prg({prg:`31. Qual das alternativas a seguir, indica o número máximo de entidades que podem estar
-            envolvidas num relacionamento?'`,a:new aln(`Cardinalidade mínima `),b:new aln(`Cardinalidade máxima,0`),c:new aln(`DER`),d:new aln(`Quantidade de entidades no relacionamento`),e:new aln(``),imgs:[]}),
+            envolvidas num relacionamento?'`,a:new aln(`Cardinalidade mínima `),b:new aln(`Cardinalidade máxima`,0),c:new aln(`DER`),d:new aln(`Quantidade de entidades no relacionamento`),e:new aln(``),imgs:[]}),
             new Prg({prg:`32. A entidade Pessoa é classificada como estudante e empregado. O processo é chamado de ___
-            '`,a:new aln(`Generalização `),b:new aln(`Especialização,0`),c:new aln(`Categorização `),d:new aln(``),e:new aln(``),imgs:[]}),
+            '`,a:new aln(`Generalização `),b:new aln(`Especialização`,0),c:new aln(`Categorização `),d:new aln(``),e:new aln(``),imgs:[]}),
             new Prg({prg:`33. Considere por exemplo a equipe de trabalho do funcionário e suponha que determinados
             funcionários participam em mais do que uma equipe de trabalho. Um determinado funcionário pode,
             portanto, aparecer em mais do que uma entidade equipe que é de nivel inferior do funcionário. 
-            Assim, a generalização é ________'`,a:new aln(`Não Disjunta (overlapping) ,0`),b:new aln(`Disjunta`),c:new aln(` Única`),d:new aln(`Relacional `),e:new aln(``),imgs:[]}),
+            Assim, a generalização é ________'`,a:new aln(`Não Disjunta (overlapping) `,0),b:new aln(`Disjunta`),c:new aln(` Única`),d:new aln(`Relacional `),e:new aln(``),imgs:[]}),
             new Prg({prg:`34. A restrição de participação de uma entidade num relacionamento pode ser total ou parcial.
-            Ela depende da:'`,a:new aln(`cardinalidade mínima.,0`),b:new aln(`cardinalidade máxima. `),c:new aln(``),d:new aln(``),e:new aln(``),imgs:[]}),
+            Ela depende da:'`,a:new aln(`cardinalidade mínima.`,0),b:new aln(`cardinalidade máxima. `),c:new aln(``),d:new aln(``),e:new aln(``),imgs:[]}),
             new Prg({prg:`35. Analise o diagrama Entidade Relacionamento abaixo
-            Com base neste diagrama, pode-se afirmar que:'`,a:new aln(`o telefone é um atributo simples. `),b:new aln(`um apartamento pertence, necessariamente, a um e só um condomínio. ,0`),c:new aln(`o atributo endereço é derivado. D. vários condominios possuem, no mínimo, um apartamento.`),d:new aln(`apartamento é uma entidade forte.`),e:new aln(``),imgs:[require(`../testespics/teste21.35.jpg`)]}),
+            Com base neste diagrama, pode-se afirmar que:'`,a:new aln(`o telefone é um atributo simples. `),b:new aln(`um apartamento pertence, necessariamente, a um e só um condomínio. `,0),c:new aln(`o atributo endereço é derivado. D. vários condominios possuem, no mínimo, um apartamento.`),d:new aln(`apartamento é uma entidade forte.`),e:new aln(``),imgs:[require(`../testespics/teste21.35.jpg`)]}),
             new Prg({prg:`36. Considere a seguinte tabela de uma base de dados.
             FUNCIONARIO (COD_FUNC, NOME, COD_DEP, SAL) 
             Uma expressão da álgebra relacional representando a tabela formada pelos códigos,
             (COD_FUNC) e nomes (NOME) dos funcionários que ganham salário (SAL) entre 3000 e 6000 MT 
-            e trabalham no departamento de código 3 é :'`,a:new aln(`(veja imagem)II cod_func, nome (o cod_dep=3 AND sal>=3000 AND sal<=6000 (Funcionario)) ,0`),b:new aln(`(veja imagem)II (0 sal>=3000 AND sal<=6000 (Funcionario)) `),c:new aln(`(veja imagem)O cod_dep (II sal>=3000 AND sal<=6000 (Funcionario)) `),d:new aln(`(veja imagem)II (o cod_dep=3 AND sal>=3000 AND sal<= 6000 (cod_func, nome))`),e:new aln(`(veja imagem)O cod_func, nome (II cod dep= 3 AND sal>=3000 AND sal<6000 (Funcionario)) `),imgs:[require(`../testespics/teste21.36.jpg`)]}),
+            e trabalham no departamento de código 3 é :'`,a:new aln(`(veja imagem)II cod_func, nome (o cod_dep=3 AND sal>=3000 AND sal<=6000 (Funcionario)) `,0),b:new aln(`(veja imagem)II (0 sal>=3000 AND sal<=6000 (Funcionario)) `),c:new aln(`(veja imagem)O cod_dep (II sal>=3000 AND sal<=6000 (Funcionario)) `),d:new aln(`(veja imagem)II (o cod_dep=3 AND sal>=3000 AND sal<= 6000 (cod_func, nome))`),e:new aln(`(veja imagem)O cod_func, nome (II cod dep= 3 AND sal>=3000 AND sal<6000 (Funcionario)) `),imgs:[require(`../testespics/teste21.36.jpg`)]}),
             new Prg({prg:`37. A Figura 1 a seguir exibe duas relaçoes que fazem parte de uma base de dados relacional.
             sobre essas relacoes foi aplicada uma sequência de operações da Algebra
             Relacional, que resultou na relação exibida na Figura 2:
             
-            Qual sequência de operações é compatível com a relação resultante? '`,a:new aln(`(da 2 imagem )`),b:new aln(`(da 2 imagem ),0`),c:new aln(`(da 2 imagem )`),d:new aln(`(da 2 imagem )`),e:new aln(``),imgs:[require(`../testespics/teste21.37.jpg`),require(`../testespics/teste21.37b.jpg`)]}),
+            Qual sequência de operações é compatível com a relação resultante? '`,a:new aln(`(da 2 imagem )`),b:new aln(`(da 2 imagem )`,0),c:new aln(`(da 2 imagem )`),d:new aln(`(da 2 imagem )`),e:new aln(``),imgs:[require(`../testespics/teste21.37.jpg`),require(`../testespics/teste21.37b.jpg`)]}),
             new Prg({prg:`38. Considere a expressão de Algebra Relacional
              Q salario>10000 AND dept_id=101 (Empregado) 
-             Quais os campos são mostrados na saída? '`,a:new aln(`Salario, dept_id `),b:new aln(`Empregado `),c:new aln(`Salario`),d:new aln(`Todos os campos da relação empregado ,0`),e:new aln(``),imgs:[]}),
+             Quais os campos são mostrados na saída? '`,a:new aln(`Salario, dept_id `),b:new aln(`Empregado `),c:new aln(`Salario`),d:new aln(`Todos os campos da relação empregado `,0),e:new aln(``),imgs:[]}),
             new Prg({prg:`39. Se tuplas correspondentes não forem encontradas, o tipo de operação OUI
-            mantém todas as tuplas da primeira e segunda relação é classificado como '`,a:new aln(`LEFT OUTER JOIN `),b:new aln(`FULL OUTER JOIN ,0`),c:new aln(`HALF OUTER JOIN`),d:new aln(`RIGTH OUTER JOIN `),e:new aln(``),imgs:[]}),
+            mantém todas as tuplas da primeira e segunda relação é classificado como '`,a:new aln(`LEFT OUTER JOIN `),b:new aln(`FULL OUTER JOIN `,0),c:new aln(`HALF OUTER JOIN`),d:new aln(`RIGTH OUTER JOIN `),e:new aln(``),imgs:[]}),
             new Prg({prg:`40. Na consulta dada, qual palavra-chave deve ser inserida?
-            INSERT INTO employee ___ (1002, Joey, 2000);'`,a:new aln(`TABLE `),b:new aln(`VALUES ,0`),c:new aln(`RELATION`),d:new aln(` FIELD `),e:new aln(``),imgs:[]}),
+            INSERT INTO employee ___ (1002, Joey, 2000);'`,a:new aln(`TABLE `),b:new aln(`VALUES `,0),c:new aln(`RELATION`),d:new aln(` FIELD `),e:new aln(``),imgs:[]}),
             new Prg({prg:`41. Relativamente ao predicado LIKE qual das seguintes alternativas e verdadeira:
             
             i) % corresponde a zero ou mais caracteres 
-            ii) corresponde exactamente a um caracter'`,a:new aln(`i, apenas `),b:new aln(`ii, apenas `),c:new aln(`ie ii,0`),d:new aln(`Nenhuma das opções `),e:new aln(``),imgs:[]}),
+            ii) corresponde exactamente a um caracter'`,a:new aln(`i, apenas `),b:new aln(`ii, apenas `),c:new aln(`ie ii`,0),d:new aln(`Nenhuma das opções `),e:new aln(``),imgs:[]}),
             new Prg({prg:`42. Considere o comando:
                    SELECT dept_nome, dept_id, AVG (salario) 
                    FROM instrutor
                    GROUP BY dept_nome; 
-            Esta instrução está incorrecta porque :'`,a:new aln(` AVG (salario) não deve ser seleccionado `),b:new aln(`Dept_id não deve ser usado na cláusula GROUP BY ,0`),c:new aln(`Cláusula GROUP BY mal colocada`),d:new aln(`Cláusula GROUP BY não é válida nesta consulta `),e:new aln(``),imgs:[]}),
-            new Prg({prg:`43. Subconsultas não podem:'`,a:new aln(`Usar GROUP BY ou funções de grupo`),b:new aln(`Recuperar dados de uma tabela diferente daquela da consulta externa ,0`),c:new aln(`Juntar tabelas`),d:new aln(`Aparecer em SELECT, UPDATE, DELETE, INSERT`),e:new aln(``),imgs:[]}),
-            new Prg({prg:`44. Para incluir restrição de integridade numa relação existente, usa-se:'`,a:new aln(`CREATE TABLE `),b:new aln(`MODIFY TABLE`),c:new aln(`ALTER TABLE ,0`),d:new aln(`DROP TABLE`),e:new aln(``),imgs:[]}),
+            Esta instrução está incorrecta porque :'`,a:new aln(` AVG (salario) não deve ser seleccionado `),b:new aln(`Dept_id não deve ser usado na cláusula GROUP BY `,0),c:new aln(`Cláusula GROUP BY mal colocada`),d:new aln(`Cláusula GROUP BY não é válida nesta consulta `),e:new aln(``),imgs:[]}),
+            new Prg({prg:`43. Subconsultas não podem:'`,a:new aln(`Usar GROUP BY ou funções de grupo`),b:new aln(`Recuperar dados de uma tabela diferente daquela da consulta externa `,0),c:new aln(`Juntar tabelas`),d:new aln(`Aparecer em SELECT, UPDATE, DELETE, INSERT`),e:new aln(``),imgs:[]}),
+            new Prg({prg:`44. Para incluir restrição de integridade numa relação existente, usa-se:'`,a:new aln(`CREATE TABLE `),b:new aln(`MODIFY TABLE`),c:new aln(`ALTER TABLE `,0),d:new aln(`DROP TABLE`),e:new aln(``),imgs:[]}),
             new Prg({prg:`45. Qual dos seguintes comandos actualiza todos os instrutores com salário acima de
             100.000 para receberem um aumento de 3%, enquanto todos os outros recebem um aumento de 5%. 
             '`,a:new aln(`A. UPDATE instrutor
@@ -580,7 +580,7 @@ let teste4 = [
               UPDATE instrutor 
                SET salario = salario * 1.05
                WHERE salario <= 100000; 
-            ,0`),b:new aln(`B. 
+            `,0),b:new aln(`B. 
             UPDATE instructor
             SET salario = salario * 1.05 
             WHERE salario < (SELECT avg (salario)
@@ -595,14 +595,14 @@ let teste4 = [
                SELECT ID, nome, dept_nome
                 FROM instrutor; 
                 
-            Encontre o erro neste comando '`,a:new aln(`Instrutor `),b:new aln(` SELECT `),c:new aln(`VIEW ...AS`),d:new aln(`Nenhum dos mencionados,0`),e:new aln(``),imgs:[]}),
+            Encontre o erro neste comando '`,a:new aln(`Instrutor `),b:new aln(` SELECT `),c:new aln(`VIEW ...AS`),d:new aln(`Nenhum dos mencionados`,0),e:new aln(``),imgs:[]}),
             new Prg({prg:`47. Que tipo de junção (join) é necessário quando se deseja incluir linhas que não têm
-            valores correspondentes? '`,a:new aln(`EQUI-JOIN `),b:new aln(`NATURAL JOIN `),c:new aln(`OUTER JOIN,0`),d:new aln(`Nenhum dos mencionados `),e:new aln(``),imgs:[]}),
-            new Prg({prg:`48. A condição ___ permite um predicado geral sobre as relações que estão sendo unidas.'`,a:new aln(`ON ,0`),b:new aln(`USING `),c:new aln(`SET`),d:new aln(`WHERE `),e:new aln(``),imgs:[]}),
+            valores correspondentes? '`,a:new aln(`EQUI-JOIN `),b:new aln(`NATURAL JOIN `),c:new aln(`OUTER JOIN`,0),d:new aln(`Nenhum dos mencionados `),e:new aln(``),imgs:[]}),
+            new Prg({prg:`48. A condição ___ permite um predicado geral sobre as relações que estão sendo unidas.'`,a:new aln(`ON `,0),b:new aln(`USING `),c:new aln(`SET`),d:new aln(`WHERE `),e:new aln(``),imgs:[]}),
             new Prg({prg:`49. As funções agregadas podem ser usadas na lista de selerccao (SELECT)
             ou na cláusula_____de uma instrução  SELECT ou Subconsulta.Nao podem ser usadas numa 
             cláusula____
-            '`,a:new aln(`WHERE, HAVING`),b:new aln(`HAVING, WHERE ,0`),c:new aln(`GROUP BY, HAVING`),d:new aln(`GROUP BY, WHERE`),e:new aln(``),imgs:[]}),
+            '`,a:new aln(`WHERE, HAVING`),b:new aln(`HAVING, WHERE `,0),c:new aln(`GROUP BY, HAVING`),d:new aln(`GROUP BY, WHERE`),e:new aln(``),imgs:[]}),
             new Prg({prg:`50.Seja dado o trecho de código abaixo. Indique quais das alternativas descreve a consulta
              produzida pelo código abaixo:
             
@@ -612,8 +612,8 @@ let teste4 = [
             WHERE comissao IS NOT NULL 
             ORDER BY 2;
             (ou veja na imagem abaixo)'`,a:new aln(`Listar o apelido, titulo e percentagem de comissão, para todos os empregados que
-            uma comissão ordenados por titulo. `),b:new aln(`Listar todos os dados dos empregados que não tem comissão ordenados por 2 `),c:new aln(`Listas todos os dados de tabela Empregado ordenados por 2.`),d:new aln(`Todas as afirmações acima.`),e:new aln(`Nenhuma das alternativas. ,0`),imgs:[require(`../testespics/teste21.50.jpg`)]})
-             ]
+            uma comissão ordenados por titulo. `),b:new aln(`Listar todos os dados dos empregados que não tem comissão ordenados por 2 `),c:new aln(`Listas todos os dados de tabela Empregado ordenados por 2.`),d:new aln(`Todas as afirmações acima.`),e:new aln(`Nenhuma das alternativas. `,0),imgs:[require(`../testespics/teste21.50.jpg`)]})
+             ];
 
      let todos= [teste1,teste2,teste3,teste4,teste5,teste6];
 
