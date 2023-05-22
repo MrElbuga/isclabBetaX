@@ -4,14 +4,20 @@
     "slug": "isclabBeta",
     "icon": "./Devsource/testespics/Isclablogo.png",
     "version": "1.0.0",
+    
     "assetBundlePatterns": [
       "**/*"
     ],
     "android": {
-      "package": "com.cNrTheLazy.isclabBeta",
+      "package": "com.isclabbeta",
       "adaptiveIcon": {
         "foregroundImage": "./Devsource/testespics/Isclablogo.png",
         "backgroundColor": "#FFFFFF"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7270f33d-b832-4439-9d6c-53cc881e5619"
       }
     }
   }
