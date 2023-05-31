@@ -1,12 +1,23 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-
+//#fff
 export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  }, txtNormal:
+  {
+    fontSize: 15,
+    fontWeight: "bold"
+  }, txtUnderlined:
+  {
+    fontSize: 15,
+    marginRight: 15,
+    fontWeight: "bold",
+    borderBottomWidth: 1.3,
+    color: "gray"
   },
   texto: {
     color: "blue",

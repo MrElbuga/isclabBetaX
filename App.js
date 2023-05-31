@@ -18,7 +18,7 @@ import {
 import estilo from "./Devsource/estilo";
 //Dados
 import { sortear } from "./Devsource/Ddata/dados";
-import { todos, tnomes, testar } from "./Devsource/Ddata/testes";
+import { todos, tnomes } from "./Devsource/Ddata/testes";
 import RespUi from "./Devsource/components/respUi";
 import BtnIndex from "./Devsource/components/btnIndex";
 import ImgUi from "./Devsource/components/imgUi";
@@ -47,18 +47,22 @@ export default function App() {
   const [cur_nrP, setcur_nrP] = useState(0);
   const [cur_Org, setcur_Org] = useState(0);
 
+  const [cur_temas, setcur_temas] = useState([]);
+
   const fil_Teste =
     ["A relação EMP-PROJ, com estas dependências funcionais, viola que forma normal?",
       "Denji",
       `9. Se uma tabela foi normalizada de modo que todos determinantes são chaves candidatas, então
         essa tabela está na:`,
       "Portuga", "matematica Discreta 120", "olemx", "DGD", "DGD1", "olemx", "DGD", "DGD1"
-      , "olemx", "DGD", "DGD1"];
+      , "olemx", "DGD", "DGD1", "Oshi"];
 
   //const Tdados = sortear();
 
   //Dados
   const [NrPerguntas, setNrPerg] = useState([5, 8, 10, 12]);
+  const [OrgPerguntas, setOrgPerg] = useState(["Sequencial"
+    , "aleatorio", "Batceba Mix"]);
 
   useEffect(() => {
     //console.log(`I:${iteste},Idx: ${idx}`);
@@ -121,6 +125,18 @@ export default function App() {
 
     setPontos(valFinal);
   };
+
+
+  //Setar Organizacao
+
+  function setarOrg(item) {
+    setcur_Org(item);
+  }
+  //  Setar Nr de pergs
+
+  function setarNrP(item) {
+    setcur_nrP(item);
+  }
 
   //Repetir
 
@@ -271,9 +287,17 @@ export default function App() {
         </Modal>
 
         {/* Escolhas pause*/}
-        <Modal visible={true}>
+        <Modal visible={true} >
           <View style={[estilo.container, { borderTopLeftRadius: 2 }]}>
             {/* TelaCima pause*/}
+            <TouchableOpacity style={[estilo.filterButton, {
+              alignSelf: 'flex-start',
+              height: 40, justifyContent: 'center', bottom: '7.1%', backgroundColor: 'red'
+            }]}>
+              <Text style={[estilo.txtNormal, { fontSize: 17 }]}>
+                Voltar
+              </Text>
+            </TouchableOpacity>
             <View
               style={StyleSheet.create({
                 backgroundColor: "#EAF5FE",
@@ -281,13 +305,14 @@ export default function App() {
                 paddingLeft: `2%`,
                 paddingRight: `2%`,
                 flexDirection: "column",
-                paddingTop: "3%",
+                paddingTop: "3%", bottom: "3%",
                 paddingBottom: "3%",
                 height: '50%',
                 borderRadius: 5, justifyContent: "flex-start",
 
               })}
             >
+
               <View
                 style={{
                   flexDirection: "row",
@@ -297,6 +322,7 @@ export default function App() {
                   paddingBottom: "2%",
                 }}
               >
+
                 <Text
                   style={{
                     bottom: "1%",
@@ -308,16 +334,14 @@ export default function App() {
                   Escolha Temas
                 </Text>
 
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    setcur_temas("");
+                  }}
+                >
 
                   <Text
-                    style={{
-                      fontSize: 15,
-                      marginRight: 15,
-                      fontWeight: "bold",
-                      borderBottomWidth: 1.3,
-                      color: "gray",
-                    }}
+                    style={estilo.txtUnderlined}
                   >
                     Limpar
                   </Text>
@@ -347,7 +371,34 @@ export default function App() {
                   data={fil_Teste}
                   renderItem={
                     ({ item, index }) => {
-                      return <FilterB ola={item} />;
+                      return <FilterB ola={item} customBool={false} func={() => {
+
+
+
+
+                        if (cur_temas.includes(item)) {
+
+                          let nlista = [...cur_temas];
+
+                          // nlista.push(...cur_temas);
+                          nlista = nlista.filter((el, idx) => {
+                            return el != item;
+                          });
+                          setcur_temas(nlista);
+                          console.log(cur_temas);
+
+                        } else {
+                          let nlista = [...cur_temas, item];
+
+                          //nlista.push(...cur_temas);
+                          // nlista.push(item);
+                          setcur_temas(nlista);
+
+                        }
+
+                        console.log(cur_temas);
+
+                      }} />;
                     }}
                 ></FlatList>
 
@@ -361,10 +412,10 @@ export default function App() {
             {/* Fim Tela cima */}
 
             {/*  Tela Baixo */}
-
+            {/* EAF5FE*/}
             <View
               style={StyleSheet.create({
-                backgroundColor: "#EAF5FE",
+                backgroundColor: "lightblue",
                 width: "95%",
                 flex: 0.6,
                 marginTop: 5,
@@ -377,110 +428,138 @@ export default function App() {
               })}
             >
 
-              {/* Baixo Numero de Perguntas*/}
-              <View
 
-                style={{
-                  flexDirection: "row",
-                  paddingTop: "5%"
-                  ,
-                  width: "100%",
-                  justifyContent: "space-between",
-                  paddingBottom: "1%",
-                }}
+              <ScrollView
+                scrollEnabled={true}
+                showsVerticalScrollIndicator={true}
+                style={{ width: '100%' }}
               >
-                <Text
-                  style={{
-                    bottom: "1%",
-                    fontSize: 20,
-                    fontWeight: "bold",
-                    paddingLeft: 15,
-                  }}
-                >
-                  Nr de questoes
-                </Text>
 
-                <TouchableOpacity>
-                  <Text
+                <View >
+                  {/* Baixo Numero de Perguntas*/}
+                  <View
+
                     style={{
-                      fontSize: 15,
-                      marginRight: 15,
-                      fontWeight: "bold",
-                      borderBottomWidth: 1.3,
-                      color: "gray",
+                      flexDirection: "row",
+                      paddingTop: "5%",
+                      width: "100%",
+                      justifyContent: "space-between",
+                      paddingBottom: "1%",
                     }}
                   >
-                    Limpar
-                  </Text>
-                </TouchableOpacity>
+                    <Text
+                      style={{
+                        bottom: "1%",
+                        fontSize: 20,
+                        fontWeight: "bold",
+                        paddingLeft: 15,
+                      }}
+                    >
+                      ~ Nr de questoes
+                    </Text>
+
+                    <TouchableOpacity
+                      onPress={() => {
+                        setcur_nrP("");
+                        console.log(cur_temas);
+                      }}
+                    >
+                      <Text
+                        style={estilo.txtUnderlined}
+                      >
+                        Limpar
+                      </Text>
+                    </TouchableOpacity>
 
 
 
-              </View>
+                  </View>
 
-              <FlatList
-                data={NrPerguntas}
-                contentContainerStyle={{ marginLeft: '5%' }}
-                horizontal={true}
-                renderItem={({ item, index }) => {
-                  return <FilterB ola={item} />;
-                }}
-                ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
-              ></FlatList>
+                  <FlatList
+                    data={NrPerguntas}
+                    contentContainerStyle={{ marginLeft: '5%', paddingBottom: 10 }}
+                    horizontal={true}
+                    renderItem={({ item, index }) => {
+                      return <FilterB ola={item} customBool={true}
+                        customCond={item}
+                        curVal={cur_nrP}
+                        func={() => { setarNrP(item); }} />;
 
-              {/* Baixo Tipo de organizacao*/}
-              <View
+                    }}
+                    ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
+                  ></FlatList>
+                </View>
 
-                style={{
-                  flexDirection: "row",
-                  paddingTop: "5%"
-                  ,
-                  width: "100%",
-                  justifyContent: "space-between",
-                  paddingBottom: "1%",
-                }}
-              >
-                <Text
-                  style={{
-                    bottom: "1%",
-                    fontSize: 20,
-                    fontWeight: "bold",
-                    paddingLeft: 15,
-                  }}
-                >
-                  Tipo de organizacao
-                </Text>
 
-                <TouchableOpacity>
-                  <Text
+                {/* Baixo Tipo de organizacao*/}
+                <View style={{ paddingBottom: '4%', width: '100%' }}>
+
+                  <View
+
                     style={{
-                      fontSize: 15,
-                      marginRight: 15,
-                      fontWeight: "bold",
-                      borderBottomWidth: 1.3,
-                      color: "gray",
+                      flexDirection: "row",
+                      paddingTop: "5%"
+                      ,
+                      width: "100%",
+                      justifyContent: "space-between",
+                      paddingBottom: "1%",
                     }}
                   >
-                    Limpar
-                  </Text>
-                </TouchableOpacity>
+                    <Text
+                      style={{
+                        bottom: "1%",
+                        fontSize: 20,
+                        fontWeight: "bold",
+                        textAlign: 'left',
+                        paddingLeft: 15,
+                      }}
+                    >
+                      Tipo de organizacao
+                    </Text>
+                    {/*Tipo de organizacao*/}
+                    <TouchableOpacity
+                      onPress={() => {
+                        setcur_Org("");
+                      }}
+                    >
+                      <Text
+                        style={estilo.txtUnderlined}
+                      >
+                        Limpar
+                      </Text>
+                    </TouchableOpacity>
 
 
 
-              </View>
+                  </View>
 
-              <FlatList
-                data={NrPerguntas}
-                contentContainerStyle={{ marginLeft: '5%' }}
-                horizontal={true}
-                renderItem={({ item, index }) => {
-                  return <FilterB ola={item} />;
-                }}
-                ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
-              ></FlatList>
+                  <FlatList
+                    data={OrgPerguntas}
+                    style={{ width: '100%', paddingRight: 10 }}
+                    contentContainerStyle={{ marginLeft: '5%', paddingBottom: '1%', paddingRight: 20 }}
+                    horizontal={true}
+                    renderItem={({ item, index }) => {
+                      return <FilterB ola={item} customBool={true}
+                        customCond={item}
+                        curVal={cur_Org}
+                        func={() => { setarOrg(item); }} />;
+                    }}
+                    ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
+                  ></FlatList>
 
+                </View>
 
+              </ScrollView>
             </View>
+            <TouchableOpacity style={[estilo.filterButton, {
+              alignSelf: 'flex-end',
+              height: 50, justifyContent: 'center', top: '4.5%'
+            }]}>
+              <Text style={[estilo.txtNormal, { fontSize: 17 }]}>
+                Prosseguir
+              </Text>
+            </TouchableOpacity>
+
           </View>
         </Modal>
 
@@ -558,7 +637,7 @@ export default function App() {
         </View>
       </View >
       {/* Baixo*/}
-      <View View View
+      <View View
         style={{
           flex: 0.8,
           alignItems: "center",
