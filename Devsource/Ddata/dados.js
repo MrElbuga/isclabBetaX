@@ -6,13 +6,21 @@ class Prg {
     this.c = dados.c;
     this.d = dados.d;
     this.e = dados.e;
+    this.cadNome = dados.cadNome;
+    this.tema = dados.tema;
     this.currA = " ";
     this.valor = 0;
     this.imgs = dados.imgs;
 
     if (typeof this.a == "undefined") {
       this.a = { f: "" };
+
     }
+
+    if (typeof this.cadNome == undefined) {
+      this.cadNome = "Sem";
+    }
+
     if (typeof this.b == "undefined") {
       this.b = { f: "" };
     }
@@ -59,15 +67,6 @@ class aln {
 //console.log(ps.nome+"/"+ps.altura+'/'+ps.idade);
 
 //export
-let pdados = [
-  ` //new Prg('a',"oque this?",'istoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoisto','nada','makima'),
-    //new Prg('e',"oque makima?",'lady','istoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoistoisto','chain','manga','demon')
-    new Prg({prg:"oque this?",a:new aln('aa'),b:new aln('nada',0),d:new aln('makima'),imgs:[require('../imagem/PSK-1.jpg'),require('../imagem/digital.jpg'),require('../imagem/PSK-1.jpg')]}),
-    new Prg({prg:"food===?",a:new aln('bebe'),b:new aln('agua'),c:new aln('comida',0)}),
-    new Prg({prg:"Rn ==?",a:new aln('React'),b:new aln('React-native',0),c:new aln('frame')}),
-    new Prg({prg:"oque makima?",b:new aln('lady'),c:new aln('woman'),a:new aln('chain'),d:new aln('manga'),e:new aln('demon',0),imgs:[require('../imagem/digital.jpg')]})
-`,
-];
 
 let pdfl = [
   `new Prg({prg:'c',a:new aln('a'),b:new aln('b'),c:new aln('c',0),d:new aln(''),e:new aln(' '),imgs:[]}),
@@ -181,6 +180,11 @@ function mostrarTUdo(fArray, pdados) {
 let fArray = [];
 function sortear(lista) {
   let newP = [];
+
+  /*
+  console.log("Etsa:");
+  console.log(lista.length);*/
+
   for (let z = 0; z < lista.length; z++) {
     let id = z;
     let avbPergs = s_currPgFecther(lista, id);

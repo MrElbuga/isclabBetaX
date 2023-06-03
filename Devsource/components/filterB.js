@@ -29,6 +29,9 @@ export default function FilterB({ ola, customBool, customCond, curVal, func }) {
       console.log("ativo");
     }
     else {
+
+      //console.log(curVal + " // " + customCond);
+
       if (customCond == curVal) {
         setActivo(true);
       } else {

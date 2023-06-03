@@ -7,8 +7,8 @@
 
 //MixF = [mix1+mix2]  if(mix1<5)
 
-function subTopico(Nome, Tema) {
-    return { nome: Nome, tema: Tema };
+function subTopico(nome, Tema) {
+    return { prg: nome, tema: Tema };
 }
 
 // Cadeira bd1
@@ -54,10 +54,6 @@ function init_temaMixer(rand, mix, temas, tamanhototal) {
     let counterI = 0;
 
 
-
-
-
-
     let tSufciente = false;
 
     let randomTema = false;
@@ -68,6 +64,7 @@ function init_temaMixer(rand, mix, temas, tamanhototal) {
     let questT = 0;
     for (let x = 0; x < temas.length; x++) {
         questT += temas[x].length;
+
 
     }
     if (questT >= tamanhototal) {
@@ -123,7 +120,8 @@ function init_temaMixer(rand, mix, temas, tamanhototal) {
                 if (temas[fila[pergIndice]].length > 0) {
 
                     let nrz = parseInt(Math.random() * temas[fila[pergIndice]].length);
-                    nlista.push(temas[fila[pergIndice]][nrz].nome + ":" + temas[fila[pergIndice]][nrz].tema);
+                    //nlista.push(temas[fila[pergIndice]][nrz].prg + ":" + temas[fila[pergIndice]][nrz].tema);
+                    nlista.push(temas[fila[pergIndice]][nrz]);
 
 
 
@@ -212,13 +210,16 @@ function init_temaMixer(rand, mix, temas, tamanhototal) {
         console.log("Tamanho: " + nlista.length);
 
     } else {
+
+        console.log("Aqui: " + temas.length);
         console.log("Nao Suf: ");
 
         for (let x = 0; x < tamanhototal; x++) {
 
             if (temas[temaIndex].length > 0) {
                 let nrz = parseInt(Math.random() * temas[temaIndex].length - 1);
-                nlista.push(temas[temaIndex][nrz].nome + ":" + temas[temaIndex][nrz].tema);
+                //nlista.push(temas[temaIndex][nrz].prg + ":" + temas[temaIndex][nrz].tema);
+                nlista.push(temas[temaIndex][nrz]);
                 temas[temaIndex].splice(nrz, 1);
 
                 temaIndex++;
@@ -242,37 +243,62 @@ function fecth_TemaDatas(temasString, temasData) {
     let nlista = [];
     temasString.forEach((el, idx) => {
 
-        nlista.unshift(dividirTemas(temasData, temasString[idx].toLowerCase()));
+        nlista.push(dividirTemas(temasData, temasString[idx].toLowerCase()));
     });
 
     return nlista;
 }
+function stats_tema(nomex) { return { tema: nomex, count: 0 } }
 
-function randomizerStart() {
+function fetch_tudoTemas(tudoTemas) {
+    let nlista = [];
+    tudoTemas.forEach(el => {
+        nlista.push(...el);
+    })
+
+    return nlista;
+}
+
+let input_temas = ["tekken", "street", "mk"];
+let tudox = [];
+tudox = fetch_tudoTemas([tudo]);
+
+function randomizerStart(rando, allPergs, temaStrings, tamanho) {
 
 
-    let input_temas = ["street", "mk", "tekken"];
-    let listaMix_input = fecth_TemaDatas(input_temas, tudo);
+    let listaMix_input = fecth_TemaDatas(temaStrings, allPergs);
 
     let listaFinal = [];
-    listaFinal = init_temaMixer(false, true, listaMix_input, 8);
+    //rand, mix, temas, tamanhototal
+    listaFinal = init_temaMixer(rando, true, listaMix_input, tamanho);
 
-    let sf, mk, tk;
+    //let sf, mk, tk;
 
-    sf = build(input_temas[0]);
-    mk = build(input_temas[1]);
-    tk = build(input_temas[2]);
+    //sf = build(input_temas[0]);
 
-    function build(nomex) { return { nome: nomex, count: 0 } }
+    //let final_count = [sf, mk, tk]
 
-    let final_count = [sf, mk, tk]
+    let allStats = [];
+    temaStrings.forEach((el, id) => {
+        allStats.push(stats_tema(el));
+    })
 
+    allStats.forEach(els => {
 
-    // console.log(listaMix_input);
+        listaFinal.forEach(elf => {
+            if (els.tema.toLowerCase().trim() == elf.tema.toLowerCase().trim()) {
+                els.count++;
+            }
+        })
 
-    console.log(listaFinal);
+    })
 
+    //console.log(allStats);
+
+    return listaFinal;
 }
 
 
-randomizerStart();
+//randomizerStart(tudox, input_temas, 8);
+
+export { randomizerStart, fetch_tudoTemas };

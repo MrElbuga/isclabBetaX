@@ -11,6 +11,11 @@ let tnomes = [
   newTesteData(2014),
 ];
 
+let tnomesES1T1 = [
+  newTesteData(2015),
+  newTesteData(2014),
+];
+
 //arrayMixado
 
 //Mix 1
@@ -124,4 +129,4 @@ function testar() {
 
 let todos = [Bd.bd22, Bd.bd19, Bd.bd18, Bd.bd16, Bd.bd15, Bd.bd14];
 
-export { todos, tnomes, testar };
+export { todos, tnomes, tnomesES1T1, testar };

@@ -1,6 +1,25 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions, Platform, PixelRatio } from "react-native";
+
+const {
+  width: SCREEN_WIDTH,
+  height: SCREEN_HEIGHT,
+} = Dimensions.get('window');
+
+// based on iphone 5s's scale
+const scale = SCREEN_WIDTH / 320;
+
+export function normalize(size) {
+  const newSize = size * scale
+  if (Platform.OS === 'ios') {
+    return Math.round(PixelRatio.roundToNearestPixel(newSize))
+  } else {
+    return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 2
+  }
+}
+
 //#fff
+
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -13,7 +32,7 @@ export default StyleSheet.create({
     fontWeight: "bold"
   }, txtUnderlined:
   {
-    fontSize: 15,
+    fontSize: normalize(15),
     marginRight: 15,
     fontWeight: "bold",
     borderBottomWidth: 1.3,
@@ -21,8 +40,8 @@ export default StyleSheet.create({
   },
   texto: {
     color: "blue",
-    fontSize: 15,
-    fontWeight: "300",
+    fontSize: normalize(16),
+    fontWeight: "00",
     padding: "5%",
   },
   provas: {
@@ -30,17 +49,21 @@ export default StyleSheet.create({
     borderRadius: 2,
     borderWidth: 3,
     height: "50%",
-    width: 130,
-    paddingLeft: "15%",
-    paddingTop: "100%",
+    width: normalize(150),
+    paddingBottom: "25%",
+    marginLeft: 10,
+    alignItems: 'center', justifyContent: 'center',
+
   },
   provasTxt: {
     fontWeight: "bold",
-    fontSize: 25,
+    fontSize: normalize(23),
+    textAlign: 'center',
+    borderBottomWidth: 1.3
   },
   filterButton: {
     fontWeight: "bold",
-    fontSize: 17,
+    fontSize: normalize(17),
     paddingLeft: 12,
     paddingRight: 12,
     paddingTop: 5,
@@ -54,7 +77,7 @@ export default StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 7,
     borderWidth: 3,
-    padding: 10,
+
     paddingLeft: 10,
     width: "100%",
   },
