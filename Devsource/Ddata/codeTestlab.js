@@ -266,34 +266,39 @@ tudox = fetch_tudoTemas([tudo]);
 function randomizerStart(rando, allPergs, temaStrings, tamanho) {
 
 
+
+    /* console.log("temaStrings");
+     console.log(temaStrings);*/
     let listaMix_input = fecth_TemaDatas(temaStrings, allPergs);
-
     let listaFinal = [];
-    //rand, mix, temas, tamanhototal
-    listaFinal = init_temaMixer(rando, true, listaMix_input, tamanho);
 
-    //let sf, mk, tk;
+    if (temaStrings.length > 0) {
+        //rand, mix, temas, tamanhototal
+        listaFinal = init_temaMixer(rando, true, listaMix_input, tamanho);
 
-    //sf = build(input_temas[0]);
+        //let sf, mk, tk;
 
-    //let final_count = [sf, mk, tk]
+        //sf = build(input_temas[0]);
 
-    let allStats = [];
-    temaStrings.forEach((el, id) => {
-        allStats.push(stats_tema(el));
-    })
+        //let final_count = [sf, mk, tk]
 
-    allStats.forEach(els => {
-
-        listaFinal.forEach(elf => {
-            if (els.tema.toLowerCase().trim() == elf.tema.toLowerCase().trim()) {
-                els.count++;
-            }
+        let allStats = [];
+        temaStrings.forEach((el, id) => {
+            allStats.push(stats_tema(el));
         })
 
-    })
+        allStats.forEach(els => {
 
-    //console.log(allStats);
+            listaFinal.forEach(elf => {
+                if (els.tema.toLowerCase().trim() == elf.tema.toLowerCase().trim()) {
+                    els.count++;
+                }
+            })
+
+        })
+
+        //console.log(allStats);
+    }
 
     return listaFinal;
 }

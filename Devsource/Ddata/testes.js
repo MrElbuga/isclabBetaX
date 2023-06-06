@@ -2,14 +2,20 @@ import { Prg, aln, newTesteData } from "./dados";
 import * as Bd from './BdData';
 
 
-let tnomes = [
+let tnomes_BD1T2 = [
   newTesteData(2022),
   newTesteData(2019),
-  newTesteData(2018),
+  newTesteData(2018)
+];
+
+let tnomes_BD1T1 = [
+
+
   newTesteData(2016),
   newTesteData(2015),
-  newTesteData(2014),
+  newTesteData(2014)
 ];
+
 
 let tnomesES1T1 = [
   newTesteData(2015),
@@ -129,4 +135,4 @@ function testar() {
 
 let todos = [Bd.bd22, Bd.bd19, Bd.bd18, Bd.bd16, Bd.bd15, Bd.bd14];
 
-export { todos, tnomes, tnomesES1T1, testar };
+export { todos, tnomes_BD1T2 as tnomes, tnomesES1T1, tnomes_BD1T1, testar };

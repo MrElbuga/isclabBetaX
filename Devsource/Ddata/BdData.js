@@ -959,7 +959,7 @@ let bd16 = [
     cadNome: `Bd1`,
     pId: `/0`,
     testRef: ``,
-    tema: ``,
+    tema: `Nefex`,
     prg: `1. Em relação à normalização de dados, NÃO é um objectivo desse processo:
           ,`,
     a: new aln(`eliminar a redundância causada pelos campos repetidos;
@@ -975,7 +975,7 @@ let bd16 = [
     cadNome: `Bd1`,
     pId: `/1`,
     testRef: ``,
-    tema: ``,
+    tema: `Nefex`,
     prg: `2. São características de uma base de dados normalizada:
           ,`,
     a: new aln(`Variedade acentuada de índices por tabela`),
@@ -990,7 +990,7 @@ let bd16 = [
     cadNome: `Bd1`,
     pId: `/2`,
     testRef: ``,
-    tema: ``,
+    tema: `Gst`,
     prg: `3. Normalização é o processo de organização eficiente dos dados dentro de uma base de dados. 
           ,Os seus objectivos são eliminar dados redundantes e garantir que as dependências entre os dados façam sentido. 
           ,Uma forma normal é uma regra que deve ser aplicada na construção das tabelas da base de dados 
@@ -1688,7 +1688,8 @@ new Prg({
         ,`), imgs: [require('../testespics/teste2bd/teste19.1.jpg')], fim: ""
 }),
 ];
-let ts1 = [bd22, bd19, bd18, bd16, bd15, bd14];
+let bd1t2 = [bd22, bd19, bd18];
+let bd1t1 = [bd16, bd15, bd14];
 let esTs1 = [es14, es15];
 
-export { ts1, esTs1 };
+export { bd1t2, esTs1, bd1t1 };

@@ -13,16 +13,26 @@ let cad_Bd1 = CadData("Bd1");
 let cad_Bd2 = CadData("Bd2");
 let cad_Es1 = CadData("Es1");
 
-cad_Bd1.Teste1.push(...bd1Tdata.ts1);
-cad_Bd1.T1nomes.push(...tsdata.tnomes);
 
+//Bd1
+cad_Bd1.Teste1.push(...bd1Tdata.bd1t1);
+cad_Bd1.Teste2.push(...bd1Tdata.bd1t2);
+cad_Bd1.T1nomes.push(...tsdata.tnomes_BD1T1);
+cad_Bd1.T2Nomes.push(...tsdata.tnomes);
+
+
+//ES1
 cad_Es1.Teste1.push(...bd1Tdata.esTs1);
 cad_Es1.T1nomes.push(...tsdata.tnomesES1T1);
+
 
 
 let allCads = [cad_Bd1, cad_Es1];
 let curr_temas = [];
 let finalTest = [];
+
+let cur_cad = allCads[0];
+
 function collect_Temas(lista) {
     let nlista = [];
 
@@ -39,16 +49,21 @@ function collect_Temas(lista) {
     return nlista;
 }
 
-
 //randomizerStart(tudox, input_temas, 8);
 
 let aleatorio = true;
 let tamanho = 5;
-let tudox = RandLab.fetch_tudoTemas(bd1Tdata.ts1);
+let tudox = RandLab.fetch_tudoTemas([...cur_cad.Teste1, ...cur_cad.Teste2]);
 
 
 curr_temas = collect_Temas(cad_Bd1.Teste1);
-let choosenT = [curr_temas[0], curr_temas[1]];
+
+console.log("curr_temas");
+
+console.log(curr_temas);
+
+let choosenT = [...curr_temas];
+
 
 finalTest = RandLab.randomizerStart(aleatorio, tudox, choosenT, tamanho);
 
@@ -58,8 +73,12 @@ function getTemas() {
     return curr_temas;
 }
 
+function setTudox(curcadx) {
+    tudox = RandLab.fetch_tudoTemas([...curcadx.Teste1, ...curcadx.Teste2]);
+}
+
 function setCurTemas(cad) {
-    curr_temas = collect_Temas(cad.Teste1);
+    curr_temas = collect_Temas(cad);
 }
 
 function getTemaN(lista) {
@@ -96,9 +115,12 @@ function setTama(booleano) {
 
 function updateTest() {
     finalTest = RandLab.randomizerStart(aleatorio, tudox, choosenT, tamanho);
+    console.log("COnsul: " + JSON.stringify(finalTest));
+    console.log("tUDOXX: " + JSON.stringify(tudox.length));
+    console.log("CHOOSEN: " + JSON.stringify(choosenT));
     return finalTest;
 }
 
-console.log("tanas:" + cad_Bd1.Teste1.length);
+//console.log("tanas:" + cad_Bd1.Teste1.length);
 
-export { cad_Bd1, allCads, updateTest, setAlea, setTama, setTemas, setCurTemas, getTemas, getTemaN };
+export { cad_Bd1, allCads, updateTest, setTudox, setAlea, setTama, setTemas, setCurTemas, getTemas, getTemaN };

@@ -54,25 +54,37 @@ export default function App() {
   const [cur_nrP, setcur_nrP] = useState(0);
   const [cur_Org, setcur_Org] = useState(0);
 
+  const materiaList = ["Teste1", "Teste2", "Mix"];
+  const testViwList = ["Teste 1", "Teste 2"];
+  const [testDispName, set_testDispName] = useState(testViwList[0]);
+
+
   const [cur_temas, setcur_temas] = useState([]);
+  const [test_type, set_testType] = useState(testViwList[0]);
+  const [cur_materia_type, set_cur_materiaType] = useState(materiaList[0]);
+
+
+
 
   const [isTsSuf, setTsSuf] = useState(false);
   const [isTssing, setTssing] = useState(false);
   const [isShowCad, setShowCad] = useState(false);
 
+  const [curTestNomes, setCurTestNomes] = useState(cur_cad.T1nomes);
 
-  const cadMenuString = isShowCad ? "a sua cadeira" : "o seu Teste 2";
-  const studyArray = isShowCad ? TScenter.allCads : cur_cad.T1nomes;
+  const cadMenuString = isShowCad ? "a sua cadeira" : "o seu ";
+  const studyArray = isShowCad ? TScenter.allCads : curTestNomes;
   const cadRef = useRef(null);
   const Bindex_Ref = useRef(null);
   //const Tdados = sortear();
 
-  //Dados 
+  //Dados  
   const [custom_Teste, setCust_testes] = useState(TScenter.getTemas());
 
   const [NrPerguntas, setNrPerg] = useState([5, 8, 10, 12]);
   const [OrgPerguntas, setOrgPerg] = useState(["Sequencial"
     , "aleatorio", "Mix"]);
+
 
   useEffect(() => {
     //console.log(`I:${iteste},Idx: ${idx}`);
@@ -92,11 +104,55 @@ export default function App() {
 
   useEffect(() => {
 
-    TScenter.setCurTemas(cur_cad);
+    //console.log("Curas!");
+    sync_Materia();
+    //TScenter.setCurTemas(cur_cad.Teste1);
     setCust_testes(TScenter.getTemas());
 
   }, [cur_cad]);
 
+  useEffect(() => {
+
+    console.log("Curasx!");
+    sync_Materia();
+
+    setCust_testes(TScenter.getTemas());
+
+  }, [cur_materia_type]);
+
+  /*
+  useEffect(() => {
+
+    sync_Materia();
+    //TScenter.setCurTemas(cur_cad.Teste1);
+    setCust_testes(TScenter.getTemas());
+
+  }, [cur_cad]);*/
+
+  useEffect(() => {
+
+    console.log("vishhh!");
+    ChangeCurTestNomes();
+
+
+  }, [test_type, cur_cad]);
+
+
+  ///Name checer
+  useEffect(() => {
+
+    if (cur_cad.Teste1.length < 1) {
+
+      if (cur_cad.Teste2.length > 0) {
+        set_testDispName(testViwList[1] + ":");
+      }
+    } else {
+      if (cur_cad.Teste2.length < 0) {
+        set_testDispName(testViwList[0] + ":");
+      }
+    }
+
+  });
 
   useEffect(() => {
     //console.log(`I:${iteste},Idx: ${idx}`);
@@ -115,6 +171,30 @@ export default function App() {
   };
 
   console.log(TScenter.cad_Bd1.Teste1[iteste].length);
+
+  function trocarTeste(index) {
+    set_testType(testViwList[index]);
+  }
+
+
+  function ChangeCurTestNomes() {
+
+    switch (test_type) {
+      case testViwList[0]:
+
+        setCurTestNomes(cur_cad.T1nomes);
+
+        break;
+      case testViwList[1]:
+
+        setCurTestNomes(cur_cad.T2Nomes);
+
+        break;
+
+    }
+
+
+  }
 
 
   // [nometeste, iteste, idx, Timg, Tdados]);
@@ -211,6 +291,29 @@ export default function App() {
     setcur_Org(item);
     setPergOrg(item);
   }
+
+  function setarMateria(item) {
+    set_cur_materiaType(item);
+  }
+
+  function sync_Materia() {
+    switch (cur_materia_type) {
+      case materiaList[0]:
+        TScenter.setCurTemas(cur_cad.Teste1);
+
+        break;
+      case materiaList[1]:
+        TScenter.setCurTemas(cur_cad.Teste2);
+
+        break;
+      case materiaList[2]:
+        TScenter.setCurTemas([...cur_cad.Teste1, ...cur_cad.Teste2]);
+
+        break;
+
+    }
+  }
+
   //  Setar Nr de pergs
 
   function setarNrP(item) {
@@ -273,7 +376,7 @@ export default function App() {
     if (customData == null) {
       console.log("standardXX");
 
-      setNomeTeste(cur_cad.T1nomes[nr].Numero);
+      setNomeTeste(nr);
     } else {
       console.log("HasXX");
 
@@ -326,6 +429,9 @@ export default function App() {
     }
   };
 
+
+
+
   return (
     //<RespUi resp ={'G G Games'}/>
 
@@ -356,7 +462,7 @@ export default function App() {
                 textAlign: 'center'
               }}
             >
-              Escolha {cadMenuString}
+              Escolha {cadMenuString} {test_type}
             </Text>
             <Button
               title="Voltar"
@@ -364,6 +470,26 @@ export default function App() {
                 setVprovas(false);
               }}
             ></Button>
+
+            {!isShowCad &&
+              <FlatList
+                horizontal={true}
+                style={{ borderColor: 'pink', borderWidth: 2, flexGrow: 0, backgroundColor: 'pink' }}
+                contentContainerStyle={{ height: 30 }}
+                data={testViwList}
+                renderItem={({ item, index }) => {
+                  return (<TouchableOpacity style={[item == test_type ? { backgroundColor: 'red' } : { backgroundColor: 'black' }, {
+                    borderWidth: 2, justifyContent: 'center',
+                    alignItems: 'center', paddingHorizontal: 10, borderColor: 'pink'
+                  }]} onPress={() => { trocarTeste(index); }} >
+                    <Text style={{ color: 'white', fontWeight: 'bold' }}>
+                      {item}
+                    </Text>
+                  </TouchableOpacity>);
+                }}
+              />
+            }
+
             <FlatList
               horizontal={true}
               data={studyArray}
@@ -377,14 +503,14 @@ export default function App() {
                     onPress={() => {
                       if (isShowCad == false) {
                         setTesteI(index);
-                        nameUpdate(index);
+                        nameUpdate(studyArray[index].Numero);
                         setTssing(false);
                         scrollToTop(Bindex_Ref);
-
+                        set_testDispName(test_type + " :");
                         novo(index);
                       } else {
                         setcur_cad(TScenter.allCads[index]);
-
+                        TScenter.setTudox(TScenter.allCads[index]);
                         setShowCad(false);
                       }
                     }}
@@ -406,6 +532,16 @@ export default function App() {
                 );
               }}
             />
+
+            {!isShowCad && curTestNomes.length < 1 && <View style={{
+              position: 'absolute',
+              top: '40%', width: '100%'
+            }}>
+              <Text style={{ fontSize: normalize(20), fontWeight: 'bold', textAlign: 'center' }}>
+                Yo! Sem Dados! Escolha outro Teste/ Cadeira!</Text>
+
+            </View>}
+
             <Button
 
               title="Trocar Cadeira"
@@ -548,6 +684,15 @@ export default function App() {
                 ></FlatList>
 
 
+                {custom_Teste.length < 1 && <View style={{
+                  position: 'absolute',
+                  top: '40%', width: '100%'
+                }}>
+                  <Text style={{ fontSize: normalize(20), fontWeight: 'bold', textAlign: 'center' }}>
+                    Yo! Sem Temas! Escolha outro teste ou "Todos"  abaixo!</Text>
+
+                </View>}
+
               </View>
 
 
@@ -580,8 +725,63 @@ export default function App() {
                 style={{ width: '100%' }}
               >
 
+
+                {/* Baixo Tipo de Materia*/}
+                <View style={{ paddingBottom: '5%', width: '100%' }}>
+
+                  <View
+
+                    style={{
+                      flexDirection: "row",
+                      paddingTop: "5%"
+                      ,
+                      width: "100%",
+                      justifyContent: "space-between",
+                      paddingBottom: "1%",
+                    }}
+                  >
+                    <Text
+                      style={{
+                        bottom: "1%",
+                        fontSize: normalize(18),
+                        fontWeight: "bold",
+                        textAlign: 'left',
+                        paddingLeft: 15,
+                      }}
+                    >
+                      Temas em avaliacao:
+                    </Text>
+                    {/*Tipo de organizacao*/}
+
+
+
+                  </View>
+
+                  <FlatList
+                    data={materiaList}
+                    style={{ width: '100%', paddingRight: 10 }}
+                    contentContainerStyle={{ marginLeft: '5%', paddingBottom: '1%', paddingRight: 20 }}
+                    horizontal={true}
+                    renderItem={({ item, index }) => {
+                      return <FilterB ola={item} customBool={true}
+                        customCond={item}
+                        curVal={cur_materia_type}
+                        func={() => {
+                          setcur_temas([]);
+
+                          setarMateria(item);
+                          check_TsSufReq();
+
+                        }} />;
+                    }}
+                    ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
+                  ></FlatList>
+
+                </View>
+
+                {/* Baixo Numero de Perguntas*/}
+
                 <View >
-                  {/* Baixo Numero de Perguntas*/}
                   <View
 
                     style={{
@@ -718,13 +918,20 @@ export default function App() {
                 try {
 
                   TScenter.setTemas(cur_temas);
-
+                  //  console.log(cur_temas);
                   //setTesteI(index);
                   novo("index", TScenter.updateTest());
 
                   setTssing(true);
                   nameUpdate("", `Teste de ${TScenter.getTemaN(Curr_Tdados)}`);
-                  setVTemas(false);
+                  set_testDispName("");
+
+                  setTimeout(() => {
+                    setVTemas(false);
+                  }, 5);
+
+
+
 
                 } catch (error) {
                   console.log(error);
@@ -757,7 +964,11 @@ export default function App() {
             <Button
               title="Ver  Correccao   "
               onPress={() => {
-                setVwponto(false);
+
+                setTimeout(() => {
+                  setVwponto(false);
+                }, 4);
+
                 setFinish(true);
               }}
             />
@@ -798,7 +1009,7 @@ export default function App() {
           <Text
             style={[estilo.texto, { fontWeight: "900", alignSelf: "center" }]}
           >
-            Teste 2 Ano: {nometeste}
+            {testDispName} {nometeste}
           </Text>
           <ScrollView
             style={{
