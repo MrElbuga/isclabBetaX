@@ -20,14 +20,19 @@ cad_Bd1.Teste2.push(...bd1Tdata.bd1t2);
 cad_Bd1.T1nomes.push(...tsdata.tnomes_BD1T1);
 cad_Bd1.T2Nomes.push(...tsdata.tnomes);
 
+//Bd2
+
+cad_Bd2.Teste2.push(...bd1Tdata.bd2t2);
+cad_Bd2.T2Nomes.push(...tsdata.tnomes_BD2T2);
+
 
 //ES1
-cad_Es1.Teste1.push(...bd1Tdata.esTs1);
-cad_Es1.T1nomes.push(...tsdata.tnomesES1T1);
+cad_Es1.Teste2.push(...bd1Tdata.esTs2);
+cad_Es1.T2Nomes.push(...tsdata.tnomesES1T2);
 
+//console.log(cad_Es1.Teste1);
 
-
-let allCads = [cad_Bd1, cad_Es1];
+let allCads = [cad_Bd1, cad_Bd2, cad_Es1];
 let curr_temas = [];
 let finalTest = [];
 
@@ -56,7 +61,7 @@ let tamanho = 5;
 let tudox = RandLab.fetch_tudoTemas([...cur_cad.Teste1, ...cur_cad.Teste2]);
 
 
-curr_temas = collect_Temas(cad_Bd1.Teste1);
+curr_temas = collect_Temas(cad_Bd2.Teste2);
 
 console.log("curr_temas");
 

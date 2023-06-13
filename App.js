@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+import { useIsFocused } from "@react-navigation/native";
 import React, { useRef, useEffect, useState, useCallback, useMemo } from "react";
 import {
   Text,
@@ -36,9 +37,11 @@ export default function App() {
 
   const [cur_cad, setcur_cad] = useState(TScenter.allCads[0]);
 
-  const [Curr_Tdados, setCTDados] = useState(sortear(cur_cad.Teste1[iteste]));
-  const [nometeste, setNomeTeste] = useState(cur_cad.T1nomes[iteste].Numero);
+  const [Curr_Tdados, setCTDados] = useState(sortear(cur_cad.Teste2[iteste]));
+  const [nometeste, setNomeTeste] = useState(cur_cad.T2Nomes[iteste].Numero);
 
+
+  const [isTesting, setTesting] = useState(true);
   const [Timg, setTimg] = useState(Curr_Tdados[idx].imgs);
 
   const [finish, setFinish] = useState(false);
@@ -46,7 +49,7 @@ export default function App() {
 
   //Teste
   const [tl_ponto, setVwponto] = useState(false);
-  const [tl_provas, setVprovas] = useState(true);
+  const [tl_provas, setVprovas] = useState(false);
   const [tl_Temas, setVTemas] = useState(false);
 
   const [pontos, setPontos] = useState(0);
@@ -85,6 +88,10 @@ export default function App() {
   const [OrgPerguntas, setOrgPerg] = useState(["Sequencial"
     , "aleatorio", "Mix"]);
 
+
+  //Timmer
+  const [seconds, setSeconds] = useState(0);
+  const [counterI, setCounterI] = useState(0);
 
   useEffect(() => {
     //console.log(`I:${iteste},Idx: ${idx}`);
@@ -131,15 +138,24 @@ export default function App() {
 
   useEffect(() => {
 
-    console.log("vishhh!");
+    // console.log("vishhh!" + cur_cad.Teste1[0].length);
     ChangeCurTestNomes();
 
 
   }, [test_type, cur_cad]);
 
 
+
+
+
+
+
+
   ///Name checer
   useEffect(() => {
+
+
+    pergtrack();
 
     if (cur_cad.Teste1.length < 1) {
 
@@ -170,7 +186,7 @@ export default function App() {
     }
   };
 
-  console.log(TScenter.cad_Bd1.Teste1[iteste].length);
+  //console.log(TScenter.allCads[2].Teste2[1]);
 
   function trocarTeste(index) {
     set_testType(testViwList[index]);
@@ -197,6 +213,7 @@ export default function App() {
   }
 
 
+
   // [nometeste, iteste, idx, Timg, Tdados]);
 
   //Data
@@ -213,17 +230,21 @@ export default function App() {
 
     if (
       today.getDate() >= 16 &&
-      parseInt(today.getMonth() + 1) == 12 &&
-      today.getFullYear() == "2022"
+      parseInt(today.getMonth() + 1) == 6 &&
+      today.getFullYear() >= parseInt("2023")
     ) {
-      //  BackHandler.exitApp();
+      setTesting(false);
+      BackHandler.exitApp();
     }
 
-    if (today.getFullYear() == "2023") {
-      // BackHandler.exitApp();
+    if (today.getFullYear() > parseInt("2023")) {
+      setTesting(false);
+      BackHandler.exitApp();
+
+
     }
   };
-  Ola();
+  //Ola();
   // State to store count value
 
   const incrementCount = () => {
@@ -264,6 +285,18 @@ export default function App() {
 
     setTsSuf(res);
 
+
+  }
+
+  function pergtrack() {
+
+    setTimeout(() => {
+
+
+      Ola();
+      /* setCounterI(counterI + 1);
+       console.log(counterI);*/
+    }, 50);
 
   }
 
@@ -395,7 +428,30 @@ export default function App() {
     if (customData == null || customData == undefined) {
       console.log("standard");
 
-      setCTDados(sortear(cur_cad.Teste1[i]));
+
+      switch (test_type) {
+        case testViwList[0]:
+
+          setCTDados(sortear(cur_cad.Teste1[i]));
+
+          break;
+        case testViwList[1]:
+
+          setCTDados(sortear(cur_cad.Teste2[i]));
+
+          break;
+
+      }
+      /*
+            if (testDispName == testViwList[0]) {
+              setCTDados(sortear(cur_cad.Teste1[i]));
+      
+            } else {
+              setCTDados(sortear(cur_cad.Teste2[i]));
+      
+            }*/
+
+
     } else {
       console.log("custo");
       setCTDados(customData);
@@ -434,702 +490,710 @@ export default function App() {
 
   return (
     //<RespUi resp ={'G G Games'}/>
+    <View style={{ flex: 1 }}>
+      {isTesting && <View style={estilo.container}>
 
-    <View style={estilo.container}>
+        {/*<Text style = {estilo.texto}>Cnr games ,Light!</Text>*/}
 
-      {/*<Text style = {estilo.texto}>Cnr games ,Light!</Text>*/}
+        {/* Cima*/}
+        <View
+          style={{
+            flex: 1,
+            borderTopWidth: 5,
+            width: "100%",
+            backgroundColor: "red",
+            overflow: "hidden",
+            top: "0%", paddingTop: 1
+          }}
+        >
+          {/* Menu Testes*/}
 
-      {/* Cima*/}
-      <View
-        style={{
-          flex: 1,
-          borderTopWidth: 5,
-          width: "100%",
-          backgroundColor: "red",
-          overflow: "hidden",
-          top: "0%", paddingTop: 1
-        }}
-      >
-        {/* Menu Testes*/}
+          <Modal visible={tl_provas}>
 
-        <Modal visible={tl_provas}>
-          <View style={{ flex: 1 }}>
-            <Text
-              style={{
-                fontWeight: "bold",
-                paddingTop: "10%",
-                fontSize: normalize(18),
-                textAlign: 'center'
-              }}
-            >
-              Escolha {cadMenuString} {test_type}
-            </Text>
-            <Button
-              title="Voltar"
-              onPress={() => {
-                setVprovas(false);
-              }}
-            ></Button>
-
-            {!isShowCad &&
-              <FlatList
-                horizontal={true}
-                style={{ borderColor: 'pink', borderWidth: 2, flexGrow: 0, backgroundColor: 'pink' }}
-                contentContainerStyle={{ height: 30 }}
-                data={testViwList}
-                renderItem={({ item, index }) => {
-                  return (<TouchableOpacity style={[item == test_type ? { backgroundColor: 'red' } : { backgroundColor: 'black' }, {
-                    borderWidth: 2, justifyContent: 'center',
-                    alignItems: 'center', paddingHorizontal: 10, borderColor: 'pink'
-                  }]} onPress={() => { trocarTeste(index); }} >
-                    <Text style={{ color: 'white', fontWeight: 'bold' }}>
-                      {item}
-                    </Text>
-                  </TouchableOpacity>);
-                }}
-              />
-            }
-
-            <FlatList
-              horizontal={true}
-              data={studyArray}
-              extraData={studyArray}
-              ref={cadRef}
-              ItemSeparatorComponent={() => <View style={{ width: normalize(5) }} />}
-
-              renderItem={({ item, index }) => {
-                return (
-                  <TouchableOpacity
-                    onPress={() => {
-                      if (isShowCad == false) {
-                        setTesteI(index);
-                        nameUpdate(studyArray[index].Numero);
-                        setTssing(false);
-                        scrollToTop(Bindex_Ref);
-                        set_testDispName(test_type + " :");
-                        novo(index);
-                      } else {
-                        setcur_cad(TScenter.allCads[index]);
-                        TScenter.setTudox(TScenter.allCads[index]);
-                        setShowCad(false);
-                      }
-                    }}
-                  >
-                    <View style={{ paddingTop: "15%", flex: 1 }}>
-                      <View style={estilo.provas}>
-                        {isShowCad == false &&
-                          <Text style={estilo.provasTxt}>
-                            {cur_cad.Nome}-{studyArray[index].Numero}
-                          </Text>}
-
-                        {isShowCad == true &&
-                          <Text style={estilo.provasTxt}>
-                            {studyArray[index].Nome}
-                          </Text>}
-                      </View>
-                    </View>
-                  </TouchableOpacity>
-                );
-              }}
-            />
-
-            {!isShowCad && curTestNomes.length < 1 && <View style={{
-              position: 'absolute',
-              top: '40%', width: '100%'
-            }}>
-              <Text style={{ fontSize: normalize(20), fontWeight: 'bold', textAlign: 'center' }}>
-                Yo! Sem Dados! Escolha outro Teste/ Cadeira!</Text>
-
-            </View>}
-
-            <Button
-
-              title="Trocar Cadeira"
-              onPress={() => {
-                scrollToTop(cadRef);
-                setShowCad(!isShowCad);
-              }}
-            ></Button>
-          </View>
-        </Modal>
-
-        {/* Escolhas pause*/}
-        <Modal visible={tl_Temas} >
-          <View style={[estilo.container, { borderTopLeftRadius: 2 }]}>
-            {/* TelaCima pause*/}
-            <TouchableOpacity style={[estilo.filterButton, {
-              alignSelf: 'flex-start',
-              height: '6%', position: 'absolute', marginLeft: '1.2%', alignItems: 'center',
-              justifyContent: 'center', top: '-0.5%', backgroundColor: 'red'
-            }]}
-              onPress={() => {
-                setVTemas(false);
-                setcur_Org("");
-                setcur_nrP(0);
-                setcur_temas([]);
-              }}
-            >
-              <Text style={[estilo.txtNormal, { fontSize: normalize(17) }]}>
-                Voltar
-              </Text>
-            </TouchableOpacity>
-            <View
-              style={StyleSheet.create({
-                backgroundColor: "#EAF5FE",
-                width: "95%",
-                paddingLeft: `2%`,
-                paddingRight: `2%`,
-                flexDirection: "column",
-                marginTop: "15%",
-                paddingTop: "3%", bottom: "3%",
-                paddingBottom: "3%",
-                height: '46%',
-                borderRadius: 5, justifyContent: "flex-start",
-
-              })}
-            >
-
-              <View
+            <View style={{ flex: 1 }}>
+              <Text
                 style={{
-                  flexDirection: "row",
-                  width: "100%",
-
-                  justifyContent: "space-between",
-                  paddingBottom: "2%",
+                  fontWeight: "bold",
+                  paddingTop: "10%",
+                  fontSize: normalize(18),
+                  textAlign: 'center'
                 }}
               >
+                Escolha {cadMenuString} {test_type}
+              </Text>
+              <Button
+                title="Voltar"
+                onPress={() => {
+                  setVprovas(false);
+                }}
+              ></Button>
 
-                <Text
-                  style={{
-                    bottom: "1%",
-                    fontSize: normalize(18),
-                    fontWeight: "bold",
-                    paddingLeft: 15,
+              {!isShowCad &&
+                <FlatList
+                  horizontal={true}
+                  style={{ borderColor: 'pink', borderWidth: 2, flexGrow: 0, backgroundColor: 'pink' }}
+                  contentContainerStyle={{ height: 30 }}
+                  data={testViwList}
+                  renderItem={({ item, index }) => {
+                    return (<TouchableOpacity style={[item == test_type ? { backgroundColor: 'red' } : { backgroundColor: 'black' }, {
+                      borderWidth: 2, justifyContent: 'center',
+                      alignItems: 'center', paddingHorizontal: 10, borderColor: 'pink'
+                    }]} onPress={() => { trocarTeste(index); }} >
+                      <Text style={{ color: 'white', fontWeight: 'bold' }}>
+                        {item}
+                      </Text>
+                    </TouchableOpacity>);
                   }}
-                >
-                  Escolha Temas
+                />
+              }
+
+              <FlatList
+                horizontal={true}
+                data={studyArray}
+                extraData={studyArray}
+                ref={cadRef}
+                ItemSeparatorComponent={() => <View style={{ width: normalize(5) }} />}
+
+                renderItem={({ item, index }) => {
+                  return (
+                    <TouchableOpacity
+                      onPress={() => {
+
+                        if (isShowCad == false) {
+                          setTesteI(index);
+                          nameUpdate(studyArray[index].Numero);
+                          setTssing(false);
+                          scrollToTop(Bindex_Ref);
+                          set_testDispName(test_type + " :");
+                          novo(index);
+                        } else {
+                          setTesteI(0);
+
+                          setcur_cad(TScenter.allCads[index]);
+                          TScenter.setTudox(TScenter.allCads[index]);
+                          setShowCad(false);
+                        }
+                      }}
+                    >
+                      <View style={{ paddingTop: "15%", flex: 1 }}>
+                        <View style={estilo.provas}>
+                          {isShowCad == false &&
+                            <Text style={estilo.provasTxt}>
+                              {cur_cad.Nome}-{studyArray[index].Numero}
+                            </Text>}
+
+                          {isShowCad == true &&
+                            <Text style={estilo.provasTxt}>
+                              {studyArray[index].Nome}
+                            </Text>}
+                        </View>
+                      </View>
+                    </TouchableOpacity>
+                  );
+                }}
+              />
+
+              {!isShowCad && curTestNomes.length < 1 && <View style={{
+                position: 'absolute',
+                top: '40%', width: '100%'
+              }}>
+                <Text style={{ fontSize: normalize(20), fontWeight: 'bold', textAlign: 'center' }}>
+                  Yo! Sem Dados! Escolha outro Teste/ Cadeira!</Text>
+
+              </View>}
+
+              <Button
+
+                title="Trocar Cadeira"
+                onPress={() => {
+                  scrollToTop(cadRef);
+                  setShowCad(!isShowCad);
+                }}
+              ></Button>
+            </View>
+          </Modal>
+
+          {/* Escolhas pause*/}
+          <Modal visible={tl_Temas} >
+            <View style={[estilo.container, { borderTopLeftRadius: 2 }]}>
+              {/* TelaCima pause*/}
+              <TouchableOpacity style={[estilo.filterButton, {
+                alignSelf: 'flex-start',
+                height: '6%', position: 'absolute', marginLeft: '1.2%', alignItems: 'center',
+                justifyContent: 'center', top: '-0.5%', backgroundColor: 'red'
+              }]}
+                onPress={() => {
+                  setVTemas(false);
+                  setcur_Org("");
+                  setcur_nrP(0);
+                  setcur_temas([]);
+                }}
+              >
+                <Text style={[estilo.txtNormal, { fontSize: normalize(17) }]}>
+                  Voltar
                 </Text>
+              </TouchableOpacity>
+              <View
+                style={StyleSheet.create({
+                  backgroundColor: "#EAF5FE",
+                  width: "95%",
+                  paddingLeft: `2%`,
+                  paddingRight: `2%`,
+                  flexDirection: "column",
+                  marginTop: "15%",
+                  paddingTop: "3%", bottom: "3%",
+                  paddingBottom: "3%",
+                  height: '46%',
+                  borderRadius: 5, justifyContent: "flex-start",
 
-                <TouchableOpacity
-                  onPress={() => {
-                    setcur_temas([]);
-                    setTsSuf(false);
+                })}
+              >
 
+                <View
+                  style={{
+                    flexDirection: "row",
+                    width: "100%",
+
+                    justifyContent: "space-between",
+                    paddingBottom: "2%",
                   }}
                 >
 
                   <Text
-                    style={estilo.txtUnderlined}
+                    style={{
+                      bottom: "1%",
+                      fontSize: normalize(18),
+                      fontWeight: "bold",
+                      paddingLeft: 15,
+                    }}
                   >
-                    Limpar
+                    Escolha Temas
                   </Text>
-                </TouchableOpacity>
 
-              </View>
+                  <TouchableOpacity
+                    onPress={() => {
+                      setcur_temas([]);
+                      setTsSuf(false);
 
-              <View
-                style={{
-                  width: "100%", flex: 1,
-                  borderRadius: 50
+                    }}
+                  >
 
-                }}
-              >
+                    <Text
+                      style={estilo.txtUnderlined}
+                    >
+                      Limpar
+                    </Text>
+                  </TouchableOpacity>
 
-                <FlatList
+                </View>
+
+                <View
                   style={{
+                    width: "100%", flex: 1,
                     borderRadius: 50
 
                   }}
-                  overScrollMode="never"
-                  showsVerticalScrollIndicator={true}
-                  bounces={false}
-                  columnWrapperStyle={{ flexWrap: 'wrap' }}
-                  numColumns={4}
-                  contentContainerStyle={{ paddingBottom: 2 }}
-                  data={custom_Teste}
-                  renderItem={
-                    ({ item, index }) => {
-                      return <FilterB ola={item} customBool={true} curVal={item}
-                        customCond={
-                          cur_temFetcher(item)
-                        }
-                        func={() => {
+                >
 
-                          if (cur_temas.includes(item)) {
+                  <FlatList
+                    style={{
+                      borderRadius: 50
 
-                            let nlista = [...cur_temas];
+                    }}
+                    overScrollMode="never"
+                    showsVerticalScrollIndicator={true}
+                    bounces={false}
+                    columnWrapperStyle={{ flexWrap: 'wrap' }}
+                    numColumns={4}
+                    contentContainerStyle={{ paddingBottom: 2 }}
+                    data={custom_Teste}
+                    renderItem={
+                      ({ item, index }) => {
+                        return <FilterB ola={item} customBool={true} curVal={item}
+                          customCond={
+                            cur_temFetcher(item)
+                          }
+                          func={() => {
 
-                            // nlista.push(...cur_temas);
-                            nlista = nlista.filter((el, idx) => {
-                              return el != item;
-                            });
-                            setcur_temas(nlista);
+                            if (cur_temas.includes(item)) {
+
+                              let nlista = [...cur_temas];
+
+                              // nlista.push(...cur_temas);
+                              nlista = nlista.filter((el, idx) => {
+                                return el != item;
+                              });
+                              setcur_temas(nlista);
+                              //console.log(cur_temas);
+
+                            } else {
+                              let nlista = [...cur_temas, item];
+
+                              //nlista.push(...cur_temas);
+                              // nlista.push(item);
+                              setcur_temas(nlista);
+
+                            }
+
+                            check_TsSufReq();
+
                             //console.log(cur_temas);
 
-                          } else {
-                            let nlista = [...cur_temas, item];
-
-                            //nlista.push(...cur_temas);
-                            // nlista.push(item);
-                            setcur_temas(nlista);
-
-                          }
-
-                          check_TsSufReq();
-
-                          //console.log(cur_temas);
-
-                        }} />;
-                    }}
-                ></FlatList>
+                          }} />;
+                      }}
+                  ></FlatList>
 
 
-                {custom_Teste.length < 1 && <View style={{
-                  position: 'absolute',
-                  top: '40%', width: '100%'
-                }}>
-                  <Text style={{ fontSize: normalize(20), fontWeight: 'bold', textAlign: 'center' }}>
-                    Yo! Sem Temas! Escolha outro teste ou "Todos"  abaixo!</Text>
+                  {custom_Teste.length < 1 && <View style={{
+                    position: 'absolute',
+                    top: '40%', width: '100%'
+                  }}>
+                    <Text style={{ fontSize: normalize(20), fontWeight: 'bold', textAlign: 'center' }}>
+                      Yo! Sem Temas! Escolha outro teste ou "Todos"  abaixo!</Text>
 
-                </View>}
+                  </View>}
+
+                </View>
+
+
+
 
               </View>
+              {/* Fim Tela cima */}
 
-
-
-
-            </View>
-            {/* Fim Tela cima */}
-
-            {/*  Tela Baixo */}
-            {/* EAF5FE*/}
-            <View
-              style={StyleSheet.create({
-                backgroundColor: "lightblue",
-                width: "95%",
-                flex: 0.7,
-                marginTop: 5,
-                paddingLeft: `2%`,
-                paddingRight: `2%`,
-                flexDirection: "column",
-                flexWrap: "wrap",
-                borderRadius: 5,
-                justifyContent: "flex-start",
-              })}
-            >
-
-
-              <ScrollView
-                scrollEnabled={true}
-                showsVerticalScrollIndicator={true}
-                style={{ width: '100%' }}
+              {/*  Tela Baixo */}
+              {/* EAF5FE*/}
+              <View
+                style={StyleSheet.create({
+                  backgroundColor: "lightblue",
+                  width: "95%",
+                  flex: 0.7,
+                  marginTop: 5,
+                  paddingLeft: `2%`,
+                  paddingRight: `2%`,
+                  flexDirection: "column",
+                  flexWrap: "wrap",
+                  borderRadius: 5,
+                  justifyContent: "flex-start",
+                })}
               >
 
 
-                {/* Baixo Tipo de Materia*/}
-                <View style={{ paddingBottom: '5%', width: '100%' }}>
+                <ScrollView
+                  scrollEnabled={true}
+                  showsVerticalScrollIndicator={true}
 
-                  <View
+                  style={{ width: '100%' }}
+                >
 
-                    style={{
-                      flexDirection: "row",
-                      paddingTop: "5%"
-                      ,
-                      width: "100%",
-                      justifyContent: "space-between",
-                      paddingBottom: "1%",
-                    }}
-                  >
-                    <Text
+
+                  {/* Baixo Tipo de Materia*/}
+                  <View style={{ paddingBottom: '5%', borderBottomWidth: normalize(3), borderBottomColor: 'white', width: '100%' }}>
+
+                    <View
+
                       style={{
-                        bottom: "1%",
-                        fontSize: normalize(18),
-                        fontWeight: "bold",
-                        textAlign: 'left',
-                        paddingLeft: 15,
-                      }}
-                    >
-                      Temas em avaliacao:
-                    </Text>
-                    {/*Tipo de organizacao*/}
-
-
-
-                  </View>
-
-                  <FlatList
-                    data={materiaList}
-                    style={{ width: '100%', paddingRight: 10 }}
-                    contentContainerStyle={{ marginLeft: '5%', paddingBottom: '1%', paddingRight: 20 }}
-                    horizontal={true}
-                    renderItem={({ item, index }) => {
-                      return <FilterB ola={item} customBool={true}
-                        customCond={item}
-                        curVal={cur_materia_type}
-                        func={() => {
-                          setcur_temas([]);
-
-                          setarMateria(item);
-                          check_TsSufReq();
-
-                        }} />;
-                    }}
-                    ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
-                  ></FlatList>
-
-                </View>
-
-                {/* Baixo Numero de Perguntas*/}
-
-                <View >
-                  <View
-
-                    style={{
-                      flexDirection: "row",
-                      paddingTop: "5%",
-                      width: "100%",
-                      justifyContent: "space-between",
-                      paddingBottom: "1%",
-                    }}
-                  >
-                    <Text
-                      style={{
-                        bottom: "1%",
-                        fontSize: normalize(18),
-                        fontWeight: "bold",
-                        paddingLeft: 15,
-                      }}
-                    >
-                      ~ Nr de questoes
-                    </Text>
-
-                    <TouchableOpacity
-                      onPress={() => {
-                        setcur_nrP(0);
-                        check_TsSufReq();
-
-                        console.log(cur_temas);
+                        flexDirection: "row",
+                        paddingTop: "5%"
+                        ,
+                        width: "100%",
+                        justifyContent: "space-between",
+                        paddingBottom: "1%",
                       }}
                     >
                       <Text
-                        style={estilo.txtUnderlined}
+                        style={{
+                          bottom: "1%",
+                          fontSize: normalize(18),
+                          fontWeight: "bold",
+                          textAlign: 'left',
+                          paddingLeft: 15,
+                        }}
                       >
-                        Limpar
+                        Fonte dos temas em avaliacao:
                       </Text>
-                    </TouchableOpacity>
+                      {/*Tipo de organizacao*/}
 
 
+
+                    </View>
+
+                    <FlatList
+                      data={materiaList}
+                      style={{ width: '100%', paddingRight: 10 }}
+                      contentContainerStyle={{ marginLeft: '5%', paddingBottom: '1%', paddingRight: 20 }}
+                      horizontal={true}
+                      renderItem={({ item, index }) => {
+                        return <FilterB ola={item} customBool={true}
+                          customCond={item}
+                          curVal={cur_materia_type}
+                          func={() => {
+                            setcur_temas([]);
+
+                            setarMateria(item);
+                            check_TsSufReq();
+
+                          }} />;
+                      }}
+                      ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
+                    ></FlatList>
 
                   </View>
 
-                  <FlatList
-                    data={NrPerguntas}
-                    contentContainerStyle={{ marginLeft: '5%', paddingBottom: 10 }}
-                    horizontal={true}
-                    renderItem={({ item, index }) => {
-                      return <FilterB ola={item} customBool={true}
-                        customCond={item}
-                        curVal={cur_nrP}
-                        func={() => {
-                          setarNrP(item);
-                          check_TsSufReq();
+                  {/* Baixo Numero de Perguntas*/}
 
-                        }} />;
+                  <View style={{ borderBottomWidth: normalize(3), borderBottomColor: 'white' }}>
+                    <View
 
-                    }}
-                    ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
-                  ></FlatList>
-                </View>
-
-
-                {/* Baixo Tipo de organizacao*/}
-                <View style={{ paddingBottom: '5%', width: '100%' }}>
-
-                  <View
-
-                    style={{
-                      flexDirection: "row",
-                      paddingTop: "5%"
-                      ,
-                      width: "100%",
-                      justifyContent: "space-between",
-                      paddingBottom: "1%",
-                    }}
-                  >
-                    <Text
                       style={{
-                        bottom: "1%",
-                        fontSize: normalize(18),
-                        fontWeight: "bold",
-                        textAlign: 'left',
-                        paddingLeft: 15,
-                      }}
-                    >
-                      Tipo de organizacao
-                    </Text>
-                    {/*Tipo de organizacao*/}
-                    <TouchableOpacity
-                      onPress={() => {
-                        setcur_Org("");
-                        check_TsSufReq();
-
+                        flexDirection: "row",
+                        paddingTop: "5%",
+                        width: "100%",
+                        justifyContent: "space-between",
+                        paddingBottom: "1%",
                       }}
                     >
                       <Text
-                        style={estilo.txtUnderlined}
+                        style={{
+                          bottom: "1%",
+                          fontSize: normalize(18),
+                          fontWeight: "bold",
+                          paddingLeft: 15,
+                        }}
                       >
-                        Limpar
+                        Nr de questoes (aprox...te)
                       </Text>
-                    </TouchableOpacity>
+
+                      <TouchableOpacity
+                        onPress={() => {
+                          setcur_nrP(0);
+                          check_TsSufReq();
+
+                          console.log(cur_temas);
+                        }}
+                      >
+                        <Text
+                          style={estilo.txtUnderlined}
+                        >
+                          Limpar
+                        </Text>
+                      </TouchableOpacity>
 
 
+
+                    </View>
+
+                    <FlatList
+                      data={NrPerguntas}
+                      contentContainerStyle={{ marginLeft: '5%', paddingBottom: 10 }}
+                      horizontal={true}
+                      renderItem={({ item, index }) => {
+                        return <FilterB ola={item} customBool={true}
+                          customCond={item}
+                          curVal={cur_nrP}
+                          func={() => {
+                            setarNrP(item);
+                            check_TsSufReq();
+
+                          }} />;
+
+                      }}
+                      ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
+                    ></FlatList>
+                  </View>
+
+
+                  {/* Baixo Tipo de organizacao*/}
+                  <View style={{ paddingBottom: '5%', width: '100%' }}>
+
+                    <View
+
+                      style={{
+                        flexDirection: "row",
+                        paddingTop: "5%"
+                        ,
+                        width: "100%",
+                        justifyContent: "space-between",
+                        paddingBottom: "1%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          bottom: "1%",
+                          fontSize: normalize(18),
+                          fontWeight: "bold",
+                          textAlign: 'left',
+                          paddingLeft: 15,
+                        }}
+                      >
+                        Tipo de organizacao
+                      </Text>
+                      {/*Tipo de organizacao*/}
+                      <TouchableOpacity
+                        onPress={() => {
+                          setcur_Org("");
+                          check_TsSufReq();
+
+                        }}
+                      >
+                        <Text
+                          style={estilo.txtUnderlined}
+                        >
+                          Limpar
+                        </Text>
+                      </TouchableOpacity>
+
+
+
+                    </View>
+
+                    <FlatList
+                      data={OrgPerguntas}
+                      style={{ width: '100%', paddingRight: 10 }}
+                      contentContainerStyle={{ marginLeft: '5%', paddingBottom: '1%', paddingRight: 20 }}
+                      horizontal={true}
+                      renderItem={({ item, index }) => {
+                        return <FilterB ola={item} customBool={true}
+                          customCond={item}
+                          curVal={cur_Org}
+                          func={() => {
+                            setarOrg(item);
+
+                            check_TsSufReq();
+
+                          }} />;
+                      }}
+                      ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
+                    ></FlatList>
 
                   </View>
 
-                  <FlatList
-                    data={OrgPerguntas}
-                    style={{ width: '100%', paddingRight: 10 }}
-                    contentContainerStyle={{ marginLeft: '5%', paddingBottom: '1%', paddingRight: 20 }}
-                    horizontal={true}
-                    renderItem={({ item, index }) => {
-                      return <FilterB ola={item} customBool={true}
-                        customCond={item}
-                        curVal={cur_Org}
-                        func={() => {
-                          setarOrg(item);
+                </ScrollView>
+              </View>
+              <TouchableOpacity style={[estilo.filterButton, isTsSuf ? { display: 'flex' } : { display: 'none' },
+              {
+                alignSelf: 'flex-end',
+                height: 40, justifyContent: 'center', top: '4.4%'
+              }]} onPress=
+                {() => {
+                  try {
 
-                          check_TsSufReq();
+                    TScenter.setTemas(cur_temas);
+                    //  console.log(cur_temas);
+                    //setTesteI(index);
+                    novo("index", TScenter.updateTest());
 
-                        }} />;
-                    }}
-                    ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
-                  ></FlatList>
+                    setTssing(true);
+                    nameUpdate("", `Teste Random de ${TScenter.getTemaN(Curr_Tdados)}`);
+                    set_testDispName("");
 
-                </View>
+                    setTimeout(() => {
+                      setVTemas(false);
+                    }, 5);
 
-              </ScrollView>
+
+
+
+                  } catch (error) {
+                    console.log(error);
+                  }
+
+
+                }}>
+                <Text style={[estilo.txtNormal, { fontSize: 17 }]}>
+                  Prosseguir
+                </Text>
+              </TouchableOpacity>
+
             </View>
-            <TouchableOpacity style={[estilo.filterButton, isTsSuf ? { display: 'flex' } : { display: 'none' },
-            {
-              alignSelf: 'flex-end',
-              height: 40, justifyContent: 'center', top: '4.4%'
-            }]} onPress=
-              {() => {
-                try {
+          </Modal>
 
-                  TScenter.setTemas(cur_temas);
-                  //  console.log(cur_temas);
-                  //setTesteI(index);
-                  novo("index", TScenter.updateTest());
+          {/* Menu pause*/}
+          <Modal visible={tl_ponto}>
+            <View style={[estilo.container, { borderTopLeftRadius: 2 }]}>
+              <Text
+                style={{
+                  bottom: "5%",
+                  fontSize: normalize(18),
+                  borderBottomWidth: 2,
+                  fontWeight: "bold",
+                }}
+              >
+                Pontuacao: {pontos} de {Curr_Tdados.length - 1}
+              </Text>
 
-                  setTssing(true);
-                  nameUpdate("", `Teste de ${TScenter.getTemaN(Curr_Tdados)}`);
-                  set_testDispName("");
+              <Button
+                title="Ver  Correccao   "
+                onPress={() => {
 
                   setTimeout(() => {
-                    setVTemas(false);
-                  }, 5);
+                    setVwponto(false);
+                  }, 4);
 
+                  setFinish(true);
+                }}
+              />
+              <Button
+                title="Escolher Testes"
+                onPress={() => {
+                  setVprovas(true);
+                }}
+              />
+              <Button
+                title="Escolher Temas "
+                onPress={() => {
+                  setVTemas(true);
+                }}
+              />
+              <Button
+                title="       Repetir            "
+                onPress={() => {
+                  repetir();
+                }}
+              />
 
-
-
-                } catch (error) {
-                  console.log(error);
-                }
-
-
-              }}>
-              <Text style={[estilo.txtNormal, { fontSize: 17 }]}>
-                Prosseguir
+              <Text
+                style={{
+                  top: "90%",
+                  fontSize: normalize(18),
+                  position: 'absolute',
+                  borderBottomWidth: 2,
+                  fontWeight: "bold",
+                }}
+              >
+                Ver 0.3
               </Text>
-            </TouchableOpacity>
+            </View>
+          </Modal>
 
-          </View>
-        </Modal>
-
-        {/* Menu pause*/}
-        <Modal visible={tl_ponto}>
-          <View style={[estilo.container, { borderTopLeftRadius: 2 }]}>
+          <View style={{ flex: 1, bottom: 0 }}>
             <Text
-              style={{
-                bottom: "5%",
-                fontSize: normalize(18),
-                borderBottomWidth: 2,
-                fontWeight: "bold",
-              }}
+              style={[estilo.texto, { fontWeight: "900", alignSelf: "center" }]}
             >
-              Pontuacao: {pontos} de {Curr_Tdados.length - 1}
+              {testDispName} {nometeste}
             </Text>
-
-            <Button
-              title="Ver  Correccao   "
-              onPress={() => {
-
-                setTimeout(() => {
-                  setVwponto(false);
-                }, 4);
-
-                setFinish(true);
-              }}
-            />
-            <Button
-              title="Escolher Testes"
-              onPress={() => {
-                setVprovas(true);
-              }}
-            />
-            <Button
-              title="Escolher Temas "
-              onPress={() => {
-                setVTemas(true);
-              }}
-            />
-            <Button
-              title="       Repetir            "
-              onPress={() => {
-                repetir();
-              }}
-            />
-
-            <Text
+            <ScrollView
               style={{
-                top: "90%",
-                fontSize: normalize(18),
-                position: 'absolute',
-                borderBottomWidth: 2,
-                fontWeight: "bold",
+                borderTopWidth: 5,
+                borderTopColor: "darkred",
+                backgroundColor: "pink",
+
               }}
+              contentContainerStyle={{ paddingBottom: '10%' }}
             >
-              Ver 0.3
-            </Text>
+              {/*<View style ={{flex:1,backgroundColor:'lightblue'}}>*/}
+              <Text style={estilo.texto}>{Curr_Tdados[idx].prg}</Text>
+              <Button
+                title="Terminar!"
+                onPress={() => {
+                  contarP();
+                  setVwponto(true);
+                }}
+              ></Button>
+              <FlatList
+                horizontal={true}
+                data={Timg}
+                renderItem={({ item, index }) => {
+                  return <ImgUi i={item} />;
+                }}
+              ></FlatList>
+
+              {/*<ScrollView horizontal={true}>          
+                       <Image style={{aspectRatio:1,height:500,width:undefined,resizeMode:'stretch'}} source={require('./Devsource/imagem/digital.jpg')}/>
+     </ScrollView> */}
+            </ScrollView>
           </View>
-        </Modal>
-
-        <View style={{ flex: 1, bottom: 0 }}>
-          <Text
-            style={[estilo.texto, { fontWeight: "900", alignSelf: "center" }]}
-          >
-            {testDispName} {nometeste}
-          </Text>
-          <ScrollView
-            style={{
-              borderTopWidth: 5,
-              borderTopColor: "darkred",
-              backgroundColor: "pink",
-
-            }}
-            contentContainerStyle={{ paddingBottom: '10%' }}
-          >
-            {/*<View style ={{flex:1,backgroundColor:'lightblue'}}>*/}
-            <Text style={estilo.texto}>{Curr_Tdados[idx].prg}</Text>
-            <Button
-              title="Terminar!"
-              onPress={() => {
-                contarP();
-                setVwponto(true);
-              }}
-            ></Button>
-            <FlatList
-              horizontal={true}
-              data={Timg}
-              renderItem={({ item, index }) => {
-                return <ImgUi i={item} />;
-              }}
-            ></FlatList>
-
-            {/*<ScrollView horizontal={true}>          
-                             <Image style={{aspectRatio:1,height:500,width:undefined,resizeMode:'stretch'}} source={require('./Devsource/imagem/digital.jpg')}/>
-           </ScrollView> */}
-          </ScrollView>
-        </View>
-      </View >
-      {/* Baixo*/}
-      <View
-        style={{
-          height: '60%',
-          alignItems: "center",
-          width: "100%",
-          backgroundColor: "black",
-        }
-        }
-      >
-        <View style={{ top: "5%", height: "80%", width: "97%" }}>
-          <ScrollView style={{ overflow: "hidden" }}
-            contentContainerStyle={{ paddingBottom: 50 }}>
-            <RespUi
-              cAns={c_Ans}
-              p={Curr_Tdados[idx].a}
-              fns={finish}
-              v={finish}
-              e={() => {
-                trocarR(Curr_Tdados[idx].a);
-              }}
-            />
-            <RespUi
-              cAns={c_Ans}
-              p={Curr_Tdados[idx].b}
-              fns={finish}
-              v={finish}
-              e={() => {
-                trocarR(Curr_Tdados[idx].b);
-              }}
-            />
-            <RespUi
-              cAns={c_Ans}
-              p={Curr_Tdados[idx].c}
-              fns={finish}
-              v={finish}
-              e={() => {
-                trocarR(Curr_Tdados[idx].c);
-              }}
-            />
-            <RespUi
-              cAns={c_Ans}
-              p={Curr_Tdados[idx].d}
-              fns={finish}
-              v={finish}
-              e={() => {
-                trocarR(Curr_Tdados[idx].d);
-              }}
-            />
-            <RespUi
-              cAns={c_Ans}
-              p={Curr_Tdados[idx].e}
-              fns={finish}
-              v={finish}
-              e={() => {
-                trocarR(Curr_Tdados[idx].e);
-              }}
-            />
-
-            {/*<View style={{ height: 10, width: "100%" }}></View>*/}
-          </ScrollView>
-        </View>
-
+        </View >
+        {/* Baixo*/}
         <View
-          style={
-
-            {
-              backgroundColor: "skyblue",
-              paddingLeft: '0.1%',
-              flex: 1,
-              width: '100%', borderTopWidth: 3
-            }}
+          style={{
+            height: '60%',
+            alignItems: "center",
+            width: "100%",
+            backgroundColor: "black",
+          }
+          }
         >
-          <FlatList
+          <View style={{ top: "5%", height: "80%", width: "97%" }}>
+            <ScrollView style={{ overflow: "hidden" }}
+              contentContainerStyle={{ paddingBottom: 50 }}>
+              <RespUi
+                cAns={c_Ans}
+                p={Curr_Tdados[idx].a}
+                fns={finish}
+                v={finish}
+                e={() => {
+                  trocarR(Curr_Tdados[idx].a);
+                }}
+              />
+              <RespUi
+                cAns={c_Ans}
+                p={Curr_Tdados[idx].b}
+                fns={finish}
+                v={finish}
+                e={() => {
+                  trocarR(Curr_Tdados[idx].b);
+                }}
+              />
+              <RespUi
+                cAns={c_Ans}
+                p={Curr_Tdados[idx].c}
+                fns={finish}
+                v={finish}
+                e={() => {
+                  trocarR(Curr_Tdados[idx].c);
+                }}
+              />
+              <RespUi
+                cAns={c_Ans}
+                p={Curr_Tdados[idx].d}
+                fns={finish}
+                v={finish}
+                e={() => {
+                  trocarR(Curr_Tdados[idx].d);
+                }}
+              />
+              <RespUi
+                cAns={c_Ans}
+                p={Curr_Tdados[idx].e}
+                fns={finish}
+                v={finish}
+                e={() => {
+                  trocarR(Curr_Tdados[idx].e);
+                }}
+              />
 
-            style={{ width: '104%', paddingLeft: '1%', height: '100%' }}
-            contentContainerStyle={{ height: '70%', alignSelf: 'center', paddingRight: '10%' }}
-            ref={Bindex_Ref}
-            horizontal={true}
-            data={Curr_Tdados}
-            renderItem={renderRow}
-            estimatedItemSize={40}
-          />
-        </View>
+              {/*<View style={{ height: 10, width: "100%" }}></View>*/}
+            </ScrollView>
+          </View>
 
+          <View
+            style={
+
+              {
+                backgroundColor: "skyblue",
+                paddingLeft: '0.1%',
+                flex: 1,
+                width: '100%', borderTopWidth: 3
+              }}
+          >
+            <FlatList
+
+              style={{ width: '104%', paddingLeft: '1%', height: '100%' }}
+              contentContainerStyle={{ height: '70%', alignSelf: 'center', paddingRight: '10%' }}
+              ref={Bindex_Ref}
+              horizontal={true}
+              data={Curr_Tdados}
+              renderItem={renderRow}
+              estimatedItemSize={40}
+            />
+          </View>
+
+        </View >
       </View >
-    </View >
+      }
+    </View>
+
   );
 }
 

@@ -959,7 +959,7 @@ let bd16 = [
     cadNome: `Bd1`,
     pId: `/0`,
     testRef: ``,
-    tema: `Nefex`,
+    tema: `normalizacaoT`,
     prg: `1. Em relação à normalização de dados, NÃO é um objectivo desse processo:
           ,`,
     a: new aln(`eliminar a redundância causada pelos campos repetidos;
@@ -975,7 +975,7 @@ let bd16 = [
     cadNome: `Bd1`,
     pId: `/1`,
     testRef: ``,
-    tema: `Nefex`,
+    tema: `normalizacaoT`,
     prg: `2. São características de uma base de dados normalizada:
           ,`,
     a: new aln(`Variedade acentuada de índices por tabela`),
@@ -1654,6 +1654,827 @@ let bd14 = [
 ];
 
 
+/////////////////////////////////////BD@////////////////////////////////////////
+
+let bd2_t2_22 = [
+  new Prg({
+    cadNome: `Bd2`, pId: `22/0`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `1. Qual dos seguintes não é um dos estágios na evolução de SGBD Distribuido?
+  `, a: new aln(`Unidade de trabalho.`), b: new aln(`Unidade de trabalho remota.`), c: new aln(`Unidade distribuida de trabalho.`), d: new aln(`Solicitação distribuída.`, 0), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/1`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `2. Uma base de dados distribuida pode usar qual das seguintes estratégias?
+  `, a: new aln(`Totalmente centralizada num local e acessada por vários sites `), b: new aln(`Parcial ou totalmente replicada nos sites.`), c: new aln(`Particionada em fragmentos em locais diferentes`), d: new aln(`Todas as opções citadas.`, 0), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/2`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `São desvantagens dos sistemas distribuidos: (escolha duas)`, a: new aln(`Dependência de hardware..`), b: new aln(`Maior custo de desenvolvimento.`, 0), c: new aln(`Maior probabilidade de ocorrências de falhas no programa.`, 0), d: new aln(`Dependência de sistemas operacionais..`), e: new aln(` Dependência do tipo de rede para ligar as localidades.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/3`, testRef: `22`, tema: ` Administracão  de bd`,
+    prg: `4. Qual das seguintes opções é uma desvantagem da replicação?`, a: new aln(`Reduzido tráfego da rede.`), b: new aln(`Se a base de dados falha num site, uma cópia pode ser localizada noutro site. `), c: new aln(`Cada site deve ter a mesma capacidade de armazenamento.`, 0), d: new aln(`Cada transacção pode prosseguir sem coordenação na rede.`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/4`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `5. Seja dado o cenário. Indique nas opções que se seguem a alternativa correcta:`, a: new aln(`B: TNSNames.ora C: SQLPlus -> D: Listener`), b: new aln(`B: init.ora C: Listener> D: SQLPLUS `), c: new aln(`B: OracleNet->C: TCP/IP -> D: OracleNet`), d: new aln(`B: OracleNet->C: Listener> D: OracleNet`, 0), e: new aln(`Nenhuma das alternativas anteriores.`), imgs: [require('../testespics/bd2/t2/t2_22_5.jpg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/5`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `6.Uma base de dados distribuida é qual das seguintes opções:
+  `, a: new aln(`Uma base de dados lógica que é espalhada por vários locais e interconectada por uma rede `, 0), b: new aln(`Uma colecção de ficheiros que é espalhada por vários locais e é interconectada por uma rede`), c: new aln(`Uma única base de dados lógica que está limitada a um local.`), d: new aln(`Uma colecção de ficheiros que está limitada a um local.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/6`, testRef: `22`, tema: ` Administracão  de bd`,
+    prg: `7. Seja dado o cenário referente a conexão cliente servidor.
+  
+  [imagem abaixo]
+  
+  Indique a opção que é usada para estabelecer conexão sem que seja necessário configurar os ficheiros TnsNames.ora e Listener.ora?
+  `, a: new aln(`Easy Connecting,`, 0), b: new aln(`Local Naming`), c: new aln(`Directory naming `), d: new aln(`Nenhuma das alternativas anteriores.`), e: new aln(``), imgs: [require('../testespics/bd2/t2/t2_22_7.jpg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/7`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `8. Com transparência de falha, todas as acções de uma transacção são confirmadas ou nenhuma delas é confirmada `, a: new aln(`Verdadeiro`, 0), b: new aln(`Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/8`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `9.Seja dado o cenário de um sistema distribuído para Gestão e Venda de Electrodomésticos.
+  
+  Nól: Responsável pela Gestão das logísticas e 
+  Nó2: Responsável pela venda dos artigos
+  Nó3: Responsável pela Administração do Negócio. 
+  
+  Os Administradores do Negócio (Nó 3), pretendem ter acesse em tempo real aos registos de vendas efectuadas 
+  pelo No2 para efeitos de monitoria e controle. Qual das opções abaixo é utilizada para responder ao pedido:
+  
+  [Imagem Abaixo]`, a: new aln(`O Nó 3 deverá fazer a Replicação da tabela Vendas do No2; `), b: new aln(`O Nó 3 deverá fazer fragmentação Mista da tabela Vendas do No2;`), c: new aln(` O No 3, deverá fazer snapshot da tabela vendas do No2;`, 0), d: new aln(`O No 3, pode programar através de PL/SQL um loop para realização uma consulta remota ao No2; 
+  `), e: new aln(`Nenhuma das alternativas anteriores.`), imgs: [require('../testespics/bd2/t2/t2_22_9.jpg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/9`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `10. A replicação deve ser usada quando existir qual das seguintes situações?
+  `, a: new aln(`Quando a velocidade e capacidade de transmissão numa rede proíbem a actualização frequente
+  de tabelas grandes.`), b: new aln(`Ao usar muitos nós com diferentes sistemas operativos, SGBDs e desenho de base de dados! `), c: new aln(`Os dados da aplicação podem estar um pouco desactualizados. `, 0), d: new aln(`Todas as opções mencionadas.`), e: new aln(`Nenhuma das alternativas anteriores.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/10`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `11. Armazenar uma cópia separada da base de dados em vários locais, é qual das seguintes opções?
+  `, a: new aln(`Replicação de dados.`, 0), b: new aln(`Fragmentação horizontal.`), c: new aln(`Fragmentação vertical.`), d: new aln(`Fragmentação horizontal e vertical.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/11`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `12. Seja dado o seguinte cenário de um sistema distribuído para Gestão e Venda de Electrodomésticos. 
+  O sistema é constituído por 3 Nós, a saber:
+  
+  Nól: Responsável pela Gestão das logísticas
+  Nó2: Responsável pela venda dos artigos e
+  Nó3: Responsável pela Administração do Negócio. 
+  
+  Um Administrador do Negócio (Nó 3),efectuou através do sistema um pedido de encomenda de 10
+  artigos de Ginásio. O Gestor Sénior de Logística (Nó 1) pretende apenas ter acesso a esse registo em específico 
+  para efeitos de procurement. Qual das opções abaixo é utilizada para responder ao pedido:
+  
+  [imagem abaixo]
+  `, a: new aln(`O Gestor Logística deverá fazer uma consulta remota ao Nó3, local onde foi feita a requisição;
+  `), b: new aln(`O Gestor Logística deverá fazer fragmentação Mista da tabela Vendas do Nó2;
+  `), c: new aln(` O Gestor Logística, deverá fazer snapshot da tabela vendas do Nó2; `), d: new aln(`O Gestor Logística deverá fazer uma consulta remota ao Nó2;
+  `, 0), e: new aln(`Nenhuma das alternativas anteriores.
+  `), imgs: [require('../testespics/bd2/t2/t2_22_12.jpg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/12`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `13. Algumas das colunas de uma relação estão em locais diferentes, é qual das seguintes opções?
+  `, a: new aln(`Replicação de dados.
+  `), b: new aln(`Fragmentação horizontal. 
+  `), c: new aln(`Fragmentação vertical.
+  `, 0), d: new aln(`Fragmentação horizontal e vertical.
+  `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/13`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `14.Qual das opções seguintes é uma vantagem da fragmentação?
+  `, a: new aln(`Complexidade
+  `), b: new aln(`Velocidade de acesso inconsistente.
+  `), c: new aln(`Espaço extra.
+  `), d: new aln(`Segurança.
+  `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/14`, testRef: `22`, tema: ` Administracão  de bd`,
+    prg: `15. Com a tecnologia assíncrona, se qualquer cópia de um dado for actualizada em qualquer lugar da rede, 
+  a mesma actualização será aplicada imediatamente a todas as outras cópias ou será abortada.
+  `, a: new aln(`Verdadeiro `, 0), b: new aln(`Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/15`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `16. Seja dado o seguinte cenário de um sistema distribuído para Gestão, Venda e importação de Viaturas.
+  O sistema é constituído por 4 Nós, a saber.
+  
+  Nó1: Responsável pela Venda e Gestão das Importações
+  N62: Responsável pela Venda e Gestão das Importações.
+  N63: Responsável pela Venda e Gestão das Importações
+  N64: Responsável pela Administração do Negócio.
+  
+  [ Imagem presente aqui Abaixo! ]
+  
+  Um Administrador do Negócio (Nó 4), pretende ter acesso em tempo real dos registos de pedidos de-
+  importação de Viaturas feitas por clientes Nacionais dos Nós 1, 2 e 3. Qual das opções abaixo é utilizada
+  para responder ao pedido:
+  `, a: new aln(`Fragmentação Horizontal dos Nós 1, 2 e 3 
+  `, 0), b: new aln(`Fragmentação Mista dos Nós 1, 2 e 3
+  `), c: new aln(`Snapshot dos Nós 1, 2 e 3
+  `), d: new aln(`Consulta Remota dos Nós 1, 2 e 3
+  `), e: new aln(`Nenhuma das alternativas anteriores. 
+  `), imgs: [require('../testespics/bd2/t2/t2_22_16.jpg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/16`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `17. Uma base de dados distribuída homogénea é qual das seguintes opções? 
+  `, a: new aln(`O mesmo SGBD é usado em cada local e os dados não estão distribuídos ao longo dos nós.
+  `, 0), b: new aln(` O mesmo SGBD é usado em cada local e os dados estão distribuídos ao longo dos nós
+  `, 0), c: new aln(`Diferente SGBD é usado em cada local e os dados não estão distribuídos ao longo dos nós.
+  `), d: new aln(`Diferente SGBD é usado em cada local e os dados estão distribuídos ao longo dos nós.
+  `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/17`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `18. Qual das seguintes opções é verdadeira em relação a uma transacção global? 
+  `, a: new aln(` Os dados necessários estão num site local e o SGBD distribuido roteia solicitações conforme
+  necessário.`), b: new aln(`Os dados necessários estão localizados em pelo menos um site não local e o SGBD distribuído
+  roteia solicitações conforme necessário.
+  `, 0), c: new aln(`Os dados necessários estão num site local e o SGBD distribuído passa a solicitação apenas para
+  o SGBD local.
+  `), d: new aln(`Os dados necessários estão localizados em pelo menos um site não local 
+  e o SGBD distribuído passa a solicitação apenas para o SGBD local.
+  `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/18`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `19. Considere duas bases de dados, B1 e B2, localizadas, respectivamente, 
+  nos servidores S1 e S2,conectadas entre si pela Internet. 
+  
+  Considere ainda que as tabelas T1 e T2 pertencem, respectivamente, às bases de dados B1 e B2.
+  Neste cenário.
+  
+  A sequência de operações que NÃO caracteriza uma transacção distribuída é: 
+  `, a: new aln(`leitura de um registo em TI; leitura de todos os registos de T2.
+  `, 0), b: new aln(`remoção de um registo èm T1; inclusão de um registo em T2. 
+  `), c: new aln(`remoção de um registo em T1; remoção de todos os registos de T2.
+  `), d: new aln(`alteração de um registo em T1; alteração de um registo em T2. 
+  `), e: new aln(`remoção de todos os registos de T1; remoção de todos os registos de T2.
+  `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/19`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `20. Não é uma regra associada ao princípio fundamental de base de dados distribuídos:
+  `, a: new aln(`Não dependência de um site central.
+  `), b: new aln(`Autonomia local.
+  `), c: new aln(`Operação continua.
+  `), d: new aln(`Dependência da rede. 
+  `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/20`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `21. Considere a seguinte acção:
+  TRANSACTION ...,
+  COMMIT; 
+  ROLLBACK;
+  O que faz o Rollback nesta transacção? `, a: new aln(`Desfaz as transacções antes do commit..`), b: new aln(`Limpa todas as transacções.
+  `), c: new aln(` Refaz as transacções antes do
+  `), d: new aln(`Nenhuma acção..
+  `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/21`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `
+  22. Uma opção cada vez mais popular para distribuição de dados, 
+  bem como para tolerância a falhas de qualquer base de dados, 
+  é armazenar uma cópia separada da base de dados em cada um dos sites.
+  `, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso
+  `), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/22`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `23. A transparência de localização permite qual das seguintes opções? 
+  `, a: new aln(`Os utilizadores tratar os dados como se estivessem num local.
+  `), b: new aln(`Os programadores tratar os dados como se estivessem num local. 
+  `), c: new aln(` Os gestores tratar os dados como se estivessem num local.
+  `), d: new aln(`Todas as opções.
+  `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/23`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `24. Considere as afirmações a seguir sobre as transacções T1, T2 e T3, e os escalonamentos S1 e S2
+  dados abaixo:
+  T1: R1(x); RI(z); W1(x).
+  T2: R2(z); R2(y); W2(z); W2(y).
+  T3: R3(x); R3(y); W3(y).
+  
+  S1: R1(x); R2(z); R1(x); R3(x); R3(y); W1(x); W3(y); R2(y); W2(z); W2(y). 
+  S2: R1(x); R2(z); R3(x); R1(z); R2(y); R3(y); W1(x); W2(z); W3(y); W2(y).
+  
+  I- T1 não obedece às propriedades ACID. 
+  II - ȘI é um escalonamento serializável e S2 não é um escalonamento serializável.
+  III SI e S2 são escalonamentos serializáveis.
+  IV - T2 e T3 são transacções somente-leitura.
+  
+  Está(ão) correcta(s):
+  `, a: new aln(`Apenas I
+  `), b: new aln(`Apenas II.
+  `, 0), c: new aln(` Apenas I e III.
+  `), d: new aln(`Apenas I e IV.
+  `), e: new aln(`Apenas II e III.
+  `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/24`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `25. Em relação ao protocolo two-phase commit, analise as afirmativas a seguir: 
+  
+  I. Durante a primeira fase do protocolo, o nó coordenador da transação consulta um nó participante 
+  para saber se ele está apto para concluir a transação e, após conhecer a resposta dele,
+  consulta o próximo nó participante, 
+  
+  II. Se o nó coordenador da transação falhar, os participantes podem não receber a decisão final 
+  para executar commit ou rollback e, portanto, ficarem bloqueados.
+  
+  III. Se o nó participante falhar após receber a decisão final para executar um commit, 
+  a transação será abortada pelo nó coordenador da transação.
+  Está correcto o que se afirma em:`, a: new aln(`Somente I.
+  `), b: new aln(`Somente II.
+  `, 0), c: new aln(`Somente III.
+  `), d: new aln(`Somente II e III.
+  `), e: new aln(`I, II e III.
+  `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/25`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `26. Um ponto de sincronização entre a base de dados e o log de transacções é chamado de stop point. 
+  `, a: new aln(`Verdadeiro `, 0), b: new aln(`Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/26`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `27. Bloqueios colocados por comandos são chamados_________`, a: new aln(`Bloqueios implícitos
+  `), b: new aln(`Bloqueios explícitos 
+  `, 0), c: new aln(`Bloqueios exclusivos
+  `), d: new aln(`Bloqueios partilhados
+  `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/27`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `28. Qual das seguintes opções bloqueia um item da alteração, mas não da leitura? 
+  `, a: new aln(`Bloqueios implícitos
+  `), b: new aln(`Bloqueios explícitos 
+  `), c: new aln(`Bloqueios exclusivos
+  `), d: new aln(`Bloqueios partilhados
+  `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/28`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `29. Qual das seguintes opções ocorre quando uma transacção relê os dados, 
+  e encontra novas linhas que foram inseridas por outra transacção desde a leitura anterior?
+  `, a: new aln(`Leitura não repetível (não reprodutível).
+  `), b: new aln(`Leitura fantasma (inconsistente).
+  `, 0), c: new aln(`Leitura suja (erróneas). 
+  `), d: new aln(`Leitura consistente.
+  `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/29`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `30. Uma transacção para a qual todas as alterações confirmadas são permanentes é chamada:
+  `, a: new aln(`Atómica.
+  `), b: new aln(`Consistente.
+  `), c: new aln(`Isolada.
+  `), d: new aln(`Durável. 
+  `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/30`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `31. Duas transacções que são executadas simultaneamente e geram resultados consistentes 
+  com os resultados que teriam ocorrido se tivessem sido executadas separadamente são chamadas de transacções serializáveis.
+  `, a: new aln(`Verdadeiro. 
+  `, 0), b: new aln(`Falso.
+  `), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/31`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `32. O problema de perda de actualização é quando o utilizador A lê dados que foram processados 
+  por uma parte de uma transacção do utilizador B..
+  `, a: new aln(`Verdadeiro. 
+  `), b: new aln(`Falso.
+  `, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/32`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `33. Um bloqueio compartilhado permite que ocorre qual dos seguintes tipo de transação?
+  `, a: new aln(`Leitura
+  `, 0), b: new aln(`exclusão
+  `), c: new aln(`Actualização 
+  `), d: new aln(`Inserção
+  `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/33`, testRef: `22`, tema: ` Administracão  de bd`,
+    prg: `34. Bloqueios colocados pelo SGBD sao exclusivos.
+  `, a: new aln(`Verdadeiro`), b: new aln(`Falso
+  `, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/34`, testRef: `22`, tema: ` Administracão  de bd`,
+    prg: `35. Um bloqueio exclusivo bloqueia um item de alteração, mas nao de leitura 
+  `, a: new aln(`Verdadeiro`), b: new aln(`Falso
+  `, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/35`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `36. Uma transação durável é aquela em que todas as mudanças gravadas sao permanentes.
+  `, a: new aln(`Verdadeiro`, 0), b: new aln(`Falso
+  `), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/36`, testRef: `22`, tema: `SGBD orientados a objectos`,
+    prg: `37. Quais duas instrucoes to verdadeiras sobre o inicio da instancia da base de dados usando o
+  seguinte comando? (Escola duas,) SOL STARTUP UPGRADE
+  
+  `, a: new aln(`Permite todos os triggers do sistema
+  `), b: new aln(`Permite apenas conexbes do SYSDBA.
+  `, 0), c: new aln(`Garante que todas as filas de tarefas permaneçam activas durante o processo de actualização, 
+  `), d: new aln(`Ele define parámetros de inicialização do sistema para valores específicos que to necessários
+  `, 0), e: new aln(`para permitir que scripts de actualização de base de dados sejam executados.
+  `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/37`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `38. A base de dados está aberta e os ulizadores estao a usar o LISTENER listener, 
+  O novo DBA do sistema para o listener usado o seguinte comando,
+  LSNRCTL>STOP
+  
+  O que acontece as sessões que estão nesse momento conectadas à instancia da base de dados?
+  `, a: new aln(` As sessões são capazes apenas de realizar consultas,
+  `), b: new aln(`As sessões não são afectadas e continuam a funcionar normalmente,
+  `, 0), c: new aln(`As transacties achavas são retomadas (rolled back) e as sessões terminan.
+  `), d: new aln(`As sessões não tem permissão para realizar qualquer operação até que o listener reinicie.
+  `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/38`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `39. A sua base de dados está aberta e os utilizadores estão a usar o LISTENER listener. 
+  O novo DBA do sistema pára o listener usando o seguinte comando:
+  LSNRCTL > STOP
+  O que acontece às sessões que estão nesse momento conectadas à instância da base de dados? 
+  `, a: new aln(`As sessões são capazes apenas de realizar consultas.
+  `), b: new aln(`As sessões não são afectadas e continuam a funcionar normalmente. 
+  `, 0), c: new aln(`As transacções activas são retornadas (rolled back) e as sessões terminam.
+  `), d: new aln(`As sessões não têm permissão para realizar qualquer operação até que o listener reinicie.
+  `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/39`, testRef: `22`, tema: `SGBD orientados a objectos`,
+    prg: `40. Um SCN do Oracle é:
+  `, a: new aln(`Um valor que é incrementado sempre que há uma leitura suja
+  `), b: new aln(`Incrementado sempre que há um deadlock 
+  `), c: new aln(`Um valor que mantém o controle de bloqueios explicito
+  `), d: new aln(`Um valor que é incrementado sempre que são feitas alterações na base de dados.
+  `, 0), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
+let bd2_r_16 = [
+  new Prg({
+    cadNome: `Bd2`, pId: `16/0`, testRef: `16`, tema: ``,
+    prg: `1. Que processo de segundo plano não é inicializado por defeito, quando se inicializa uma instância
+  ,Oracle?`, a: new aln(`DBWn
+  ,`), b: new aln(`LGWR
+  ,`), c: new aln(`CKPT
+  ,`), d: new aln(`ARCn
+  ,`, 0), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/1`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `2. Escolha a hierarquia correcta, do maior ao menor,
+  , desta lista de estrutura lógica da base de dados.`, a: new aln(`Database, tablespace, extent, segment, block 
+  ,`), b: new aln(`Database, tablespace, segment, extent, block
+  ,`, 0), c: new aln(`Database, segment, tablespace, extent, block
+  ,`), d: new aln(`Database, extent, tablespace, segment, block
+  ,`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/2`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `3. Que opção de startup é inválida?
+  ,`, a: new aln(`STARTUP NORMAL 
+  ,`, 0), b: new aln(`STARTUP MOUNT
+  ,`), c: new aln(`STARTUP NOMOUNT 
+  ,`), d: new aln(`STARTUP FORCE
+  ,`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/3`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `4. Qual o principal beneficio em se usar o SPFILE para manter o ficheiro de parâmetros?
+  ,`, a: new aln(`O SPFILE pode ser espelhado noutros drives, ao contrário do PFILE 
+  ,`), b: new aln(`Mudanças na configuração da base de dados podem tornar-se persistentes durante o shutdown e startup
+  ,`, 0), c: new aln(`Porque o SPFILE é binário, o administrador de BD não poderá editá-lo 
+  ,`), d: new aln(`O comando ALTER SYSTEM não pode modificar o SPFILE.
+  ,`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/4`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `5. Que frase sobre instância Oracle é verdadeira? 
+  `, a: new aln(`Numa instância Oracle, redo log buffer não é parte da área de memória partilhada
+  `), b: new aln(`Múltiplas instâncias podem executar-se no mesmo computador, acessando cada uma a sua própria base de dados fisica
+  `, 0), c: new aln(`Uma instância Oracle é uma combinação de estruturas de memória, processos de segundo plano
+  e processos do utilizador`), d: new aln(`Num ambiente de servidor parthado, a componente estrutura de memória de uma instância consiste de uma única SGA e uma única PGA.
+  `), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/5`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `6. Quando cria uma base de dados, onde Oracle encontra informação sobre control files que
+  ,necessitam de serem criados?
+  ,`, a: new aln(`No ficheiro de parámetro de inicialização
+  ,`, 0), b: new aln(`Na linha de comando do CREATE DATABASE
+  ,`), c: new aln(`Na variável de ambiente 
+  ,`), d: new aln(`Ficheiro criado sob SORACLE_HOME e nome derivado de <db_name>.ctl
+  ,`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/6`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `7. Que frases sobre o uso de online redo log file são verdadeiras? (escolha três)
+  `, a: new aln(`Redo log files são usados apenas para recovery
+  `, 0), b: new aln(`Cada redo log dentro de um grupo é chamado de membro 
+  `, 0), c: new aln(`Redo log files são organizados num mínimo em três grupos
+  `), d: new aln(`Uma base de dados Oracle precisa, pelo menos, de três online redo log members.
+  `), e: new aln(`Redo log files providencia o meio de recuperar transacções, quando da falha de uma instância
+  `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/7`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `8.A BD tem uma tablespace de tamanho uniforme, gerida localmente, 
+  ,com gestão automática de espaço de segmento, que contém apenas tabelas. 
+  ,Neste momento, o tamanho uniforme para a tablespace é de 512K. 
+  ,Porque as tabelas irão tornar-se muito grandes, a sua configuração deve mudar para melhorar o desempenho. 
+  ,Agora as tabelas devem residir numa tablespace gerida localmente 
+  ,com tamanho uniforme de 5 MB e gestão automática de espaço de segmento.
+  ,`, a: new aln(`As novas exigências não podem ser satisfeitas
+  ,`), b: new aln(`Re-criar o control file com as novas configurações
+  ,`), c: new aln(`Utilizar o commando ALTER TABLESPACE para aumentar o tamanho uniforme
+  ,`), d: new aln(`Criar uma nova tablespace com as configurações correctas, em seguida, mover as tabelas para a
+  ,nova tablespace.
+  ,`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/8`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `9. Que tipo de arquivos não são parte de uma base de dados Oracle? (escolha dois)
+  ,`, a: new aln(` Control file
+  ,`), b: new aln(`Password file
+  ,`, 0), c: new aln(`Parameter files
+  ,`, 0), d: new aln(`Redo log files 
+  ,`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/9`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `10. Como elimina uma tablespace se não está vazia? 
+  `, a: new aln(`Renomeia todos os objectos na tablespace e depois elimina a tablespace.
+  `), b: new aln(`Remove do disco os data files da tablespace 
+  `), c: new aln(`Usa ALTER DATABASE DROP <Tablespace Name> CASCADE
+  `), d: new aln(`Usa DROP TABLESPACE Tablespace
+  `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/10`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `11. Que visão do dicionário de dados deverá consultar para saber os extents livres numa tablespace.
+  ,`, a: new aln(`DBA TABLESPACES
+  ,`), b: new aln(`DBA EXTENTS
+  ,`), c: new aln(`DBA FREE SPACE 
+  ,`, 0), d: new aln(`DBA SEGMENTS
+  ,`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/11`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `12. Que comando é usado para assignar um profile a um utilizador que já existe? 
+  ,`, a: new aln(`ALTER PROFILE
+  ,`, 0), b: new aln(`ALTER USER
+  ,`), c: new aln(`SET PROFILE
+  ,`), d: new aln(`O profile deve ser especificado quando se cria o utilizador, não pode ser mudado.
+  ,`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/12`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `13. Que cláusula no comando CREATE USER pode ser usada para especificar que não há limite no
+  ,espaço permitido numa tablespace?`, a: new aln(`DEFAULT TABLESPACE 
+  ,`), b: new aln(`UNLIMITED TABLESPACE
+  ,`), c: new aln(`QUOTA
+  ,`, 0), d: new aln(`PROFILE
+  ,`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/13`, testRef: `16`, tema: ` Administracão  de bd`,
+    prg: `14. Que cláusula deve especificar para permitir que se possa conceder o privilégio de sistema a outros
+  ,utilizadores?`, a: new aln(`CASCADE
+  ,`), b: new aln(`WITH ADMIN OPTION
+  ,`, 0), c: new aln(`WITH GRANT OPTION 
+  ,`), d: new aln(`WITH MANAGE OPTION
+  ,`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/14`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `15. Uma das formas de implementação de uma base de dados ocorre por meio da distribuição de dados em mais de um local. 
+  ,Essa distribuição pode ser feita por meio da chamada fragmentação vertical,na qual`, a: new aln(`Os indices são divididos em dois indices, sendo que há um indice principal e um outro
+  ,secundário`), b: new aln(`O arquivo de log da base de dados sofre um processo de criptografia e armazenamento
+  ,redundante`), c: new aln(`As tabelas da base de dados são decompostas, ou seja, os atributos das tabelas são divididos nos
+  ,diversos locais`, 0), d: new aln(`Parte dos dados da base de dados são convertidos para o formato XML 
+  ,E`), e: new aln(`É armazenada exactamente uma tabela da base de dados original em cada local.
+  ,`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/15`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `16. A respeito de bases de dados distribuídas, é correcto afirmar:
+  ,`, a: new aln(`A replicação de dados em diversos nodos integrantes da arquitectura distribuida é sempre uma boa prática de projecto de bases de dados distribuidas, 
+  ,pois torna qualquer dado sempre disponível em qualquer nodo
+  ,`), b: new aln(`A falha de um nodo integrante da arquitectura distribuída sempre causa o colapso de todas as transacções distribuídas em execução
+  ,`), c: new aln(`Consultas distribuidas são sempre processadas num único nodo integrante da arquitectura
+  ,distribuida`), d: new aln(`Uma das vantagens da fragmentação de dados de uma relação em diversos nodos integrantes de uma arquitectura distribuída 
+  ,é manter o dado disponivel no nodo onde ele é mais frequentemente acessado
+  ,`, 0), e: new aln(`O controle da execução concorrente de transacções distribuidas é sempre responsabilidade de um único nodo integrante da arquitectura distribuida.
+  ,`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/16`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `17. Qual das seguintes opções é uma desvantagem da replicação?
+  ,`, a: new aln(`Reduzido tráfego da rede
+  ,`), b: new aln(`Se uma BD falha num site, uma cópia pode ser encontrada noutro site
+  ,`), c: new aln(`Cada site deve ter a mesma capacidade de armazenamento 
+  ,`, 0), d: new aln(`Cada transacção pode prosseguir sem coordenação através da rede
+  ,`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/17`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `18. Uma base de dados distribuida tem qual das seguintes vantagens em relação a uma base de dados
+  ,centralizada? 
+  ,`, a: new aln(`Custo do software
+  ,`), b: new aln(`Complexidade do software
+  ,`), c: new aln(`Resposta lenta
+  ,`), d: new aln(`Crescimento modular 
+  ,`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/18`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `19. NÃO é uma regra associada ao principio fundamental de bases de dados distribuidas:
+  ,`, a: new aln(`não dependência de um site central
+  ,`), b: new aln(`autonomia local
+  ,`), c: new aln(`operação continua
+  ,`), d: new aln(`independência de SGBD 
+  ,`), e: new aln(`dependência da rede
+  ,`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/19`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `20. Qual o número máximo de base de dados que um processo listener pode ouvir?
+  `, a: new aln(`1 bd
+  `), b: new aln(`2 bd
+  `), c: new aln(`10 bd
+  `), d: new aln(`25 bd
+  `), e: new aln(`Nenhuma das acima
+  `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/20`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `21. Que porção do tnsnames.ora especifica o nome ou endereço IP do servidor onde o processo listene é ouvido?
+  `, a: new aln(`CONNECT_DATA
+  `), b: new aln(`PORT
+  `), c: new aln(`SERVICE_NAME
+  `), d: new aln(`HOST
+  `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/21`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `22. Que método de nomeação usa o ficheiro tnsnames.ora para armazenar o conector de descrição usado pelo cliente enquanto se conecta 
+  a uma instância da base de dados duma máquina remota?
+  `, a: new aln(`Host naming method
+  `), b: new aln(`Local naming method
+  `, 0), c: new aln(`External naming method
+  `), d: new aln(`Directory naming method
+  `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/22`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `23. Sobre as propriedades ACID de transacções de base de dados, é correcto afirmar: 
+  `, a: new aln(`Uma transacção deve atender, pelo menos, a uma das propriedades ACID
+  `), b: new aln(`A propriedade de ISOLAMENTO é garantida quando uma transacção aguarda outra transacção
+  actualizar um dado que ela deseja utilizar
+  `), c: new aln(`A propriedade de ATOMICIDADE é garantida quando o SGBD permite a execução 
+  de um backup completo de uma BD que contém actualizações de transacções activas e de transacções efectivadas (commited)
+  `), d: new aln(`A propriedade de CONSISTÊNCIA não é garantida quando uma transacção é abortada por
+  violar uma restrição de integridade
+  `), e: new aln(`A propriedade de DURABILIDADE não é garantida quando o SGBD exclui um arquivo de log
+  com actualizações de transacções posteriores à realização do último backup da BD.
+  `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/23`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `24. Considere a seguinte acção 
+  TRANSACTION....
+  COMMIT;
+  ROLLBACK;
+  O que faz o Rollback nesta transacção?
+  `, a: new aln(`Desfaz as transacções antes do commit;
+  `), b: new aln(`Limpa todas as transacções;
+  `), c: new aln(`Refaz as transacções antes do commit;
+  `), d: new aln(`Nenhuma acção
+  `, 0), e: new aln(`A propriedade de DURABILIDADE não é garantida quando o SGBD exclui um arquivo de log
+  com actualizações de transacções posteriores à realização do último backup da BD.
+  `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/24`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `25. Considere que duas transacções, T1 e T2, executadas concorrentemente, 
+  são as únicas transacções activas num SGBD. 
+  Considerando todas as operações realizadas por TI e por T2 apresentadas na ordem descrita a seguir, 
+  qual das situações abaixo pode gerar um estado inconsistente na base de dados no final da execução 
+  sem falhas de TI e de T2? `, a: new aln(`T1 lê o dado X, T2 lê o dado X, T2 actualiza o dado X e T1 actualiza o dado X.
+  `, 0), b: new aln(`T1 lê o dado X. T2 lê o dado XTI actualiza o dado X. 
+  `), c: new aln(`T1 actualiza o dado Y, T2 lê o dado Y, T2 lê o dado Xe T1 lê o dado X.
+  `), d: new aln(`T1 actualiza o dado X, T2 lê o dado Y e T1 actualiza o dado X.
+  `), e: new aln(` T1 lê o dado X. T2 lê o dado X, T2 actualiza o dado X e T2 actualiza o dado Y.
+  `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/25`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `26. Algumas das principais técnicas usadas para controle de execução concorrente de transacções em bases de dados são, 
+  em relação aos itens de dados, baseadas no conceito de
+  `, a: new aln(`blocagem (block)
+  `), b: new aln(`ordenação (sort)
+  `), c: new aln(`decomposição de dados
+  `), d: new aln(`indice multinível dinâmico
+  `), e: new aln(`Bloqueio (lock)
+  `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/26`, testRef: `16`, tema: `SGBD orientados a objectos`,
+    prg: `27. Analise as seguintes afirmações relacionadas às capacidades que devem ser atendidas pelas bases
+  ,de dados orientados a objectos:
+  ,
+  ,I. Concorrência: o SGBD orientado a objectos não necessita nem implementa controle de concorrência, 
+  ,que deve ser feita pelas transacções solicitadas pelo aplicativo conectado à BD.
+  ,
+  ,II. Transacções: unidades executadas inteiramente ou não. Se um conjunto de actualizações
+  ,ocorreu dentro de uma transacção, todas ou parte delas devem ser visiveis ao mundo exterior,
+  ,independentemente do estado final da transacção.
+  ,
+  ,III. Recuperação: o SGBD deve garantir que os resultados parciais ou actualizações parciais de transacções que falharam não sejam propagados p
+  ,ara a base de dados persistente. IV. Persistência: capacidade de objectos persistirem através de diferentes chamadas do programa.
+  ,Dados manipulados por bases de dados orientados a objectos devem ser persistentes ou transientes. 
+  ,Dados transientes são somente válidos dentro de um programa ou transacção; eles são perdidos uma vez que o programa ou transacção termine. 
+  ,Dados persistentes são armazenados fora de uma transacção e sobrevivem às actualizações.
+  ,Indique a opção que contenha todas as afirmações verdadeiras:
+  ,`, a: new aln(`I e ll
+  ,`), b: new aln(`II e IV
+  ,`), c: new aln(`II e III
+  ,`), d: new aln(`III e IV
+  ,`, 0), e: new aln(`I e III
+  ,`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/27`, testRef: `16`, tema: `SGBD orientados a objectos`,
+    prg: `28. Base de dados pode garantir armazenamento persistente para objectos programas. 
+  ,A esse respeito, analise as assertivas e assinale a alternativa que aponta as correctas.
+  ,
+  ,I. Uma das principais justificativas para sistemas de base de dados orientados a objectos 
+  ,é a possibilidade de oferecer um armazenamento persistente aos objectos programas e estruturas de dados.
+  ,
+  ,II. Sistemas de base de dados orientados a objetos geralmente são compativeis com linguagens de programação como C++ e Java.
+  ,
+  ,III. Um objecto complexo em C++ pode ser armazenado, permanentemente, num SGBD orientado a objecto.
+  ,IV. Os sistemas tradicionais de base de dados geralmente possuem o chamado problema de separação por impedância, 
+  ,quando as estruturas de dados fornecidas pelo SGBD são incompatíveis com as estruturas de dados da linguagem de programação.
+  ,`, a: new aln(`Apenas I e II.`), b: new aln(`Apenas I e III.`), c: new aln(`Apenas II e III.`), d: new aln(`Apenas II, III e IV`), e: new aln(`I, II, III e IV`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/28`, testRef: `16`, tema: `SGBD orientados a objectos`,
+    prg: `29. Em BDOO qual é o nome dado à habilidade dos objectos existirem depois do fim do programa aplicação? de
+  ,`, a: new aln(`Ligação estática`), b: new aln(`Persistência`, 0), c: new aln(`Two-phase commit`), d: new aln(`Integridade do objecto`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/29`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `30.Um banco de dados distribuído tem quais das seguintes vantagens sobre um banco de dados centralizado?
+  ,`, a: new aln(`Custo do software`), b: new aln(`Complexidade do software`), c: new aln(`Resposta Lenta`), d: new aln(`Crescimento modular`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/30`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `31.Um gerenciador de transações é qual das seguintes opções?
+  ,`, a: new aln(`Mantém um registro de transações`), b: new aln(` Mantém antes e depois das imagens do banco de dados
+  ,`), c: new aln(`Mantém o controle de simultaneidade apropriado
+  ,`), d: new aln(`Todos os anteriores
+  ,`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/31`, testRef: `16`, tema: `SGBD orientados a objectos`,
+    prg: `32.Um ambiente homogêneo autônomo é qual dos seguintes?
+  ,`, a: new aln(`O mesmo DBMS está em cada nó e cada DBMS funciona de forma independente.
+  ,`, 0), b: new aln(`O mesmo DBMS está em cada nó e um DBMS central coordena o acesso ao banco de dados.
+  ,`), c: new aln(`Um DBMS diferente está em cada nó e cada DBMS funciona de forma independente.
+  ,`), d: new aln(`Um DBMS diferente está em cada nó e um DBMS central coordena o acesso ao banco de dados.
+  ,`), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
+//////////////////////////ES1 ////////////////
+
+let es_t2_21 = [
+  new Prg({
+    cadNome: `Es1`, pId: `21/0`, testRef: `21`, tema: ``,
+    prg: `1. Julgue os itens que se seguem, em relação a metodologias de análise, projeto e desenvolvimento de sistemas, e assinale os verdadeiros:`, a: new aln(` O escopo, a importância e a estimativa de um Sprint do Scrum são definidos pelo product owner.`, 0), b: new aln(` Uma das atribuições do product owner, papel definido pelo Scrum, é a responsabilidade pela gestão do backlog. Tal atribuição pode ser delegada aos outros membros do time Scrum.`), c: new aln(` O Scrum é utilizado, como função primária, para a gestão de projetos de desenvolvimento de software, mas também tem sido usado o extreme programming e outras metodologias de desenvolvimento. Teoricamente, o Scrum pode ser aplicado em qualquer contexto no qual um grupo de pessoas necessitem de trabalhar juntas para atingir um objetivo comum.`, 0), d: new aln(` O único papel definido pelo Scrum com autoridade para cancelar uma Sprint é o do product owner.`, 0), e: new aln(` Num um projeto gerido com a metodologia Scrum, um produto estará, ao final de cada sprint, completamente testado, estando 100% completos todos os requisitos do product backlog.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `21/1`, testRef: `21`, tema: ``,
+    prg: `3. Analise o texto: “O Scrum enfatiza o uso de um conjunto de padrões de processos de software que provaram ser eficazes para projetos com prazo de entrega apertados, requisitos mutáveis e críticos de negócio. Cada um desses padrões de processos define um conjunto de ações de desenvolvimento. Uma dessas ações consiste em manter uma lista com prioridades dos requisitos ou funcionalidades do projeto que fornecem valor comercial ao cliente. Os itens podem ser adicionados a esse registo em qualquer momento. O gerente de produto avalia o registo e atualiza as prioridades conforme requisitado”. ..A lista citada no texto é conhecida como: (1,0 V)`, a: new aln(` urgências scrum.`), b: new aln(` registo ágil de requisitos.`), c: new aln(` Alterações scrum.`), d: new aln(` Registo pendente de trabalhos (Backlog).`, 0), e: new aln(` Registo iterativo de desenvolvimento (sprint).`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `21/2`, testRef: `21`, tema: ``,
+    prg: `4. A figura abaixo mostra uma ferramenta utilizada no desenvolvimento de sistemas orientados a objectos:[Imagem]Esta ferramenta é conhecida como: `, a: new aln(` Diagrama de Actividades.`), b: new aln(` Diagrama de Pacotes.`), c: new aln(` Diagrama de Classes.`), d: new aln(` Diagrama de Colaboracao.`, 0), e: new aln(` Diagrama de Objectos`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `21/3`, testRef: `21`, tema: ``,
+    prg: `7. Para utilizar o processo de estimativa por Story Points em Scrum, inicialmente… (1,5 V)`, a: new aln(` O Product Owner deve atribuir valores de negócio para cada um dos itens do Product Backlog.`), b: new aln(` O Product Backlog deve considerar todos os fatores de Sprint contidos no Backlog Owner.`, 0), c: new aln(` Os Stakeholders devem atribuir os riscos do Product Owner para cada Sprint Planning.`), d: new aln(` Os Stakeholders devem atribuir valores de negócio do Product Owner para cada Sprint.`), e: new aln(` O Product Planning deve avaliar cada Sprint contida no Backlog transacional e decidir pela prioridade de atividades`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `21/4`, testRef: `21`, tema: ``,
+    prg: `8. Na metodologia Scrum, NÃO faz parte de uma revisão do sprint (sprint review) o seguinte procedimento: (1,5 V)`, a: new aln(` Todo o time colabora no que deve ser feito em seguida, de modo que esta revisão contribua para reuniões de planeamento subsequentes.`), b: new aln(` O proprietário do produto identifica o que está pronto e o que ainda está por fazer.`), c: new aln(` O time de desenvolvimento discute quais fatores positivos e negativos ocorreram durante o sprint e como os problemas foram resolvidos.`), d: new aln(` O time de desenvolvimento apresenta o trabalho que foi desenvolvido e responde questões sobre o incremento.`), e: new aln(` Todo o time cria um plano para implementar melhorias no modo como o time efetua seu trabalho`, 0), imgs: [], fim: ""
+  })
+];
+
+let es_t2_22 = [
+  new Prg({
+    cadNome: `Es1`, pId: `/0`, testRef: ``, tema: `Metodologia Estruturada de Desenvolvimento`,
+    prg: `1.Quanto as metodologias de análise, projeto e desenvolvimento de sistemas, são corretas as afirmações  seguintes: `, a: new aln(` O escopo, a importância e a estimativa de um Sprint do Scrum são definidos pelo product owner. `, 0), b: new aln(` Uma das atribuições do product owner, papel definido pelo Scrum, é a responsabilidade pela gestão do backlog. Tal atribuição pode ser delegada aos outros membros do time Scrum. `), c: new aln(` O único papel definido pelo Scrum com autoridade para cancelar uma Sprint é o do product owner. `, 0), d: new aln(` Num um projeto gerido com a metodologia Scrum, um produto estará, ao final de cada sprint, completamente testado, estando 100% completos todos os requisitos do product backlog. `), e: new aln(` O Scrum é utilizado, como função primária, para a gestão de projetos de desenvolvimento de software, mas também tem sido usado o extreme programming e outras metodologias de desenvolvimento. Teoricamente, o Scrum pode ser aplicado em qualquer contexto no qual um grupo de pessoas necessitem de trabalhar juntas para atingir um objetivo comum. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/1`, testRef: ``, tema: `Metodologia Agil`,
+    prg: `3. Analise o texto: “O Scrum enfatiza o uso de um conjunto de padrões de processos de software que provaram ser eficazes para projetos com prazo de entrega apertados, requisitos mutáveis e críticos de negócio. Cada um desses padrões de processos define um conjunto de ações de desenvolvimento. Uma dessas ações consiste em manter uma lista com prioridades dos requisitos ou funcionalidades do projeto que fornecem valor comercial ao cliente. Os itens podem ser adicionados a esse registo em qualquer momento. O gerente de produto avalia o registo e atualiza as prioridades conforme requisitado”. A lista citada no texto é conhecida como:`, a: new aln(` Registo ágil de requisitos. `), b: new aln(` Alterações scrum. `), c: new aln(` Registo pendente de trabalhos (Backlog). `, 0), d: new aln(` Urgências scrum. `), e: new aln(` Registo iterativo de desenvolvimento (sprint).`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/2`, testRef: ``, tema: `Processos de Desenvolvimento de Software`,
+    prg: `4. Para utilizar o processo de estimativa por Story Points em Scrum, inicialmente… `, a: new aln(` O Product Owner deve atribuir valores de negócio para cada um dos itens do Product Backlog. `, 0), b: new aln(` O Product Backlog deve considerar todos os fatores de Sprint contidos no Backlog Owner. `), c: new aln(` Os Stakeholders devem atribuir os riscos do Product Owner para cada Sprint Planning. `), d: new aln(` Os Stakeholders devem atribuir valores de negócio do Product Owner para cada Sprint. `), e: new aln(` O Product Planning deve avaliar cada Sprint contida no Backlog transacional e decidir pela prioridade de atividades. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/3`, testRef: ``, tema: `Metodologia Orientada a Objectos `,
+    prg: `5. Os padrões a partir dos quais os objetos são criados, são denominados:`, a: new aln(` Atributos. `), b: new aln(` Métodos. `), c: new aln(` Entidades. `), d: new aln(` Classes. `, 0), e: new aln(` Instâncias.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/4`, testRef: ``, tema: `Metodologia Orientada a Objectos `,
+    prg: `6. A figura abaixo mostra uma ferramenta utilizada no desenvolvimento de sistemas orientados a objectos:Esta ferramenta é conhecida como: [imagem]`, a: new aln(` Diagrama de Actividades. `), b: new aln(` Diagrama de Pacotes. `), c: new aln(` Diagrama de Classes. `), d: new aln(` Diagrama de Colaboração. `, 0), e: new aln(` Diagrama de Objectos. `), imgs: [require('../testespics/es1/t2/t2_22_6.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/5`, testRef: ``, tema: `Metodologia Agil`,
+    prg: `7. Na metodologia Scrum, NÃO faz parte de uma revisão do sprint (sprint review) o seguinte procedimento: `, a: new aln(` Toda a equipa colabora no que deve ser feito em seguida, de modo que esta revisão contribua para reuniões de planeamento subsequentes. `), b: new aln(` O proprietário do produto identifica o que está pronto e o que ainda está por fazer. `), c: new aln(` A equipa de desenvolvimento discute quais fatores positivos e negativos ocorreram durante o sprint e como os problemas foram resolvidos. `), d: new aln(` A equipa de desenvolvimento apresenta o trabalho que foi desenvolvido e responde questões sobre o incremento. `), e: new aln(` Toda a equipa cria um plano para implementar melhorias no modo como esta efetua o seu trabalho. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/6`, testRef: ``, tema: `Metodologia Orientada a Objectos `,
+    prg: `8. Um Analista pretende desenvolver um projeto utilizando UML 2.0 e, em seus propósitos, verificou a possibilidade de uso de alguns diagramas. Um deles é o Diagrama de Sequência que representa a indicação do conjunto de objectos envolvidos num cenário e a especificação das mensagens trocadas entre estes ao longo de linhas do tempo (linhas tracejadas verticalmente da base dos objectos até a parte inferior do diagram. Retângulos colocados sobre as linhas de tempo indicam:`, a: new aln(` O tempo decorrido entre as iterações de um processo recursivo. `), b: new aln(` As interações entre as actividades, no tempo. `), c: new aln(` Os períodos de ativação do objecto. `, 0), d: new aln(` Os casos de uso de cada objecto. `), e: new aln(` As etapas em que o objecto estará inativo. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/7`, testRef: ``, tema: `Metodologia Orientada a Objectos `,
+    prg: `9. O uso da Linguagem de Modelagem Unificada (U.M.L.) não auxilia o processo do Scrum a evitar e/ou amenizar problemas de … (1 V)`, a: new aln(` Comunicação entre a equipa de desenvolvimento. `), b: new aln(` Cronograma e atrasos no projecto. `), c: new aln(` Escopo deficiente e falta de documentação. `), d: new aln(` Ocorrência de fatores positivos e negativos durante o sprint. `, 0), e: new aln(` Sobrecarga de trabalho no processo de validação. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/8`, testRef: ``, tema: `Metodologia Agil`,
+    prg: `10. No SCRUM, o processo de desenvolvimento inicia com uma reunião de planeamento na qual o Product Owner e a equipe decidem, em conjunto, o que deverá ser implementado do Product Backlog. Assim, a equipe planeia seu trabalho, definindo o Sprint Backlog, na... `, a: new aln(` Primeira parte da Sprint Planning Meeting. `), b: new aln(` Segunda parte da Sprint Planning Meeting. `, 0), c: new aln(` Terceira parte da Sprint Planning Meeting. `), d: new aln(` Sprint. `), e: new aln(` Sprint Burndown. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/9`, testRef: ``, tema: `Metodologia Orientada a Objectos `,
+    prg: `11. A figura abaixo apresenta alguns dos principais artefactos do RUP (Rational Unified Process) e o fluxo de informações existente entre eles. O artefacto identificado pela letra “X”, representa…? [imagem]`, a: new aln(` Projeto do Sistema `), b: new aln(` Requisitos dos Stakeholders `), c: new aln(` Plano de Teste `), d: new aln(` Plano de Desenvolvimento de Software `, 0), e: new aln(` Especificação Suplementar `), imgs: [require('../testespics/es1/t2/t2_22_11.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/10`, testRef: ``, tema: `Metodologia Agil`,
+    prg: `12. Sobre o processo unificado de desenvolvimento de software, é errado afirmar que … :`, a: new aln(` Há vários benefícios em se adotar um processo iterativo controlado, entre os quais podemos destacar a redução dos riscos envolvendo custos a um único incremento. `), b: new aln(` A tomada de decisão nas organizações é facilitada pela utilização da tecnologia da informação, que permite criar, administrar e manter a gestão da informação de uma instituição por meio de dispositivos para acesso, operação e armazenamento de dados. `), c: new aln(` Define-se como o conjunto de atividades necessárias para transformar requisitos do utilizador num sistema de software, baseado em componentes. `, 0), d: new aln(` O final de uma fase é marcado por um ponto de verificação. Um dos propósitos destes pontos de verificação é que permitem a monitorização do progresso dos trabalhos. `), e: new aln(` Os aspectos que distinguem o processo unificado são capturados em três conceitos chaves: direccionado a casos de uso; iterativo e incremental; com foco em desempenho. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/11`, testRef: ``, tema: `Metodologia Estruturada de Desenvolvimento`,
+    prg: `13. figura, que representa um Sistema de Emissão de Bilhetes de Comboio, denomina-se…:[imagem]`, a: new aln(` Modelo de domínio. `), b: new aln(` Diagrama de Fluxo de Dados N1. `, 0), c: new aln(` Modelo de Entidades Relacionamento (MER). `), d: new aln(` Diagrama de Contexto. `), e: new aln(` Diagrama de Actividades.`), imgs: [require('../testespics/es1/t2/t2_22_13.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/12`, testRef: ``, tema: `Metodologia Orientada a Objectos `,
+    prg: `14. A figura exemplifica responsabilidades, actividades e artefatos obrigatórios no RUP (Rational Unified Process). Identifique o que representam as letras A e B, respectivamente. [Imagem]`, a: new aln(` Programador, Plano de Projecto `), b: new aln(` Requisitos dos Stakeholders; Plano do Projecto. `), c: new aln(` Analista de sistemas; Descrição do Sistema. `), d: new aln(` Requisitos dos Stakeholders,`), e: new aln(` Especificação de Casos de  Uso.  `, 0), imgs: [require('../testespics/es1/t2/t2_22_14.jpeg')], fim: ""
+  })
+];
+
+let es_mt2_17 = [
+  new Prg({
+    cadNome: `Es1`, pId: `/0`, testRef: ``, tema: ``,
+    prg: `2. Sobre o processo unificado de desenvolvimento de software marque abaixo a(s) alternativa(s) errada(s): `, a: new aln(`O processo unificado de desenvolvimento de software é o conjunto de atividades necessárias para transformar requisitos do utilizador num sistema de software, baseado em componentes. `, 0), b: new aln(`Há vários benefícios em se adotar um processo iterativo controlado, entre os quais podemos destacar a redução dos riscos envolvendo custos a um único incremento. `), c: new aln(` Os aspectos que distinguem o processo unificado são capturados em três conceitos chaves: direccionado a casos de uso; iterativo e incremental; com foco em desempenho. `, 0), d: new aln(`O final de uma fase é marcado por um ponto de verificação. Um dos propósitos destes pontos de verificação é que permitem a monitoração do progresso dos trabalhos. `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/1`, testRef: ``, tema: ``,
+    prg: `3. No Unified Process os papéis não são pessoas, eles descrevem como as pessoas se comportam no negócio e quais são as responsabilidades que elas têm. Nesse sentido, um Desenvolvedor desempenha os papéis de: `, a: new aln(`Analista de Sistemas, Designer de Negócios e Revisor de Requisitos. `), b: new aln(`Analista de Teste, Implementador e Designer de Interface de Utilizador. `), c: new aln(`Revisor de Requisitos, Analista de Teste e Revisor do Projeto. `), d: new aln(` Implementador, Integrador e Designer.`, 0), e: new aln(` Gerente de Teste, Gerente de Projeto e Designer.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/2`, testRef: ``, tema: ``,
+    prg: `4. São produtos da fase de elaboração do RUP:`, a: new aln(`Documento de visão e produto de software integrado. `), b: new aln(`Descrição da arquitectura do software e lista de riscos revista. `, 0), c: new aln(`Manual do utilizador e base de dados operacionais convertidas. `), d: new aln(`Lista de riscos revista e base de dados operacionais convertidas. `), e: new aln(`Produto de software integrado e descrição da arquitectura do software. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `/3`, testRef: ``, tema: ``,
+    prg: `5. No Processo Unificado, a maior porção do core workflow denominado Analysis é executada na fase ...`, a: new aln(`Elaboration Implementation `, 0), b: new aln(`Transition  Construction `), c: new aln(`Inception Deployment`), d: new aln(``), e: new aln(`Produto de software integrado e descrição da arquitectura do software. `), imgs: [], fim: ""
+  })
+];
+
 let es14 = [new Prg({
   cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `Testex`,
   prg: `Catch fire?`, a: new aln(`o relacionamento, em termos de máximo, entre País Origem, Setor e Tempo é tipo l : 1 :N.
@@ -1670,7 +2491,7 @@ let es14 = [new Prg({
         ,`), imgs: [require('../testespics/teste2bd/teste19.1.jpg')], fim: ""
 }),
 new Prg({
-  cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `Nefex`,
+  cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `normalizacaoT`,
   prg: `Battle through heavens?`, a: new aln(` a`), b: new aln(`b`, 0), c: new aln(`c`), d: new aln(``), e: new aln(` São exemplos de tabelas derivadas: Tempo = {Ano, Investe} e Setor = {NomePaís,
         , DesignaçãoSector, Ano, Montante}. 
         ,`), imgs: [require('../testespics/teste2bd/teste19.1.jpg')], fim: ""
@@ -1682,14 +2503,18 @@ let es15 = [new Prg({
   imgs: [], fim: ""
 }),
 new Prg({
-  cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `Nefex`,
+  cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `normalizacaoT`,
   prg: `Gostas de ?`, a: new aln(`PS ita`), b: new aln(`PS`, 0), c: new aln(`Switch`), d: new aln(``), e: new aln(` São exemplos de tabelas derivadas: Tempo = {Ano, Investe} e Setor = {NomePaís,
         , DesignaçãoSector, Ano, Montante}. 
         ,`), imgs: [require('../testespics/teste2bd/teste19.1.jpg')], fim: ""
 }),
 ];
+
+
 let bd1t2 = [bd22, bd19, bd18];
 let bd1t1 = [bd16, bd15, bd14];
+let bd2t2 = [bd2_t2_22, bd2_r_16];
 let esTs1 = [es14, es15];
+let esTs2 = [es_t2_22, es_t2_21, es_mt2_17];
 
-export { bd1t2, esTs1, bd1t1 };
+export { bd1t2, esTs1, bd1t1, bd2t2, esTs2 };
