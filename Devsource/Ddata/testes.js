@@ -23,7 +23,9 @@ let tnomes_BD2T2 = [
 
 
   newTesteData(2022),
-  newTesteData(2016)
+  newTesteData(2016, "R"),
+  newTesteData(2016),
+  newTesteData(2014),
 ];
 
 // ES1

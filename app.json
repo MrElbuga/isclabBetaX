@@ -14,6 +14,11 @@
       "**/*"
     ],
     "android": {
+      "package": "com.isclabbeta", "splash": {
+        "image": "./Devsource/testespics/pt.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#000000"
+      },
       "adaptiveIcon": {
         "foregroundImage": "./Devsource/testespics/Isclablogo.png",
         "backgroundColor": "#000000"

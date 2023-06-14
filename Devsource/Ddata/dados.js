@@ -200,8 +200,18 @@ function sortear(lista) {
 //fArray= sortear();
 //mostrarTUdo(fArray,pdados);
 
-function newTesteData(nr) {
-  return { Numero: nr };
+function newTesteData(nr, r) {
+  let nome = {};
+
+  let plvr = nr;
+
+  if (r != null) {
+    plvr = r + ": " + nr;
+  }
+
+  nome = { Numero: plvr };
+
+  return nome;
 }
 
 export { sortear, Prg, aln, newTesteData };

@@ -1669,7 +1669,7 @@ let bd2_t2_22 = [
   }),
   new Prg({
     cadNome: `Bd2`, pId: `22/2`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
-    prg: `São desvantagens dos sistemas distribuidos: (escolha duas)`, a: new aln(`Dependência de hardware..`), b: new aln(`Maior custo de desenvolvimento.`, 0), c: new aln(`Maior probabilidade de ocorrências de falhas no programa.`, 0), d: new aln(`Dependência de sistemas operacionais..`), e: new aln(` Dependência do tipo de rede para ligar as localidades.`), imgs: [], fim: ""
+    prg: `3.São desvantagens dos sistemas distribuidos: (escolha duas)`, a: new aln(`Dependência de hardware..`), b: new aln(`Maior custo de desenvolvimento.`, 0), c: new aln(`Maior probabilidade de ocorrências de falhas no programa.`, 0), d: new aln(`Dependência de sistemas operacionais..`), e: new aln(` Dependência do tipo de rede para ligar as localidades.`), imgs: [], fim: ""
   }),
   new Prg({
     cadNome: `Bd2`, pId: `22/3`, testRef: `22`, tema: ` Administracão  de bd`,
@@ -1705,7 +1705,7 @@ let bd2_t2_22 = [
   Nó2: Responsável pela venda dos artigos
   Nó3: Responsável pela Administração do Negócio. 
   
-  Os Administradores do Negócio (Nó 3), pretendem ter acesse em tempo real aos registos de vendas efectuadas 
+  Os Administradores do Negócio (Nó 3), pretendem ter acesso em tempo real aos registos de vendas efectuadas 
   pelo No2 para efeitos de monitoria e controle. Qual das opções abaixo é utilizada para responder ao pedido:
   
   [Imagem Abaixo]`, a: new aln(`O Nó 3 deverá fazer a Replicação da tabela Vendas do No2; `), b: new aln(`O Nó 3 deverá fazer fragmentação Mista da tabela Vendas do No2;`), c: new aln(` O No 3, deverá fazer snapshot da tabela vendas do No2;`, 0), d: new aln(`O No 3, pode programar através de PL/SQL um loop para realização uma consulta remota ao No2; 
@@ -1764,7 +1764,7 @@ let bd2_t2_22 = [
     cadNome: `Bd2`, pId: `22/14`, testRef: `22`, tema: ` Administracão  de bd`,
     prg: `15. Com a tecnologia assíncrona, se qualquer cópia de um dado for actualizada em qualquer lugar da rede, 
   a mesma actualização será aplicada imediatamente a todas as outras cópias ou será abortada.
-  `, a: new aln(`Verdadeiro `, 0), b: new aln(`Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  `, a: new aln(`Verdadeiro `), b: new aln(`Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
     cadNome: `Bd2`, pId: `22/15`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
@@ -1776,10 +1776,9 @@ let bd2_t2_22 = [
   N63: Responsável pela Venda e Gestão das Importações
   N64: Responsável pela Administração do Negócio.
   
-  [ Imagem presente aqui Abaixo! ]
+  [ Imagem presente aqui, Abaixo! ]
   
-  Um Administrador do Negócio (Nó 4), pretende ter acesso em tempo real dos registos de pedidos de-
-  importação de Viaturas feitas por clientes Nacionais dos Nós 1, 2 e 3. Qual das opções abaixo é utilizada
+  Um Administrador do Negócio (Nó 4), pretende ter acesso em tempo real dos registos de pedidos de importação de Viaturas feitas por clientes Nacionais dos Nós 1, 2 e 3. Qual das opções abaixo é utilizada
   para responder ao pedido:
   `, a: new aln(`Fragmentação Horizontal dos Nós 1, 2 e 3 
   `, 0), b: new aln(`Fragmentação Mista dos Nós 1, 2 e 3
@@ -1792,7 +1791,7 @@ let bd2_t2_22 = [
     cadNome: `Bd2`, pId: `22/16`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
     prg: `17. Uma base de dados distribuída homogénea é qual das seguintes opções? 
   `, a: new aln(`O mesmo SGBD é usado em cada local e os dados não estão distribuídos ao longo dos nós.
-  `, 0), b: new aln(` O mesmo SGBD é usado em cada local e os dados estão distribuídos ao longo dos nós
+  `), b: new aln(` O mesmo SGBD é usado em cada local e os dados estão distribuídos ao longo dos nós
   `, 0), c: new aln(`Diferente SGBD é usado em cada local e os dados não estão distribuídos ao longo dos nós.
   `), d: new aln(`Diferente SGBD é usado em cada local e os dados estão distribuídos ao longo dos nós.
   `), e: new aln(``), imgs: [], fim: ""
@@ -1871,8 +1870,16 @@ let bd2_t2_22 = [
   T2: R2(z); R2(y); W2(z); W2(y).
   T3: R3(x); R3(y); W3(y).
   
-  S1: R1(x); R2(z); R1(x); R3(x); R3(y); W1(x); W3(y); R2(y); W2(z); W2(y). 
-  S2: R1(x); R2(z); R3(x); R1(z); R2(y); R3(y); W1(x); W2(z); W3(y); W2(y).
+  S1: R1(x); R2(z); R1(x); 
+  R3(x); R3(y); 
+  W1(x); W3(y); 
+  R2(y); W2(z); W2(y). 
+
+
+  S2: R1(x); R2(z); 
+  R3(x); R1(z); R2(y); 
+  R3(y); W1(x); W2(z); 
+  W3(y); W2(y).
   
   I- T1 não obedece às propriedades ACID. 
   II - ȘI é um escalonamento serializável e S2 não é um escalonamento serializável.
@@ -1950,16 +1957,14 @@ let bd2_t2_22 = [
   }),
   new Prg({
     cadNome: `Bd2`, pId: `22/30`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
-    prg: `31. Duas transacções que são executadas simultaneamente e geram resultados consistentes 
-  com os resultados que teriam ocorrido se tivessem sido executadas separadamente são chamadas de transacções serializáveis.
+    prg: `31. Duas transacções que são executadas simultaneamente e geram resultados consistentes com os resultados que teriam ocorrido se tivessem sido executadas separadamente são chamadas de transacções serializáveis.
   `, a: new aln(`Verdadeiro. 
   `, 0), b: new aln(`Falso.
   `), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
     cadNome: `Bd2`, pId: `22/31`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
-    prg: `32. O problema de perda de actualização é quando o utilizador A lê dados que foram processados 
-  por uma parte de uma transacção do utilizador B..
+    prg: `32. O problema de perda de actualização é quando o utilizador A lê dados que foram processados por uma parte de uma transacção do utilizador B..
   `, a: new aln(`Verdadeiro. 
   `), b: new aln(`Falso.
   `, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
@@ -1994,7 +1999,8 @@ let bd2_t2_22 = [
   new Prg({
     cadNome: `Bd2`, pId: `22/36`, testRef: `22`, tema: `SGBD orientados a objectos`,
     prg: `37. Quais duas instrucoes to verdadeiras sobre o inicio da instancia da base de dados usando o
-  seguinte comando? (Escola duas,) SOL STARTUP UPGRADE
+  seguinte comando? (Escola duas,) SQL:
+   STARTUP UPGRADE
   
   `, a: new aln(`Permite todos os triggers do sistema
   `), b: new aln(`Permite apenas conexbes do SYSDBA.
@@ -2018,48 +2024,88 @@ let bd2_t2_22 = [
   }),
   new Prg({
     cadNome: `Bd2`, pId: `22/38`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
-    prg: `39. A sua base de dados está aberta e os utilizadores estão a usar o LISTENER listener. 
-  O novo DBA do sistema pára o listener usando o seguinte comando:
-  LSNRCTL > STOP
-  O que acontece às sessões que estão nesse momento conectadas à instância da base de dados? 
-  `, a: new aln(`As sessões são capazes apenas de realizar consultas.
-  `), b: new aln(`As sessões não são afectadas e continuam a funcionar normalmente. 
-  `, 0), c: new aln(`As transacções activas são retornadas (rolled back) e as sessões terminam.
-  `), d: new aln(`As sessões não têm permissão para realizar qualquer operação até que o listener reinicie.
-  `), e: new aln(``), imgs: [], fim: ""
+    prg: `39. Trata-se de regras ou objectivos secundários aplicados aos SGBDs distribuídos:
+  
+  I. Processamento de consultas centralizado
+  II. Dependência de um site central.
+  III. Independência de fragmentação.
+  IV. Autonomia local.Está correcto o que consta APENAS em`, a: new aln(` I e II.`), b: new aln(` I, II e III.`), c: new aln(` II e III.`, 0), d: new aln(` II, III e IV.`), e: new aln(` III e IV.`), imgs: [], fim: ""
   }),
   new Prg({
     cadNome: `Bd2`, pId: `22/39`, testRef: `22`, tema: `SGBD orientados a objectos`,
-    prg: `40. Um SCN do Oracle é:
-  `, a: new aln(`Um valor que é incrementado sempre que há uma leitura suja
-  `), b: new aln(`Incrementado sempre que há um deadlock 
-  `), c: new aln(`Um valor que mantém o controle de bloqueios explicito
-  `), d: new aln(`Um valor que é incrementado sempre que são feitas alterações na base de dados.
-  `, 0), e: new aln(``), imgs: [], fim: ""
+    prg: `40. Que método de nomeação usa o ficheiro tnsnames.ora para armazenar o conector de descrição usado pelo cliente enquanto se conecta a uma instância da base de dados duma máquina remota?`, a: new aln(` Host naming method`), b: new aln(` Local naming method`, 0), c: new aln(` External naming method`), d: new aln(` Directory naming method`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/40`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `41. Ao definir a escala de processamento distribuído de uma consulta numa base de dados distribuídanão é necessário considerar:`, a: new aln(` O custo de transmissão dos dados`), b: new aln(` A replicação dos dados`), c: new aln(` A capacidade de armazenamento de cada servidor`, 0), d: new aln(` A fragmentação de dados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/41`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `42.Uma das desvantagens dos sistemas de base de dados distribuída é`, a: new aln(` a redução da confiabilidade.`), b: new aln(` a redução da disponibilidade.`), c: new aln(` a redução da escalabilidade.`), d: new aln(` o aumento do overhead de processamento.`, 0), e: new aln(` o compartilhamento de dados e o controle distribuído.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/42`, testRef: `22`, tema: ` Administracão  de bd`,
+    prg: `43. C++ é uma linguagem orientada a objectos e é mais simples que Java. `, a: new aln(`Verdadeiro.`), b: new aln(`Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(` o compartilhamento de dados e o controle distribuído.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/43`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `44. Que parte do tnsnames.ora especifica o nome ou endereço IP do servidor onde o processo listener é ouvido? `, a: new aln(` PORT`), b: new aln(` CONNECT_DATA `), c: new aln(` SERVICE_NAME`), d: new aln(` HOST `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/44`, testRef: `22`, tema: `SGBD orientados a objectos`,
+    prg: `45. Acerca de uma base de dados com orientação a objectos: 
+    I - Os objectos não podem conter referências para outros objectos.
+
+    II-A organização dos objectos obedece a uma hierarquia de tipos, subtipos e supertipos. 
+
+    III - A implementação de uma base de dados orientada a objectos não traz mudanças quanto àforma de acesso por parte das aplicações, 
+    o que muda é a forma como os dados serão organizadosna base de dados.
+    Está(ão) correcta(s):
+    `, a: new aln(` Apenas a afirmativa I. `), b: new aln(` Apenas a afirmativa II.`), c: new aln(` Apenas as afirmativas II e III`, 0), d: new aln(` Todas as afirmativas.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/45`, testRef: `22`, tema: `SGBD orientados a objectos`,
+    prg: `46. Objectos de base de dados são quase sempre transitórios.
+  `, a: new aln(`Verdadeiro.`), b: new aln(`Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(` o compartilhamento de dados e o controle distribuído.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/46`, testRef: `22`, tema: `SGBD orientados a objectos`,
+    prg: `47. Qual das seguintes opções é verdadeira em relação ao SGBDOO?`, a: new aln(` Eles têm a capacidade de armazenar tipos de dados complexos.`, 0), b: new aln(` Eles estão a passar à frente dos SGBDR para todas as aplicações. `), c: new aln(` Eles são mais úteis para aplicações de base de dados tradicionais, tabelas bidimensionais.`), d: new aln(` Todas as opções.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/47`, testRef: `22`, tema: ` Administracão  de bd`,
+    prg: `48. De quem é o papel de determinar os requisitos e o desenho de uma base de dados?`, a: new aln(` Analista de base de dados `, 0), b: new aln(` Administrador de base de dados`), c: new aln(` Ambos A e B`), d: new aln(` Nem A nem B.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `22/48`, testRef: `22`, tema: ``,
+    prg: `39. Trata-se de regras ou objectivos secundários aplicados aos SGBDs distribuídos:
+  
+  I. Processamento de consultas centralizado
+  II. Dependência de um site central.
+  III. Independência de fragmentação.
+  IV. Autonomia local.Está correcto o que consta APENAS em`, a: new aln(` I e II.`), b: new aln(` I, II e III.`), c: new aln(` II e III.`, 0), d: new aln(` II, III e IV.`), e: new aln(` III e IV.`), imgs: [], fim: ""
   })
 ];
 
 let bd2_r_16 = [
   new Prg({
-    cadNome: `Bd2`, pId: `16/0`, testRef: `16`, tema: ``,
-    prg: `1. Que processo de segundo plano não é inicializado por defeito, quando se inicializa uma instância
-  ,Oracle?`, a: new aln(`DBWn
+    cadNome: `Bd2`, pId: `/0`, testRef: ``, tema: ``,
+    prg: `1. Que processo de segundo plano não é inicializado por defeito, quando se inicializa uma instância,Oracle?`, a: new aln(`DBWn
   ,`), b: new aln(`LGWR
   ,`), c: new aln(`CKPT
   ,`), d: new aln(`ARCn
   ,`, 0), e: new aln(` `), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/1`, testRef: `16`, tema: ` Administracão  de bd`,
-    prg: `2. Escolha a hierarquia correcta, do maior ao menor,
-  , desta lista de estrutura lógica da base de dados.`, a: new aln(`Database, tablespace, extent, segment, block 
+    cadNome: `Bd2`, pId: `/1`, testRef: ``, tema: ` Administracão  de bd`,
+    prg: `2. Escolha a hierarquia correcta, do maior ao menor, desta lista de estrutura lógica da base de dados.`, a: new aln(`Database, tablespace, extent, segment, block 
   ,`), b: new aln(`Database, tablespace, segment, extent, block
   ,`, 0), c: new aln(`Database, segment, tablespace, extent, block
   ,`), d: new aln(`Database, extent, tablespace, segment, block
   ,`), e: new aln(` `), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/2`, testRef: `16`, tema: ` Administracão  de bd`,
+    cadNome: `Bd2`, pId: `/2`, testRef: ``, tema: ` Administracão  de bd`,
     prg: `3. Que opção de startup é inválida?
   ,`, a: new aln(`STARTUP NORMAL 
   ,`, 0), b: new aln(`STARTUP MOUNT
@@ -2068,7 +2114,7 @@ let bd2_r_16 = [
   ,`), e: new aln(` `), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/3`, testRef: `16`, tema: ` Administracão  de bd`,
+    cadNome: `Bd2`, pId: `/3`, testRef: ``, tema: ` Administracão  de bd`,
     prg: `4. Qual o principal beneficio em se usar o SPFILE para manter o ficheiro de parâmetros?
   ,`, a: new aln(`O SPFILE pode ser espelhado noutros drives, ao contrário do PFILE 
   ,`), b: new aln(`Mudanças na configuração da base de dados podem tornar-se persistentes durante o shutdown e startup
@@ -2077,7 +2123,7 @@ let bd2_r_16 = [
   ,`), e: new aln(` `), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/4`, testRef: `16`, tema: ` Administracão  de bd`,
+    cadNome: `Bd2`, pId: `/4`, testRef: ``, tema: ` Administracão  de bd`,
     prg: `5. Que frase sobre instância Oracle é verdadeira? 
   `, a: new aln(`Numa instância Oracle, redo log buffer não é parte da área de memória partilhada
   `), b: new aln(`Múltiplas instâncias podem executar-se no mesmo computador, acessando cada uma a sua própria base de dados fisica
@@ -2086,9 +2132,8 @@ let bd2_r_16 = [
   `), e: new aln(` `), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/5`, testRef: `16`, tema: ` Administracão  de bd`,
-    prg: `6. Quando cria uma base de dados, onde Oracle encontra informação sobre control files que
-  ,necessitam de serem criados?
+    cadNome: `Bd2`, pId: `/5`, testRef: ``, tema: ` Administracão  de bd`,
+    prg: `6. Quando cria uma base de dados, onde Oracle encontra informação sobre control files que,necessitam de serem criados?
   ,`, a: new aln(`No ficheiro de parámetro de inicialização
   ,`, 0), b: new aln(`Na linha de comando do CREATE DATABASE
   ,`), c: new aln(`Na variável de ambiente 
@@ -2096,7 +2141,7 @@ let bd2_r_16 = [
   ,`), e: new aln(` `), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/6`, testRef: `16`, tema: ` Administracão  de bd`,
+    cadNome: `Bd2`, pId: `/6`, testRef: ``, tema: ` Administracão  de bd`,
     prg: `7. Que frases sobre o uso de online redo log file são verdadeiras? (escolha três)
   `, a: new aln(`Redo log files são usados apenas para recovery
   `, 0), b: new aln(`Cada redo log dentro de um grupo é chamado de membro 
@@ -2106,7 +2151,7 @@ let bd2_r_16 = [
   `, 0), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/7`, testRef: `16`, tema: ` Administracão  de bd`,
+    cadNome: `Bd2`, pId: `/7`, testRef: ``, tema: ` Administracão  de bd`,
     prg: `8.A BD tem uma tablespace de tamanho uniforme, gerida localmente, 
   ,com gestão automática de espaço de segmento, que contém apenas tabelas. 
   ,Neste momento, o tamanho uniforme para a tablespace é de 512K. 
@@ -2121,7 +2166,7 @@ let bd2_r_16 = [
   ,`, 0), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/8`, testRef: `16`, tema: ` Administracão  de bd`,
+    cadNome: `Bd2`, pId: `/8`, testRef: ``, tema: ` Administracão  de bd`,
     prg: `9. Que tipo de arquivos não são parte de uma base de dados Oracle? (escolha dois)
   ,`, a: new aln(` Control file
   ,`), b: new aln(`Password file
@@ -2130,7 +2175,7 @@ let bd2_r_16 = [
   ,`), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/9`, testRef: `16`, tema: ` Administracão  de bd`,
+    cadNome: `Bd2`, pId: `/9`, testRef: ``, tema: ` Administracão  de bd`,
     prg: `10. Como elimina uma tablespace se não está vazia? 
   `, a: new aln(`Renomeia todos os objectos na tablespace e depois elimina a tablespace.
   `), b: new aln(`Remove do disco os data files da tablespace 
@@ -2139,7 +2184,7 @@ let bd2_r_16 = [
   `, 0), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/10`, testRef: `16`, tema: ` Administracão  de bd`,
+    cadNome: `Bd2`, pId: `/10`, testRef: ``, tema: ` Administracão  de bd`,
     prg: `11. Que visão do dicionário de dados deverá consultar para saber os extents livres numa tablespace.
   ,`, a: new aln(`DBA TABLESPACES
   ,`), b: new aln(`DBA EXTENTS
@@ -2148,7 +2193,7 @@ let bd2_r_16 = [
   ,`), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/11`, testRef: `16`, tema: ` Administracão  de bd`,
+    cadNome: `Bd2`, pId: `/11`, testRef: ``, tema: ` Administracão  de bd`,
     prg: `12. Que comando é usado para assignar um profile a um utilizador que já existe? 
   ,`, a: new aln(`ALTER PROFILE
   ,`, 0), b: new aln(`ALTER USER
@@ -2157,27 +2202,24 @@ let bd2_r_16 = [
   ,`), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/12`, testRef: `16`, tema: ` Administracão  de bd`,
-    prg: `13. Que cláusula no comando CREATE USER pode ser usada para especificar que não há limite no
-  ,espaço permitido numa tablespace?`, a: new aln(`DEFAULT TABLESPACE 
+    cadNome: `Bd2`, pId: `/12`, testRef: ``, tema: ` Administracão  de bd`,
+    prg: `13. Que cláusula no comando CREATE USER pode ser usada para especificar que não há limite no,espaço permitido numa tablespace?`, a: new aln(`DEFAULT TABLESPACE 
   ,`), b: new aln(`UNLIMITED TABLESPACE
   ,`), c: new aln(`QUOTA
   ,`, 0), d: new aln(`PROFILE
   ,`), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/13`, testRef: `16`, tema: ` Administracão  de bd`,
-    prg: `14. Que cláusula deve especificar para permitir que se possa conceder o privilégio de sistema a outros
-  ,utilizadores?`, a: new aln(`CASCADE
+    cadNome: `Bd2`, pId: `/13`, testRef: ``, tema: ` Administracão  de bd`,
+    prg: `14. Que cláusula deve especificar para permitir que se possa conceder o privilégio de sistema a outros,utilizadores?`, a: new aln(`CASCADE
   ,`), b: new aln(`WITH ADMIN OPTION
   ,`, 0), c: new aln(`WITH GRANT OPTION 
   ,`), d: new aln(`WITH MANAGE OPTION
   ,`), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/14`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
-    prg: `15. Uma das formas de implementação de uma base de dados ocorre por meio da distribuição de dados em mais de um local. 
-  ,Essa distribuição pode ser feita por meio da chamada fragmentação vertical,na qual`, a: new aln(`Os indices são divididos em dois indices, sendo que há um indice principal e um outro
+    cadNome: `Bd2`, pId: `/14`, testRef: ``, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `15. Uma das formas de implementação de uma base de dados ocorre por meio da distribuição de dados em mais de um local. ,Essa distribuição pode ser feita por meio da chamada fragmentação vertical,na qual`, a: new aln(`Os indices são divididos em dois indices, sendo que há um indice principal e um outro
   ,secundário`), b: new aln(`O arquivo de log da base de dados sofre um processo de criptografia e armazenamento
   ,redundante`), c: new aln(`As tabelas da base de dados são decompostas, ou seja, os atributos das tabelas são divididos nos
   ,diversos locais`, 0), d: new aln(`Parte dos dados da base de dados são convertidos para o formato XML 
@@ -2185,7 +2227,7 @@ let bd2_r_16 = [
   ,`), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/15`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    cadNome: `Bd2`, pId: `/15`, testRef: ``, tema: ` Sistemas de base de dados distribuídos`,
     prg: `16. A respeito de bases de dados distribuídas, é correcto afirmar:
   ,`, a: new aln(`A replicação de dados em diversos nodos integrantes da arquitectura distribuida é sempre uma boa prática de projecto de bases de dados distribuidas, 
   ,pois torna qualquer dado sempre disponível em qualquer nodo
@@ -2197,7 +2239,7 @@ let bd2_r_16 = [
   ,`), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/16`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    cadNome: `Bd2`, pId: `/16`, testRef: ``, tema: ` Sistemas de base de dados distribuídos`,
     prg: `17. Qual das seguintes opções é uma desvantagem da replicação?
   ,`, a: new aln(`Reduzido tráfego da rede
   ,`), b: new aln(`Se uma BD falha num site, uma cópia pode ser encontrada noutro site
@@ -2206,9 +2248,8 @@ let bd2_r_16 = [
   ,`), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/17`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
-    prg: `18. Uma base de dados distribuida tem qual das seguintes vantagens em relação a uma base de dados
-  ,centralizada? 
+    cadNome: `Bd2`, pId: `/17`, testRef: ``, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `18. Uma base de dados distribuida tem qual das seguintes vantagens em relação a uma base de dados,centralizada? 
   ,`, a: new aln(`Custo do software
   ,`), b: new aln(`Complexidade do software
   ,`), c: new aln(`Resposta lenta
@@ -2216,7 +2257,7 @@ let bd2_r_16 = [
   ,`, 0), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/18`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    cadNome: `Bd2`, pId: `/18`, testRef: ``, tema: ` Sistemas de base de dados distribuídos`,
     prg: `19. NÃO é uma regra associada ao principio fundamental de bases de dados distribuidas:
   ,`, a: new aln(`não dependência de um site central
   ,`), b: new aln(`autonomia local
@@ -2226,7 +2267,7 @@ let bd2_r_16 = [
   ,`, 0), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/19`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    cadNome: `Bd2`, pId: `/19`, testRef: ``, tema: ` Sistemas de base de dados distribuídos`,
     prg: `20. Qual o número máximo de base de dados que um processo listener pode ouvir?
   `, a: new aln(`1 bd
   `), b: new aln(`2 bd
@@ -2236,7 +2277,7 @@ let bd2_r_16 = [
   `, 0), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/20`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    cadNome: `Bd2`, pId: `/20`, testRef: ``, tema: ` Sistemas de base de dados distribuídos`,
     prg: `21. Que porção do tnsnames.ora especifica o nome ou endereço IP do servidor onde o processo listene é ouvido?
   `, a: new aln(`CONNECT_DATA
   `), b: new aln(`PORT
@@ -2245,9 +2286,8 @@ let bd2_r_16 = [
   `, 0), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/21`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
-    prg: `22. Que método de nomeação usa o ficheiro tnsnames.ora para armazenar o conector de descrição usado pelo cliente enquanto se conecta 
-  a uma instância da base de dados duma máquina remota?
+    cadNome: `Bd2`, pId: `/21`, testRef: ``, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `22. Que método de nomeação usa o ficheiro tnsnames.ora para armazenar o conector de descrição usado pelo cliente enquanto se conecta a uma instância da base de dados duma máquina remota?
   `, a: new aln(`Host naming method
   `), b: new aln(`Local naming method
   `, 0), c: new aln(`External naming method
@@ -2255,21 +2295,21 @@ let bd2_r_16 = [
   `), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/22`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    cadNome: `Bd2`, pId: `16/22`, testRef: `16`, tema: ``,
     prg: `23. Sobre as propriedades ACID de transacções de base de dados, é correcto afirmar: 
   `, a: new aln(`Uma transacção deve atender, pelo menos, a uma das propriedades ACID
   `), b: new aln(`A propriedade de ISOLAMENTO é garantida quando uma transacção aguarda outra transacção
   actualizar um dado que ela deseja utilizar
-  `), c: new aln(`A propriedade de ATOMICIDADE é garantida quando o SGBD permite a execução 
+  `, 0), c: new aln(`A propriedade de ATOMICIDADE é garantida quando o SGBD permite a execução 
   de um backup completo de uma BD que contém actualizações de transacções activas e de transacções efectivadas (commited)
   `), d: new aln(`A propriedade de CONSISTÊNCIA não é garantida quando uma transacção é abortada por
   violar uma restrição de integridade
   `), e: new aln(`A propriedade de DURABILIDADE não é garantida quando o SGBD exclui um arquivo de log
   com actualizações de transacções posteriores à realização do último backup da BD.
-  `, 0), imgs: [], fim: ""
+  `), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/23`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    cadNome: `Bd2`, pId: `/23`, testRef: ``, tema: ` Mecanismos de gestão de transacções`,
     prg: `24. Considere a seguinte acção 
   TRANSACTION....
   COMMIT;
@@ -2284,7 +2324,7 @@ let bd2_r_16 = [
   `), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/24`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    cadNome: `Bd2`, pId: `/24`, testRef: ``, tema: ` Mecanismos de gestão de transacções`,
     prg: `25. Considere que duas transacções, T1 e T2, executadas concorrentemente, 
   são as únicas transacções activas num SGBD. 
   Considerando todas as operações realizadas por TI e por T2 apresentadas na ordem descrita a seguir, 
@@ -2297,7 +2337,7 @@ let bd2_r_16 = [
   `), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/25`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    cadNome: `Bd2`, pId: `/25`, testRef: ``, tema: ` Mecanismos de gestão de transacções`,
     prg: `26. Algumas das principais técnicas usadas para controle de execução concorrente de transacções em bases de dados são, 
   em relação aos itens de dados, baseadas no conceito de
   `, a: new aln(`blocagem (block)
@@ -2308,7 +2348,7 @@ let bd2_r_16 = [
   `, 0), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/26`, testRef: `16`, tema: `SGBD orientados a objectos`,
+    cadNome: `Bd2`, pId: `/26`, testRef: ``, tema: `SGBD orientados a objectos`,
     prg: `27. Analise as seguintes afirmações relacionadas às capacidades que devem ser atendidas pelas bases
   ,de dados orientados a objectos:
   ,
@@ -2333,32 +2373,31 @@ let bd2_r_16 = [
   ,`), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/27`, testRef: `16`, tema: `SGBD orientados a objectos`,
+    cadNome: `Bd2`, pId: `/27`, testRef: ``, tema: `SGBD orientados a objectos`,
     prg: `28. Base de dados pode garantir armazenamento persistente para objectos programas. 
-  ,A esse respeito, analise as assertivas e assinale a alternativa que aponta as correctas.
-  ,
-  ,I. Uma das principais justificativas para sistemas de base de dados orientados a objectos 
-  ,é a possibilidade de oferecer um armazenamento persistente aos objectos programas e estruturas de dados.
-  ,
+      A esse respeito, analise as assertivas e assinale a alternativa que aponta as correctas.
+  
+  I. Uma das principais justificativas para sistemas de base de dados orientados a objectos ,é a possibilidade de oferecer um armazenamento persistente aos objectos programas e estruturas de dados.
+  
   ,II. Sistemas de base de dados orientados a objetos geralmente são compativeis com linguagens de programação como C++ e Java.
-  ,
+  
   ,III. Um objecto complexo em C++ pode ser armazenado, permanentemente, num SGBD orientado a objecto.
   ,IV. Os sistemas tradicionais de base de dados geralmente possuem o chamado problema de separação por impedância, 
   ,quando as estruturas de dados fornecidas pelo SGBD são incompatíveis com as estruturas de dados da linguagem de programação.
   ,`, a: new aln(`Apenas I e II.`), b: new aln(`Apenas I e III.`), c: new aln(`Apenas II e III.`), d: new aln(`Apenas II, III e IV`), e: new aln(`I, II, III e IV`, 0), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/28`, testRef: `16`, tema: `SGBD orientados a objectos`,
+    cadNome: `Bd2`, pId: `/28`, testRef: ``, tema: `SGBD orientados a objectos`,
     prg: `29. Em BDOO qual é o nome dado à habilidade dos objectos existirem depois do fim do programa aplicação? de
   ,`, a: new aln(`Ligação estática`), b: new aln(`Persistência`, 0), c: new aln(`Two-phase commit`), d: new aln(`Integridade do objecto`), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/29`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    cadNome: `Bd2`, pId: `/29`, testRef: ``, tema: ` Sistemas de base de dados distribuídos`,
     prg: `30.Um banco de dados distribuído tem quais das seguintes vantagens sobre um banco de dados centralizado?
   ,`, a: new aln(`Custo do software`), b: new aln(`Complexidade do software`), c: new aln(`Resposta Lenta`), d: new aln(`Crescimento modular`, 0), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/30`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    cadNome: `Bd2`, pId: `/30`, testRef: ``, tema: ` Mecanismos de gestão de transacções`,
     prg: `31.Um gerenciador de transações é qual das seguintes opções?
   ,`, a: new aln(`Mantém um registro de transações`), b: new aln(` Mantém antes e depois das imagens do banco de dados
   ,`), c: new aln(`Mantém o controle de simultaneidade apropriado
@@ -2366,13 +2405,206 @@ let bd2_r_16 = [
   ,`, 0), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Bd2`, pId: `16/31`, testRef: `16`, tema: `SGBD orientados a objectos`,
+    cadNome: `Bd2`, pId: `/31`, testRef: ``, tema: `SGBD orientados a objectos`,
     prg: `32.Um ambiente homogêneo autônomo é qual dos seguintes?
   ,`, a: new aln(`O mesmo DBMS está em cada nó e cada DBMS funciona de forma independente.
   ,`, 0), b: new aln(`O mesmo DBMS está em cada nó e um DBMS central coordena o acesso ao banco de dados.
   ,`), c: new aln(`Um DBMS diferente está em cada nó e cada DBMS funciona de forma independente.
   ,`), d: new aln(`Um DBMS diferente está em cada nó e um DBMS central coordena o acesso ao banco de dados.
   ,`), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
+let bd2_t2_16 = [
+  new Prg({
+    cadNome: `Bd2`, pId: `16/0`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `1. Sobre as propriedades ACID de transacções de base de dados, é correcto afirmar: `, a: new aln(` Uma transacção deve atender, pelo menos, a uma das propriedades ACID.`), b: new aln(` A propriedade de ISOLAMENTO é garantida quando uma transacção aguarda outra transacção actualizar um dado que ela deseja utilizar`, 0), c: new aln(` A propriedade de ATOMICIDADE é garantida quando o SGBD permite a execução de um backup completo de uma BD que contém actualizações de transacções activas e de transacções efectivadas (commite`), d: new aln(` A propriedade de CONSISTENCIA não é garantida quando uma transacção é abortada porviolar uma restrição de integridade`), e: new aln(` A propriedade de DURABILIDADE não é garantida quando o SGBD exclui um arquivo de log com actualizações de transacções posteriores à realização do último backup da BD.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/1`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `2. Sobre controle de concorrência de transacções, é correcto afirmar:`, a: new aln(` Bloqueios (lock) de tabelas são sempre realizados de forma automática pelo Oracle`), b: new aln(` O Oracle define modos de bloqueios para tabelas, para linhas de tabelas, para colunas de tabelas `), c: new aln(` Transacções só podem executar concorrentemente se estiverem a actuar sobre um protocolo dotipo serializável`), d: new aln(` Transacções de utilizadores, podem bloquear através de comandos SQL, tanto tabelas quanto partes do dicionário de dados`), e: new aln(` Um bloqueio mantido num recurso por uma transacção Té libertado somente quando T encerra com sucesso (commit) ou em decorrência de um rollback ou savepoint.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/2`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `3.Para que uma transacção seja efectivada, todas as acções que compõem a respectiva unidade de trabalho devem ser concluidas com sucesso. 
+  
+  Caso contrário,a acção que constituiu falha e a transacção devem ser desfeitas.A afirmação refere-se a uma das quatro propriedades da integridade de uma transação,denominada:`, a: new aln(` Atomicidade`, 0), b: new aln(` Consistência`), c: new aln(` Isolamento`), d: new aln(` Durabilidade`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/3`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `4. Considere a seguinte acção:
+  
+  TRANSACTION ...
+  COMMIT; 
+  ROLLBACK;
+  
+  O que faz o Rollback nesta transacção? `, a: new aln(` Desfaz as transacções antes do commit..`), b: new aln(` Limpa todas as transacções.`), c: new aln(` Refaz as transacções antes do`), d: new aln(` Nenhuma acção..`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/4`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `5. Considere que duas transacções, T1 e T2, executadas concorrentemente, são as únicas transacções activas num SGBD. Considerando todas as operações realizadas por T1 e por T2 apresentadas na ordem descrita a seguir, 
+  
+  qual das situações abaixo pode gerar um estado inconsistente na base de dados no final da execução sem falhas de T1 e de T2? `, a: new aln(` T1 lê o dado X, T2 lê o dado X, T2 actualiza o dado X e T1 actualiza o dado X.`, 0), b: new aln(` T1 lê o dado X. T2 lê o dado XTI actualiza o dado X. `), c: new aln(` T1 actualiza o dado Y, T2 lê o dado Y, T2 lê o dado Xe T1 lê o dado X.`), d: new aln(` T1 actualiza o dado X, T2 lê o dado Y e T1 actualiza o dado X.`), e: new aln(` T1 lê o dado X. T2 lê o dado X, T2 actualiza o dado X e T2 actualiza o dado Y.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/5`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `6. Um ambiente homogéneo autónomo é qual das seguintes opções?`, a: new aln(` O mesmo SGBD està em cada nó e cada SGBD trabalha independentemente `, 0), b: new aln(` O mesmo SGBD está em cada né e um SGBD central controla o acesso à BD`), c: new aln(` Diferentes SGBD estão em cada nó e cada SGBD trabalha independentemente `), d: new aln(` Diferentes SGBD estão em cada nó e um SGBD central controla e acesso à BD`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/6`, testRef: `16`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `7. Relativamente a transacção global, qual das seguintes opções é verdadeira?`, a: new aln(` Os dados necessários estão num site local e o SGBDD encaminha o pedido. se necessário`), b: new aln(` Os dados necessários estão localizados em pelo menos um site não local e o SGBDD encaminhao pedido se necessário`, 0), c: new aln(` Os dados necessários estão num site local e o SGBDD encaminha o pedido para apenas o SGBD local`), d: new aln(`Os dados necessários estão localizados em pelo menos um site não local e o SGBDD encaminha o pedido para apenas o SGBD local`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/7`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `8. Qual das seguintes opções é uma desvantagem da replicação?`, a: new aln(` Reduzido tráfego da rede `), b: new aln(` Se uma BD falha num site, uma cópia pode ser encontrada noutro site`), c: new aln(` Cada site deve ter a mesma capacidade de armazenamento`, 0), d: new aln(` Cada transacção pode prosseguir sem coordenação através da rede`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/8`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `9. Transparência de localização permite qual das seguintes opções? `, a: new aln(` Utilizadores tratarem os dados como se estivessem num local`), b: new aln(` Programadores tratarem os dados como se estivessem num local`), c: new aln(` Gestores tratarem os dados como se estivessem num local `), d: new aln(` Todas acima`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/9`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `10. Uma BDD pode usar qual das seguintes estratégias? `, a: new aln(` Totalmente centralizada num site e acedida por muitos outros sites`), b: new aln(` Parcialmente ou totalmente replicada através dos sites`), c: new aln(` Particionada em segmentos em diferentes sites`), d: new aln(` Todas acima`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/10`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `11. Uma base de dados distribuida tem qual das seguintes vantagens em relação a uma base de dadoscentralizada? `, a: new aln(` Custo do software`), b: new aln(` Complexidade do software`), c: new aln(` Resposta lenta `), d: new aln(` Crescimento modular`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/11`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `12. Uma base de dados distribuida heterogénea, è qual das seguintes? `, a: new aln(` O mesmo SGBD e usado em cada sitio e os dados não são distribuidos ao longo dos nós.`), b: new aln(` O mesmo SGBD é usado em cada sitio e os dados são distribuidos ao longo dos nós `), c: new aln(` Um SGBD diferente é usado em cada sitio e os dados não são distribuidos ao longo dos nós`), d: new aln(` Um SGBD diferente é usado em cada sitio e os dados são distribuidos ao longo dos nós.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/12`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `13. A regra de SGBDD que define que a probabilidade do sistema funcionar, sem queda, em qualquer momento, mesmo diante da falha de algum componente individual, tal como um site isolado, édesignada como?`, a: new aln(` Independência de localização `), b: new aln(` Durabilidade`), c: new aln(` Confiabilidade`, 0), d: new aln(` Consistência`), e: new aln(` Dependência da replicação`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/13`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `14. Qual o número máximo de base de dados que um processo listener pode ouvir?`, a: new aln(` 1 bd`), b: new aln(` 2 bd `), c: new aln(` 10 bd`), d: new aln(` 25 bd`), e: new aln(` Nenhuma das acima`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/14`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `15. Há um listener chamado LISTENER. O método correcto para iniciar o listener seria`, a: new aln(` Isnrctl startup listener`), b: new aln(` Isnrctl start`, 0), c: new aln(` listener start`), d: new aln(` listener start listener`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/15`, testRef: `16`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `16. Que método de nomeação usa o ficheiro tnsnames.ora para armazenar o conector de descrição usado pelo cliente enquanto se conecta a uma instância da base de dados duma máquina remota`, a: new aln(` Host naming method`), b: new aln(` Local naming method`, 0), c: new aln(` External naming method `), d: new aln(` Directory naming method`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/16`, testRef: `16`, tema: ` SGBD orientados a objectos`,
+    prg: `17. Sobre SGBDOO é correcto afirmar: (escolha três)`, a: new aln(` Não suportam tipos de dades definidos pelo utilizador, so dominios `), b: new aln(` Um objecto tem existência independente de seu valor e do endereço de seu armazenamento fisico`, 0), c: new aln(` Providencia modularidade e independència logica dos dados `, 0), d: new aln(` Um objecto complexo em C`, 0), e: new aln(` pode ser armazenado, permanentemente, num SGBD orientado a objecto`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/17`, testRef: `16`, tema: ` SGBD orientados a objectos`,
+    prg: `18. Analise as seguintes afirmações:
+  
+  I. Concorrência. o SGBD orientado a objetos não necessita nem implementa controle de concorrência, que deve ser feita pelas transacções solicitadas pelo aplicativo conectado à BD. 
+  
+  II. Transacções: unidades executadas inteiramente ou não. Se um conjunto de actualizações ocorreu dentro de uma transacção, todas ou parte delas devem ser visiveis ao mundo exterior. independentemente do estado final da transacção.
+  
+  III.Recuperação: o SGBD deve garantir que os resultados parciais ou actualizações parciais de transacções que falharam não sejam propagados para a base de dados persistente.
+  
+  IV. Persistència: capacidade de objectos persistirem através de diferentes chamadas do programa Dados manipulados por bases de dados orientados a objectos devem ser persistentes ou transientes.
+  
+  Quais são correctas?`, a: new aln(` I e II`), b: new aln(` II e III`), c: new aln(` III e IV`), d: new aln(` I e III`), e: new aln(`III e IV`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `16/18`, testRef: `16`, tema: ` SGBD orientados a objectos`,
+    prg: `19. Em BDOO qual é o nome dado à habilidade dos objectos existirem depois do fim do programa deaplicação?`, a: new aln(`Ligação estática`), b: new aln(`Persistência`, 0), c: new aln(`Two-phase commit `), d: new aln(`Integridade do objecto`), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
+let bd2_r_14 = [
+  new Prg({
+    cadNome: `Bd2`, pId: `14/0`, testRef: `14`, tema: ` Administracão  de bd`,
+    prg: `1. Qual o método correcto para iniciar uma instância para criar uma base de dados?`, a: new aln(` STARTUP`), b: new aln(` STARTUP OPEN `), c: new aln(` STARTUP MOUNT`), d: new aln(` STARTUP NOMOUNT`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/1`, testRef: `14`, tema: ` Administracão  de bd`,
+    prg: `2. Examine os requisitos de tablespace para uma nova base de dadosQuais as três tablespaces podem ser criadas no comando CREATE DATABASE? (Escolha 3)
+  
+  [Imagem abaixo]`, a: new aln(` TEMP`, 0), b: new aln(` USERS`), c: new aln(` SYSTEM`, 0), d: new aln(` APP NDX`), e: new aln(` UNDOTBS`, 0), imgs: [require('../testespics/bd2/t2/r_14_2.png')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/2`, testRef: `14`, tema: ` Administracão  de bd`,
+    prg: `3.Está a criar uma nova base de dados, mas não quer que os utilizadores usem a tablespace SYSTEM para diversas operações. oque deve incluir no comando CREATE DATABASE para prevenir o uso do SYSTEM?`, a: new aln(`Criar uma UNDO tablespace; `), b: new aln(`Criar uma DEFAULT TEMPORARY tablespace;`, 0), c: new aln(`Criar uma tablespace com UNDO keyword;`), d: new aln(`Criar uma tablespace com TEMPORARY keyword.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/3`, testRef: `14`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `4. Que processo é iniciado quando um utilizador se conecta ao servidor Oracle no modo servidor dedicado?`, a: new aln(` DBWn`), b: new aln(` PMON`), c: new aln(` SMON`), d: new aln(` Server.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/4`, testRef: `14`, tema: ` Administracão  de bd`,
+    prg: `5. Quando se prepara para criar uma base de dados, tem de ter a certeza que tem espaço suficiente para os database files. Quando calcula os requisitos de espaço tem de ter em consideração que alguns ficheiros podem ser multiplicados (multiplexe)?
+  
+  Quais os dois tipos de ficheiros deve planear multiplicar (multiplex? (Escolha 2)`, a: new aln(` Data files`, 0), b: new aln(` Control file`), c: new aln(` Password file`), d: new aln(` Online redo log files `, 0), e: new aln(` Initialization parameter file`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/5`, testRef: `14`, tema: ` Administracão  de bd`,
+    prg: `6. Pode usar o Database Configuration Assistant para criar um template, usando a estrutura de uma base de dados que já existe.Qual das opções incluirá no seu template? (Escolha 3)`, a: new aln(` Data files`, 0), b: new aln(` Tablespaces`, 0), c: new aln(` User defined schemas `), d: new aln(` User defined schema data`), e: new aln(` Initialization parameters`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/6`, testRef: `14`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `7.Está a criar uma base de dados manualmente e precisa de limitar o número inicial de online redo log groups e membros. 
+  
+  Que duas palavras chave deve usar no comando CREATE DATABASE para definir onúmero máximo de online redo log files? (Escolha 2)`, a: new aln(`MAXLOGMEMBERS, que determina o número máximo de membros por grupo. `, 0), b: new aln(`MAXREDOLOGS, que especifica o número máximo de online redo log files. `), c: new aln(`MAXLOGFILES, que determina o máximo absoluto de online redo log groups.`, 0), d: new aln(`MAXLOGGROUPS, que especifica o número máximo de online redo log files, groups e members.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/7`, testRef: `14`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `8. Uma base de dados distribuída tem qual das seguintes vantagens em relação a uma base de dados centralizada?`, a: new aln(` Custo do software software`), b: new aln(` Complexidade do `), c: new aln(` Resposta lenta`), d: new aln(` Crescimento modular`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/8`, testRef: `14`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `9. Uma base de dados distribuída heterogénea, é qual das seguintes?`, a: new aln(` O mesmo SGBD é usado em cada sitio e os dados não são distribuidos ao longo dos nós.`), b: new aln(` O mesmo SGBD é usado em cada sítio e os dados são distribuidos ao longo dos nós `), c: new aln(` Um SGBD diferente é usado em cada sítio e os dados não são distribuídos ao longo dos nós`), d: new aln(` Um SGBD diferente é usado em cada sitio e os dados são distribuídos ao longo dos nós.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/9`, testRef: `14`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `10. Qual das seguintes é uma desvantagem da replicação?`, a: new aln(` Tráfico de rede reduzido`), b: new aln(` Se uma base de dados falha num site, uma cópia pode ser localizada noutro site `), c: new aln(` Cada site deve ter a mesma capacidade de armazenamento`, 0), d: new aln(` Cada transacção pode prosseguir, sem coordenação, através da rede.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/10`, testRef: `14`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `11. A regra de SGBDD que define que a probabilidade do sistema funcionar, sem queda, em qualquer momento, mesmo diante da falha de algum componente individual, tal como um site isolado, é designada como?`, a: new aln(` Independência de localização`), b: new aln(` Durabilidade`), c: new aln(` Confiabilidade`, 0), d: new aln(` Consistência`), e: new aln(` Dependência da replicação`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/11`, testRef: `14`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `12. Qual o número máximo de base de dados que um processo listener pode ouvir?`, a: new aln(` 1 bd`), b: new aln(` 2 bd`), c: new aln(` 10 bd`), d: new aln(` 25 bd`), e: new aln(` Nenhuma das acima`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/12`, testRef: `14`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `13. Há um listener chamado listener. O método correcto para iniciar o listener seria`, a: new aln(` Isnrctl startup listener `), b: new aln(` Isnrctl start`, 0), c: new aln(` listener start`), d: new aln(` listener start listener`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/13`, testRef: `14`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `14. Que método de nomeação usa o ficheiro tnsnames.ora para armazenar o conector de descrição usado pelo cliente enquanto se conecta a uma instância da base de dados duma máquina remota?`, a: new aln(` Host naming method`), b: new aln(` Local naming method `, 0), c: new aln(` External naming method`), d: new aln(` Directory naming method`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/14`, testRef: `14`, tema: ` Sistemas de base de dados distribuídos`,
+    prg: `15. Para que uma transacção seja efectivada, todas as acções que compõem a respectiva unidade de trabalho devem ser concluidas com sucesso. Caso contrário, a acção que constituiu falha e a transação devem ser desfeitas.A afirmação refere-se a uma das quatro propriedades da integridade de uma transação, denominada:`, a: new aln(` Atomicidade`, 0), b: new aln(` Consistência`), c: new aln(` Isolamento`), d: new aln(` Durabilidade`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/15`, testRef: `14`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `16. Considere a seguinte acção
+  Transaction...
+  Commit;
+  Rollback;
+  
+  O que faz o Rollback?`, a: new aln(` Desfaz as transacções antes do commit`), b: new aln(` Limpa todas as transacções;`), c: new aln(` Refaz as transacções antes do commit;`), d: new aln(` Nenhuma acção.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/16`, testRef: `14`, tema: ` Mecanismos de gestão de transacções`,
+    prg: `17.Considere que duas transacções, T1 e T2, executadas concorrentemente, são as únicas transacções activas num SGBD. 
+  
+  Considerando todas as operações realizadas por T1 e por T2 apresentadas na ordem descrita a seguir
+  
+  qual das situações abaixo pode gerar um estado inconsistente na base de dados no final da execução sem falhas de T1 e de T2? `, a: new aln(` T1 lê o dado X, T2 lê o dado X, T2 actualiza o dado X e T1 actualiza o dado X.`, 0), b: new aln(` T1 lê o dado X. T2 lê o dado XTI actualiza o dado X. `), c: new aln(` T1 actualiza o dado Y, T2 lê o dado Y, T2 lê o dado Xe T1 lê o dado X.`), d: new aln(` T1 actualiza o dado X, T2 lê o dado Y e T1 actualiza o dado X.`), e: new aln(` T1 lê o dado X. T2 lê o dado X, T2 actualiza o dado X e T2 actualiza o dado Y.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/17`, testRef: `14`, tema: ` SGBD orientados a objectos`,
+    prg: `18. Todos os produtos OODBMS, nomeadamente, O2, Objectivity, Object Store e Versant suportam consultas ad-hoc com as seguintes:`, a: new aln(` ADA`), b: new aln(` 4GL `), c: new aln(` C++ `, 0), d: new aln(` PASCAL`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `14/18`, testRef: `14`, tema: ` SGBD orientados a objectos`,
+    prg: `19. Em BDOO qual é o nome dado à habilidade dos objectos existirem depois do fim do programa de aplicação?`, a: new aln(` Ligação estática`), b: new aln(` Persistência`, 0), c: new aln(` Two-phase commit`), d: new aln(` Integridade do objecto`), e: new aln(``), imgs: [], fim: ""
   })
 ];
 
@@ -2513,7 +2745,7 @@ new Prg({
 
 let bd1t2 = [bd22, bd19, bd18];
 let bd1t1 = [bd16, bd15, bd14];
-let bd2t2 = [bd2_t2_22, bd2_r_16];
+let bd2t2 = [bd2_t2_22, bd2_r_16, bd2_t2_16, bd2_r_14];
 let esTs1 = [es14, es15];
 let esTs2 = [es_t2_22, es_t2_21, es_mt2_17];
 
