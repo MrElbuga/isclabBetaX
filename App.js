@@ -51,6 +51,7 @@ export default function App() {
   const [tl_ponto, setVwponto] = useState(false);
   const [tl_provas, setVprovas] = useState(false);
   const [tl_Temas, setVTemas] = useState(false);
+  const [custom_cad, setCustom_cad] = useState(false);
 
   const [pontos, setPontos] = useState(0);
 
@@ -65,7 +66,6 @@ export default function App() {
   const [cur_temas, setcur_temas] = useState([]);
   const [test_type, set_testType] = useState(testViwList[0]);
   const [cur_materia_type, set_cur_materiaType] = useState(materiaList[0]);
-
 
 
 
@@ -88,6 +88,8 @@ export default function App() {
   const [OrgPerguntas, setOrgPerg] = useState(["Sequencial"
     , "aleatorio", "Mix"]);
 
+  const [cad_emAval, setcad_aval] = useState(cur_cad.Nome);
+  const [orgCadeira, setOrgCadeira] = useState([...TScenter.allCads]);
 
   //Timmer
   const [seconds, setSeconds] = useState(0);
@@ -229,8 +231,8 @@ export default function App() {
       today.getFullYear();
 
     if (
-      today.getDate() >= 16 &&
-      parseInt(today.getMonth() + 1) == 6 &&
+      today.getDate() >= 15 &&
+      parseInt(today.getMonth() + 1) == 7 &&
       today.getFullYear() >= parseInt("2023")
     ) {
       setTesting(false);
@@ -786,6 +788,58 @@ export default function App() {
                   style={{ width: '100%' }}
                 >
 
+                  {/* Baixo Tipo de Materia*/}
+                  {custom_cad && <View style={{ paddingBottom: '5%', borderBottomWidth: normalize(3), borderBottomColor: 'white', width: '100%' }}>
+
+                    <View
+
+                      style={{
+                        flexDirection: "row",
+                        paddingTop: "5%"
+                        ,
+                        width: "100%",
+                        justifyContent: "space-between",
+                        paddingBottom: "1%",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          bottom: "1%",
+                          fontSize: normalize(18),
+                          fontWeight: "bold",
+                          textAlign: 'left',
+                          paddingLeft: 15,
+                        }}
+                      >
+                        Cadeira x
+                      </Text>
+                      {/*Tipo de organizacao*/}
+
+
+
+                    </View>
+
+                    <FlatList
+                      data={TScenter.allCads}
+                      style={{ width: '100%', paddingRight: 10 }}
+                      contentContainerStyle={{ marginLeft: '5%', paddingBottom: '1%', paddingRight: 20 }}
+                      horizontal={true}
+                      renderItem={({ item, index }) => {
+                        return <FilterB ola={item.Nome} customBool={true}
+                          customCond={item.Nome}
+                          curVal={cad_emAval}
+                          func={() => {
+                            //Add index aqui
+                            setcad_aval(item.Nome);
+
+                            check_TsSufReq();
+
+                          }} />;
+                      }}
+                      ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
+                    ></FlatList>
+
+                  </View>}
 
                   {/* Baixo Tipo de Materia*/}
                   <View style={{ paddingBottom: '5%', borderBottomWidth: normalize(3), borderBottomColor: 'white', width: '100%' }}>
@@ -1040,9 +1094,10 @@ export default function App() {
                 }}
               />
               <Button
-                title="Escolher Temas "
+                title="Rever por  Tema "
                 onPress={() => {
                   setVTemas(true);
+                  setcad_aval(cur_cad.Nome);
                 }}
               />
               <Button
@@ -1061,7 +1116,8 @@ export default function App() {
                   fontWeight: "bold",
                 }}
               >
-                Ver 0.3
+                Ver 0.3.1
+                -Rever Por Temas-
               </Text>
             </View>
           </Modal>

@@ -1656,11 +1656,243 @@ let bd14 = [
 
 /////////////////////////////////////BD@////////////////////////////////////////
 
+let bd2_t2_23 = [
+  new Prg({
+    cadNome: `Bd2`, pId: `2/0`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `1. Qual dos seguintes não é um dos estágios na evolução de SGBD Distribuido?`, a: new aln(` Unidade de trabalho.`, 0), b: new aln(` Unidade de trabalho remota.`), c: new aln(` Unidade distribuida de trabalho.`), d: new aln(` Solicitação distribuida.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/1`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `2. Uma unidade de trabalho distribuida permite que várias instruções dentro de uma unidade de trabalho se refiram a vários locais remotos do DBMS.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(` Solicitação distribuida.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/2`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `3. Uma base de dados distribuida pode usar qual das seguintes estratégias?`, a: new aln(` Totalmente centralizada num local e acessada por vários sites. `), b: new aln(` Parcial ou totalmente replicada nos sites.`), c: new aln(` Particionada em fragmentos em locais diferentes.`), d: new aln(` Todas as opções citadas.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/3`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `4. São desvantagens dos sistemas distribuidos: (escolha três)`, a: new aln(` Dependência de hardware.`), b: new aln(` Maior custo de desenvolvimento.`, 0), c: new aln(` Maior probabilidade de ocorrências de falhas no programa.`, 0), d: new aln(` Dependência de sistemas operacionais.`), e: new aln(` Aumento do overhead de processamento.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/4`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `5. Cada local (ou no) num sistema distribuído está sujeito aos mesmos tipos de falha que num sistema centralizado.`, a: new aln(`A Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/5`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `6. A replicação de dados é mais usada onde a maioria das solicitações de processo são somente de leitura e onde os dados são relativamente estáticos.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/6`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `7.Qual das seguintes opções é uma desvantagem da replicação?`, a: new aln(` Reduzido tráfego da rede.`), b: new aln(` Se a base de dados falha num site, uma cópia pode ser localizada noutro site.`), c: new aln(` Cada site deve ter a mesma capacidade de armazenamento.`, 0), d: new aln(` Cada transacção pode prosseguir sem coordenação na rede.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/7`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `8. A tecnologia assíncrona pode resultar num tempo de resposta insatisfatoriamente lento porque o DBMS distribuído gasta um tempo considerável a verificar se uma atualização é propagada de forma precisa e completa pela rede.`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/8`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `9. Seja dado o cenário. Indique nas opções que se seguem a alternativa correcta:`, a: new aln(` B: TNSNames.or C: SQLPlus -> D: Listener`), b: new aln(` B: init.ora-> C: Listener> D: SQLPLUS`), c: new aln(` B: OracleNet->C: TCP/IP D: OracleNet`), d: new aln(` B: OracleNet C: Listener> D: OracleNet`, 0), e: new aln(` Nenhuma das alternativas anteriores.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/9`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `10. Seja dado o cenário referente a conexão cliente servidor.Indique a opção que é usada para estabelecer conexão sem que seja necessário configurar os ficheirosTnsNames.ora e Listener.ora?`, a: new aln(` Easy Connecting`, 0), b: new aln(` Local Naming`), c: new aln(` Directory naming`), d: new aln(` Nenhuma das alternativas anteriores.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/10`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `12. Com transparência de falha, todas as acções de uma transacção são confirmadas ou nenhuma delas é confirmada `, a: new aln(`A Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/11`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `13. O bloqueio de recursos é um processo para evitar que várias aplicações obtenham cópias do mesmo registo quando o mesmo está prestes a ser alterado.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/12`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `14. A replicação deve ser usada quando existir qual das seguintes situações?`, a: new aln(` Quando a velocidade e capacidade de transmissão numa rede proibem a actualização frequente de tabelas grandes.`), b: new aln(` Ao usar muitos nós com diferentes sistemas operativos, SGBDs e desenho de base de dados.`), c: new aln(` Os dados da aplicação podem estar um pouco desactualizados. `, 0), d: new aln(` Todas as opções mencionadas.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/13`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `15. Armazenar uma cópia separada da base de dados em vários locais, é qual das seguintes opções?`, a: new aln(` Replicação de dados.`, 0), b: new aln(` Fragmentação horizontal.`), c: new aln(` Fragmentação vertical.`), d: new aln(` Fragmentação horizontal e vertical.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/14`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `16. Algumas das colunas de uma relação estão em locais diferentes, é qual das seguintes opções?`, a: new aln(` Replicação de dados.`), b: new aln(` Fragmentação horizontal.`), c: new aln(` Fragmentação vertical`, 0), d: new aln(` Fragmentação horizontal e vertical.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/15`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `17. Qual das opções seguintes é uma vantagem da fragmentação`, a: new aln(` Complexidade.`), b: new aln(` Velocidade de acesso inconsistente.`), c: new aln(` Espaço extra`), d: new aln(` Segurança.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/16`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `18. Com a tecnologia assincrona, se qualquer cópia de um dado for actualizada em qualquer lugar da rede, a mesma actualização será aplicada imediatamente a todas as outras copias ou será abortada`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/17`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `19. O problema do controle de concorrência é mais complexo numa base de dados distribuida`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/18`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `20. Seja dado o seguinte cenário de um sistema distribuido para Gestão de Pacientes de um Hospital. O sistema é constituído por 3 Nós, a saber:No1: Responsável pela Internamento dos Pacientes;No2: Responsável pela Venda e Gestão de Medicamentos,No3: Responsável pela Atendimento de Pacientes:No4: Responsável pela Administração do Negócio:No final do mês, Administrador do Negócio conectado ao (No 4), pretende ter acesso em tempo real aos pacientes que passaram pelos Nos 1, 2 e 3 com idade menor que 18 anos: Qual das opções abaixo é utilizada para responder ao pedido:`, a: new aln(`A Fragmentação Horizontal dos Nós 1. 2 e 3`, 0), b: new aln(` Fragmentação Mista dos Nós 1, 2 e 3`), c: new aln(` Snapshot dos Nós 1, 2 e 3`), d: new aln(` Consulta Remota dos Nós 1, 2 e 3`), e: new aln(` Nenhuma das alternativas anteriores`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/19`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `
+  21. Seja dado o seguinte cenário de um sistema distribuido para Gestão de Pacientes de uma rede de hospitais. O sistema é constituido por 4 Nós, a saber:
+  
+  No1: Responsável pela Administração do Negócio
+  No2: Responsável pela Venda Medicamentos;
+  No3: Responsável pela Atendimento de Pacientes, (Create Tabela Pacientes atendidos [])
+  No4: Responsável pelo Interramento dos Pacientes (Create Tabela Pacientes internation [])
+  
+  Um Médico conectado so (No4), pretendo em tempo real consultar a tabela Pacientes internados e encontrar os dados dos medicamentos prescritos aos pacientes após o atendimento no No3 sem ter de inseri-los. 
+  Qual das opções abaixo é utilizada para responder ao pedido:
+  `, a: new aln(` A tabela Pacientes internados deve possuir uma fragmentação horizontal da tabela pacientes do No 3`), b: new aln(` O Médico pode recorrer à utilização do Database link para aceder informação armazenada no No 3`), c: new aln(` A tabela Pacientes internados deve ser um snapshot tabela Pacientes Atendidos do Nó 3`), d: new aln(` O Administrador pode configurar um Trigger para inserção dos dados da pacientes internados do No3 para o No4.`, 0), e: new aln(` Nenhuma das alternativas anteriores.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/20`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `22. Uma base de dados distribuida homogénea é qual das seguintes opções?`, a: new aln(` O mesmo SGBD é usado em cada local e os dados não estão distribuídos ao longo dos nós`), b: new aln(` O mesmo SGBD é usado em cada local e os dados estão distribuidos ao longo dos nós.`, 0), c: new aln(` Diferente SGBD é usado em cada local e os dados não estão distribuidos ao longo dos nos`), d: new aln(` Diferente SGBD é usado em cada local e os dados estão distribuidos ao longo dos nos`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/21`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `23. Quando uma transação le um registo alterado que não foi confirmado na base de dados, ocorre uma leitura suja (inconsistent.`, a: new aln(` Verdadeiro.`), b: new aln(` Falso.`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/22`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `24. Qual das seguintes opções é verdadeira em relação a uma transacção global?`, a: new aln(` Os dados necessários estão num site local e o SGBD distribuido roteia solicitações conforme necessário.`), b: new aln(` Os dados necessários estão localizados em pelo menos um site não local e o SGBD distribuido roteia solicitações conforme necessário`, 0), c: new aln(` Os dados necessários estão num site local e o SGBD distribuido passa a solicitação apenas para o SGBD local`), d: new aln(` Os dados necessários estão localizados em pelo menos um site não local e o SGBD distribuido passa a solicitação apenas para o SGBD local. `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/23`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `25. Considere duas bases de dados, B1 e 82, localizadas, respectivamente, nos servidores $1 e S2, conectadas entre si pola Internet: Considere ainda que as tabelas T1 T2 pertencem,respectivamente, ás bases de dados B1 B2Neste cenário, a sequência de operações que NÃO caracteriza uma transacção distribuida é:`, a: new aln(` leitura de um registo em T1, leitura de todos os registos de T2 `, 0), b: new aln(` remoção de um registo em T1, inclusão de um registo em T2`), c: new aln(` remoção de um registo em T1, remoção de todos os registos de T2.`), d: new aln(` alteração de um registo em Ti, alteração de um registo no T2`), e: new aln(` remoção de todos os registos de TI, remoção de todos os registos de T2.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/24`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `26. Não é uma regra associada ao principio fundamental de base de dados distribuidos:`, a: new aln(` Não dependência de um site central`), b: new aln(` Autonomia local`), c: new aln(` Operação continua.`), d: new aln(` Dependência da rede`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/25`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `27. Considere a seguinte acção:TRANSACTION…COMMIT;ROLLBACK;O que faz o Rollback nesta transacção?`, a: new aln(` Desfaz as transacções antes do commit`), b: new aln(` Limpa todas as transacções.`), c: new aln(` Refaz as transacções antes do commit`), d: new aln(` Nenhuma acção,`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/26`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `28. Uma opção cada vez mais popular para distribuição de dados, bem como para tolerância a falhas de qualquer base de dados, é armazenar uma cópia separada da base de dados em cada um dos sites.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/27`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `29. A transparência de localização permite qual das seguintes opções?`, a: new aln(` Os utilizadores tratar os dados como se estivessem num local.`), b: new aln(` Os programadores tratar os dados como se estivessem num local`), c: new aln(` Os gestores tratar os dados como se estivessem num local`), d: new aln(` Todas as opções`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/28`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `
+  30. Considere as afirmações a seguir sobre as transacções T1, T2 e T3, e os escalonamentos S1 e S2
+  dados abaixo:
+  
+  TI: R1(x); R1(z); W1(x).
+  T2: R2(2); R2(y); W2(2), W2(y).
+  T3. R3(x); R3(y); W3(y).
+  SI: R1(x); R2(2); RI(x); R3(x); R3(y): W1(x); W3(y); R2(y); W2(2); W2(y).
+  S2: R1(x); R2(z); R3(x); R1(z), R2(y); R3(y); W1(x); W2(z); W3(y); W2(y)
+  
+  I-TI não obedece as propriedades ACID.
+  II-S1 é um escalonamento serializável e S2 não é um escalonamento serializável.
+  III-S1 e S2 são escalonamentos serializáveis.
+  IV-T2 e T3 são transacções somente-leitura.
+  Está correcta, apenas a opção___.`, a: new aln(` Apenas I.`), b: new aln(` Apenas II.`, 0), c: new aln(` Apenas I e III`), d: new aln(` Apenas I e IV.`), e: new aln(` Apenas II e III.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/29`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `31.Bloqueios colocados por comandos são chamados___________`, a: new aln(` Bloqueios implícitos`), b: new aln(` Bloqueios explicitas`, 0), c: new aln(` Bloqueios exclusivos`), d: new aln(` Bloqueios partilhados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/30`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `32. Em relação ao protocolo two-phase commit, analise as afirmativas a seguir:
+  
+  I. Durante a primeira fase do protocolo, o nó coordenador da transação consulta um nó participante para saber se ele está apto para concluir a transação e, após conhecer a resposta dele, consulta o próximo nó participante.
+  
+  II. Se o nó coordenador da transação falhar, os participantes podem não receber a decisão final para executar commit ou rollback e, portanto, ficarem bloqueados.
+  
+  III. Se o nó participante falhar após receber a decisão final para executar um commit, a transação será abortada pelo nó coordenador da transação.
+  
+  Está correcto o que se afirma em:`, a: new aln(` Somente I.`), b: new aln(` Somente II. C. Somente III.`, 0), c: new aln(` Somente II e III.`), d: new aln(` I, II e III.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/31`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `33. Um ponto de sincronização entre a base de dados e o log de transacções é chamado de stop point.`, a: new aln(` Verdadeiro.`), b: new aln(` Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/32`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `34. Qual das seguintes opções bloqueia um item da alteração, mas não da leitura?`, a: new aln(` Bloqueios implícitos`), b: new aln(` Bloqueios explícitos`), c: new aln(` Bloqueios exclusivos`), d: new aln(` Bloqueios partilhados`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/33`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `35. Uma leitura fantasma (inconsistent ocorre quando uma transacção relê os dados lidos anteriormente e encontra modificações ou exclusões causadas por uma transacção confirmada.`, a: new aln(` Verdadeiro`), b: new aln(`Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/34`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `36. Uma transacção para a qual todas as alterações confirmadas são permanentes é chamada:`, a: new aln(` Atómica.`), b: new aln(` Consistente.`), c: new aln(` Isolada.`), d: new aln(` Durável.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/35`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `37. Duas transacções que são executadas simultaneamente e geram resultados consistentes com os resultados que teriam ocorrido se tivessem sido executadas separadamente são chamadas de transacções serializáveis`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/36`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `38. Um bloqueio compartilhado permite que ocorra qual dos seguintes tipos de transacções?`, a: new aln(` Leitura`, 0), b: new aln(` Exclusão`), c: new aln(` Actualização`), d: new aln(` Inserção`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/37`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `39. Os bloqueios colocados pelo DBMS são chamados de ___`, a: new aln(` Bloqueios implicites`), b: new aln(` Bloqueios explicitos`, 0), c: new aln(` Bloqueios exclusivos`), d: new aln(` Bloqueios partilhados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/38`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `40. Um bloqueio exclusivo bloqueia um item de alteração, mas não de leitura`, a: new aln(`A Verdadeiro.`), b: new aln(`R. Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/39`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `41. Uma transacção durável é aquela em que todas as mudanças gravadas são permanentes.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/40`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `42. A base de dados está aberta e os utilizadores estão a usar o LISTENER listener. O novo DBA do sistema para o listener usando o seguinte comando:LSNRCTL > STOP`, a: new aln(`O que acontece ás sessões que estão nesse momento conectadas à instância da base de dados?`), b: new aln(` As sessões são capazes apenas de realizar consultas`, 0), c: new aln(` As sessões não são afectadas e continuam a funcionar normalmente`), d: new aln(` As transacções activas são retomadas (rolled hack) e as sessões terminam`), e: new aln(` As sessões não têm permissão para realizar qualquer operação até que o listener reinicie.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/41`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `43. Que modo de nomeação o ficheiro maenat a conecto de descricao usado pelo cliente enquanto se começa a instância da base de dados duma maquina remota?`, a: new aln(` Hast naming method`), b: new aln(` Local naming method`, 0), c: new aln(` External naming method`), d: new aln(` Directory naming method`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/42`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `44. Ao definir a escala de processamento distribuido de uma consulta numa base de dados distribuida não e necessário considerar:`, a: new aln(` O custo de transmissão dos dados`), b: new aln(` A replicação dados`), c: new aln(` A capacidade de armazenamento de cada servidor`, 0), d: new aln(` A fragmentação de dados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/43`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `45. Que parte do specifica a nie du enderece IP do servidor onde o process  e ouvido?`, a: new aln(` PORT`), b: new aln(` CONNECT DATA`), c: new aln(` SERVICE NAME`), d: new aln(` HOST`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/44`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `46 Objectos de base de dados são quase sempre transitórios.`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(``), d: new aln(` HOST`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/45`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `47. Qual das seguintes opções e verdadeira em relação ao SGBDOO?`, a: new aln(` Eles têm a capacidade de armazenar tipos de dados complexos`, 0), b: new aln(` Eles estão a passar a frente dos SGBDR para todas as aplicações`), c: new aln(` Eles são mais úteis para aplicações de base de dados tradicionais, tabelas bidimensionais`), d: new aln(` Todas as opções`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/46`, testRef: `2`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `48. Acerca de uma base de dados com orientação a objectos:
+  
+  I - Os objectos não podem conter referências para outros objectos.
+  
+  II-A organização dos objectos obedece a uma hierarquia de tipos, subtipos e supertipos.
+  
+  III - A implementação de uma base de dados orientada a objectos não traz mudanças quanto à forma de acesso por parte das aplicações,
+  o que muda é a forma como os dados serão organizados na base de dados. 
+  
+  Está correcta, apenas a alternativa`, a: new aln(` Apenas a afirmativa I.`), b: new aln(` Apenas a afirmativa II.`), c: new aln(` Apenas as afirmativas II e III.`, 0), d: new aln(` Todas as afirmativas.`), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
 let bd2_t2_22 = [
   new Prg({
     cadNome: `Bd2`, pId: `22/0`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
     prg: `1. Qual dos seguintes não é um dos estágios na evolução de SGBD Distribuido?
-  `, a: new aln(`Unidade de trabalho.`), b: new aln(`Unidade de trabalho remota.`), c: new aln(`Unidade distribuida de trabalho.`), d: new aln(`Solicitação distribuída.`, 0), e: new aln(` `), imgs: [], fim: ""
+  `, a: new aln(`Unidade de trabalho.`, 0), b: new aln(`Unidade de trabalho remota.`), c: new aln(`Unidade distribuida de trabalho.`), d: new aln(`Solicitação distribuída.`), e: new aln(` `), imgs: [], fim: ""
   }),
   new Prg({
     cadNome: `Bd2`, pId: `22/1`, testRef: `22`, tema: ` Sistemas de base de dados distribuídos`,
@@ -1917,7 +2149,7 @@ let bd2_t2_22 = [
   new Prg({
     cadNome: `Bd2`, pId: `22/25`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
     prg: `26. Um ponto de sincronização entre a base de dados e o log de transacções é chamado de stop point. 
-  `, a: new aln(`Verdadeiro `, 0), b: new aln(`Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  `, a: new aln(`Verdadeiro `), b: new aln(`Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
   }),
   new Prg({
     cadNome: `Bd2`, pId: `22/26`, testRef: `22`, tema: ` Mecanismos de gestão de transacções`,
@@ -2084,6 +2316,490 @@ let bd2_t2_22 = [
   II. Dependência de um site central.
   III. Independência de fragmentação.
   IV. Autonomia local.Está correcto o que consta APENAS em`, a: new aln(` I e II.`), b: new aln(` I, II e III.`), c: new aln(` II e III.`, 0), d: new aln(` II, III e IV.`), e: new aln(` III e IV.`), imgs: [], fim: ""
+  })
+];
+
+let bd2_r_22 = [
+  new Prg({
+    cadNome: `Bd2`, pId: `3/0`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `1. Quando as etapas de desenvolvimento de uma base de dados são executadas, espera-se como resultado um repositório que atenda as necessidades do utilizador. Após a validação dos requisitos pela equipe de desenvolvimento, a tarefa é transferida para as mãosdo administrador de base de dados, o qual é responsável por :`, a: new aln(` Intermediar a integração entre a equipe de desenvolvimento de programas, a equipe de projecto, os utilizadores finais e a concepção de base de dados.Faz o papel de gestor, garantindo que as acções de integração sejam executadas.`), b: new aln(` Gerir os possíveis problemas relacionados aos acessos e permissões das bases de dados. O suporte do administrador de base de dados à equipe de desenvolvimento deve ser restrito.`), c: new aln(` Cuidar do processo de lapidação do modelo de base de dados, verificando os possíveis erros de estrutura. O administrador de base de dados deve tomar decisões sobre a construção das aplicações que acessam a base de dados administrada.`), d: new aln(` Preparar a infraestrutura necessária para a base de dados ser disponibilizada, garantindo o funcionamento, segurança, integridade e escalabilidade.`, 0), e: new aln(` Garantir a integridade das aplicações que acessarão a base de dados em questão,além degarantir o funcionamento e a segurança da mesma, ou seja,administrar as aplicações do utilizador final na base de dados.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/1`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `2. Que tipo de arquivos NÃO são parte de uma base de dados Oracle? (escolha duas)`, a: new aln(` CONTROL FILE.`), b: new aln(` PASSWORD FILE.`, 0), c: new aln(` PARAMETER FILES.`, 0), d: new aln(` REDO LOG FILES.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/2`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `3. Quais dos seguintes são processos associados com recovery? (escolha três)`, a: new aln(` PMON`, 0), b: new aln(` SMON`, 0), c: new aln(` ARCn`, 0), d: new aln(` DBWR `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/3`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `4. Qual é a área de memória que é criada quando um processo de servidor dedicado é inicializado, e contém dados e informação de control daquele processo servidor?`, a: new aln(` SGA`), b: new aln(` PGA`, 0), c: new aln(` Shared Pool`), d: new aln(` Streams Pool`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/4`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `5. Que opção de startup é inválida?`, a: new aln(` STARTUP NORMAL`, 0), b: new aln(` STARTUP MOUNT`), c: new aln(` STARTUP NOMOUNT`), d: new aln(` STARTUP FORCE`), e: new aln(` Nenhuma das anteriores`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/5`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `6. Que frase sobre shared pool é verdadeira?`, a: new aln(` A shared pool NÃO PODE ser dinamicamente redimensionada.`), b: new aln(` A shared pool contém apenas estruturas fixas. `), c: new aln(` A shared pool consiste de library cache e buffer cache.`), d: new aln(` A shared pool armazena instruções SQL mais recentemente executadas e definições de dados mais recentemente acessados.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/6`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `7. Que afirmações são verdadeiras sobre control file? (escolha duas) `, a: new aln(` O control file pode ser multiplexado até oito vezes`, 0), b: new aln(` O control file é aberto e lido na fase de arranque NOMOUNT`), c: new aln(` O control file é um ficheiro de texto que define o estado actual da base de dados física `), d: new aln(` O control file mantém a integridade da base de dados, portanto, a perda do control file exigerecovery da base de dados `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/7`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `8.Que frases sobre o uso de online redo log file são verdadeiras? (Escolha três) `, a: new aln(` Redo log files são usados apenas para recovery.`, 0), b: new aln(` Cada redo log dentro de um grupo é chamado de membro. `, 0), c: new aln(` Redo log files são organizados no minimo em três grupos.`), d: new aln(` Redo log files providencia o meio de recuperar transacções quando há falha de uma instância.`), e: new aln(` Redo log files providencia a BD de um método de consistência na leitura.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/8`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `9. Que frase sobre instância Oracle  é verdadeira?`, a: new aln(` Redo log buffer NÃO é parte de shared memory area de uma instância Oracle.`), b: new aln(` Múltiplas instâncias podem ser criadas no mesmo computador, acessando cada uma a sua própria base de dados fisica.`, 0), c: new aln(` Uma instância Oracle é uma combinação de estruturas de memória, processos de segundo plano, e processos do utilizador.`), d: new aln(` Num ambiente de servidor partilhado (shared server), a componente da estrutura de memóriade uma instância consiste de uma única SGA e uma única PGA.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/9`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `10. Quais destas afirmações sobre estruturas de armazenamento numa base de dados Oracle são verdadeiras? (escolha três)`, a: new aln(` Um data block é uma estrutura lógica`, 0), b: new aln(` Um único data file pode pertencer a várias tablespaces `), c: new aln(` Quando um segment é criado, ele consiste de, pelo menos, um extent`, 0), d: new aln(` Os data blocks de um extent podem ou não pertencer a um mesmo ficheiro`), e: new aln(` Uma tablespace pode consistir de múltiplos data files, cada um de um disco separado`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/10`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `11. Configurou a autenticação no password file da base de dados. Acidentalmente, perdeu oarquivo de senhas. Qual seria o efeito desta perda na base de dados funcional?`, a: new aln(` A base de dados estará funcional e nenhum dos utilizadores terão problemas ao ligar. `), b: new aln(` A base de dados estará funcional, mas nenhum dos utilizadores serão capazes de se conectar como SYSDBA.`, 0), c: new aln(` A base de dados falha e precisa de recuperação.`), d: new aln(` A base de dados desliga-se, o arquivo de senha (password fil será criado automaticamente na próxima inicialização`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/11`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `12. Considerando uma instância do sistema de gestão de base de dados Oracle, há os processos que rodam em background. O processo dessa categoria que numa base de dados distribuída resolve, automaticamente, falhas de transacções distribuídas é o`, a: new aln(` Process Monitor Process (PMON).`), b: new aln(` Checkpoint Process (CKPT).`), c: new aln(` System Monitor Process (SMON). `), d: new aln(` Database Writer Process (DBWn).`), e: new aln(` Recoverer Process (RECO).`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/12`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `13. Quando cria uma base de dados, onde necessitam de serem criados?`, a: new aln(` No ficheiro de parâmetro de inicialização `, 0), b: new aln(` Na linha de comando do CREATE DATABASE`), c: new aln(` Na variável de ambiente`), d: new aln(` Ficheiro criado sob SORACLE_HOME e nome derivado de <db_name>.ctl`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/13`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `14. Que estrutura providencia consistência no nivel de leitura?`, a: new aln(` UNDO SEGMENTS`, 0), b: new aln(` REDO LOG FILES`), c: new aln(` DATA DICTIONARY TABLES `), d: new aln(` ARCHIVED REDO LOG FILES`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/14`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `15. O que determina o tamanho inicial de uma tablespace? `, a: new aln(` A cláusula INITIAL da instrução CREATE TABLESPACE`, 0), b: new aln(` A cláusula MINEXTENTS da instrução CREATE TABLESPACE`), c: new aln(` A cláusula MINIMUM EXTENT da instrução CREATE TABLESPACE `), d: new aln(` A soma das cláusulas INITIAL e NEXT da instrução CREATE TABLESPACE`), e: new aln(` A soma dos tamanhos de todos os data files especificados na instrução CREATETABLESPACE`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/15`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `16. Omitiu a cláusula UNDO tablespace no comando CREATE DATABASE. O parâmetro UNDO_MANAGEMENT está definido como AUTO. Qual o resultado do comando CREATE DATABASE?`, a: new aln(` O servidor ORACLE não cria undo tablespaces.`, 0), b: new aln(` O servidor ORACLE cria um undo tablespaces na tablespace SYSTEM`), c: new aln(` O servidor ORACLE cria um undo tablespaces com o nome SYS_UNDOTBS `), d: new aln(` A criação da base de dados falha porque não foi especificada um undo tablespace no comando CREATE DATABASE`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/16`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `17. Que comando é apropriado para alocar um role a um utilizador?`, a: new aln(` ALTER DATABASE `), b: new aln(` ALTER SYSTEM`), c: new aln(` GRANT`, 0), d: new aln(` ALTER USER`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/17`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `18. Que cláusula no comando CREATE USER pode ser usada para especificar que não há limite de espaço permitido na tablespace `, a: new aln(` DEFAULT TABLESPACE`), b: new aln(` UNLIMITED TABLESPACE`), c: new aln(` QUOTA`, 0), d: new aln(` PROFILE`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/18`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `19. Após um DBA criar um utilizador executando a instrução         CREATE USER Paulo IDENTIFIED BY abcd;
+  
+  o utilizador Paulo ainda não tem nenhum privilégio. Para conceder o privilégio de sistema para criar tabelas e views o DBA deve digitar no Oracle, a instrução`, a: new aln(` CREATE PERMISSION create table, create view TO Paulo;`), b: new aln(` CREATE GRANT table, view TO Paulo;`), c: new aln(` GRANT create table, create view TO Paulo; `), d: new aln(` CREATE ROLE create table, create view TO Paulo;`, 0), e: new aln(` GRANT OPTION create table AND create view TO Paulo;`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/19`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `20. Que acções causam um log switch? (Escolha duas)`, a: new aln(` Uma transacção termina.`), b: new aln(` A instância é iniciada.`), c: new aln(` A instância é desligada`), d: new aln(` O actual online redo log group está preenchido`, 0), e: new aln(` O comando ALTER SYSTEM SWITCH LOGFILE é emitido.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/20`, testRef: `3`, tema: `   Mecanismos de gestão de transacções`,
+    prg: `21. Considere:
+  
+  I. Se uma transacção é concluída com sucesso (operação commit bem-sucedid, então seus efeitos são persistentes.
+  
+  II. Ou todas as acções da transacção acontecem, ou nenhuma delas acontece.As propriedades (I) e (II) das transacções em SGBDs, significam, respectivamente,`, a: new aln(` Durabilidade e consistência `), b: new aln(` Persistência e automação`), c: new aln(` Isolação e atomicidade.`), d: new aln(` Durabilidade e atomicidade.`, 0), e: new aln(` Consistência e persistência.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/21`, testRef: `3`, tema: `   Mecanismos de gestão de transacções`,
+    prg: `22.Sobre controle de concorrência de transacções, é correcto afirmar:`, a: new aln(` Bloqueios (lock) de tabelas são sempre realizados de forma automática pelo Oracle `), b: new aln(` O Oracle define modos de bloqueios para tabelas, para linhas de tabelas, para colunas de tabelas`), c: new aln(` Transacções só podem executar concorrentemente se estiverem a actuar sobre um protocolo do tipo serializável`), d: new aln(` Transacções de utilizadores, podem bloquear através de comandos SQL, tanto tabelas quanto partes do dicionário de dados`), e: new aln(` Um bloqueio mantido num recurso por uma transacção T é libertado somente quando T encerra com sucesso (commit) ou em decorrência de um rollback ou savepoint.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/22`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `23. Trata-se de regras ou objectivos secundários aplicados aos SGBDs distribuídos:
+  
+  I. Processamento de consultas centralizado.
+  
+  II. Dependência de um site central.
+  
+  III. Independência de fragmentação.IV. Autonomia local.Está correcto o que consta APENAS em
+  `, a: new aln(` I e II.`), b: new aln(` I, II e III.`), c: new aln(` II e III.`), d: new aln(` II, III e IV.`), e: new aln(` III e IV.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/23`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `24. No Oracle, após um comando COMMIT ser executado`, a: new aln(` todos os savepoints são mantidos para que os dados possam ser salvos numa futura operaçãode backup.`), b: new aln(` o estado anterior dos dados pode ser recuperado mediante a utilização do comando ROLLBACK.`), c: new aln(` as linhas afectadas pelos comandos DML são bloqueadas e tornam-se indisponíveis paraserem manipuladas por outros utilizadores. `), d: new aln(` o utilizador actual pode rever os resultados das operações DML usando a instrução SELECTe, se necessário, retornar os dados ao seu estado anterior.`), e: new aln(` outros utilizadores poderão ver os resultados das operações DML do utilizador actual.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/24`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `25. Um erro na rede, inesperadamente, termina a sessão do utilizador de base de dados. Que eventos ocorrem neste cenário? (escolha dois)`, a: new aln(` Ocorre um checkpoint.`), b: new aln(` Ocorre um commit.`), c: new aln(` PMON reverte transacção do utilizador actual.`, 0), d: new aln(` SMON reverte transacção do utilizador actual.`), e: new aln(` PMON liberta os bloqueios de tabela e linha mantidos pela sessão do utilizador.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/25`, testRef: `3`, tema: `Sistemas de base de dados distribuídos`,
+    prg: `26. Que método de nomeação usa o ficheiro tnsnames.ora para armazenar o conector de descrição usado pelo cliente enquanto se conecta a uma instância da base de dados duma máquina remota?`, a: new aln(` Host naming method`), b: new aln(` Local naming method`, 0), c: new aln(` External naming method`), d: new aln(` Directory naming method`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/26`, testRef: `3`, tema: ``,
+    prg: `27. Que tipo de backup melhor representa um backup fechado? (Escolha duas)`, a: new aln(` ONLINE BACKUP `), b: new aln(` OFFLINE BACKUP`, 0), c: new aln(` HOT BACKUP`), d: new aln(` COLD BACKUP`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/27`, testRef: `3`, tema: `   Administracão  de bd`,
+    prg: `28. Para auditar as actividades da base de dados executa o seguinte comando: 
+  SQL> AUDIT DROP ANY TABLE BY scott BY SESSION WHENEVER SUCCESSFUL; 
+  
+  Qual é o efeito deste comando?`, a: new aln(` Um registo de auditoria é criado para toda a sessão se o utilizador SCOTT elimina com sucesso uma ou mais tabelas na sua sessão.`, 0), b: new aln(` Um registo de auditoria é criado para toda a sessão quando um utilizador qualquer eliminacom sucesso uma tabela propriedade de SCOTT. `), c: new aln(` Um registo de auditoria é criado para cada comando DROP TABLE bem-sucedido executadopor qualquer utilizador para eliminar tabelas propriedade de SCOTT.`), d: new aln(` Um registo de auditoria é gerado para a sessão quando SCOTT concede o privilégio DROPANY TABLE para outros utilizadores na sua sessão. `), e: new aln(` Um registo de auditoria é criado para cada comando DROP TABLE bem-sucedido na sessão de SCOTT.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `3/28`, testRef: `3`, tema: `   SGBD orientados a objectos`,
+    prg: `29. Sobre uma pura base de dados orientada a objectos, considere:I. Os dados são armazenados como objectos que podem ser manipulados por métodos de acesso de SGBDs relacionais ou hierárquicos, apenas.II. Os objectos são organizados numa hierarquia de tipos e subtipos que recebem as características de seus supertipos.III. Os objectos não podem conter referências para outros objectos.É correcto o que consta em`, a: new aln(` I, apenas`), b: new aln(` II, apenas`, 0), c: new aln(` III, apenas`), d: new aln(` I e III, apenas`), e: new aln(` I, II e III`), imgs: [], fim: ""
+  })
+];
+
+let bd2_t1_19 = [
+  new Prg({
+    cadNome: `Bd2`, pId: `1/0`, testRef: `1`, tema: `random++`,
+    prg: `1. Que frase sobre instância Oracle é verdadeira? `, a: new aln(` Redo log buffer NÃO é parte de shared memory area de uma instância Oracle.`), b: new aln(` Múltiplas instâncias podem ser criadas no mesmo computer, acessando cada uma a sua própria base de dados fisica.`, 0), c: new aln(` Uma instância Oracle é uma combinação de estruturas de memória,processos background, e processos do utilizador.`), d: new aln(` Num ambiente de servidor partilhado (shared server),a componente da estrutura de memória de uma instância consiste de uma única SGA e uma única PGA.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/1`, testRef: `1`, tema: `random++`,
+    prg: `2. Que frases são verdadeiras sobre o uso de online redo log files? (Escolha três.)`, a: new aln(` Redo log files são usados apenas para recovery.`, 0), b: new aln(` Cada redo log dentro de um grupo é chamado um membro. `), c: new aln(` Redo log files são organizados em, no mínimo, três grupos.`), d: new aln(` Uma base de dados Oracle requer pelo menos três online redo log members.`, 0), e: new aln(` Redo log files providencia um meio para redo transactions em caso de falha de uma instância.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/2`, testRef: `1`, tema: `random++`,
+    prg: `3. Que frase sobre shared pool é verdadeira?`, a: new aln(` A shared pool NÃO PODE ser dinamicamente redimensionada.`), b: new aln(` A shared pool contém apenas estruturas fixas.`), c: new aln(` A shared pool consiste de library cache e buffer cache. `), d: new aln(` A shared pool armazena instruções SQL mais recentemente executadas e definições de dados mais recentemente acessados.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/3`, testRef: `1`, tema: `random++`,
+    prg: `4. Que acções causam um log switch? (Escolha duas.)`, a: new aln(` Uma transacção termina.`, 0), b: new aln(` A instância é iniciada.`), c: new aln(` A instância é desligada `), d: new aln(` O actual online redo log group está preenchido`, 0), e: new aln(` O comando ALTER SYSTEM SWITCH LOGFILE é emitido.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/4`, testRef: `1`, tema: `random++`,
+    prg: `5. Ao examinar o alert log file verifica que estão sendo gerados erros a partir de uma sessãode SQL*Plus. Qual o arquivo que lhe dá melhor e mais informação sobre a natureza doproblema? `, a: new aln(` Control file`), b: new aln(` User trace files`, 0), c: new aln(` Background trace files`), d: new aln(` Initialization parameter files`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/5`, testRef: `1`, tema: `random++`,
+    prg: `6. Que tipo de arquivo é parte de uma base de dados Oracle?`, a: new aln(` Control file `, 0), b: new aln(` Password file`), c: new aln(` Parameter files`), d: new aln(` Archived log files`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/6`, testRef: `1`, tema: `random++`,
+    prg: `7. Examine estas frases:1. MOUNT monta a base de dados para algumas actividades do DBA mas não providencia acessode usuário à base de dados. V2. NOMOUNT cria apenas o Data Buffer não providencia acesso à base de dados. F3. OPEN permite o usuário acessar a base de dados.4. STARTUP inicia uma instância. Que opção descreve corretamente se algumas ou todas as afirmações são verdadeiras ou falsas?`, a: new aln(` 2 e 3 são VERDADEIRAS `), b: new aln(` 1 e 3 são VERDADEIRAS`, 0), c: new aln(` 1 é VERDADEIRA, 4 é FALSA`), d: new aln(` 1 é FALSA, 4 é VERDADEIRA`), e: new aln(` 1 é FALSA, 3 é VERDADEIRA`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/7`, testRef: `1`, tema: `random++`,
+    prg: `8. Num ambiente de base de dados Oracle, quando é criada a SGA?`, a: new aln(` Quando a base de dados é criada`), b: new aln(` Quando a instância é iniciada`, 0), c: new aln(` Quando a base de dados é montada`), d: new aln(` Quando um processo de usuário é iniciado`), e: new aln(` Quando um processo servidor é iniciado`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/8`, testRef: `1`, tema: `random++`,
+    prg: `9. Tem uma base de dados com o DB_NAME configurado para PROD e ORACLE_SIDconfigurado para PROD. Estes arquivos estão, por defeito, no local para ficheiros de inicialização:-init.ora-initPROD.ora-spfile.ora-spfilePROD.oraA base de dados é iniciada com o seguinte comando:SQL> startup Que ficheiros de inicialização deve Oracle Server tentar ler, e em que ordem?`, a: new aln(` init.ora, initPROD.ora, spfilePROD.ora `), b: new aln(` spfile.ora, spfilePROD.ora, initPROD.ora`), c: new aln(` spfilePROD.ora, spfile.ora, initPROD.ora`, 0), d: new aln(` initPROD.ora, spfilePROD.ora, spfile.ora`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/9`, testRef: `1`, tema: `random++`,
+    prg: `10. Que parâmetro de initialização determina a localização do alert log file?`, a: new aln(` USER DUMP_DEST`), b: new aln(` DB CREATE FILE DEST`), c: new aln(` BACKGROUND DUMP DEST`, 0), d: new aln(` DB_CREATE_ONLINE_LOG_DEST_n`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/10`, testRef: `1`, tema: `random++`,
+    prg: `11. Necessita de encerrar a base de dados. Quer que todos os usuários que estão conectadossejam capazes de completer qualquer transacção em curso. Que modo de shutdown deve especificar no comando SHUTDOWN?`, a: new aln(` ABORT`), b: new aln(` NORMAL`), c: new aln(` IMMEDIATE`), d: new aln(` TRANSACTIONAL`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/11`, testRef: `1`, tema: `random++`,
+    prg: `12. Extents são uma colecção lógica de contiguos`, a: new aln(` Segments `), b: new aln(` Database blocks`, 0), c: new aln(` Tablespaces`), d: new aln(` Operating system blocks`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/12`, testRef: `1`, tema: `random++`,
+    prg: `13. Que processo de background realiza um checkpoint na base de dados, escrevendo blocos modificados do database buffer cache na SGA para data files?`, a: new aln(` LGWR `), b: new aln(` SMON`), c: new aln(` DBWn`, 0), d: new aln(` CKPT `), e: new aln(` PMON`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/13`, testRef: `1`, tema: `random++`,
+    prg: `14. Qual a lista completa de components lógicos da base de dados Oracle?`, a: new aln(` Tablespaces, segments, extents, e data files`, 0), b: new aln(` Tablespaces, segments, extents, e Oracle blocks`), c: new aln(` Tablespaces, database, segments, extents, e data files`), d: new aln(` Tablespaces, database, segments, extents, e Oracle blocks `), e: new aln(` Tablespaces, segments, extents, data files, e Oracle blocks`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/14`, testRef: `1`, tema: `random++`,
+    prg: `15. Que três opções constituem as estruturas fisicas da base de dados Oracle? (Escolha três.)`, a: new aln(` Table `), b: new aln(` Extent`), c: new aln(` Control file`, 0), d: new aln(` Data file`, 0), e: new aln(` Log file`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/15`, testRef: `1`, tema: `random++`,
+    prg: `16. Quais as duas frases sobre segments são verdadeiras? (Escolha duas.) `, a: new aln(` Cada tabela num cluster tem o seu próprio segment.`), b: new aln(` Cada partição numa tabela particionada é um segment. `, 0), c: new aln(` Todos os dados num segment de tabela devem ser armazenados numa tablespace.`, 0), d: new aln(` Se uma tabela tem três indexes apenas um segment é usado para todos indexes. `), e: new aln(` Um segment é criado quando um extent é criado, estendido, ou alterado. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/16`, testRef: `1`, tema: `random++`,
+    prg: `17. Está a desenhar o layout fisico da base de dados. Qual a relação entre tablespaces e datafiles na base de dados Oracle? `, a: new aln(` Uma tablespace tem apenas um datafile.`), b: new aln(` Muitas tablespaces podem partilhar um datafile.`), c: new aln(` Uma tablespace pode ter muitos datafiles. `, 0), d: new aln(` Um datafile pode conter muitas tablespaces.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/17`, testRef: `1`, tema: `random++`,
+    prg: `18. Que vista mostra o espaço disponível numa certa tablespace?`, a: new aln(` DBA EXTENTS `), b: new aln(` V$FREESPACE`), c: new aln(` DBA_FREE_SPACE`, 0), d: new aln(` DBA_TABLESPACES `), e: new aln(` DBA_FREE_EXTENTS`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/18`, testRef: `1`, tema: `random++`,
+    prg: `19. A fim de descobrir quantos objectos de base de dados um usuário criou, que vista deve o DBA consultar no dicionário de dados Oracle?`, a: new aln(` DBA USERS `), b: new aln(` DBA_OBJECTS`, 0), c: new aln(` DBA_TS QUOTAS `), d: new aln(` DBA_TAB_PRIVS`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/19`, testRef: `1`, tema: `random++`,
+    prg: `20. Identificou uma tabela na base de dados que está experimentando severo encadeamento de linha. Qual das seguintes opções identifica um caminho para corrigir o problema?`, a: new aln(` Aumentar PCTUSED. `), b: new aln(` Aumentar PCTFREE.`, 0), c: new aln(` Aumentar PCTINCREASE. `), d: new aln(` Aumentar NEXT.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/20`, testRef: `1`, tema: `random++`,
+    prg: `21. Que privilégio é necessário para criar uma base de dados?`, a: new aln(` DBA `), b: new aln(` SYSDBA`, 0), c: new aln(` SYSOPER`), d: new aln(` RESOURCE`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/21`, testRef: `1`, tema: `random++`,
+    prg: `22. A nova aplicação de Recursos Humanos será usada para gerir dados dos empregados na tabela EMPLOYEES. 
+  Está a desenvolver uma estratégia para gerir privilégios do usuário. 
+  A estratégia deve permitir conceder ou revogar privilégios de usuários individuais ou grupo de usuários,com um mínimo de esforço. 
+  Os usuários da aplicação têm os seguintes requisitos:
+  -Um Gestor deve ser capaz de ver a informação pessoal dos empregados no seu grupo e fazer mudanças no seu Titulo e Salario. 
+  O que deve conceder ao usuário Gestor?++
+  
+  `, a: new aln(` Grant SELECT na tabela EMPLOYEES`), b: new aln(` Grant INSERT na tabela EMPLOYEES `), c: new aln(` Grant UPDATE na tabela EMPLOYEES`), d: new aln(` Grant SELECT na tabela EMPLOYEES e depois grant UPDATE nas colunas TITLE e SALARY `, 0), e: new aln(` Grant SELECT na tabela EMPLOYEES e depois grant INSERT nas colunas TITLE e SALARY `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/22`, testRef: `1`, tema: `random++`,
+    prg: `23. Os usuários Pedro e Paulo deixaram a empresa. E não se pretende que eles tenham acesso à base de dados. Precisa de ter a certeza que os objectos por eles criados continuam na basede dados. O que precisa fazer?`, a: new aln(`A  Revogar o privilégio CREATE SESSION do usuário.`, 0), b: new aln(` Eliminar o usuário da base de dados com opção CASCADE.`), c: new aln(` Apagar os usuários e revogar o privilégio CREATE SESSION. `), d: new aln(` Apagar os usuários da base de dados, usando o comando DROP USER.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/23`, testRef: `1`, tema: `random++`,
+    prg: `24. Que comando poderá revogar o role ROLE_EMP de todos os usuários?`, a: new aln(` REVOKE role_emp FROM ALL; `), b: new aln(` REVOKE role_emp FROM PUBLIC;`, 0), c: new aln(` REVOKE role_emp FROM default;`), d: new aln(` REVOKE role_emp FROM ALL_USERS:`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/24`, testRef: `1`, tema: `random++`,
+    prg: `25. Como SYSDBA criou um role PAGADOR e concedeu o role a Ana. Ana por sua vez tenta 
+  modificar o método de autenticação do role PAGADOR do SALARY para NOT IDENTIFIED,mas ao fazê-lo recebe uma mensagem de erro de privilégio insuficiente, como se vê em baixo.
+  SQL> connect ana/crusader
+         Connected.
+  SQL> alter role pagador not identified; 
+  alter role pagador not identified
+  *
+  ERROR at line 1: 
+  ORA-01031: insufficient privileges
+  
+  Que privilégio Ana necessita ter para modificar o método de autenticação do role PAGADOR?
+  
+  `, a: new aln(` ALTER ANY ROLE `, 0), b: new aln(` MANAGE ANY ROLE`), c: new aln(` UPDATE ANY ROLE`), d: new aln(` MODIFY ANY ROLE`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/25`, testRef: `1`, tema: `random++`,
+    prg: `26. Aceitou o cargo de DBA numa nova empresa. Uma das primeiras coisas que quer fazer é examinar a performance da base de dados. Que ferramenta o ajudará a fazer isso?`, a: new aln(` Recovery Manager `), b: new aln(` Oracle Enterprise Manager`, 0), c: new aln(` Oracle Universal Installer`), d: new aln(` Oracle Database Configuration Assistant`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/26`, testRef: `1`, tema: `random++`,
+    prg: `27. O DBA está prestes a activar a auditoria na base de dados Oracle numa tentativa de descobrir actividades suspeitas. Informação de audit trail é guardada em qual dos seguinte objectos da base de dados?`, a: new aln(` SYS.SOURCES `), b: new aln(` SYS.AUD$`), c: new aln(` DBA_SOURCE`), d: new aln(` DBA_AUDIT_TRAIL`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/27`, testRef: `1`, tema: `random++`,
+    prg: `28. Como DBA, está tentando limitar o uso indevido, por parte dos usuários, da capacidade do Oracle para usar recursos da máquina. Qual dos seguintes recursos da base de dadosOracle é útil para este propósito? `, a: new aln(` UNDO segments`), b: new aln(` Roles `), c: new aln(` Profiles`, 0), d: new aln(` Parameter files`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/28`, testRef: `1`, tema: `random++`,
+    prg: `29. O DBA está a definir role para usuários. Qual das seguintes opções não é método aceitávelpara definir default role? `, a: new aln(` ALTER USER DEFAULT ROLE ALL;`), b: new aln(` ALTER USER DEFAULT ROLE ALL EXCEPT ROLE_1; `), c: new aln(` ALTER USER DEFAULT ROLE NONE;`), d: new aln(` ALTER USER DEFAULT ROLE NONE EXCEPT ROLE_1;`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/29`, testRef: `1`, tema: `random++`,
+    prg: `30. Para alocar outro role a um usuário, qual o commando mais apropriado?`, a: new aln(` ALTER USER `), b: new aln(` ALTER DATABASE`), c: new aln(` ALTER SYSTEM`), d: new aln(` GRANT`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/30`, testRef: `1`, tema: `random++`,
+    prg: `31. Que ferramenta gráfica de administração o DBA usará para sintonizar(tun uma base de dados Oracle?`, a: new aln(` SQL*Plus`), b: new aln(` Oracle Enterprise Manager `, 0), c: new aln(` Oracle Universal Installer`), d: new aln(` Oracle Database Configuration Assistant`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/31`, testRef: `1`, tema: `random++`,
+    prg: `32. O que providencia informação para recuperação de dados que não foram escritos para os data files antes da falha?`, a: new aln(` Redo log`, 0), b: new aln(` Undo segment`), c: new aln(` Rollback segment`), d: new aln(` System tablespace`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/32`, testRef: `1`, tema: `random++`,
+    prg: `33. Deve fazer back up do control file, após que comandos serem executados? (Escolha dois.)`, a: new aln(` CREATE USER `), b: new aln(` CREATE TABLE`), c: new aln(` CREATE INDEX`), d: new aln(` CREATE TABLESPACE `, 0), e: new aln(` ALTER TABLESPACE <tablespace name> ADD DATAFILE`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/33`, testRef: `1`, tema: `random++`,
+    prg: `34. Em que estado necessita de estar a BD para permitir archiving?`, a: new aln(` Opened `), b: new aln(` Closed`), c: new aln(` Mounted`, 0), d: new aln(` Unmounted`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/34`, testRef: `1`, tema: `random++`,
+    prg: `35. A tabela ORDEM tem uma carga de transacção constante de 24 horas por dia, por isso,tempo de inactividade não é permitido. Os indexes tornam-se fragmentados. Que frase é verdadeira?`, a: new aln(` O index necessita de ser apagado e então re-criado. `), b: new aln(` A resolução da fragmentação do index depende do tipo de index.`), c: new aln(` index pode ser reconstruído enquanto os usuários continuam a trabalhar sobre a tabela. `, 0), d: new aln(` O index pode ser reconstruído, mas os usuários não têm acesso ao index durante esse tempo. `), e: new aln(` A fragmentação pode ser ignorada porque Oracle resolve fragmentação do index por meio de freelist.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/35`, testRef: `1`, tema: `random++`,
+    prg: `36. A base de dados está em modo ARCHIVELOG. Que frases devem ser verdadeiras antes do Log Writer (LGWR) poder reusar um redo log file online preenchido? (Escolha duas). `, a: new aln(` O redo log file deve ser arquivado.`), b: new aln(` Todos os data files devem ser backed up.`), c: new aln(` Todas as transacções com entrada no redo log file devem completar-se. `, 0), d: new aln(` Os data files pertencentes a tablespace SYSTEM devem ser backed up.`), e: new aln(` As mudanças registadas no redo log file devem ser escritas para os data files.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/36`, testRef: `1`, tema: `random++`,
+    prg: `37. Que tipo de backup melhor representa um backup aberto? (Escolha duas)`, a: new aln(` Online backup `, 0), b: new aln(` Offline backup`), c: new aln(` Hot backup`, 0), d: new aln(` Cold backup`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/37`, testRef: `1`, tema: `random++`,
+    prg: `38. Quando se usa RMAN, em que modo deve estar a BD para realizar restore e recovery?`, a: new aln(` Opened`), b: new aln(` Nomount`), c: new aln(` Closed`), d: new aln(` Mount`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/38`, testRef: `1`, tema: `random++`,
+    prg: `39. Que tipo de backup de base de dados requer um shutdown da mesma? (Escolha duas) `, a: new aln(` Uma base de dados em ARCHIVELOG `), b: new aln(` Uma base de dados em NOARCHIVELOG`, 0), c: new aln(` Cold backup (offline backup)`), d: new aln(` Hot Backup (online backup)`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `1/39`, testRef: `1`, tema: `random++`,
+    prg: `40. Quais dos seguintes são processos associados com recovery? (Escolha três)`, a: new aln(` PMON `, 0), b: new aln(` SMON`, 0), c: new aln(` ARCn`, 0), d: new aln(` DBWR`), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
+let bd2_t1_23 = [
+  new Prg({
+    cadNome: `Bd1`, pId: `0/0`, testRef: `0`, tema: ``,
+    prg: `1. Entre as funções listadas abaixo, assinale a que NÃO É da competência especifica de um DBA. `, a: new aln(`Conceder autorização para acesso a dados a utilizadores.`), b: new aln(`Zelar pela integridade da base de dados e definir procedimentos para criação e recuperação debackups. `), c: new aln(`Auxiliar equipes de desenvolvimento e de testes a maximizar o desempenho e uso da base dedados.`), d: new aln(` Planear, documentar, gerir e integrar recursos de informações corporativas de forma a manter as regras de negócio cocrentes.`, 0), e: new aln(` Projectar o armazenamento dos dados de forma a atender às necessidades de acesso.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/1`, testRef: `0`, tema: ``,
+    prg: `2. Quais são as duas afirmações verdadeiras sobre a arquitectura do servidor de base de dados Oracle? `, a: new aln(` Um processo de servidor de base de dados Oracle representa o estado de login de um utilizador numa instância.`), b: new aln(` Um processo do servidor de base de dados Oracle está sempre associado a uma sessão.`), c: new aln(` Cada processo do servidor tem sua própria Program Global Area (PGA). `, 0), d: new aln(` Uma conexão representa o estado de login de um utilizador numa instância.`, 0), e: new aln(` Todo o dicionário de dados é sempre armazenado em cache no pool grande.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/2`, testRef: `0`, tema: ``,
+    prg: `3. Quando um processo de usuário falha, qual processo em segundo plano limpa depois disso?`, a: new aln(` PCLEAN`), b: new aln(` PMON`, 0), c: new aln(` SMON`), d: new aln(` CKPT`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/3`, testRef: `0`, tema: ``,
+    prg: `4. PFILE é simplesmente um arquivo em texto`, a: new aln(` Verdadeiro.`, 0), b: new aln(` Falso.`), c: new aln(``), d: new aln(` CKPT`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/4`, testRef: `0`, tema: ``,
+    prg: `5. Qual é a área de memória que é criada quando um processo de servidor dedicado é inicializado, e contém dados e informação de control daquele processo servidor?`, a: new aln(` SGA`), b: new aln(` PGA`, 0), c: new aln(` Shared Pool`), d: new aln(` Streams Pool`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/5`, testRef: `0`, tema: ``,
+    prg: `6. A shared pool consiste de library cache e database buffer cache.`, a: new aln(` Verdadeiro.`), b: new aln(` Falso.`, 0), c: new aln(``), d: new aln(` Streams Pool`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/6`, testRef: `0`, tema: ``,
+    prg: `7. Quais são as duas afirmações verdadeiras sobre os arquivos de rastreamento (trace fil produzidospelo servidor Oracle Database? (Escolha duas.)`, a: new aln(` Eles podem ser escritos por processos servidor `, 0), b: new aln(` Os arquivos de rastreamento são gravados na Fast Recovery Area (FRA)`), c: new aln(` Eles podem ser escritos por processos em segundo plano `, 0), d: new aln(` Todos os arquivos de rastreamento contêm informações de erro que exigem contacto com o Suporte Oracle`), e: new aln(` Os nomes dos arquivos de rastreamento são baseados no nome da base de dados concatenadocom um número sequencial`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/7`, testRef: `0`, tema: ``,
+    prg: `8. Seja uma Base de Dados no qual um DBA modifica com sucesso a lista de control files no pfile, apontando apenas para um CONTROL01 CTL inexistente na Base de Dados XE. O que acontece ao iniciar normalmente a instância, montar a base de dados e abrir a base de dados (STARTUP). `, a: new aln(` Apenas é inicializada a instância`), b: new aln(` Inicializa-se a instância, monta-se a Base de Dados XE e abre-se a Base de Dados XE`), c: new aln(` Será exibida uma mensagem de erro (ora-00205: error in identifying control file, check alert log for more info)`, 0), d: new aln(` Inicializa-se a instância, monta-se a Base de Dados XE, mas dá erro ao tentar abrir a Base deDados `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/8`, testRef: `0`, tema: ``,
+    prg: `9. Toda a estrutura da base de dados é mantida num ficheiro chamado:`, a: new aln(` REDOLOG FILE `), b: new aln(` DATA FILE`), c: new aln(` CONTROL FILE`, 0), d: new aln(` PARAMETER FILE`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/9`, testRef: `0`, tema: ``,
+    prg: `10. A instância de base de dados foi encerrada normalmente e iniciada no estado NOMOUNT. A seguir, executa este comando:ALTER DATABASE MOUNT;Quais são as duas acções executadas? (Escolha duas.)`, a: new aln(` Os redo logs online são abertos. `), b: new aln(` Os arquivos de dados online são abertos`), c: new aln(` O alert log regista os detalhes da execução`, 0), d: new aln(` Os processos em segundo plano do Oracle são iniciados`), e: new aln(` O arquivo de controle é lido`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/10`, testRef: `0`, tema: ``,
+    prg: `11. Seja dado o seguinte cenário de BD, no qual existe uma tabela ALUNOS com 5mil registos. 1. Desmontar a Base de Dados, parar a BD e fechar a instância;2. Inicializar apenas a instância da Base de Dados; 3. Montar a Base de Dado e abrir a Base de Dados;4. Visualizar todos os registos da tabela ALUNOS:5. ?Identifique nas opções abaixo os comandos envolvidos para permitir uma mensagem positiva na linha 5:`, a: new aln(` SHUTDOWN, STARTUP, ALTER DATABASE OPEN; SELECT * FROM ALUNOS; `), b: new aln(` SHUTDOWN, STARTUP, ALTER DATABASE MOUNT: DESC ALUNOS;`), c: new aln(` SHUTDOWN, STARTUP NO MOUNT, STARTUP; SELECT * FROM ALUNOS;`), d: new aln(` SHUTDOWN, STARTUP NO MOUNT, ALTER DATABASE OPEN; SELECT * FROM ALUNOS;`, 0), e: new aln(` NENHUMA DAS ALTERNATIVAS ANTERIORES`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/11`, testRef: `0`, tema: ``,
+    prg: `12. O____ regista todas as alterações feitas nos dados:`, a: new aln(` REDO LOG`, 0), b: new aln(` ARCHIVE LOG`), c: new aln(` Ambos A e B`), d: new aln(` DATA FILE`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/12`, testRef: `0`, tema: ``,
+    prg: `13. DBA_DATA_FILES é usado para?`, a: new aln(` Ver todos os arquivos de dados`, 0), b: new aln(` Ver os caracteres de um arquivo de dados`), c: new aln(` Ambos B e D`), d: new aln(` Ver o tamanho de um arquivo de dados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/13`, testRef: `0`, tema: ``,
+    prg: `14. Os seguintes parámetros são opcionais no ficheiro de parâmetros init.ora: DB_BLOCK_SIZE,PROCESS. `, a: new aln(` VERDADEIRO `), b: new aln(` FALSO`, 0), c: new aln(``), d: new aln(` Ver o tamanho de um arquivo de dados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/14`, testRef: `0`, tema: ``,
+    prg: `15. Que processo de background realiza um checkpoint na base de dados, escrevendo blocos modificados do database buffer cache na SGA para data files?`, a: new aln(` LGWR `), b: new aln(` SMON`), c: new aln(` DBWn`, 0), d: new aln(` PMON`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/15`, testRef: `0`, tema: ``,
+    prg: `16. Examine os seguintes parâmetros de inicialização:MEMORY_MAX_TARGET = 0MEMORY_TARGET= 500MSGA TARGET= 300MPGA_AGGREGATE_TARGET = 70MQual afirmação é verdadeira sobre gestão de memória para a instância de base de dados recém iniciada?`, a: new aln(`MEMORY_TARGET define o limite máximo para SGA_TARGET.`), b: new aln(` SGA_TARGET e PGA_AGGREGATE_TARGET combinados nunca crescerão além de 500M.`, 0), c: new aln(` O valor para MEMORY_MAX_TARGET é a soma de SGA_TARGET e PGA_AGGREGATE_TARGET`), d: new aln(` SGA_TARGET e PGA_AGGREGATE_TARGET continuarão crescendo até um máximo de 300M e 70M, respectivamente`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/16`, testRef: `0`, tema: ``,
+    prg: `17. O processo LGWR grava as informações em`, a: new aln(` Arquivos de base de dados.`), b: new aln(` Arquivos de controle.`), c: new aln(` Arquivos redolog.`, 0), d: new aln(` Arquivos archived log.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/17`, testRef: `0`, tema: ``,
+    prg: `18. O tamanho de uma tablespace pode ser aumentada por:`, a: new aln(` Aumentando o tamanho de um dos datafile.`), b: new aln(` Adicionando um ou mais datafiles.`), c: new aln(` Não pode ser aumentada.`), d: new aln(` Nenhuma das acima.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/18`, testRef: `0`, tema: ``,
+    prg: `19. Relativamente a instância e base de dados XE e, recorrendo aos comandos do bash e sqlplus,sequencialmente, executar as seguintes acções:i. Desmontar a base de dados, parar a base de dados e parar a instância. ii. Copiar todos control files pertencentes a base de dados XE para a directoria ./temp.iii. Iniciar a Instância e montar a Base de Dados XE.O que é possível observar?`, a: new aln(` Mensagem de ERRO:(ora-00205: error in identifying control file, check alert log for more info)`), b: new aln(` Mensagem de SUCESSO:  Database Mounted.`), c: new aln(` Mensagem de ERRO:
+   Oracle instance opened 
+  Database Mounted.`), d: new aln(` Mensagem de SUCESSO:     
+  Oracle instance opened     
+  Database Mounted.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/19`, testRef: `0`, tema: ``,
+    prg: `20. Que comando deveria executar um Administrador de Base de Dados que pretende verificar oscontrol files utilizados por uma Base de Dados XE.I. select name from V$CONTROLFILE;II. grep -i '.ctl' $ORACLE_HOME/dbs/initXE.ora;III. select name from $CONTROLFILE_RECORD_SECTION;IV. find /-name V$CONTROLFILE;Indique a opção correcta:`, a: new aln(` Alternativa I`), b: new aln(` Alternativa II`), c: new aln(` Alternativas I e II`, 0), d: new aln(` Alternativa III`), e: new aln(` Nenhuma das alternativas`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/20`, testRef: `0`, tema: ``,
+    prg: `21. Todos os arquivos de dados relacionados a uma tablespace são removidos quando a tablespace édescartada`, a: new aln(` Verdadeiro.`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(` Alternativa III`), e: new aln(` Nenhuma das alternativas`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/21`, testRef: `0`, tema: ``,
+    prg: `22. Que estrutura providencia consistência no nível de leitura?`, a: new aln(` UNDO SEGMENTS `, 0), b: new aln(` REDO LOG FILES`), c: new aln(` DATA DICTIONARY TABLES`), d: new aln(`D ARCHIVED REDO LOG FILES`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/22`, testRef: `0`, tema: ``,
+    prg: `23. Quais são as duas afirmações verdadeiras em relação à gestão de espaço livre em blocos de dados?(escolha duas) `, a: new aln(` O padrão PCTFREE é 10% para todos os blocos em todos os segmentos para todos os métodos de compactação`), b: new aln(` As operações de actualização sempre tentam encontrar blocos com espaço livre apropriado ao comprimento da linha que está sendo actualizada.`, 0), c: new aln(` As operações de inserção sempre tentam encontrar blocos com espaço livre apropriado aocomprimento da linha que está sendo inserida`), d: new aln(` Um bloco sempre será elegível para inserções se a linha for curta o suficiente para caber no bloco`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/23`, testRef: `0`, tema: ``,
+    prg: `24. Quais são as duas afirmações verdadeiras sobre segmentos de undo e o uso de undo por transações numa instância de base de dados Oracle? (Escolha duas)`, a: new aln(` Um segmento de undo pode ser usado por várias transações simultaneamente`, 0), b: new aln(` Os segmentos de undo podem envolver a primeira extensão quando uma transação preenche a última extensão do segmento de undoC. Os segmentos de undo têm no mínimo três extensões`), c: new aln(` Os segmentos de undo podem se estender quando uma transação preenche a última extensão dosegmento de undo`), d: new aln(` Uma única transação pode usar vários segmentos de undo simultaneamente`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/24`, testRef: `0`, tema: ``,
+    prg: `25. Quais são as duas afirmações verdadeiras sobre vistas usadas para visualizar informações de tablespaces e datafiles? (Escolha duas.)`, a: new aln(` O espaço livre da tablespace pode ser visualizada em V$TABLESPACE`), b: new aln(` V$TABLESPACE exibe informações que estão contidas no controlfile sobre tablespaces`), c: new aln(` V$TABLESPACE exibe informações sobre tablespaces contidos no dicionário de dados`), d: new aln(` O espaço livre da tablespace pode ser visualizado em DBA_TABLESPACES`, 0), e: new aln(` Um arquivo de dados pode ser renomeado quando a base de dados está no estado MOUNT e o novo nome do arquivo é exibido ao consultar DBA_DATA_FILES depois que a base de dados é aberta`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/25`, testRef: `2`, tema: ``,
+    prg: `26. Muitas tablespaces podem partilhar um único datafile.`, a: new aln(` Verdadeiro.`), b: new aln(` Falso `, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd2`, pId: `2/26`, testRef: `2`, tema: ``,
+    prg: `27. Quando uma transacção modifica a base de dados, Oracle copia os dados originais antes de modificá-los. A cópia original dos dados modificados é chamada `, a: new aln(` ARCHIVE DATA`), b: new aln(` REDO DATA`), c: new aln(` UNDO DATA`, 0), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/27`, testRef: `0`, tema: ``,
+    prg: `28. Os privilégios de sistema SYSDBA e SYSOPER permitem acesso a uma instância de base de dados mesmo quando a base de dados não está aberta`, a: new aln(` Verdadeira`, 0), b: new aln(` Falsa`), c: new aln(``), d: new aln(``), e: new aln(` Um arquivo de dados pode ser renomeado quando a base de dados está no estado MOUNT e o novo nome do arquivo é exibido ao consultar DBA_DATA_FILES depois que a base de dados é aberta`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/28`, testRef: `0`, tema: ``,
+    prg: `29. Criou um utilizador executando o seguinte comando:SQL> CREATE USER user01 IDENTIFIED BY user01      DEFAULT TABLESPACE users    TEMPORARY TABLESPACE temp; A seguir concedeu privilégios ao user01 executando o seguinte comando:SQL> GRANT CREATE SESSION, CREATE TABLE TO user01;Quais das seguintes opcões é verdadeira neste cenário? (Escolha duas)`, a: new aln(` O utilizador pode efectuar log in na instância da base de dados`, 0), b: new aln(` O utilizador pode criar tabelas`, 0), c: new aln(` O utilizador não pode consultar nenhuma tabela`), d: new aln(` O utilizador pode conceder o privilégio CREATE SESSION a outros utilizadores`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/29`, testRef: `0`, tema: ``,
+    prg: `30. Seja dado o cenário:O Administrador de Base de Dados, recebeu notificação sobre um utilizador que não consegue conectar ao SQLPlus para executar o comando (SELECT * FROM ALUNOS) na Base de Dados, Nas opções abaixo indique o que é necessário para ter informação referente sobre o que está acontecer?`, a: new aln(` Consultar se o utilizador tem o privilégio SELECT table.`), b: new aln(` Consultar informação nos registos da auditoria activa na Base de Dados.`), c: new aln(` Consultar se o utilizador tem o privilégio GRANT.`), d: new aln(` Consultar se o utilizador tem o privilégio CONNECT.`, 0), e: new aln(` Nenhuma das alternativas anteriores.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/30`, testRef: `0`, tema: ``,
+    prg: `31. Seja uma Base de Dados no qual um Administrador está a gerir todas as tablespaces existentes. O Administrador em causa quer garantir que os utilizadores alocados a cada tablespace tenham espaço limitado (ex: 1M) para utilização.Nas opções abaixo indique qual comando deverá utilizar para resolver o problema acima: `, a: new aln(` Definir o tamanho QUOTA durante a criação do utilizador`, 0), b: new aln(` Definir o tamanho do DATAFILE igual a IM durante a criação da tablespace `), c: new aln(` Definir o atributo LOCAL UNIFORME size IM durante a criação da tablespace`), d: new aln(` Utilizar o atributo DEFAULT TABLESPACE size IM durante a criação do utilizador`), e: new aln(` Todas as alternativas anteriores`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/31`, testRef: `0`, tema: ``,
+    prg: `32. Executa o seguinte comando:SQL> DROP USER user01;   The command fails displaying the following error:    ORA-01922: CASCADE must be specified to drop 'USER01'O que causou a falha no comando?`, a: new aln(` O password do utilizador expirou. `), b: new aln(` A conta do utilizador está bloqueada.`), c: new aln(` O esquema da base de dados tem objectos na base de dados.`, 0), d: new aln(` O utilizador está conectado à base de dados.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/32`, testRef: `0`, tema: ``,
+    prg: `33. Quais são os quatro recursos de gestão de contas que podem ser configurados usando perfis (profil Oracle? (Escolha quatro.)`, a: new aln(` O número de horas para o qual uma conta é bloqueada após o número configurado de tentativas de login ter sido alcançado`, 0), b: new aln(` o número de dias durante os quais uma conta pode ficar inativa antes de ser bloqueada`, 0), c: new aln(` o número de dias durante os quais uma conta é bloqueada após o número configurado de Tentativas de login ter sido atingido`), d: new aln(` a capacidade de impedir que uma senha seja reutilizada`, 0), e: new aln(` o número de alterações de senha necessárias dentro de um período antes que uma senha possa ser reutilizada`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/33`, testRef: `0`, tema: ``,
+    prg: `34. Seja dada o seguinte cenário no qual um utilizador A tenta verificar tudo que foi feito na base de Dados do seu estabelecimento. Nas opções abaixo indique o que é necessário para ter informação relativas a TODAS as operações feitas na Base de Dados.`, a: new aln(` Entrar como utilizador SYS ou SYSDBA`), b: new aln(` Utilizar o comando SELECT para consultar toda Base de Dados XE (SELECT FROM DATABASES)`), c: new aln(` Activar auditoria na tablespace USER`), d: new aln(` Utilizar o comando SELECT para consultar todas as operações feitas pelo utilizador A`), e: new aln(` Nenhuma das Operações anteriores`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/34`, testRef: `0`, tema: ``,
+    prg: `35. Para auditar as actividades da base de dados executa o seguinte comando:    SQL> AUDIT DROP ANY TABLE BY scott BY SESSION WHENEVER SUCCESSFUL;Qual é o efeito deste comando?`, a: new aln(` Um registo de auditoria é criado para toda a sessão se o utilizador SCOTT elimina com sucesso uma ou mais tabelas na sua sessão `, 0), b: new aln(` Um registo de auditoria é criado para toda a sessão quando um utilizador qualquer elimina comsucesso uma tabela propriedade de SCOTT `), c: new aln(` Um registo de auditoria é criado para cada comando DROP TABLE bem-sucedido executado por qualquer utilizador para eliminar tabelas propriedade de SCOTT`), d: new aln(` Um registo de auditoria é criado para cada comando DROP TABLE bem-sucedido na sessão de SCOTT`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/35`, testRef: `0`, tema: ``,
+    prg: `36. Qual arquivo de backup e recuperação do Oracle contém dados do utilizador e do sistema?`, a: new aln(` CONTROL FILE`), b: new aln(` DATAFILE`, 0), c: new aln(` ONLINE REDO FILE`), d: new aln(` OFFLINE REDO FILE`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/36`, testRef: `0`, tema: ``,
+    prg: `37. Qual das opções a seguir é a forma para recuperar uma base de dados após o término anormal de uma transacção em andamento?`, a: new aln(` Rollback`, 0), b: new aln(` Rollforward`), c: new aln(` Mudar para uma base de dados duplicada`), d: new aln(` Reprocessar a transacção`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/37`, testRef: `0`, tema: ``,
+    prg: `38. Para criar um backup_______,a base de dados deve ter sido encerrada normalmente.`, a: new aln(` Hot`), b: new aln(` Consistente`, 0), c: new aln(` Inconsistente`), d: new aln(` Soft`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/38`, testRef: `0`, tema: ``,
+    prg: `39. A recuperação para trás (backward recorevy) é qual das seguintes opções?`, a: new aln(` Onde as imagens do segmento de rollback são aplicadas à base de dados `, 0), b: new aln(` Onde as imagens do ficheiro redo log são aplicadas à base de dados`), c: new aln(` Onde as duas imagens são aplicadas à base de dados`), d: new aln(` Mudança para uma cópia da base de dados existente`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Bd1`, pId: `0/39`, testRef: `0`, tema: ``,
+    prg: `40. A técnica de restauração/recuperação (restore/recovere envolve o reprocessamento das transações do dia até ao ponto de falha`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(``), d: new aln(` Mudança para uma cópia da base de dados existente`), e: new aln(``), imgs: [], fim: ""
   })
 ];
 
@@ -2612,24 +3328,29 @@ let bd2_r_14 = [
 
 let es_t2_21 = [
   new Prg({
-    cadNome: `Es1`, pId: `21/0`, testRef: `21`, tema: ``,
+    cadNome: `Es1`, pId: `2/0`, testRef: `2`, tema: `nada`,
     prg: `1. Julgue os itens que se seguem, em relação a metodologias de análise, projeto e desenvolvimento de sistemas, e assinale os verdadeiros:`, a: new aln(` O escopo, a importância e a estimativa de um Sprint do Scrum são definidos pelo product owner.`, 0), b: new aln(` Uma das atribuições do product owner, papel definido pelo Scrum, é a responsabilidade pela gestão do backlog. Tal atribuição pode ser delegada aos outros membros do time Scrum.`), c: new aln(` O Scrum é utilizado, como função primária, para a gestão de projetos de desenvolvimento de software, mas também tem sido usado o extreme programming e outras metodologias de desenvolvimento. Teoricamente, o Scrum pode ser aplicado em qualquer contexto no qual um grupo de pessoas necessitem de trabalhar juntas para atingir um objetivo comum.`, 0), d: new aln(` O único papel definido pelo Scrum com autoridade para cancelar uma Sprint é o do product owner.`, 0), e: new aln(` Num um projeto gerido com a metodologia Scrum, um produto estará, ao final de cada sprint, completamente testado, estando 100% completos todos os requisitos do product backlog.`), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Es1`, pId: `21/1`, testRef: `21`, tema: ``,
+    cadNome: `Es1`, pId: `2/1`, testRef: `2`, tema: `nada`,
     prg: `3. Analise o texto: “O Scrum enfatiza o uso de um conjunto de padrões de processos de software que provaram ser eficazes para projetos com prazo de entrega apertados, requisitos mutáveis e críticos de negócio. Cada um desses padrões de processos define um conjunto de ações de desenvolvimento. Uma dessas ações consiste em manter uma lista com prioridades dos requisitos ou funcionalidades do projeto que fornecem valor comercial ao cliente. Os itens podem ser adicionados a esse registo em qualquer momento. O gerente de produto avalia o registo e atualiza as prioridades conforme requisitado”. ..A lista citada no texto é conhecida como: (1,0 V)`, a: new aln(` urgências scrum.`), b: new aln(` registo ágil de requisitos.`), c: new aln(` Alterações scrum.`), d: new aln(` Registo pendente de trabalhos (Backlog).`, 0), e: new aln(` Registo iterativo de desenvolvimento (sprint).`), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Es1`, pId: `21/2`, testRef: `21`, tema: ``,
+    cadNome: `Es1`, pId: `2/2`, testRef: `2`, tema: `nada`,
     prg: `4. A figura abaixo mostra uma ferramenta utilizada no desenvolvimento de sistemas orientados a objectos:[Imagem]Esta ferramenta é conhecida como: `, a: new aln(` Diagrama de Actividades.`), b: new aln(` Diagrama de Pacotes.`), c: new aln(` Diagrama de Classes.`), d: new aln(` Diagrama de Colaboracao.`, 0), e: new aln(` Diagrama de Objectos`), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Es1`, pId: `21/3`, testRef: `21`, tema: ``,
+    cadNome: `Es1`, pId: `2/3`, testRef: `2`, tema: `nada`,
     prg: `7. Para utilizar o processo de estimativa por Story Points em Scrum, inicialmente… (1,5 V)`, a: new aln(` O Product Owner deve atribuir valores de negócio para cada um dos itens do Product Backlog.`), b: new aln(` O Product Backlog deve considerar todos os fatores de Sprint contidos no Backlog Owner.`, 0), c: new aln(` Os Stakeholders devem atribuir os riscos do Product Owner para cada Sprint Planning.`), d: new aln(` Os Stakeholders devem atribuir valores de negócio do Product Owner para cada Sprint.`), e: new aln(` O Product Planning deve avaliar cada Sprint contida no Backlog transacional e decidir pela prioridade de atividades`), imgs: [], fim: ""
   }),
   new Prg({
-    cadNome: `Es1`, pId: `21/4`, testRef: `21`, tema: ``,
+    cadNome: `Es1`, pId: `2/4`, testRef: `2`, tema: `nada`,
     prg: `8. Na metodologia Scrum, NÃO faz parte de uma revisão do sprint (sprint review) o seguinte procedimento: (1,5 V)`, a: new aln(` Todo o time colabora no que deve ser feito em seguida, de modo que esta revisão contribua para reuniões de planeamento subsequentes.`), b: new aln(` O proprietário do produto identifica o que está pronto e o que ainda está por fazer.`), c: new aln(` O time de desenvolvimento discute quais fatores positivos e negativos ocorreram durante o sprint e como os problemas foram resolvidos.`), d: new aln(` O time de desenvolvimento apresenta o trabalho que foi desenvolvido e responde questões sobre o incremento.`), e: new aln(` Todo o time cria um plano para implementar melhorias no modo como o time efetua seu trabalho`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `2/5`, testRef: `2`, tema: `nada`,
+    prg: `Correlacione as colunas a seguir, considerando o símbolo da UML que representa o tipo de relacionamento do RUP: 
+  [imagem Abaixo!!!]`, a: new aln(`agregação, herança, dependência, associação, composição`), b: new aln(`herança,composição,agregação, dependência, associação `, 0), c: new aln(`agregação,composição, herança, dependência, associação `), d: new aln(`composição, agregação, associação, dependência, herança`), e: new aln(``), imgs: [require('../testespics/es1/t2/t2_21_2.jpeg')], fim: ""
   })
 ];
 
@@ -2743,10 +3464,370 @@ new Prg({
 ];
 
 
+
+//////////////////////////IA ////////////////
+
+
+let ia_t2_23 = [
+  new Prg({
+    cadNome: `Ia`, pId: `2/0`, testRef: `2`, tema: `asaA`,
+    prg: `1. Qual busca usa o conhecimento especifico do problemaalém da definição do problema? `, a: new aln(`Busca informada`, 0), b: new aln(`Busca em profundidade Busca em largura`), c: new aln(`Busca em largura`), d: new aln(`Busca desinformada `), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/1`, testRef: `2`, tema: `asaA`,
+    prg: `2. O processo de remoção de detalhes de uma determinadarepresentação de estado é chamado de`, a: new aln(` Extração`), b: new aln(` Abstração`, 0), c: new aln(`Recuperação de Informações`), d: new aln(` Mineração de dados `), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/2`, testRef: `2`, tema: `asaA`,
+    prg: `3. Quais são os dois principais tipos de problemas de busca`, a: new aln(` Busca e optimização`), b: new aln(` Busca não informada e busca informada `, 0), c: new aln(` Busca sequencial e busca paralela`), d: new aln(` Busca local e busca global`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/3`, testRef: `2`, tema: `asaA`,
+    prg: `4. Qual é o objetivo da árvore de busca em um problema debusca"`, a: new aln(` Representar graficamente todos os estadospossiveis.`, 0), b: new aln(` Encontrar a solução ótima em tempo mínimo.`), c: new aln(` Realizar uma busca heuristica. `), d: new aln(` Organizar os nós do espaço de busca de formahierárquica.`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/4`, testRef: `2`, tema: `asaA`,
+    prg: `5. O que é uma função de custo em um problema de busca?`, a: new aln(`Uma função que estima a qualidade de umasolução.`), b: new aln(` Uma função que determina a distância entre dois nós.`), c: new aln(`Uma função que atribui um custo a cada ação emum problema.`, 0), d: new aln(` Uma função que calcula o número de nós expandidos na busca.`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/5`, testRef: `2`, tema: `asaA`,
+    prg: `6. O que é uma heuristica em um problema de buscainformada?`, a: new aln(` Uma função que estima a qualidade de uma solução semgarantia de optimalidade.`, 0), b: new aln(` Uma função que atribui um custo a cada ação em um problema.`), c: new aln(` Uma função que determina a distância entre dois nós.`), d: new aln(` Uma função que calcula o número de nós expandidos na busca.`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/6`, testRef: `2`, tema: `asaA`,
+    prg: `7. Qual é a complexidade do espaço da busca Gulosa?`, a: new aln(` O(b)`), b: new aln(` O(m)`), c: new aln(` O(bl)`), d: new aln(` O(bm)`, 0), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/7`, testRef: `2`, tema: `asaA`,
+    prg: `8. O que é a busca A*?`, a: new aln(` Um algoritmo de busca informada que utiliza uma funçãoheuristica para estimar o custo total.`, 0), b: new aln(` Um algoritmo de busca que utiliza um processo de busca paralela.`), c: new aln(` Um algoritmo de busca local que não garante a optimalidade da solução. `), d: new aln(` Um algoritmo de busca não informada que utiliza um espaço de busca em forma de árvore. `), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/8`, testRef: `2`, tema: `asaA`,
+    prg: `9. Quais são as duas propriedades essenciais que uma heuristicadeve possuir?`, a: new aln(` Consistência e admissibilidade`, 0), b: new aln(` Adaptação e eficiència`), c: new aln(` Precisão e complexidade `), d: new aln(` Aleatoriedade e determinismo`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/9`, testRef: `2`, tema: `asaA`,
+    prg: `10. Qual é a função de avaliação na abordagem gulosa?`, a: new aln(` Função heuristica`), b: new aln(` Custo do caminho do nó inicial ao nó atual`), c: new aln(` Custo do caminho do nó inicial ao nó atual +custo heuristico`, 0), d: new aln(` Média do custo do caminho do nó inicial ao nóatual e custo heuristico`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/10`, testRef: `2`, tema: `asaA`,
+    prg: `11. Qual é a função de avaliação na abordagem A*?`, a: new aln(`  Função heuristica`), b: new aln(`  Custo do caminho do nó inicial ao nó atual`), c: new aln(` Custo do caminho do nó inicial ao nó atual + custo heuristico`, 0), d: new aln(`  Média do custo do caminho do nó inicial ao nó atual e custo heurístico`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/11`, testRef: `2`, tema: `asaA`,
+    prg: `12. Uma heuristica é uma maneira de tentar:`, a: new aln(`Descobrir algo ou uma ideia incorporada em umprograma`), b: new aln(` Buscar e medir o quão longe um nó em uma árvore de Busca parece estar de um objetivo `), c: new aln(` Comparar dois nós em uma árvore de Busca para ver se um é melhor que o outro `), d: new aln(` Todos os mencionados`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/12`, testRef: `2`, tema: `asaA`,
+    prg: `13. Estratégias de Busca desinformadas são melhores do queestratégias de Busca informadas`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(` `), d: new aln(` Todos os mencionados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/13`, testRef: `2`, tema: `asaA`,
+    prg: `14. Um problema em um espaço de busca é definido por umdesses estados.`, a: new aln(` Estado inicial`, 0), b: new aln(` Último estado`), c: new aln(` Estado intermediário`), d: new aln(` Todas anteriores`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/14`, testRef: `2`, tema: `asaA`,
+    prg: `15. A função heuristica h(n) é:`, a: new aln(`é Custo de caminho mais baixo`), b: new aln(`Caminho mais barato da raiz ao nó objetivo`), c: new aln(`Custo estimado do caminho da raiz ao nó objetivo`, 0), d: new aln(`Custo médio do caminho`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/15`, testRef: `2`, tema: `asaA`,
+    prg: `16. O algoritmo A estrela é baseado em:`, a: new aln(`Busca em largura`), b: new aln(`Busca em profundidade`), c: new aln(`Melhor-primeiro-Busca`, 0), d: new aln(`Subida de colinas`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/16`, testRef: `2`, tema: `asaA`,
+    prg: `17. Qual é usado para melhorar o desempenho de uma buscaheuristica? `, a: new aln(` Qualidade dos nós`), b: new aln(` Qualidade da função heuristica`, 0), c: new aln(` Forma simples de nós `), d: new aln(` Nenhuma das mencionadas`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/17`, testRef: `2`, tema: `asaA`,
+    prg: `19. Qual é o outro nome da estratégia de Busca informada?`, a: new aln(` Busca simples `), b: new aln(` Busca heuristica`), c: new aln(` Busca on-line `, 0), d: new aln(`Nenhum dos mencionados`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/18`, testRef: `2`, tema: `asaA`,
+    prg: `20. Qual busca é completa e ótima quando h(n) é consistente?`, a: new aln(` Melhor primeira Busca `), b: new aln(` Busca em profundidade`), c: new aln(` Busca em primeiro lugar e em profundidade `), d: new aln(` Busca A*`, 0), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/19`, testRef: `2`, tema: `asaA`,
+    prg: `21. O que é Business Intelligence (BI)?`, a: new aln(` Um software específico para criar gráficos e tabelas.`), b: new aln(` Uma técnica para coletar e analisar informações de redes sociais.`), c: new aln(` Um conjunto de estratégias e ferramentas para coleta, análisee visualização de dados para tomada de decisões.`, 0), d: new aln(` `), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/20`, testRef: `2`, tema: `asaA`,
+    prg: `22. Qual é o objetivo principal do Business Intelligence (BI)?`, a: new aln(` Coletar dados de forma automatizada.`), b: new aln(` Criar relatórios complexos para gerentes executivos. `), c: new aln(`Fornecer informações valiosas para apoiar a tomada dedecisões.`, 0), d: new aln(`Automatizar todos OS processos de organização.`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/21`, testRef: `2`, tema: `asaA`,
+    prg: `23. O que é um data warehouse?`, a: new aln(`Um local fisico onde os dados são armazenadosem discos rígidos.`), b: new aln(` Um conjunto de software e hardware para à análise de big data. `), c: new aln(` Um repositório centralizado de dados integrados e históricosde uma organização.`, 0), d: new aln(`Um método de armazenamento de dados emnuvem.`), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/22`, testRef: `2`, tema: `asaA`,
+    prg: `A busca em largura sempre encontra a solução ótima++`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/23`, testRef: `2`, tema: `asaA`,
+    prg: `B) A busca em profundidade é mais eficiente do que a busca em
+  largura`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/24`, testRef: `2`, tema: `asaA`,
+    prg: ` A busca em profundidade limitada é uma variante da busca
+  em profundidade.+`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/25`, testRef: `2`, tema: `asaA`,
+    prg: `A busca de custo uniforme é uma estratégia de busca não
+  informada.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/26`, testRef: `2`, tema: `asaA`,
+    prg: `E) A busca em largura é menos propensa a ficar presa em loops
+  do que a busca em profundidade.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/27`, testRef: `2`, tema: `asaA`,
+    prg: `F) Uma heuristica admissível nunca superestima o custo para
+  alcançar o objetivo.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/28`, testRef: `2`, tema: `asaA`,
+    prg: `G) A busca gulosa utiliza uma heuristica para estimar o custo
+  total de uma solução.`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/29`, testRef: `2`, tema: `asaA`,
+    prg: `H) A busca A combina a busca em largura com uma heuristica
+  admissível.`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/30`, testRef: `2`, tema: `asaA`,
+    prg: `I) A busca A sempre encontra a solução ótima.`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/31`, testRef: `2`, tema: `asaA`,
+    prg: `J) A busca em profundidade pode ser implementada usando uma
+  pilha (LIFO).`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/32`, testRef: `2`, tema: `asaA`,
+    prg: `K) A busca gulosa sempre encontra a solução ótima.`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/33`, testRef: `2`, tema: `asaA`,
+    prg: `L) Uma heurística consistente é sempre admissível`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/34`, testRef: `2`, tema: `asaA`,
+    prg: `M) BI refere-se ao processo de coleta, organização e análise de
+  dados para obter insights e tomar decisões informadas.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/35`, testRef: `2`, tema: `asaA`,
+    prg: `N) A modelagem de dados no contexto de BI envolve a criação
+  de representações gráficas de dados.`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/36`, testRef: `2`, tema: `asaA`,
+    prg: `O) A mineração de dados é uma técnica usada para descobrir
+  padrões e relações em conjuntos de dados.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/37`, testRef: `2`, tema: `asaA`,
+    prg: `P) A modelagem de dados é o processo de projetar e definir a
+  estrutura e os relacionamentos dos dados em um sistema de
+  informações.`, a: new aln(` Verdadeiro`, 0), b: new aln(` Falso`), c: new aln(` `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
+
+let ia_t2_22 = [
+  new Prg({
+    cadNome: `Ia`, pId: `2/0`, testRef: `2`, tema: `asaA`,
+    prg: `1. O agente de resolução de problemas com várias opções imediatas de valor desconhecido pode decidir o que fazer apenas examinando diferentes sequências possiveis de ações que levam a estados de valor conhecido e, em seguida, escolher a melhor sequencia. Este processo de procurar por tal sequência é chamado de busca:`, a: new aln(` Verdadeiro`), b: new aln(` Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(` `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/1`, testRef: `2`, tema: `asaA`,
+    prg: `2. Um algoritmo de busca recebe___como entra e retorna___como saida`, a: new aln(`Entrada, saida`), b: new aln(` Problema, solução`), c: new aln(` Solução, problema`), d: new aln(` Parâmetros, sequência de ações`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/2`, testRef: `2`, tema: `asaA`,
+    prg: `3. Um problema em um espaço de busca é definido por umdesses estados.`, a: new aln(` Estado inicial `, 0), b: new aln(` Ultimo estado`), c: new aln(`Estado intermediário`), d: new aln(` Todos os mencionados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/3`, testRef: `2`, tema: `asaA`,
+    prg: `4. Qual busca usa o conhecimento especifico do problemaalém da definição do problema?`, a: new aln(` Busca informada`, 0), b: new aln(` Busca em profundidade`), c: new aln(` Busca em largura`), d: new aln(` Busca desinformada`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/4`, testRef: `2`, tema: `asaA`,
+    prg: `5. O processo de remoção de detalhes de uma determinadarepresentação de estado é chamado de____`, a: new aln(` Extração `), b: new aln(` Abstração`, 0), c: new aln(` Recuperação de Informações`), d: new aln(` Mineração de dados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/5`, testRef: `2`, tema: `asaA`,
+    prg: `6. ____número de métodos de busca informados queaprendemos na cadeira de Inteligência Artificial.`, a: new aln(`4`, 0), b: new aln(`3`), c: new aln(`2 `), d: new aln(`1`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/6`, testRef: `2`, tema: `asaA`,
+    prg: `7. Qual Busca é implementada com uma fila vazia deprimeiro a entrar, primeiro a sair?`, a: new aln(` Busca em profundidade`), b: new aln(` Busca em largura`, 0), c: new aln(` Busca bidirecional`), d: new aln(` Nenhuma das mencionadas`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/7`, testRef: `2`, tema: `asaA`,
+    prg: `8. Quando a busca em largura é ideal?`, a: new aln(` Quando há menor número de nós`), b: new aln(` Quando todos os custos das etapas são iguais`, 0), c: new aln(` Quando todos os custos das etapas são desiguais `), d: new aln(` Nenhuma das mencionadas.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/8`, testRef: `2`, tema: `asaA`,
+    prg: `9. O DFS é ___eficiente e o BFS ___é`, a: new aln(`a Espaço. Tempo `), b: new aln(` Tempo. Espaço`, 0), c: new aln(` Tempo, Tempo`), d: new aln(` Espaço, Espaço`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/9`, testRef: `2`, tema: `asaA`,
+    prg: `10. Qual é a complexidade do espaço da buscaprofundidade?`, a: new aln(`  O(b) `), b: new aln(`  O(bl)`), c: new aln(`  O(bm)`), d: new aln(`  O(m)`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/10`, testRef: `2`, tema: `asaA`,
+    prg: `11. Qual busca implementa a operação de pilha para buscar osestados? `, a: new aln(` Busca com profundidade limitada`), b: new aln(` Busca em profundidade`, 0), c: new aln(` Busca em largura`), d: new aln(` Nenhum dos mencionados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/11`, testRef: `2`, tema: `asaA`,
+    prg: `12. Qual é o termo geral da busca cega?`, a: new aln(`  Busca informada`), b: new aln(` Busca desinformada`, 0), c: new aln(` Busca informada e Não Informada`), d: new aln(` Busca heuristica`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/12`, testRef: `2`, tema: `asaA`,
+    prg: `13. Estratégia de busca gulosa escolhe o nó para expansão____`, a: new aln(` Mais raso`), b: new aln(` Mais profundo`), c: new aln(` Mais próximo do no objetivo`), d: new aln(` Com o custo heuristico minimo `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/13`, testRef: `2`, tema: `asaA`,
+    prg: `14. Qual é a função de avaliação na abordagem gulosa? `, a: new aln(` Função heuristica `), b: new aln(` Custo do caminho do nó inicial ao nó atual`), c: new aln(` Custo do caminho do nó inicial ao no atual +custo heuristico `, 0), d: new aln(` Média do custo do caminho do nó inicial ao nó atual e custo heuristico`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/14`, testRef: `2`, tema: `asaA`,
+    prg: `15. Qual é a complexidade do espaço da busca Gulosa?`, a: new aln(` O(b)`), b: new aln(` O(bl)`, 0), c: new aln(` O(m) `), d: new aln(` O(bm)`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/15`, testRef: `2`, tema: `asaA`,
+    prg: `16. Uma heuristica é uma maneira de tentar:`, a: new aln(` Descobrir algo ou uma ideia incorporada em um programa`), b: new aln(` Buscar e medir o quão longe um nó em uma árvore de Busca parece estar de um objetivo`, 0), c: new aln(` Comparar dois nós em uma árvore de Busca para ver se um é melhor que o outro`), d: new aln(` Todos os mencionados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/16`, testRef: `2`, tema: `asaA`,
+    prg: `17. Estratégias de Busca desinformada sao  melhores do doque estratégias de Busca informada`, a: new aln(`Verdadeira`), b: new aln(`Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/17`, testRef: `2`, tema: `asaA`,
+    prg: `18. Qual metodo de busca expandira no mais próximo do objetivo?`, a: new aln(` Melhor Primeiro`), b: new aln(`Busca gulosa por melhor primeiro`, 0), c: new aln(` busca A*`), d: new aln(` Nenhuma das mencionadas`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/18`, testRef: `2`, tema: `asaA`,
+    prg: `19. Um problema em um espaço de busca é definido por um desses estados`, a: new aln(` Estado inicial `, 0), b: new aln(` Ultimo estado`), c: new aln(` Estado intermediario`), d: new aln(` todas anteriores`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/19`, testRef: `2`, tema: `asaA`,
+    prg: `20 ___numero de metodos de busca informados que aprendemos na cadeira de Inteligência Artificial.`, a: new aln(` 6`), b: new aln(` 5`, 0), c: new aln(` 4`), d: new aln(` 3`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/20`, testRef: `2`, tema: `asaA`,
+    prg: `21. A fimção heuristica (n) é ___`, a: new aln(` Custo de caminho mais baixo`), b: new aln(` Caminho mais barato da raiz ao no objetivo `), c: new aln(` Custo estimado do caminho da raiz ao no objetivo`, 0), d: new aln(` Custo medio do caminho `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/21`, testRef: `2`, tema: `asaA`,
+    prg: `22.Qual declaração é válida para a função heuristica?`, a: new aln(` função heuristica é usada para resolver problemas matemáticos`), b: new aln(` A função heuristica recebe parâmetros do tipo string e retorna um valor inteiro`), c: new aln(` A função heuristica não possui nenhum tipo de retorno.`), d: new aln(` A função heuristica calcula o custo de um caminho ótimo entre o par de estadoss`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/22`, testRef: `2`, tema: `asaA`,
+    prg: `23. O algoritmo A* é baseado em ___`, a: new aln(` Busca em largura `, 0), b: new aln(` Busca em profundidade `), c: new aln(` Melhor-primeiro-Busca`), d: new aln(` Subida de colinas`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/23`, testRef: `2`, tema: `asaA`,
+    prg: `24. A* é ótimo se h(n) for uma heuristica admissivel - isto é, desde que h(n) nunca subestime o custo para atingir a meta.`, a: new aln(`Verdadeira`, 0), b: new aln(`falso`), c: new aln(``), d: new aln(` Subida de colinas`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/24`, testRef: `2`, tema: `asaA`,
+    prg: `25. Qual é a função de avaliação na abordagem A"?`, a: new aln(` Falso`), b: new aln(` Função heuristica `), c: new aln(` Custo do caminho do nó inicial ao no atual`, 0), d: new aln(` Custo do caminho do no inicial no no atual + custo heuristico`), e: new aln(` Média do custo do caminho do no inicial ao no atual e custo heuristico `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/25`, testRef: `2`, tema: `asaA`,
+    prg: `26. Qual é usado para melhorar o desempenho da buscaheuristica?`, a: new aln(` Qualidade dos nós`), b: new aln(` Qualidade da função heuristica `, 0), c: new aln(` Forma simples de nós`), d: new aln(` Nenhuma das mencionadas`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/26`, testRef: `2`, tema: `asaA`,
+    prg: `27, Qual é o outro nome da estratégia de Busca informada?`, a: new aln(`Busca simples`), b: new aln(`Busca heuristica`, 0), c: new aln(`Busca on-line`), d: new aln(`Nenhum dos mencionados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/27`, testRef: `2`, tema: `asaA`,
+    prg: `28. Qual é a função heuristica da busca gulosa do melhorprimeiro?`, a: new aln(` f(n) != h(n)`), b: new aln(` f(n) < h(n)`), c: new aln(` f(n) = h(n)`), d: new aln(` f(n) >h(n)`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `2/28`, testRef: `2`, tema: `asaA`,
+    prg: `29. Qual busca é completa e ótima quando h(n) é consistente?`, a: new aln(` Melhor primeira Busca`), b: new aln(` Busca em profundidade `), c: new aln(` Busca em primeiro lugar e em profundidade`), d: new aln(` Busca A*`, 0), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
+
+let ia_t1_23 = [
+  new Prg({
+    cadNome: `Ia`, pId: `1/0`, testRef: `1`, tema: `asaA`,
+    prg: `1 Quais instrumentos são usados para perceber e agir sobre omeio ambiente?`, a: new aln(` Sensores e Atuadores`, 0), b: new aln(` Sensores `), c: new aln(` Perceptor`), d: new aln(` Nenhum dos mencionados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/1`, testRef: `1`, tema: `asaA`,
+    prg: `2 Quantos tipos de agentes existem na inteligência artificial?`, a: new aln(` 1`), b: new aln(` 2`), c: new aln(` 3`), d: new aln(` 4`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/2`, testRef: `1`, tema: `asaA`,
+    prg: `3. O que faz um agente racional?`, a: new aln(`Reuna o máximo de informações possivel antes de tomar uma decisão.`), b: new aln(` Maximize o desempenho esperado.`, 0), c: new aln(` Maximize o desempenho atual.`), d: new aln(` Use apenas conhecimento a priori `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/3`, testRef: `1`, tema: `asaA`,
+    prg: `4. O que é a busca em profundidade de aprofundamentoiterativo?`, a: new aln(` Pesquisa de profundidade-hst com um limite de profundidadegradualmente crescente.`, 0), b: new aln(` Pesquisa em profundidade com um limite deprofundidade predeterminado, `), c: new aln(`Uma estratégia de pesquisa em que duas pesquisas são executadas simultaneamente. `), d: new aln(` Pesquisa em profundidade que expande primeiro o nó de menor custo`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/4`, testRef: `1`, tema: `asaA`,
+    prg: `5. O PEAS no ambiente de tarefa é sobre:`, a: new aln(`Par, Meio Ambiente, Amadores, Sentido`), b: new aln(` Desempenho, Ambiente, Atuadores, Sensores`, 0), c: new aln(` Percepção, Ambiente, Atuadores, Sensores`), d: new aln(` Nenhuma das acima`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/5`, testRef: `1`, tema: `asaA`,
+    prg: `6. O que se entende por sequência de percepção do agente?`, a: new aln(` Usado para perceber o ambiente `), b: new aln(` História completa do atuador`), c: new aln(` História completa das coisas percebidas`, 0), d: new aln(` Nenhum dos mencionados `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/6`, testRef: `1`, tema: `asaA`,
+    prg: `7. Qual é a composição para agentes em inteligênciaartificial?`, a: new aln(` Programa`), b: new aln(` Arquitetura`), c: new aln(` Tanto o programa quanto a arquitetura `, 0), d: new aln(` Nenhum dos mencionados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/7`, testRef: `1`, tema: `asaA`,
+    prg: `8. Um problema em um espaço de busca é definido por umdesses estados.`, a: new aln(` Estado inicial `), b: new aln(` Último estado`), c: new aln(` Estado intermediário`), d: new aln(` Todas anteriores`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/8`, testRef: `1`, tema: `asaA`,
+    prg: `9.O que é espaço de estados?`, a: new aln(` Todo o problema`), b: new aln(` Sua definição para um problema `), c: new aln(` Problema que você projeta`), d: new aln(` Representando seu problema com variável e parâmetro`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/9`, testRef: `1`, tema: `asaA`,
+    prg: `10. No espaço de estados, o conjunto de ações determinadoproblema é expresso por`, a: new aln(` Estados intermediários `), b: new aln(` Função sucessora que executa a ação atual e retorna opróximo estado`, 0), c: new aln(` Estados iniciais`), d: new aln(` Nenhuma das acima `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/10`, testRef: `1`, tema: `asaA`,
+    prg: `11. Um algoritmo de busca recebe ____ como entrada eretorna ____ como saida.`, a: new aln(` Entrada, saida `), b: new aln(` Solução do problema`), c: new aln(` Solução, problema `), d: new aln(` Parâmetros, sequência de ações`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/11`, testRef: `1`, tema: `asaA`,
+    prg: `12. O conjunto de ações para um problema em um espaço deestados é formulado por um`, a: new aln(`Estados intermediános`), b: new aln(` Estado inicial`), c: new aln(`  Função sucessora, que executa a ação atual e retorna opróximo estado imediato`, 0), d: new aln(` Nenhum dos mencionados`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/12`, testRef: `1`, tema: `asaA`,
+    prg: `13. Os principais componentes para medir o desempenho daresolução de problemas são:`, a: new aln(` Completude`), b: new aln(` Otimização `), c: new aln(` Complexidade de tempo e espaço`), d: new aln(` Todos os mencionados `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/13`, testRef: `1`, tema: `asaA`,
+    prg: `14. O criador de chamou inicialmente de "jogo deimitação".`, a: new aln(` O teórico da lógica`), b: new aln(` O Teste de Turing`, 0), c: new aln(` Cibernética`), d: new aln(` LISP`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Ia`, pId: `1/14`, testRef: `1`, tema: `asaA`,
+    prg: `15. A principal tarefa de um agente de resolução de problema é:`, a: new aln(` Resolva o problema dado e alcance a meta`), b: new aln(` Para descobrir qual sequência de ação o levará aoestado objectivo`), c: new aln(` Todos os mencionados`, 0), d: new aln(` Nenhum dos mencionados`), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
+
 let bd1t2 = [bd22, bd19, bd18];
 let bd1t1 = [bd16, bd15, bd14];
-let bd2t2 = [bd2_t2_22, bd2_r_16, bd2_t2_16, bd2_r_14];
+let bd2t2 = [bd2_t2_23, bd2_r_22, bd2_t2_22, bd2_r_16, bd2_t2_16, bd2_r_14];
+let bd2t1 = [bd2_t1_23, bd2_t1_19];
+
 let esTs1 = [es14, es15];
 let esTs2 = [es_t2_22, es_t2_21, es_mt2_17];
-
-export { bd1t2, esTs1, bd1t1, bd2t2, esTs2 };
+let IaTs1 = [ia_t1_23];
+let IaTs2 = [ia_t2_23, ia_t2_22];
+export { bd1t2, esTs1, bd1t1, bd2t2, bd2t1, esTs2, IaTs1, IaTs2 };

@@ -28,9 +28,9 @@ let tudo = [
 
 function dividirTemas(lista, tema) {
     let nlista = [];
-
     nlista = lista.filter((el) => {
-        return el.tema.toLowerCase() == tema.toLowerCase();
+
+        return el.tema.toLowerCase().trim() == tema.toLowerCase().trim();
     });
 
     return nlista;
@@ -49,7 +49,8 @@ function listaCount(lista) {
 function init_temaMixer(rand, mix, temas, tamanhototal) {
     let metade = parseInt(tamanhototal / 2);
     let nlista = [];
-
+    /*  console.log("processo de dis: " + tamanhototal);
+      console.log("processo de temas: " + JSON.stringify(temas));*/
 
     let counterI = 0;
 
@@ -211,7 +212,6 @@ function init_temaMixer(rand, mix, temas, tamanhototal) {
 
     } else {
 
-        console.log("Aqui: " + temas.length);
         console.log("Nao Suf: ");
 
         for (let x = 0; x < tamanhototal; x++) {
@@ -274,6 +274,7 @@ function randomizerStart(rando, allPergs, temaStrings, tamanho) {
 
     if (temaStrings.length > 0) {
         //rand, mix, temas, tamanhototal
+
         listaFinal = init_temaMixer(rando, true, listaMix_input, tamanho);
 
         //let sf, mk, tk;
@@ -287,17 +288,20 @@ function randomizerStart(rando, allPergs, temaStrings, tamanho) {
             allStats.push(stats_tema(el));
         })
 
-        allStats.forEach(els => {
+        allStats.forEach((els, x) => {
 
-            listaFinal.forEach(elf => {
+            listaFinal.forEach((elf, y) => {
+
                 if (els.tema.toLowerCase().trim() == elf.tema.toLowerCase().trim()) {
                     els.count++;
                 }
             })
 
-        })
 
-        //console.log(allStats);
+
+        })
+        //console.log("allStats: " + JSON.stringify(allStats));
+
     }
 
     return listaFinal;

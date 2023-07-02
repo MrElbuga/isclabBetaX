@@ -14,7 +14,7 @@
       "**/*"
     ],
     "android": {
-      "package": "com.isclabbeta", "splash": {
+      "package": "com.isclabbetaX", "splash": {
         "image": "./Devsource/testespics/pt.png",
         "resizeMode": "contain",
         "backgroundColor": "#000000"
