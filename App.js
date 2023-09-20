@@ -49,7 +49,7 @@ export default function App() {
 
   //Teste
   const [tl_ponto, setVwponto] = useState(false);
-  const [tl_provas, setVprovas] = useState(false);
+  const [tl_provas, setVprovas] = useState(true);
   const [tl_Temas, setVTemas] = useState(false);
   const [custom_cad, setCustom_cad] = useState(false);
 
@@ -71,7 +71,7 @@ export default function App() {
 
   const [isTsSuf, setTsSuf] = useState(false);
   const [isTssing, setTssing] = useState(false);
-  const [isShowCad, setShowCad] = useState(false);
+  const [isShowCad, setShowCad] = useState(true);
 
   const [curTestNomes, setCurTestNomes] = useState(cur_cad.T1nomes);
 
@@ -232,7 +232,7 @@ export default function App() {
 
     if (
       today.getDate() >= 15 &&
-      parseInt(today.getMonth() + 1) == 7 &&
+      parseInt(today.getMonth() + 1) == 8 &&
       today.getFullYear() >= parseInt("2023")
     ) {
       setTesting(false);
@@ -1046,7 +1046,7 @@ export default function App() {
                     }, 5);
 
 
-
+                    //asasas
 
                   } catch (error) {
                     console.log(error);

@@ -3465,6 +3465,546 @@ new Prg({
 
 
 
+//Exame
+
+let es1_ex_20 = [
+  new Prg({
+    cadNome: `Es1`, pId: `20/0`, testRef: `20`, tema: `randon`,
+    prg: `1.	Dentro da Engenharia de Software, encontramos uma gama de conceitos. Com base nisso, analise e assinale a(s) afirmação(ções) correta(s) sobre Processos de Software.	`, a: new aln(`	Podemos definir um processo de software como um conjunto de atividades relacionadas que levam à produção de um produto de software.	`, 0), b: new aln(`	A definição das funcionalidades do software e as restrições ao seu funcionamento são atividades incluídas no processo de software.	`, 0), c: new aln(`	A validação de software também é uma atividade presente no processo de software.	`, 0), d: new aln(`	Os processos de software são complexos e, como todos os processos intelectuais e criativos, dependem de pessoas para tomar decisões e fazer julgamentos. Não existe um processo ideal, a maioria das organizações desenvolve seus próprios processos de desenvolvimento de software.`, 0), e: new aln(``, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/1`, testRef: `20`, tema: `randon`,
+    prg: `2.	“É baseado na idéia de desenvolvimento de uma implementação inicial, expondo o resultado aos comentários do utilizador e refinando esse resultado por meio de diversas versões, até que seja desenvolvido um sistema adequado”. No âmbito do processo de software, trata-se de…	`, a: new aln(`	Desenvolvimento evolucionário.	`, 0), b: new aln(`	Modelo em cascata.	`), c: new aln(`	Engenharia de software baseada em componentes.	`), d: new aln(`	Desenvolvimento em espiral.	`), e: new aln(`	Programação estruturada.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/2`, testRef: `20`, tema: `randon`,
+    prg: `3.	O modelo em cascata inclui 5 estágios considerados fundamentais para o desenvolvimento de um software: a análise e definição de requisitos, o projeto de sistema e software, a implementação e o teste de unidade, a integração e o teste de sistema e a operação e manutenção. Apesar disso, o modelo em cascata tem como desvantagens… 	`, a: new aln(`Documentação produzida em cada estágio.	`), b: new aln(`Aderência a outros modelos de processo de engenharia.	`, 0), c: new aln(`Dificuldade de reação a mudanças de requisitos do utilizador.	`, 0), d: new aln(`Falta de estruturação para desenvolvimento de software.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/3`, testRef: `20`, tema: `randon`,
+    prg: `4.	Identifique com V as afirmações verdadeiras e com F, as falsas.	`, a: new aln(`	Os requisitos não funcionais restringem o sistema que está sendo desenvolvido e o processo de desenvolvimento que deve ser usado e estão, frequentemente, relacionados às propriedades emergentes do sistema de modo que se aplicam ao sistema na sua totalidade.	`, 0), b: new aln(`	A prototipação não é considerada uma técnica usada para validação de requisitos, pois ocorre na fase final do processo de desenvolvimento, representado a entrega do sistema aos utilizadors finais e clientes.	`), c: new aln(`	Pode-se considerar que a entrada para o estudo de viabilidade consiste em um conjunto preliminar de requisitos de negócios, um esboço da descrição do sistema e como esse sistema pretende apoiar os processos de negócios.`, 0), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/4`, testRef: `20`, tema: `randon`,
+    prg: `5.	Um processo de desenvolvimento de software é um conjunto de atividades, parcialmente ordenadas, com a finalidade de se obter um produto de software. Cada processo tem suas particularidades, entretanto, podem-se destacar atividades que são comuns à maioria dos processos. Assinale a opção correta.	`, a: new aln(`	O levantamento de requisitos tem como objetivo compreender o problema a ser resolvido e identificar necessidades. Os requisitos podem ser funcionais ou não funcionais.	`, 0), b: new aln(`	A análise tem como foco construir uma estratégia de solução. Os modelos construídos nessa fase devem ser verificados e validados. A verificação tem como objetivo assegurar que as necessidades do cliente estão sendo atendidas pelo sistema, enquanto a validação tem o objetivo de analisar se os modelos estão em conformidade com os requisitos definidos.	`), c: new aln(`	O projeto produz uma descrição computacional do software sem restrições de tecnologia, ou seja, aspectos físicos e dependentes de implementação não são considerados.	`), d: new aln(`	Na fase de implementação, o sistema é codificado, ou seja, a descrição computacional obtida na fase de projeto é traduzida para código executável, por meio do uso de uma ou mais linguagens de programação.	`), e: new aln(`	Na fase de implantação, o sistema é testado, empacotado, distribuído e instalado no ambiente do cliente.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/5`, testRef: `20`, tema: `randon`,
+    prg: `6.	13. Informação - assinale a(s) verdadeira(s) ...	`, a: new aln(`	É o conjunto de todos os dados de uma empresa com um nome.	`), b: new aln(`	É o tratamento e organização dos dados para definir o conhecimento empresarial.	`, 0), c: new aln(`	É igual a Dado + Significado + Qualidade.	`, 0), d: new aln(`	Gerada em tempo hábil é aquela que possui tempo de sobra para ser tratada.	`), e: new aln(`	São dados relevantes moldados em formato útil e significativo.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/6`, testRef: `20`, tema: `randon`,
+    prg: `7.	Considerando os conceitos de sistemas de informação e de tecnologia da informação, julgue os itens a seguir (V ou F):	`, a: new aln(`	Segundo Karl Bertalanffy Sistema é um objeto de qualquer tipo, constituído de componentes inter-relacionados com o todo e inter-dependentes, com funções cujos resultados pertencem a cada componente.	`), b: new aln(`	Dos sistemas de informação fazem parte elementos como: dados, informações, recursos materiais e tecnológicos, recursos humanos e procedimentos.	`, 0), c: new aln(`	O sistema de informação permite agregar valor às organizações, uma vez que se trata de um recurso valioso e repercute em todos os níveis da estrutura organizacional: estratégico, operacional e administrativo.	`, 0), d: new aln(`	A tomada de decisão nas organizações é facilitada pela utilização da tecnologia da informação, que permite criar, administrar e manter a gestão da informação de uma instituição por meio de dispositivos para acesso, operação e armazenamento de dados.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/7`, testRef: `20`, tema: `randon`,
+    prg: `8.	Em Engenharia de Software, é correto o que se afirma em …	`, a: new aln(`	Não visa o desenvolvimento de teorias e fundamentações, preocupando-se unicamente com as práticas de desenvolvimento de software.	`), b: new aln(`	Tem como foco o tratamento dos aspectos de desenvolvimento de software, abstraindo-se dos sistemas baseados em computadores, incluindo hardware e software.	`), c: new aln(`	Tem como métodos as abordagens estruturadas para o desenvolvimento de software que incluem os modelos de software, notações, regras e maneiras de desenvolvimento.	`, 0), d: new aln(`	Segue princípios, tais como, o da Abstração, que identifica os aspectos importantes sem ignorar os detalhes e o da Composição, que agrupa as atividades em um único processo para distribuição aos especialistas.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/8`, testRef: `20`, tema: `randon`,
+    prg: `9.	Na Engenharia de Software, um modelo de processo considera as atividades fundamentais do processo, compreendendo especificação, desenvolvimento, validação e evolução, e as representa como fases de processo separadas, tais como especificação de requisitos, projeto de software, implementação, teste e assim por diante. Esse modelo de processo é conhecido por Modelo:	`, a: new aln(` Baseado em componentes;	`), b: new aln(` Baseado em protótipos;	`), c: new aln(` Por objetivos;	`), d: new aln(` Em espiral;	`), e: new aln(` Em cascata`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/9`, testRef: `20`, tema: `randon`,
+    prg: `10.	Por ser inadequada, a utilização de protótipos para a validação dos requisitos não funcionais deve ser descartada. `, a: new aln(`	Certo`), b: new aln(`	Errado`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/10`, testRef: `20`, tema: `randon`,
+    prg: `11.	Um processo de software é um conjunto de atividades relacionadas que levam à produção de um produto de software. Existem muitos processos de software diferentes, mas todos devem incluir quatro atividades fundamentais: especificação, projeto e implementação, validação e …`, a: new aln(` teste	`), b: new aln(` evolução	`, 0), c: new aln(` prototipação	`), d: new aln(` entrega	`), e: new aln(` modelagem `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/11`, testRef: `20`, tema: `randon`,
+    prg: `12.	Os estágios do processo de software incluem situação atual, definição do problema, desenvolvimento técnico e integração da solução.`, a: new aln(`	Certo`, 0), b: new aln(`	Errado`), c: new aln(``), d: new aln(` entrega	`), e: new aln(` modelagem `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/12`, testRef: `20`, tema: `randon`,
+    prg: `13.	Em Engenharia de Software, temos o Desenvolvimento em Espiral, cada loop da espiral é dividido em quatro setores, a seguir apresentamos alguns deles. Analise as assertivas e assinale a alternativa que apresenta os corretos.
+  
+   I. Desenvolvimento de integração: O software que não puder ser comprado será desenvolvido, e os componentes e sistemas COTS serão integrados, a fim de criar um sistema. A integração de sistemas, nesse modelo, pode ser parte do processo de desenvolvimento, em vez de uma atividade separada. 
+  
+  II. Definição de objetivos: São definidos os objetivos específicos para essa fase do projeto. São identificadas as restrições para o processo e o produto, e é preparado um plano de gerenciamento detalhado. São identificados os riscos do projeto e, dependendo dos riscos, poderão ser planejadas estratégias alternativas. 
+  
+  III. Avaliação e redução de riscos: Para cada um dos riscos de projeto identificados, é realizada uma análise detalhada e são tomadas providências para reduzir esses riscos. Por exemplo, se houver um risco de os requisitos serem inadequados, poderá ser desenvolvido um protótipo. 
+  
+  IV. Panejamento: O projeto é revisto e é tomada uma decisão sobre continuar com o próximo loop da espiral. Se a decisão for continuar, serão traçados os planos para a próxima fase do projeto. 	`, a: new aln(` Apenas I e II`), b: new aln(` Apenas II, III e IV.`), c: new aln(` Apenas IV`, 0), d: new aln(` Apenas III e IV`), e: new aln(` I, II, III e IV`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/13`, testRef: `20`, tema: `randon`,
+    prg: `14.	Dentro da Engenharia de Software, encontramos uma gama de conceitos. Com base nisso, analise as assertivas e assinale a alternativa que aponta a(s) correta(s) sobre Processos de Software. I.	Podemos definir um processo de software como um conjunto de atividades relacionadas que levam à produção de um produto de software.II.	A definição das funcionalidades do software e as restrições a seu funcionamento devem ser definidas na produção de um software. Essa atividade está incluída no processo de software.III.	A validação de software também é uma atividade presente no processo de software.IV. Os processos de software são complexos e, como todos os processos intelectuais e criativos, dependem de pessoas para tomar decisões e fazer julgamentos. Não existe um processo ideal, a maioria das organizações desenvolve seus próprios processos de desenvolvimento de software.`, a: new aln(` Apenas I.`), b: new aln(` Apenas I e III.`), c: new aln(` Apenas I e IV`), d: new aln(` Apenas II, III e IV.`), e: new aln(` I, II, III e IV`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/14`, testRef: `20`, tema: `randon`,
+    prg: `15.	O modelo de processo de desenvolvimento de software que combina as atividades de desenvolvimento com o gerenciamento de risco é o Modelo…`, a: new aln(` Transformacional`), b: new aln(` De Especificação Operacional`), c: new aln(` Em V`), d: new aln(` Em Cascata`), e: new aln(` Em Espiral`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/15`, testRef: `20`, tema: `randon`,
+    prg: `16.	No desenvolvimento em cascata, os passos são ordenados em sequência e executados até a etapa final de teste, mesmo que o cliente esteja insatisfeito com determinado resultado intermediário.`, a: new aln(`	Certo`), b: new aln(`	Errado`, 0), c: new aln(``), d: new aln(` Em Cascata`), e: new aln(` Em Espiral`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/16`, testRef: `20`, tema: `randon`,
+    prg: `17.	Os diversos modelos de processo de software disponíveis permitem a representação abstrata de um processo de software sob diferentes perspectivas. No modelo evolucionário, sob a perspectiva da arquitetura, a velocidade de desenvolvimento faz que a produção de documentos que reflitam cada versão do sistema seja economicamente inviável, gerando problemas na validação independente de sistemas.`, a: new aln(`	Certo`), b: new aln(`	Errado`, 0), c: new aln(``), d: new aln(` Em Cascata`), e: new aln(` Em Espiral`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/17`, testRef: `20`, tema: `randon`,
+    prg: `18.	Metodologias de desenvolvimento de software se baseiam em um modelo de ciclo de vida, tais como cascata, espiral e prototipagem; sendo assim, é correto afirmar que 	`, a: new aln(` Metodologias que seguem o modelo em espiral normalmente possuem um maior potencial de risco, uma vez que esse modelo não lida explicitamente com isso.	`), b: new aln(` Metodologias que seguem o modelo de prototipagem devem, necessariamente, descartar os protótipos construídos; dessa forma, essas metodologias costumam ser mais custosas.	`), c: new aln(` Metodologias que seguem o modelo em cascata possuem fases bem definidas, que podem ser desenvolvidas incrementalmente, em diferentes ciclos de desenvolvimento,. Isto é, a fase seguinte pode ser executada, ainda que a fase anterior não tenha sido finalizada completamente.	`), d: new aln(` Metodologias que seguem o modelo em cascata possuem fases bem definidas e executadas sequencialmente. Além disso, não há sobreposição entre as fases, isto é, a fase seguinte somente pode ser executada após a finalização da fase anterior.	`, 0), e: new aln(` Em metodologias que seguem o modelo em espiral, o software é desenvolvido em apenas uma iteração.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/18`, testRef: `20`, tema: `randon`,
+    prg: `19.	Atividades comuns a todos os processos de software incluem a especificação, o projeto, a implementação e a validação.`, a: new aln(`	Certo`, 0), b: new aln(`	Errado`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/19`, testRef: `20`, tema: `randon`,
+    prg: `20.	A principal metodologia tradicional utilizada no desenvolvimento de software é o modelo clássico também conhecido como cascata ou sequencial. Nesse modelo… 	`, a: new aln(`	Cada etapa tem associada ao seu término uma documentação que deve ser aprovada para que a etapa posterior possa ter início	`, 0), b: new aln(`	O projeto é dividido em fases de maneira flexível.	`), c: new aln(`	O custo das alterações do software diminui à medida que o desenvolvimento progride.	`), d: new aln(`	Utiliza-se o desenvolvimento incremental e iterativo.	`), e: new aln(`	Os requisitos não podem ser estáveis.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/20`, testRef: `20`, tema: `randon`,
+    prg: `21.	“É baseado na idéia de desenvolvimento de uma implementação inicial, expondo o resultado aos comentários do utilizador e refinando esse resultado por meio de diversas versões, até que seja desenvolvido um sistema adequado”.No âmbito do processo de software, trata-se de 	`, a: new aln(`	Desenvolvimento evolucionário.	`, 0), b: new aln(`	Modelo em cascata.	`), c: new aln(`	Engenharia de software baseada em componentes.	`), d: new aln(`	Desenvolvimento em espiral.	`), e: new aln(`	Programação estruturada.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/21`, testRef: `20`, tema: `randon`,
+    prg: `22.A figura abaixo representa um Sistema de Emissão de Bilhetes de Comboio: 
+  
+  [Imagem Abaixo!]`, a: new aln(`A figura representa...`), b: new aln(`Modelo de domínio`), c: new aln(`Diagrama de Actividades`), d: new aln(`Modelo de Entidade-Relacionamento (MER)`), e: new aln(`Diagrama de Contexto`, 0), imgs: [require('../testespics/es1/t2/ex_21_16.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/22`, testRef: `20`, tema: `randon`,
+    prg: `23.	Como Modelo evolucionário do processo de software, uma característica da prototipagem é: `, a: new aln(` independer do estabelecimento e da definição de requisitos.`, 0), b: new aln(` configurar um processo interativo e rápido de desenvolvimento.`), c: new aln(` iniciar o processo de desenvolvimento pela implantação e pelos testes.`), d: new aln(` gerar uma primeira versão do sistema completa e isenta de erros.`), e: new aln(` descartar a participação do cliente no processo de desenvolvimento e de implantação.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/23`, testRef: `20`, tema: `randon`,
+    prg: `24.	O modelo em cascata inclui 5 estágios considerados fundamentais para o desenvolvimento de um software: a análise e definição de requisitos, o projeto de sistema e software, a implementação e o teste de unidade, a integração e o teste de sistema e a operação e manutenção. Apesar disso, o modelo em cascata tem como desvantagem a… `, a: new aln(`	documentação produzida em cada estágio.`), b: new aln(`	aderência a outros modelos de processo de engenharia.`, 0), c: new aln(`	dificuldade de reação a mudanças de requisitos do utilizador.`, 0), d: new aln(`	falta de estruturação para desenvolvimento de software.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/24`, testRef: `20`, tema: `randon`,
+    prg: `25.	O conjunto de atividades e resultados associados que resulta em um produto de software recebe o nome de...`, a: new aln(` engenharia de software.`), b: new aln(` processo de software.`, 0), c: new aln(` especificação de software.`), d: new aln(` implantação de software.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/25`, testRef: `20`, tema: `randon`,
+    prg: `26.	Um processo de desenvolvimento de software é um conjunto de atividades, parcialmente ordenadas, com a finalidade de se obter um produto de software. Cada processo tem suas particularidades, entretanto, podem-se destacar atividades que são comuns à maioria dos processos. Com relação a processos de desenvolvimento de software, assinale a opção correta.	`, a: new aln(`	O levantamento de requisitos tem como objetivo compreender o problema a ser resolvido e identificar necessidades. Os requisitos podem ser funcionais, que definem as funcionalidades do sistema, ou não funcionais, que não estão relacionados às funcionalidades.	`, 0), b: new aln(`	A análise tem como foco construir uma estratégia de solução. Os modelos construídos nessa fase devem ser verificados e validados. A verificação tem como objetivo assegurar que as necessidades do cliente estão sendo atendidas pelo sistema, enquanto a validação tem o objetivo de analisar se os modelos estão em conformidade com os requisitos definidos.	`), c: new aln(`	O projeto produz uma descrição computacional do software sem restrições de tecnologia, ou seja, aspectos físicos e dependentes de implementação não são considerados.	`), d: new aln(`	Na fase de implementação, o sistema é codificado, ou seja, a descrição computacional obtida na fase de projeto é traduzida para código executável, por meio do uso de uma ou mais linguagens de programação.	`), e: new aln(`	Na fase de implantação, o sistema é testado, empacotado, distribuído e instalado no ambiente do cliente.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/26`, testRef: `20`, tema: `randon`,
+    prg: `27.	O processo de desenvolvimento iterativo em que se desenvolve rapidamente um sistema apenas para explorar opções de requisitos e de projeto, mas não deverá ser implantado no cliente é o...	`, a: new aln(` modelo em espiral.	`), b: new aln(` prototipação throw-away.	`, 0), c: new aln(` modelo sequencial linear.	`), d: new aln(` método ágil programação extrema.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/27`, testRef: `20`, tema: `randon`,
+    prg: `28.	Em relação à prototipagem, todas as afirmativas estão corretas, EXCETO:	`, a: new aln(` O protótipo ajuda no entendimento dos requisitos do sistema.	`), b: new aln(` O número de iterações não é previsível.	`), c: new aln(` Apenas a fase final produz uma entrega que não é um documento.	`, 0), d: new aln(` Deve ser utilizada apenas quando os utilizadors podem participar ativamente do projeto.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/28`, testRef: `20`, tema: `randon`,
+    prg: `29.	Identifique com as afirmativas verdadeiras:. 	`, a: new aln(`	A prototipação não é considerada uma técnica usada para validação de requisitos, pois ocorre na fase final do processo de desenvolvimento, representado a entrega do sistema aos utilizadors finais e clientes.	`), b: new aln(`	Pode-se considerar que a entrada para o estudo de viabilidade consiste em um conjunto preliminar de requisitos de negócios, um esboço da descrição do sistema e como esse sistema pretende apoiar os processos de negócios.	`, 0), c: new aln(`	Os requisitos não funcionais restringem o sistema que está sendo desenvolvido e o processo de desenvolvimento que deve ser usado e estão, frequentemente, relacionados às propriedades emergentes do sistema de modo que se aplicam ao sistema em sua totalidade.`, 0), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/29`, testRef: `20`, tema: `randon`,
+    prg: `30.	A prototipação pode representar uma abordagem interessante em situações em que a incerteza está presente na definição de requisitos, objetivos e procedimentos. As alternativas a seguir apresentam vantagens da prototipação, à exceção de uma. Assinale-a.	`, a: new aln(` A prototipação é um mecanismo eficaz de identificação de requisitos.	`), b: new aln(` O treinamento de utilizadores pode ser feito antes do produto ficar pronto.	`, 0), c: new aln(` As partes do protótipo podem ser utilizadas no desenvolvimento do sistema final.	`), d: new aln(` O cliente vê o protótipo como uma versão de trabalho e exige a sua adequação para o produto.	`), e: new aln(` A melhora na qualidade da especificação de futuros programas, leva à diminuição dos gastos de manutenção.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/30`, testRef: `20`, tema: `randon`,
+    prg: `31.	Um protótipo de software pode ser usado em um processo de desenvolvimento de software para:I. Ajudar na descoberta e validação dos requisitos do sistema, durante a engenharia de requisitos.II. Explorar soluções específicas de software e apoiar o projeto de interface com o utilizador, durante o projeto do sistema.III. Realizar testes completos com o sistema que será entregue para o cliente, durante o processo de teste.Está correto o que se afirma em...`, a: new aln(` I, II e III.`), b: new aln(` II e III, apenas.`), c: new aln(` I e II, apenas.`), d: new aln(` II, apenas.`), e: new aln(` I, apenas.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/31`, testRef: `20`, tema: `randon`,
+    prg: `32.	Muito utilizada pelos engenheiros de software, a prototipação consiste na(o) …`, a: new aln(`	Análise dos custos e dos riscos de desenvolvimento, com base nos requisitos iniciais.	`), b: new aln(`	Coleta inicial dos requisitos e no planeamento do projeto, com base no grupo de programadores envolvidos.	`), c: new aln(`	Decisão de prosseguir ou não na direção de um sistema concluído, com base nos comentários do cliente.	`, 0), d: new aln(`	Procedimento estruturado que avalia os requisitos finais de um sistema em fase de testes.	`), e: new aln(`	Processo que capacita o desenvolvedor a criar um modelo do software que será implementado.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/32`, testRef: `20`, tema: `randon`,
+    prg: `33.	A Engenharia de Software ...I. Não visa o desenvolvimento de teorias e fundamentações, preocupando-se unicamente com as práticas de desenvolvimento de software. II. Tem como foco o tratamento dos aspectos de desenvolvimento de software, abstraindo-se dos sistemas baseados em computadores, incluindo hardware e software. III. Tem como métodos as abordagens estruturadas para o desenvolvimento de software que incluem os modelos de software, notações, regras e maneiras de desenvolvimento. IV. Segue princípios, tais como, o da Abstração, que identifica os aspectos importantes sem ignorar os detalhes e o da Composição, que agrupa as atividades em um único processo para distribuição aos especialistas. É correto o que se afirma em …	`, a: new aln(`	III e IV, apenas.	`, 0), b: new aln(`	I, II, III e IV.	`), c: new aln(`	I e II, apenas.	`), d: new aln(`	I, II e III, apenas.	`), e: new aln(`	II, III e IV, apenas.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/33`, testRef: `20`, tema: `randon`,
+    prg: `34.	Considerando os conceitos de sistemas de informação e de tecnologia da informação, julgue os itens a seguir E assinale os verdadeiros:	`, a: new aln(`	A tomada de decisão nas organizações é facilitada pela utilização da tecnologia da informação, que permite criar, administrar e manter a gestão da informação de uma instituição por meio de dispositivos para acesso, operação e armazenamento de dados.	`), b: new aln(`	O sistema de informação permite agregar valor às organizações, uma vez que se trata de um recurso valioso e repercute em todos os níveis da estrutura organizacional: estratégico, operacional e administrativo.	`, 0), c: new aln(`	Segundo Karl Bertalanffy Sistema é um objeto de qualquer tipo, constituído de componentes inter-relacionados com o todo e inter-dependentes, com funções cujos resultados pertencem a cada componente.	`), d: new aln(`	Dos sistemas de informação fazem parte elementos como: dados, informação, recursos materiais e tecnológicos, recursos humanos e procedimentos.`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/34`, testRef: `20`, tema: `randon`,
+    prg: `35.	“É baseado na idéia de desenvolvimento de uma implementação inicial, expondo o resultado aos comentários do utilizador e refinando esse resultado por meio de diversas versões, até que seja desenvolvido um sistema adequado”. No âmbito do processo de software, trata-se de…	`, a: new aln(`Engenharia de software baseada em componentes.	`), b: new aln(`Modelo em cascata.	`), c: new aln(`Desenvolvimento evolucionário.	`, 0), d: new aln(`Desenvolvimento em espiral.	`), e: new aln(`Programação estruturada.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/35`, testRef: `20`, tema: `randon`,
+    prg: `36.	Sobre o processo unificado de marque abaixo a(s) alternativa(s) errada(s): 	`, a: new aln(`O processo unificado de desenvolvimento de software é o conjunto de atividades necessárias para transformar requisitos do utilizador num sistema de software, baseado em componentes.	`, 0), b: new aln(`No Unified Process um Desenvolvedor desempenha os papéis de Revisor de Requisitos, Analista de Teste e Revisor do Projeto.	`, 0), c: new aln(`Há vários benefícios em se adotar um processo iterativo controlado, entre os quais podemos destacar a redução dos riscos envolvendo custos a um único incremento.	`), d: new aln(`O final de uma fase é marcado por um ponto de verificação. Um dos propósitos destes pontos de verificação é que permitem a monitoração do progresso dos trabalhos.	`), e: new aln(`Os aspectos que distinguem o processo unificado são capturados em três conceitos chaves: direccionado a casos de uso; iterativo e incremental; com foco em desempenho.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/36`, testRef: `20`, tema: `randon`,
+    prg: `37.	No Processo Unificado, a maior porção do core workflow denominado Analysis é executada na fase ... 	`, a: new aln(`Inception			   `), b: new aln(`    b.Implementation			   `), c: new aln(`    c.Transition	`), d: new aln(`Construction			`), e: new aln(`Elaboration			`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/37`, testRef: `20`, tema: `randon`,
+    prg: `38.	São produtos da fase de elaboração do RUP: 	`, a: new aln(`Documento de visão e produto de software integrado.	`), b: new aln(`Manual do utilizador e base de dados operacionais convertidas.	`), c: new aln(`Descrição da arquitectura do software e lista de riscos revista.	`, 0), d: new aln(`Produto de software integrado e descrição da arquitectura do software.	`), e: new aln(`Lista de riscos revista e base de dados operacionais convertidas.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/38`, testRef: `20`, tema: `randon`,
+    prg: `39.Em relação aos tipos de relacionamentos do RUP, correlacione as colunas a seguir, considerando o símbolo e a defnição mais adequada da UML:( 1,5V )  
+  
+   [Imagem Abaixo!]     
+  
+  a.Herança 
+  
+  e.Associação	
+  
+  d.Dependência	
+  
+  b.Composição	
+  
+  c.Agregação`, a: new aln(`herança,agregação, dependência, associação, composição`), b: new aln(`herança,composição,agregação, dependência, associação `, 0), c: new aln(`agregação,composição, herança, dependência, associação `), d: new aln(`herança,composição, agregação, associação, dependência `), e: new aln(` `), imgs: [require('../testespics/es1/t2/t2_21_2.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/39`, testRef: `20`, tema: `randon`,
+    prg: `40.Nos métodos ágeis XP e Scrum, as entregas de partes funcionais do projeto são divididas em ciclos, geralmente compreendidos no período de 1 a 4 semanas. Estes ciclos denominam-se, respectivamente:		`, a: new aln(`Backlog e planeamento da produção.	`), b: new aln(`Período de entrega e reunião de revisão.	`), c: new aln(`Reunião de planeamento e backlog.	`), d: new aln(`Iterações e sprint.	`, 0), e: new aln(`Entrega e retrospectiva.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/40`, testRef: `20`, tema: `randon`,
+    prg: `42.O Extreme Programming (XP) é, talvez, o mais conhecido e mais utilizado dos métodos ágeis. Dentre suas práticas se encontram programação em pares, integração contínua, refatoração e:	   `, a: new aln(`Propriedade colectiva, que garante uma participação nos lucros aos membros da equipe de desenvolvimento, técnica que incentiva e aumenta o desempenho de toda a equipe.	`), b: new aln(`Envolvimento do cliente apenas na fase final do sistema, fator que difere de outras metodologias como SCRUM e TDD e confere agilidade ao processo de desenvolvimento.	`), c: new aln(`Desenvolvimento incremental e sustentado por meio de pequenos e frequentes releases do sistema. Os requisitos são baseados em cenários ou em simples histórias de clientes.	`, 0), d: new aln(`Utilização de técnicas de ofuscação do código fonte, trazendo segurança e garantindo que apenas a equipe de desenvolvimento poderá ter acesso a este código.	`), e: new aln(`Processo de desenvolvimento contínuo, em que a equipe se mantém focada no sistema até que uma funcionalidade específica seja entregue, comumente agregando horas extras ao turno de trabalho.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/41`, testRef: `20`, tema: `randon`,
+    prg: `43.No Processo Unificado, a maior porção do core workflow denominado Analysis é executada na fase ... 		`, a: new aln(`Elaboration			  `, 0), b: new aln(`Implementation			  `), c: new aln(`Transition`), d: new aln(`Construction			  `), e: new aln(`Inception		`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/42`, testRef: `20`, tema: `randon`,
+    prg: `44.Observe a figura, que mostra uma ferramenta empregada no desenvolvimento orientado a objectos, utilizada na construção do modelo do sistema desde o nível de análise até o de especificação. De todos, é o mais rico em notação.	 
+  
+   [Imagem Abaixo!] 
+  
+  Esta ferramenta é conhecida como Diagrama de:	
+  
+    `, a: new aln(`  Actividades	    `), b: new aln(`  Classes.	`), c: new aln(`  Objectos.		    `, 0), d: new aln(`  Componentes.`), e: new aln(``), imgs: [require('../testespics/es1/t2/ex_20_44.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/43`, testRef: `20`, tema: `randon`,
+    prg: `45.	 Observe a figura, que mostra uma ferramenta utilizada no desenvolvimento orientado a objectos, para a construção do modelo do sistema desde o nível de análise até o de especificação.   [Imagem Abaixo!]Esta ferramenta é conhecida como Diagrama de:	`, a: new aln(`Classes.	`), b: new aln(`Componentes.	`, 0), c: new aln(`Actividades.	`), d: new aln(`Colaboração.	`), e: new aln(`Objectos.`), imgs: [require('../testespics/es1/t2/ex_20_45.jpg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/44`, testRef: `20`, tema: `randon`,
+    prg: `46.	Sobre o processo unificado de desenvolvimento de software marque abaixo a(s) alternativa(s) errada(s): 	   `, a: new aln(`O processo unificado de desenvolvimento de software é o conjunto de atividades necessárias para transformar requisitos do utilizador num sistema de software, baseado em componentes.	`, 0), b: new aln(`Há vários benefícios em se adotar um processo iterativo controlado, entre os quais podemos destacar a redução dos riscos envolvendo custos a um único incremento. 	`), c: new aln(`Os aspectos que distinguem o processo unificado são capturados em três conceitos chaves: direccionado a casos de uso; iterativo e incremental; com foco em desempenho.	`, 0), d: new aln(`O final de uma fase é marcado por um ponto de verificação. Um dos propósitos destes pontos de verificação é que permitem a monitoração do progresso dos trabalhos.  `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/45`, testRef: `20`, tema: `randon`,
+    prg: `47.	No Unified Process os papéis não são pessoas, eles descrevem como as pessoas se comportam no negócio e quais são as responsabilidades que elas têm. Nesse sentido, um Desenvolvedor desempenha os papéis de:	`, a: new aln(`Analista de Sistemas, Designer de Negócios e Revisor de Requisitos.	`), b: new aln(`Analista de Teste, Implementador e Designer de Interface de Utilizador.	`), c: new aln(`Revisor de Requisitos, Analista de Teste e Revisor do Projeto.	`), d: new aln(`Implementador, Integrador e Designer.	`, 0), e: new aln(`Gerente de Teste, Gerente de Projeto e Designer.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/46`, testRef: `20`, tema: `randon`,
+    prg: `48.	São produtos da fase de elaboração do RUP: 	`, a: new aln(`Documento de visão e produto de software integrado.	`), b: new aln(`Descrição da arquitectura do software e lista de riscos revista.	`, 0), c: new aln(`Manual do utilizador e base de dados operacionais convertidas.	`), d: new aln(`Lista de riscos revista e base de dados operacionais convertidas.	`), e: new aln(`Produto de software integrado e descrição da arquitectura do software.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/47`, testRef: `20`, tema: `randon`,
+    prg: `50.
+  
+  [Imagem Abaixo!]
+  
+  A figura abaixo apresenta alguns dos principais artefactos do RUP (Rational Unified Process) e o fluxo de informações existentes entre eles.Identifique abaixo, qual é o nome do artefacto identificado, na figura acima, pela palavra ARTEFATO e por um círculo?	`, a: new aln(`	Projeto do Sistema	`), b: new aln(`	Lista de Riscos	`, 0), c: new aln(`	Plano de Teste	`), d: new aln(`	Requisitos dos Stakeholders	`), e: new aln(`	Especificação Suplementar`), imgs: [require('../testespics/es1/t2/ex_20_50.jpg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/48`, testRef: `20`, tema: `randon`,
+    prg: `51.Considere:
+  
+  I. Dirigido por caso de uso.
+  
+  II. Orientado por quatro workflows.
+  
+  III. Centrado em arquitetura.
+  
+  IV. Distribuído em cinco fases.V. Com foco no desempenho.
+  
+  VI. Iterativo e incremental.São características do Processo Unificado (UP), o que consta APENAS em:	`, a: new aln(`I, II e III.	`), b: new aln(`I, II e IV.	`), c: new aln(`I, III e VI.	`, 0), d: new aln(`III, V e VI.`), e: new aln(`III, IV e V.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/49`, testRef: `20`, tema: `randon`,
+    prg: `52.No Processo Unificado, a(o):	`, a: new aln(`versão pronta para instalação sobrevém a cada iteração terminada.	`), b: new aln(`fase de Construção tem, normalmente, um número maior de iterações que as demais.	`), c: new aln(`duração de uma iteração é fixada antes do seu início, não podendo ultrapassar duas semanas.	`), d: new aln(`objetivo da fase de Elaboração é construir um protótipo que demonstre a viabilidade da solução proposta, que será implementada na fase de Construção.	`, 0), e: new aln(`Documento da Arquitetura de Software (SAD) deve estar pronto antes do término da fase de Elaboração.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/50`, testRef: `20`, tema: `randon`,
+    prg: `53.O Processo Unificado divide a realização de um projeto para desenvolvimento de um sistema de software em fases. Em cada uma dessas fases, são executadas actividades de diversas disciplinas em diferentes proporções. No desenvolvimento de um sistema de software complexo, esse processo recomenda: 	`, a: new aln(`construir uma arquitetura executável ao final da fase de construção, para validar as regras do negócio e os requisitos funcionais do sistema.	`), b: new aln(`criar um modelo de casos de uso durante a fase de elaboração, para documentar as regras do negócio e os requisitos não funcionais do sistema.	`), c: new aln(`usar a abordagem de desenvolvimento iterativa e incremental, para dividir as actividades em iterações em que cada iteração gera um incremento do software.	`, 0), d: new aln(`ordenar os riscos envolvidos no projeto, para que os riscos menos críticos sejam considerados logo na fase de iniciação e os mais críticos nas fases finais.	`), e: new aln(`entregar a primeira versão do sistema logo após a fase de transição, para evitar os problemas existentes no modelo de ciclo de vida em cascata tradicional.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/51`, testRef: `20`, tema: `randon`,
+    prg: `54.Uma das características do Processo Unificado (Unified Process) é ser dirigido a casos de uso (use case driven). Nesse contexto, analise as afirmações a seguir.O modelo de casos de uso representa o comportamento de um sistema, conforme percebido do ponto de vista externo a esse sistema.PORQUE A construção do modelo de classes conceituais de um sistema pode usar como ponto de partida o modelo de entidades e relacionamentos (DER).A esse respeito, conclui-se que:	`, a: new aln(`as duas afirmações são verdadeiras e a segunda justifica a primeira. 	`), b: new aln(`as duas afirmações são verdadeiras e a segunda não justifica a primeira.	`), c: new aln(`a primeira afirmação é verdadeira e a segunda é falsa.	`, 0), d: new aln(`a primeira afirmação é falsa e a segunda é verdadeira.	`), e: new aln(`as duas afirmações são falsas.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/52`, testRef: `20`, tema: `randon`,
+    prg: `55.	O Extreme Programming (XP) é, talvez, o mais conhecido e mais utilizado dos métodos ágeis. Dentre suas práticas se encontram programação em pares, integração contínua, refatoração e:	`, a: new aln(`	propriedade colectiva, que garante uma participação nos lucros aos membros da equipe de desenvolvimento, técnica que incentiva e aumenta o desempenho de toda a equipe.	`), b: new aln(`	envolvimento do cliente apenas na fase final do sistema, fator que difere de outras metodologias como SCRUM e TDD e confere agilidade ao processo de desenvolvimento.	`), c: new aln(`	processo de desenvolvimento contínuo, em que a equipe se mantém focada no sistema até que uma funcionalidade específica seja entregue, comumente agregando horas extras ao turno de trabalho.	`), d: new aln(`	utilização de técnicas de ofuscação do código fonte, trazendo segurança e garantindo que apenas a equipe de desenvolvimento poderá ter acesso a este código.	`), e: new aln(`	desenvolvimento incremental e sustentado por meio de pequenos e frequentes releases do sistema. Os requisitos são baseados em cenários ou em simples histórias de clientes.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/53`, testRef: `20`, tema: `randon`,
+    prg: `56.	Assegurar que a equipe se concentre em fazer, primeiro, apenas aquilo que é claramente necessário e evite fazer o que poderia vir a ser necessário, mas ainda não se provou essencial. Este é um dos cinco valores fundamentais do XP (Extreme Programming), denominado:	`, a: new aln(`	Coragem.	`), b: new aln(`	Respeito	`), c: new aln(`	Simplicidade.	`, 0), d: new aln(`	Comunicação	`), e: new aln(`	Feedback.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/54`, testRef: `20`, tema: `randon`,
+    prg: `57.	Nos métodos ágeis XP e Scrum, as entregas de partes funcionais do projeto são divididas em ciclos, geralmente compreendidos no período de 1 a 4 semanas. Estes ciclos denominam-se, respectivamente:	`, a: new aln(`	Iterações e sprint.	`, 0), b: new aln(`	Período de entrega e reunião de revisão.	`), c: new aln(`	Reunião de planeamento  e backlog.	`), d: new aln(`	Backlog e planeamento  da produção.	`), e: new aln(`	Entrega e retrospectiva.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/55`, testRef: `20`, tema: `randon`,
+    prg: `58.Observe a figura, que mostra uma ferramenta empregada no desenvolvimento orientado a objectos, utilizada na construção do modelo do sistema desde o nível de análise até o de especificação. 
+  
+  [Imagem Abaixo!]
+  
+  Esta ferramenta é conhecida como Diagrama de:	`, a: new aln(` Classes. 	`), b: new aln(` Objectos.	`), c: new aln(` Colaboração.	`, 0), d: new aln(` Actividades.	`), e: new aln(` Componentes.`), imgs: [require('../testespics/es1/t2/t2_21_4.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/56`, testRef: `20`, tema: `randon`,
+    prg: `59.	Assinale a alternativa que apresenta um exemplo de diagrama comportamental da UML.	 		`, a: new aln(` Diagrama de implantação.	`), b: new aln(` Diagrama de actividades.	`), c: new aln(` Diagrama de caso de uso.	`, 0), d: new aln(` Diagrama de sequência.	`), e: new aln(` Diagrama de máquina de estados.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `20/57`, testRef: `20`, tema: `randon`,
+    prg: `60.	Um Analista pretende desenvolver um projeto utilizando UML 2.0 e, em seus propósitos, verificou a possibilidade de uso de alguns diagramas. Um deles é o Diagrama de Sequência que representa a indicação do conjunto de objectos envolvidos num cenário e a especificação das mensagens trocadas entre estes ao longo de linhas do tempo (linhas tracejadas verticalmente da base dos objectos até a parte inferior do diagram. Retângulos colocados sobre as linhas de tempo indicam:		`, a: new aln(` o tempo decorrido entre as iterações de um processo recursivo.	`), b: new aln(` as interações entre as actividades, no tempo.	`), c: new aln(` os casos de uso de cada objecto.	`), d: new aln(` os períodos de ativação do objecto.	`, 0), e: new aln(` as etapas em que o objecto estará inativo.`), imgs: [], fim: ""
+  })
+];
+
+let es1_ex2_20 = [
+  new Prg({
+    cadNome: `Es1`, pId: `3/0`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `1.Na Engenharia de Software, um modelo de processo considera as atividades fundamentais do processo, compreendendo especificação, desenvolvimento, validação e evolução, e as representa como fases de processo separadas, tais como especificação de requisitos, projeto de software, implementação, teste e assim por diante. Esse modelo de processo é conhecido por Modelo:`, a: new aln(` Baseado em componentes;`), b: new aln(` Baseado em protótipos;`), c: new aln(` Por objetivos;`), d: new aln(` Em espiral;`), e: new aln(` Em cascata`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/1`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `2.Por ser inadequada, a utilização de protótipos para a validação dos requisitos não funcionais deve ser descartada. `, a: new aln(`Certo`), b: new aln(`Errado`, 0), c: new aln(`	`), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/2`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `3.Um processo de software é um conjunto de atividades relacionadas que levam à produção de um produto de software. Existem muitos processos de software diferentes, mas todos devem incluir quatro atividades fundamentais: especificação, projeto e implementação, validação e …`, a: new aln(` teste`), b: new aln(` evolução`, 0), c: new aln(` prototipação`), d: new aln(` entrega`), e: new aln(` modelagem`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/3`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `4.Os estágios do processo de software incluem situação atual, definição do problema, desenvolvimento técnico e integração da solução.`, a: new aln(`Certo`, 0), b: new aln(`Errado`), c: new aln(`	`), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/4`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `5.Em Engenharia de Software, temos o Desenvolvimento em Espiral, cada loop da espiral é dividido em quatro setores, a seguir apresentamos alguns deles. Analise as assertivas e assinale a alternativa que apresenta os corretos. 
+  
+  I. Desenvolvimento de integração: O software que não puder ser comprado será desenvolvido, e os componentes e sistemas COTS serão integrados, a fim de criar um sistema. A integração de sistemas, nesse modelo, pode ser parte do processo de desenvolvimento, em vez de uma atividade separada. 
+  
+  II. Definição de objetivos: São definidos os objetivos específicos para essa fase do projeto. São identificadas as restrições para o processo e o produto, e é preparado um plano de gerenciamento detalhado. São identificados os riscos do projeto e, dependendo dos riscos, poderão ser planejadas estratégias alternativas. 
+  
+  III. Avaliação e redução de riscos: Para cada um dos riscos de projeto identificados, é realizada uma análise detalhada e são tomadas providências para reduzir esses riscos. Por exemplo, se houver um risco de os requisitos serem inadequados, poderá ser desenvolvido um protótipo. 
+  
+  IV. Panejamento: O projeto é revisto e é tomada uma decisão sobre continuar com o próximo loop da espiral. Se a decisão for continuar, serão traçados os planos para a próxima fase do projeto. `, a: new aln(` Apenas I e II`), b: new aln(` Apenas II, III e IV.`), c: new aln(` Apenas IV`, 0), d: new aln(` Apenas III e IV`), e: new aln(` I, II, III e IV`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/5`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `6.Dentro da Engenharia de Software, encontramos uma gama de conceitos. Com base nisso, analise as assertivas e assinale a alternativa que aponta a(s) correta(s) sobre Processos de Software.
+  
+   I.Podemos definir um processo de software como um conjunto de atividades relacionadas que levam à produção de um produto de software.
+  
+  II.A definição das funcionalidades do software e as restrições a seu funcionamento devem ser definidas na produção de um software. Essa atividade está incluída no processo de software.
+  
+  III.A validação de software também é uma atividade presente no processo de software.
+  
+  IV. Os processos de software são complexos e, como todos os processos intelectuais e criativos, dependem de pessoas para tomar decisões e fazer julgamentos. Não existe um processo ideal, a maioria das organizações desenvolve seus próprios processos de desenvolvimento de software.`, a: new aln(` Apenas I.`), b: new aln(` Apenas I e III.`), c: new aln(` Apenas I e IV`), d: new aln(` Apenas II, III e IV.`), e: new aln(` I, II, III e IV`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/6`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `7.O modelo de processo de desenvolvimento de software que combina as atividades de desenvolvimento com o gerenciamento de risco é o Modelo…`, a: new aln(` Transformacional`), b: new aln(` De Especificação Operacional`), c: new aln(` Em V`), d: new aln(` Em Cascata`), e: new aln(` Em Espiral`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/7`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `8.No desenvolvimento em cascata, os passos são ordenados em sequência e executados até a etapa final de teste, mesmo que o cliente esteja insatisfeito com determinado resultado intermediário.`, a: new aln(`Certo`), b: new aln(`Errado`, 0), c: new aln(`	`), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/8`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `9.Os diversos modelos de processo de software disponíveis permitem a representação abstrata de um processo de software sob diferentes perspectivas. No modelo evolucionário, sob a perspectiva da arquitetura, a velocidade de desenvolvimento faz que a produção de documentos que reflitam cada versão do sistema seja economicamente inviável, gerando problemas na validação independente de sistemas.`, a: new aln(`Certo`, 0), b: new aln(`Errado`), c: new aln(`	`), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/9`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `10.Metodologias de desenvolvimento de software se baseiam em um modelo de ciclo de vida, tais como cascata, espiral e prototipagem; sendo assim, é correto afirmar que `, a: new aln(` Metodologias que seguem o modelo em espiral normalmente possuem um maior potencial de risco, uma vez que esse modelo não lida explicitamente com isso.`), b: new aln(` Metodologias que seguem o modelo de prototipagem devem, necessariamente, descartar os protótipos construídos; dessa forma, essas metodologias costumam ser mais custosas.`), c: new aln(` Metodologias que seguem o modelo em cascata possuem fases bem definidas, que podem ser desenvolvidas incrementalmente, em diferentes ciclos de desenvolvimento,. Isto é, a fase seguinte pode ser executada, ainda que a fase anterior não tenha sido finalizada completamente.`), d: new aln(` Metodologias que seguem o modelo em cascata possuem fases bem definidas e executadas sequencialmente. Além disso, não há sobreposição entre as fases, isto é, a fase seguinte somente pode ser executada após a finalização da fase anterior.`, 0), e: new aln(` Em metodologias que seguem o modelo em espiral, o software é desenvolvido em apenas uma iteração.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/10`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `11.Atividades comuns a todos os processos de software incluem a especificação, o projeto, a implementação e a validação.`, a: new aln(`Certo`, 0), b: new aln(`Errado`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/11`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `12.A principal metodologia tradicional utilizada no desenvolvimento de software é o modelo clássico também conhecido como cascata ou sequencial. Nesse modelo… `, a: new aln(`Cada etapa tem associada ao seu término uma documentação que deve ser aprovada para que a etapa posterior possa ter início`, 0), b: new aln(`O projeto é dividido em fases de maneira flexível.`), c: new aln(`O custo das alterações do software diminui à medida que o desenvolvimento progride.`), d: new aln(`Utiliza-se o desenvolvimento incremental e iterativo.`), e: new aln(`Os requisitos não podem ser estáveis.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/12`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `13.“É baseado na idéia de desenvolvimento de uma implementação inicial, expondo o resultado aos comentários do utilizador e refinando esse resultado por meio de diversas versões, até que seja desenvolvido um sistema adequado”.No âmbito do processo de software, trata-se de `, a: new aln(`Desenvolvimento evolucionário.`, 0), b: new aln(`Modelo em cascata.`), c: new aln(`Engenharia de software baseada em componentes.`), d: new aln(`Desenvolvimento em espiral.`), e: new aln(`Programação estruturada.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/13`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `14.Como Modelo evolucionário do processo de software, uma característica da prototipagem é: `, a: new aln(` independer do estabelecimento e da definição de requisitos.`, 0), b: new aln(` configurar um processo interativo e rápido de desenvolvimento.`), c: new aln(` iniciar o processo de desenvolvimento pela implantação e pelos testes.`), d: new aln(` gerar uma primeira versão do sistema completa e isenta de erros.`), e: new aln(` descartar a participação do cliente no processo de desenvolvimento e de implantação.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/14`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `15.O modelo em cascata inclui 5 estágios considerados fundamentais para o desenvolvimento de um software: a análise e definição de requisitos, o projeto de sistema e software, a implementação e o teste de unidade, a integração e o teste de sistema e a operação e manutenção. Apesar disso, o modelo em cascata tem como desvantagem a… `, a: new aln(`documentação produzida em cada estágio.`), b: new aln(`aderência a outros modelos de processo de engenharia.`, 0), c: new aln(`dificuldade de reação a mudanças de requisitos do utilizador.`, 0), d: new aln(`falta de estruturação para desenvolvimento de software.`), e: new aln(`	`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/15`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `16.O conjunto de atividades e resultados associados que resulta em um produto de software recebe o nome de...`, a: new aln(` engenharia de software.`), b: new aln(` processo de software.`, 0), c: new aln(` especificação de software.`), d: new aln(` implantação de software.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/16`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `17.Um processo de desenvolvimento de software é um conjunto de atividades, parcialmente ordenadas, com a finalidade de se obter um produto de software. Cada processo tem suas particularidades, entretanto, podem-se destacar atividades que são comuns à maioria dos processos. Com relação a processos de desenvolvimento de software, assinale a opção correta.`, a: new aln(`O levantamento de requisitos tem como objetivo compreender o problema a ser resolvido e identificar necessidades. Os requisitos podem ser funcionais, que definem as funcionalidades do sistema, ou não funcionais, que não estão relacionados às funcionalidades.`, 0), b: new aln(`A análise tem como foco construir uma estratégia de solução. Os modelos construídos nessa fase devem ser verificados e validados. A verificação tem como objetivo assegurar que as necessidades do cliente estão sendo atendidas pelo sistema, enquanto a validação tem o objetivo de analisar se os modelos estão em conformidade com os requisitos definidos.`), c: new aln(`O projeto produz uma descrição computacional do software sem restrições de tecnologia, ou seja, aspectos físicos e dependentes de implementação não são considerados.`), d: new aln(`Na fase de implementação, o sistema é codificado, ou seja, a descrição computacional obtida na fase de projeto é traduzida para código executável, por meio do uso de uma ou mais linguagens de programação.`), e: new aln(`Na fase de implantação, o sistema é testado, empacotado, distribuído e instalado no ambiente do cliente.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/17`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `20.Identifique com V as afirmativas verdadeiras e com F, as falsas. V	Os requisitos não funcionais restringem o sistema que está sendo desenvolvido e o processo de desenvolvimento que deve ser usado e estão, frequentemente, relacionados às propriedades emergentes do sistema de modo que se aplicam ao sistema em sua totalidade.F	A prototipação não é considerada uma técnica usada para validação de requisitos, pois ocorre na fase final do processo de desenvolvimento, representado a entrega do sistema aos utilizadors finais e clientes.V	Pode-se considerar que a entrada para o estudo de viabilidade consiste em um conjunto preliminar de requisitos de negócios, um esboço da descrição do sistema e como esse sistema pretende apoiar os processos de negócios.A alternativa que contém a sequência correta, de cima para baixo, é a:`, a: new aln(` V V F`), b: new aln(` V F V`, 0), c: new aln(` F F V`), d: new aln(` F V F`), e: new aln(` V V V`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/18`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `21.A prototipação pode representar uma abordagem interessante em situações em que a incerteza está presente na definição de requisitos, objetivos e procedimentos. As alternativas a seguir apresentam vantagens da prototipação, à exceção de uma. Assinale-a.`, a: new aln(` A prototipação é um mecanismo eficaz de identificação de requisitos.`), b: new aln(` O treinamento de utilizadores pode ser feito antes do produto ficar pronto.`, 0), c: new aln(` As partes do protótipo podem ser utilizadas no desenvolvimento do sistema final.`), d: new aln(` O cliente vê o protótipo como uma versão de trabalho e exige a sua adequação para o produto.`), e: new aln(` A melhora na qualidade da especificação de futuros programas, leva à diminuição dos gastos de manutenção.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/19`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `23.Muito utilizada pelos engenheiros de software, a prototipação consiste na(o) …`, a: new aln(`Análise dos custos e dos riscos de desenvolvimento, com base nos requisitos iniciais.`), b: new aln(`Coleta inicial dos requisitos e no planeamento do projeto, com base no grupo de programadores envolvidos.`), c: new aln(`Decisão de prosseguir ou não na direção de um sistema concluído, com base nos comentários do cliente.`, 0), d: new aln(`Procedimento estruturado que avalia os requisitos finais de um sistema em fase de testes.`), e: new aln(`Processo que capacita o desenvolvedor a criar um modelo do software que será implementado.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/20`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `24.A Engenharia de Software I. não visa o desenvolvimento de teorias e fundamentações, preocupando-se unicamente com as práticas de desenvolvimento de software. II. tem como foco o tratamento dos aspectos de desenvolvimento de software, abstraindo-se dos sistemas baseados em computadores, incluindo hardware e software. III. tem como métodos as abordagens estruturadas para o desenvolvimento de software que incluem os modelos de software, notações, regras e maneiras de desenvolvimento. IV. Segue princípios, tais como, o da Abstração, que identifica os aspectos importantes sem ignorar os detalhes e o da Composição, que agrupa as atividades em um único processo para distribuição aos especialistas. É correto o que se afirma em …`, a: new aln(`III e IV, apenas.`, 0), b: new aln(`I, II, III e IV.`), c: new aln(`I e II, apenas.`), d: new aln(`I, II e III, apenas.`), e: new aln(`II, III e IV, apenas.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/21`, testRef: `3`, tema: `PLACEhOLDER`,
+    prg: `25.	Considerando os conceitos de sistemas de informação e de tecnologia da informação, julgue os itens a seguir E assinale os verdadeiros:`, a: new aln(`	A tomada de decisão nas organizações é facilitada pela utilização da tecnologia da informação, que permite criar, administrar e manter a gestão da informação de uma instituição por meio de dispositivos para acesso, operação e armazenamento de dados.`), b: new aln(`	O sistema de informação permite agregar valor às organizações, uma vez que se trata de um recurso valioso e repercute em todos os níveis da estrutura organizacional: estratégico, operacional e administrativo.`, 0), c: new aln(`	Segundo Karl Bertalanffy Sistema é um objeto de qualquer tipo, constituído de componentes inter-relacionados com o todo e inter-dependentes, com funções cujos resultados pertencem a cada componente.`), d: new aln(`	Dos sistemas de informação fazem parte elementos como: dados, informação, recursos materiais e tecnológicos, recursos humanos e procedimentos.`, 0), e: new aln(`	`), imgs: [], fim: ""
+  })
+];
+
+let es1_ex_21 = [
+  new Prg({
+    cadNome: `Es1`, pId: `3/0`, testRef: `3`, tema: `placeHolder`,
+    prg: `1.Durante a fase inicial do ciclo de vida do desenvolvimento de sistemas, na etapa de investigação, a tarefa que determina a probabilidade de sucesso do sistema proposto e propicia uma avaliação superficial da área técnica, econômica e comportamental do projeto, sendo decisivamente importante para o processo do desenvolvimento de sistemas, é chamada: `, a: new aln(` Estudo de viabilidade. `, 0), b: new aln(`Análise de equilíbrio. `), c: new aln(`Design lógico do sistema. `), d: new aln(`Estudo de caso. `), e: new aln(`Análise de requisitos. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/1`, testRef: `3`, tema: `placeHolder`,
+    prg: `2. Os padrões a partir dos quais os objetos são criados, são denominados: `, a: new aln(`atributos `, 0), b: new aln(`métodos `), c: new aln(`entidades `), d: new aln(`classes `), e: new aln(`instâncias `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/2`, testRef: `3`, tema: `placeHolder`,
+    prg: `3. "Técnica que faz o levantamento de ideias, onde cada uma das ideias sugeridas pode ser combinada na proposta de uma nova. Atividade de livre imaginação que deve ser tratada sem críticas ou debates". O texto descreve a técnica de elicitação de requisitos denominada: (5P)`, a: new aln(`Reunião `, 0), b: new aln(`Questionário `), c: new aln(`Entrevista `), d: new aln(`Brainstorm `), e: new aln(`Casos de Uso `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/3`, testRef: `3`, tema: `placeHolder`,
+    prg: `4. A Engenharia de Software define uma gama de conceitos. Com base nisso, analise e assinale a afirmação julgar a mais correta: (10P)`, a: new aln(`Podemos definir um processo de software como um conjunto de atividades independentes que levam à produção de um produto de software. `, 0), b: new aln(`A definição das funcionalidades do software e as restrições ao seu funcionamento devem ser definidas na instalação de um software. `), c: new aln(`Essa atividade está incluída no processo de software. A validação de software é uma atividade extra no processo de software.`), d: new aln(`Os processos de software são complexos e, como todos os processos intelectuais e criativos, dependem de pessoas para tomar decisões e fazer julgamentos, levando a maioria das organizações a desenvolver os seus próprios processos de desenvolvimento de software.`), e: new aln(`Nos métodos ágeis XP e Scrum, as entregas de partes funcionais do projeto são divididas em ciclos, geralmente compreendidos no período de 1 a 4 semanas. Estes ciclos denominam-se, respectivamente sprint e retrospectiva. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/4`, testRef: `3`, tema: `placeHolder`,
+    prg: `5. No SCRUM, o processo de desenvolvimento inicia com uma reunião de planeamento na qual o Product Owner e a equipe decidem, em conjunto, o que deverá ser implementado do Product Backlog. Assim, a equipe planeia seu trabalho, definindo o Sprint Backlog, na: (5P)`, a: new aln(`Primeira parte da Sprint Planning Meeting.`, 0), b: new aln(`Segunda parte da Sprint Planning Meeting. `), c: new aln(`Terceira parte da Sprint Planning Meeting. `), d: new aln(`Sprint.`), e: new aln(`Sprint Burndown. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/5`, testRef: `3`, tema: `placeHolder`,
+    prg: `6. Identifique as afirmações verdadeiras: (10P)`, a: new aln(` Os requisitos não funcionais restringem o sistema que está sendo desenvolvido e o processo de desenvolvimento que deve ser usado e estão, frequentemente, relacionados às propriedades emergentes do sistema, de modo que se aplicam ao sistema na sua totalidade. `, 0), b: new aln(`A prototipação não é considerada uma técnica usada para validação de requisitos, pois ocorre na fase final do processo de desenvolvimento, representando a entrega do sistema aos utilizadores finais e clientes. `), c: new aln(` Pode-se considerar que a entrada para o estudo de viabilidade consiste em um conjunto preliminar de requisitos de negócios, um esboço da descrição do sistema e como esse sistema pretende apoiar os processos de negócios.`), d: new aln(`O desenvolvimento em espiral baseia-se numa implementação inicial, expondo o resultado aos comentários do utilizador e refinando-o por meio de diversas versões, até que seja desenvolvido um sistema adequado. `), e: new aln(`No desenvolvimento em cascata, os passos são ordenados em sequência e executados até a etapa final de teste, mesmo que o cliente esteja insatisfeito com determinado resultado intermediário. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/6`, testRef: `3`, tema: `placeHolder`,
+    prg: `7. É correto afirmar que … (10P) `, a: new aln(`A Engenharia de Software tem como métodos as abordagens estruturadas para o desenvolvimento de software que incluem os modelos de software, notações, regras e maneiras de desenvolvimento. `, 0), b: new aln(`Informação é o conjunto de todos os dados de uma empresa com um nome e que são gerados em tempo útil.`), c: new aln(`A Engenharia de Software tem como foco o tratamento dos aspectos de desenvolvimento de software, abstraindo-se dos sistemas baseados em computadores, incluindo hardware e software. `), d: new aln(` A Engenharia de Software segue princípios, tais como, o da Abstração, que identifica os aspectos importantes sem ignorar os detalhes e o da Composição, que agrupa as atividades em um único processo para distribuição aos especialistas.`), e: new aln(`A Engenharia de Software não visa o desenvolvimento de teorias e fundamentações, preocupando-se unicamente com as práticas de desenvolvimento de software. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/7`, testRef: `3`, tema: `placeHolder`,
+    prg: `8. O software também pode ser classificado como: Software de sistema e Software aplicativo. Também chamados de sistema operacional, o software de sistema é responsável por operar os demais periféricos que estejam conectados ao hardware. Na figura, associe a coluna da esquerda com a coluna da direita e em seguida marque a alternativa correta, considerando a sequência de cima para baixo: (15P)[Imagem ]`, a: new aln(` 2, 1, 3, 4, 5 `, 0), b: new aln(` 5, 4, 1, 3, 2 `), c: new aln(` 4, 3, 5, 1, 2 `), d: new aln(` 5, 1, 3, 2, 4 `), e: new aln(` 1, 2, 5, 3, 4 `), imgs: [require('../testespics/es1/t2/ex_21_8.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/8`, testRef: `3`, tema: `placeHolder`,
+    prg: `9. Sobre o processo unificado de desenvolvimento de software, é errado afirmar que … (10P)`, a: new aln(`Há vários benefícios em se adotar um processo iterativo controlado, entre os quais podemos destacar a redução dos riscos envolvendo custos a um único incremento. `, 0), b: new aln(`O final de uma fase é marcado por um ponto de verificação. Um dos propósitos destes pontos de verificação é que permitem a monitorização do progresso dos trabalhos. `), c: new aln(`A tomada de decisão nas organizações é facilitada pela utilização da tecnologia da informação, que permite criar, administrar e manter a gestão da informação de uma instituição por meio de dispositivos para acesso, operação e armazenamento de dados. `), d: new aln(` Define-se como o conjunto de atividades necessárias para transformar requisitos do utilizador num sistema de software, baseado em componentes. `), e: new aln(` Os aspectos que distinguem o processo unificado são capturados em três conceitos chaves: direccionado a casos de uso; iterativo e incremental; com foco em desempenho. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/9`, testRef: `3`, tema: `placeHolder`,
+    prg: `10. Na atividade de análise no Processo de Desenvolvimento de Software vemos a importância de se fazer uma modelagem para identificar se há uma falha no Levantamento de Requisitos.Uma dessas  linguagens de modelação é o UML - Unified Modeling Language, cuja característica é: (10P)I - Visualizar o desenho do sistema e a intercomunicação entre objetos. II - Permitir que desenvolvedores visualizem os produtos de seus trabalhos em diagramas padronizados. III - Modelar o problema, e não a solução. É correto o que se afirma em: `, a: new aln(`Apenas em III; `, 0), b: new aln(`Apenas em I; `), c: new aln(`Apenas em II; `), d: new aln(`Apenas em II e III; `), e: new aln(`Apenas em I e II; `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/10`, testRef: `3`, tema: `placeHolder`,
+    prg: `11. A figura exemplifica responsabilidades, actividades e artefatos obrigatórios no RUP (Rational Unified Process). Identifique o que representam as letras A e B, respectivamente. (15P)
+  
+  [Imagem Abaixo!]`, a: new aln(`Programador, Plano de Projecto `, 0), b: new aln(`Requisitos dos Stakeholders; Plano do Projecto. `), c: new aln(`Analista de sistemas; Descrição do Sistema. `), d: new aln(`Requisitos dos Stakeholders, Especificação de Casos de Uso. `), e: new aln(`Analista de sistemas, Especificação de Casos de Uso.`), imgs: [require('../testespics/es1/t2/t2_22_14.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/11`, testRef: `3`, tema: `placeHolder`,
+    prg: `12. Considerando os conceitos de sistemas de informação, tecnologia da informação e engenharia de software, podemos afirmar que…: (10P)`, a: new aln(`Segundo Karl Bertalanffy Sistema é um objeto de qualquer tipo, constituído de componentes inter-relacionados com o todo e inter-dependentes, com funções cujos resultados pertencem a cada componente. `, 0), b: new aln(`O sistema de informação permite agregar valor às organizações, uma vez que se trata de um recurso valioso e repercute em todos os níveis da estrutura organizacional: estratégico, operacional e administrativo. `), c: new aln(`Por ser inadequada, a utilização de protótipos para a validação dos requisitos não funcionais deve ser descartada.`), d: new aln(`Dentre as práticas do Extreme Programming (XP) destacam-se a programação em pares, a integração contínua, a refatoração e, ainda, o envolvimento do cliente apenas na fase final do sistema, fator que difere de outras metodologias ágeis como SCRUM e TDD, e confere agilidade ao processo de desenvolvimento.`), e: new aln(`Dos sistemas de informação fazem parte elementos como: dados, informações, recursos materiais e tecnológicos, recursos humanos e procedimentos.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/12`, testRef: `3`, tema: `placeHolder`,
+    prg: `13. Em Engenharia de Software, temos o Desenvolvimento em Espiral, cada loop da espiral é dividido em quatro setores, a seguir apresentamos alguns deles. Analise os conceitos a seguir e assinale a alternativa que apresenta os corretos. (10P)I. Desenvolvimento de integração: O software que não puder ser comprado será desenvolvido, e os componentes e sistemas COTS serão integrados, a fim de criar um sistema. A integração de sistemas, nesse modelo, pode ser parte do processo de desenvolvimento, em vez de uma atividade separada. II. Definição de objetivos: São definidos os objetivos específicos para essa fase do projeto. São identificadas as restrições para o processo e o produto, e é preparado um plano de gerenciamento detalhado. São identificados os riscos do projeto e, dependendo dos riscos, poderão ser planejadas estratégias alternativas. III. Paneamento: O projeto é revisto e é tomada uma decisão sobre continuar com o próximo loop da espiral. Se a decisão for continuar, serão traçados os planos para a próxima fase do projeto. IV. Avaliação e redução de riscos: Para cada um dos riscos de projeto identificados, é realizada uma análise detalhada e são tomadas providências para reduzir esses riscos. Por exemplo, se houver um risco de os requisitos serem inadequados, poderá ser desenvolvido um protótipo. `, a: new aln(`Apenas I e II `, 0), b: new aln(`I, II, III e IV `), c: new aln(`Apenas II, III e IV. `), d: new aln(`Apenas IV `), e: new aln(` Apenas III. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/13`, testRef: `3`, tema: `placeHolder`,
+    prg: `14. Após o sistema ter sido instalado no ambiente do utilizador, ou seja, entrado em produção, começa a fase de Manutenção deste sistema. Esta fase depende muito da qualidade no processo de desenvolvimento e da documentação atualizada. Uma das soluções aplicadas para a melhoria nas funções do sistema existente, é conhecida por: (10P)`, a: new aln(`Efeito dominó, que é uma técnica para modificação da estrutura do software, sem alterar o comportamento; `, 0), b: new aln(`Rotatividade, que é utilizada apenas para implementação de novas funções; `), c: new aln(`Refatoração, que é uma técnica ou ferramenta para auxiliar a identificar o foco do problema; `), d: new aln(`Emergencial, que é utilizada quando acumulamos demandas que justifiquem a intervenção para a manutenção; `), e: new aln(`Separação estática, que é utilizada para identificar todos os códigos de programa que são afetados por alguma variável; `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/14`, testRef: `3`, tema: `placeHolder`,
+    prg: `16. A figura, que representa um Sistema de Emissão de Bilhetes de Comboio, denomina-se…: (5P)
+  
+  [imagem Abaixo!]`, a: new aln(`Diagrama de Fluxo de Dados `, 0), b: new aln(`Modelo de Entidade-Relacionamento (MER) `), c: new aln(`Diagrama de Contexto `), d: new aln(`Diagrama de Actividades `), e: new aln(`DFD de Nível 1 `), imgs: [require('../testespics/es1/t2/ex_21_16.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/15`, testRef: `3`, tema: `placeHolder`,
+    prg: ` 17. Como Modelo evolucionário do processo de software, uma característica da prototipagem é: (5P)`, a: new aln(` Configurar um processo interativo e rápido de desenvolvimento. `, 0), b: new aln(` Iniciar o processo de desenvolvimento pela implantação e pelos testes. `), c: new aln(` Não depender do estabelecimento e da definição de requisitos. `), d: new aln(`Gerar uma primeira versão do sistema completa e isenta de erros. `), e: new aln(`Descartar a participação do cliente no processo de desenvolvimento e de implantação. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/16`, testRef: `3`, tema: `placeHolder`,
+    prg: `18. Cada processo de desenvolvimento de software tem as suas particularidades, entretanto, podem-se destacar atividades que são comuns à maioria dos processos. Relativamente a processos de desenvolvimento de software, assinale o que é correto. (10P)`, a: new aln(`A análise tem como foco construir uma estratégia de solução. Os modelos construídos nessa fase devem ser verificados e validados. A verificação tem como objetivo assegurar que as necessidades do cliente estão sendo atendidas pelo sistema, enquanto a validação tem o objetivo de analisar se os modelos estão em conformidade com os requisitos definidos. `, 0), b: new aln(` O levantamento de requisitos tem como objetivo compreender o problema a ser resolvido e identificar necessidades. Os requisitos podem ser funcionais, que definem as funcionalidades do sistema, ou não funcionais, que não estão relacionados às funcionalidades. `), c: new aln(`O projeto produz uma descrição computacional do software sem restrições de tecnologia, ou seja, aspectos físicos e dependentes de implementação não são considerados. `), d: new aln(`Na fase de implementação, o sistema é codificado, ou seja, a descrição computacional obtida na fase de projeto é traduzida para código executável, por meio do uso de uma ou mais linguagens de programação. `), e: new aln(` Na fase de implantação, o sistema é testado, empacotado, distribuído e instalado no ambiente do cliente. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/17`, testRef: `3`, tema: `placeHolder`,
+    prg: `19. Muito utilizada pelos engenheiros de software, a prototipação consiste na(o) … (5P)`, a: new aln(`Análise dos custos e dos riscos de desenvolvimento, com base nos requisitos iniciais. `, 0), b: new aln(` Decisão de prosseguir ou não na direção de um sistema concluído, com base nos comentários do cliente. `), c: new aln(`Coleta inicial dos requisitos e no planeamento do projeto, com base no grupo de programadores envolvidos. `), d: new aln(`Procedimento estruturado que avalia os requisitos finais de um sistema em fase de testes. `), e: new aln(`Processo que capacita o desenvolvedor a criar um modelo do software que será implementado. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/18`, testRef: `3`, tema: `placeHolder`,
+    prg: `20. Um Analista pretende desenvolver um projeto utilizando UML 2.0 e, em seus propósitos, verificou a possibilidade de uso de alguns diagramas. Um deles é o Diagrama de Sequência que representa a indicação do conjunto de objectos envolvidos num cenário e a especificação das mensagens trocadas entre estes ao longo de linhas do tempo (linhas tracejadas verticalmente da base dos objectos até a parte inferior do diagram. Retângulos colocados sobre as linhas de tempo indicam:(5P)`, a: new aln(`O tempo decorrido entre as iterações de um processo recursivo.`, 0), b: new aln(`Os casos de uso de cada objecto.`), c: new aln(` Os períodos de ativação do objecto. `), d: new aln(`As interações entre as actividades, no tempo`), e: new aln(`As etapas em que o objecto estará inativo.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/19`, testRef: `3`, tema: `placeHolder`,
+    prg: `21. O uso da Linguagem de Modelagem Unificada (U.M.L.) não auxilia o processo do Scrum a evitar e/ou amenizar problemas de … (10P)`, a: new aln(`Comunicação entre a equipa de desenvolvimento `, 0), b: new aln(`Sobrecarga de trabalho no processo de validação. `), c: new aln(`Cronograma e atrasos no projeto. `), d: new aln(` Ocorrência de fatores positivos e negativos durante o sprint.`), e: new aln(`Escopo deficiente e falta de documentação. `), imgs: [], fim: ""
+  })
+];
+
+
+let es1_ex_23 = [
+  new Prg({
+    cadNome: `Es1`, pId: `3/0`, testRef: `3`, tema: `random`,
+    prg: `1. "É baseado na idéia de desenvolvimento de uma implementação inicial, expondo o resultado aos comentários do utilizador e refinando esse resultado por meio de diversas versões, até que seja desenvolvido um sistema adequado". 
+  
+  No âmbito do processo de software, trata-se de... `, a: new aln(` Engenharia de software baseada em componentes.`), b: new aln(` Modelo em cascata.`), c: new aln(` Desenvolvimento evolucionário. `, 0), d: new aln(` Desenvolvimento em espiral.`), e: new aln(` Programação estruturada.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/1`, testRef: `3`, tema: `random`,
+    prg: `2. No Rational Unified Process, a maior porção do fluxo de trabalho principal denominado Analysis é executada na fase de ...`, a: new aln(` Inception`), b: new aln(` Construction`), c: new aln(` Implementation`), d: new aln(` Elaboration`, 0), e: new aln(` Transition`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/2`, testRef: `3`, tema: `random`,
+    prg: `3. Durante a fase inicial do ciclo de vida do desenvolvimento de sistemas, na etapa de investigação, a tarefa que determina a probabilidade de sucesso do sistema proposto e propicia uma avaliação superficial da área técnica, econômica e comportamental do projeto, sendo decisivamente importante para o processo do desenvolvimento de sistemas, é chamada:`, a: new aln(`Estudo de viabilidade.`, 0), b: new aln(` Análise de equilibrio.`), c: new aln(` Design lógico do sistema.`), d: new aln(` Estudo de caso.`), e: new aln(` Análise de requisitos.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/3`, testRef: `3`, tema: `random`,
+    prg: `4. Os padrões a partir dos quais os objetos são criados, 
+  são denominados:`, a: new aln(` Atributos.`), b: new aln(` Métodos.`), c: new aln(` Entidades.`), d: new aln(` Classes.`, 0), e: new aln(` instâncias`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/4`, testRef: `3`, tema: `random`,
+    prg: `5. São produtos da fase de elaboração do RUP: `, a: new aln(` Documento de visão e produto de software integrado.`), b: new aln(` Manual do utilizador e base de dados operacionais convertidas. `), c: new aln(` Descrição da arquitectura do software e lista de riscos revista.`, 0), d: new aln(` Produto de software integrado e descrição da arquitectura do software. `), e: new aln(` Lista de riscos revista e base de dados operacionais convertidas.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/5`, testRef: `3`, tema: `random`,
+    prg: `6. Assinale as) atimações incorreta(s):`, a: new aln(` A UMI (unified modeling languag umo tecnologia concorrente com o processo unificado, no que diz respeito ao apoio à prática de engenharia de software orientada a objetos`, 0), b: new aln(` No Processo Unificado, a maior porção do core workflow denominado Analysis & executada na fase elaboração.`), c: new aln(` No desenvolvimento em cascata, os passos cliente sequencia e executados até a etapa final de teste, mesmo que o cliente esteja insatisfeito com determinado resultado intermediário`, 0), d: new aln(` O modelo em cascata embora inclua 5 estágios considerados fundamentais para o desenvolvimento de um software, tem como desvantagem a dificuldade de integraçãode novos requisitos do utilizador.`, 0), e: new aln(` O pequeno ganho de curto prazo na produtividade, ao diminuir a qualidade, não écompensado por perdas ou entraves no processo de desenvolvimento a médio e longo prazo. Por essa razão, a XP incentiva o controlo da qualidade como variável do projeto. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/6`, testRef: `3`, tema: `random`,
+    prg: `7. Nos métodos ágeis XP e Scrum, as entregas de partes funcionais do projeto são divididasem ciclos, geralmente compreendidos no período de 1 a 4 semanas. 
+  Estes ciclosdenominam-se, respectivamente:`, a: new aln(` Backlog e planeamento da produção.`), b: new aln(` Periodo de entrega e reunião de revisão. `), c: new aln(` Reunião de planeamento e backlog.`), d: new aln(` Iterações e sprint.`, 0), e: new aln(` Entrega e retrospectiva.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/7`, testRef: `3`, tema: `random`,
+    prg: `8. Identifique a(s) afirmação(ões) verdadeira(s):`, a: new aln(` Os requisitos não funcionais restringem o sistema que está sendo desenvolvido e o processo de desenvolvimento que deve ser usado e estão, frequentemente, relacionados ás propriedades emergentes do sistema, de modo que se aplicam ao sistema na sua totalidade.`), b: new aln(` A prototipação não é considerada uma técnica usada para validação de requisitos, pois ocorre na fase final do processo de desenvolvimento, representando a entrega do sistema aos utilizadores finais e clientes. `, 0), c: new aln(` o desenvolvimento em espiral baseia-se numa implementação inicial, expondo oresultado aos comentanos do utilizador e refinando-o por meio de diversas versões, até que seja desenvolvido um sistema adequado.`), d: new aln(` Pode-se considerar que a entrada para a estudo de viabilidade consiste em um conjunto preliminar de requisitos de negócios, um esboço da descrição do sistema e como essesistema pretende apoiar os processos de negócios. `), e: new aln(` No desenvolvimento em cascata, os passos são ordenados em sequência e executados até a etapa final de teste, mesmo que o cliente esteja insatisfeito com determinado resultado intermediário.`, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/8`, testRef: `3`, tema: `random`,
+    prg: `9. "Técnica que faz o levantamento de ideias, onde cada uma das ideias sugeridas pode ser combinada na proposta de uma nova. Atividade de livre imaginação que deve ser tratada sem criticas ou debates". O texto descreve a técnica de elicitação de requisitos denominada:`, a: new aln(` Reunião.`), b: new aln(` Questionário,`), c: new aln(` Entrevista. `), d: new aln(` Brainstorm`, 0), e: new aln(` Casos de Uso.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/9`, testRef: `3`, tema: `random`,
+    prg: `10.A figura abaixo mostra ferramentas utilizadas no desenvolvimento de sistemas orientados a objectos:[Imagens abaixo!]
+  
+  As figuras 1. 2 e 3, respectivamente, apresentam os diagramas de:`, a: new aln(` Implantação, casos de uso e pacotes;`), b: new aln(` Colaboração, componentes e sequência; `), c: new aln(` Actividades, pacotes e componentes:`), d: new aln(` Actividades, colaboração e componentes.`, 0), e: new aln(` Casos de uso, classes e objectos.`), imgs: [require('../testespics/es1/t2/es_ex1_23_10a.jpg'), require('../testespics/es1/t2/es_ex1_23_10b.jpg'), require('../testespics/es1/t2/es_ex1_23_10c.jpg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/10`, testRef: `3`, tema: `random`,
+    prg: `11. No SCRUM, o processo de desenvolvimento inicia com uma reunião de planeamento na qual o Product Owner e a equipe decidem, em conjunto, o que deverá ser implementado do Product Backlog. Assim, a equipe planeia seu trabalho,  
+  definindo o Sprint Backlog. na: `, a: new aln(` Primeira parte da Sprint Planning Meeting.`), b: new aln(` Segunda parte da Sprint Planning Meeting. `, 0), c: new aln(` Terceira parte da Sprint Planning Meeting.`), d: new aln(` Sprint.`), e: new aln(` Sprint Burndown.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/11`, testRef: `3`, tema: `random`,
+    prg: `12. A figura, que representa um Sistema de Emissão de Bilhetes de Comboio, denomina-se....`, a: new aln(` Diagrama de Fluxo de Dados.`), b: new aln(` Modelo de Entidade-Relacionamento (MER). `), c: new aln(` Diagrama de Contexto.`), d: new aln(` Diagrama de Casos de Uso.`), e: new aln(` DFD de Nível 1.`, 0), imgs: [require('../testespics/es1/t2/ex_21_16.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `3/12`, testRef: `3`, tema: `random`,
+    prg: `13. Muito utilizada pelos engenheiros de software, a prototipação consiste na(o)...`, a: new aln(` Análise dos custos e dos riscos de desenvolvimento, com base nos requisitos iniciais. `), b: new aln(` Decisão de prosseguir ou não na direção de um sistema concluído, com base nos comentários do cliente. `, 0), c: new aln(` Coleta inicial dos requisitos e no planeamento do projeto, com base no grupo de programadores envolvidos. `), d: new aln(` Procedimento estruturado que avalia os requisitos finais de um sistema em fase de testes.`), e: new aln(` Processo que capacita o desenvolvedor a criar um modelo do software que será implementado.`), imgs: [], fim: ""
+  })
+];
+
 //////////////////////////IA ////////////////
 
 
@@ -3820,14 +4360,262 @@ let ia_t1_23 = [
   })
 ];
 
+///////////////////////////  Marketing //////////////////////////
 
+
+let mkEx1 = [
+  new Prg({
+    cadNome: `Es2`, pId: `0/0`, testRef: `0`, tema: `asaA`,
+    prg: `1. O processo de formulação de estratégia de marketing deve inicial com. `, a: new aln(` analise do ambiente de Marketing `, 0), b: new aln(` A analise do contesto competitivo`), c: new aln(` analise do ambiente da empresa `), d: new aln(` A analise do ambiente de negocios`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/1`, testRef: `0`, tema: `asaA`,
+    prg: `2. Ganhar vantagem competitiva através de uma entrega cuidadosa e rápida é um exemplo de diferenciação de ___.`, a: new aln(` Pessoal`), b: new aln(` serviços`), c: new aln(` Imagem`), d: new aln(` Canal`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/2`, testRef: `0`, tema: `asaA`,
+    prg: `3.Não é elemento do Microambiente `, a: new aln(`Taxa de juros`, 0), b: new aln(` Os consumidores`), c: new aln(` Concorrentes`), d: new aln(` Os Publicos`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/3`, testRef: `0`, tema: `asaA`,
+    prg: `4."Qualidade" significa zero defeitos - fazer a coisa certa à primeira" (PARAZURAMAN, ZEITHAML e BERRY - 1985)`, a: new aln(` Qualidade técnica`, 0), b: new aln(` Qualidade orientada para a satisfação dos clientes`), c: new aln(` Qualidade percebida`), d: new aln(` Qualidade Superior`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/4`, testRef: `0`, tema: `asaA`,
+    prg: `5. Incentivos de curto prazo para estimular a compra ou a venda de um produto são chamados de `, a: new aln(` Publicidade`), b: new aln(` Propaganda`), c: new aln(` Vendas pessoais `), d: new aln(` Promoção de vendas`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/5`, testRef: `0`, tema: `asaA`,
+    prg: `6. Qual dos seguintes níveis de segmentação de mercado normalmente é caracterizado por um mercado pequeno cujas necessidadesnão estão sendo totalmente satisfeitas?`, a: new aln(` Marketing geográfico.`), b: new aln(` Marketing individual.`), c: new aln(` Marketing de nicho;`, 0), d: new aln(` Marketing de segmentação `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/6`, testRef: `0`, tema: `asaA`,
+    prg: `7.A habilidade de preparar produtos de massa de acordo com exigências de cada cliente é conhecida como____.`, a: new aln(` Segmentação por preferências;`), b: new aln(` Customização de massa; `, 0), c: new aln(` Marketing de massa;`), d: new aln(` Marketing de nicho. `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/7`, testRef: `0`, tema: `asaA`,
+    prg: `8. Suponha que a empresa X pretende identificar um mercado com rendimentos elevados e com um estilo de vida activo. Qual das seguintes bases de segmentação seria útil para esse efeito?`, a: new aln(` Demográfica;`), b: new aln(` Comportamental;`), c: new aln(` Psicográfica: `, 0), d: new aln(` Nenhuma das respostas anteriores.`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/8`, testRef: `0`, tema: `asaA`,
+    prg: `9. A/O não é o elemento que torna a Internet o meio de comunicação em massa exclusivo na história de negócios/marketing na humanidade`, a: new aln(` Interacção`, 0), b: new aln(` Apresentação 24 horas por dia `), c: new aln(` Relevância da distância`), d: new aln(` Novas oportunidades de negócio `), e: new aln(` Disponibilidade`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/9`, testRef: `0`, tema: `asaA`,
+    prg: `10. Quando é que o e-mail Marketing pode ter impacto negativo na reputaçãofimagem de uma marca?`, a: new aln(` Quando se enviam e-mails publicitarios indiscriminadamente`, 0), b: new aln(` quando se enviam e-mails com critério prévio de segmentação `), c: new aln(` quando se enviam e-mails com critério prévio de permissão`), d: new aln(` Quando se tem o conceito de SPAM consolidado `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/10`, testRef: `0`, tema: `asaA`,
+    prg: `11. ão faz parte das vantagens do e-mail marketing quanto aos proveitos permissão`, a: new aln(` Maior notoriedade`), b: new aln(` Publicidade`, 0), c: new aln(` A fidelização`), d: new aln(` A precisão e eficácia`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/11`, testRef: `0`, tema: `asaA`,
+    prg: `12.Qual das alineas a seguir é um dos tipos de SPAM?`, a: new aln(` Vendas`), b: new aln(` propraganda`, 0), c: new aln(` segmentação`), d: new aln(` Posicionamento`), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/12`, testRef: `0`, tema: `asaA`,
+    prg: `13. Qual das seguintes alternativas seria um exemplo de 'serviço puro"?`, a: new aln(` Empresa aérea`), b: new aln(` Serviço de cópias`), c: new aln(` Revenda de automóveis`), d: new aln(` Seguros `, 0), e: new aln(` Nenhuma das anteriores`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/13`, testRef: `0`, tema: `asaA`,
+    prg: `14. Serviços com alto nivel de qualidades de avaliar mesmo depois do consumo. ou seja, que possuem caracteristicas que o comprador normalmente acha dificil`, a: new aln(` de equipamentos`), b: new aln(` de experiência `), c: new aln(` de pesquisa`), d: new aln(` credenciáveis`, 0), e: new aln(` de atenção pessoal`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/14`, testRef: `0`, tema: `asaA`,
+    prg: `15. As empresas prestadoras de serviços tentam demonstrar a qualidade de seus serviços por meio de prova fisica e`, a: new aln(` determinação predatória de preços`), b: new aln(` pessoas`), c: new aln(` lucros`), d: new aln(` apresentação`, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/15`, testRef: `0`, tema: `asaA`,
+    prg: `
+  16. A tarefa da gestão de marketing não é a de atrair clientes e relacionar-se com eles, essa função compete somente aos gestores de marketing. (............)
+  
+  `, a: new aln(`verdadeiro`, 0), b: new aln(`Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/16`, testRef: `0`, tema: `asaA`,
+    prg: `17. O sucesso ou não da empresa não depende apenas dos fornecedores, intermediários de marketing, clientes, concorrentes e vários públicos. (............)..`, a: new aln(`verdadeiro`, 0), b: new aln(`Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/17`, testRef: `0`, tema: `asaA`,
+    prg: `18. As forças que actuam no Micrombiente são controláveis enquanto as que actuam no Macroambiente são apenas monitoráveis....----------
+  `, a: new aln(`verdadeiro`, 0), b: new aln(`Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/18`, testRef: `0`, tema: `asaA`,
+    prg: `19. Na abordagem sobre filosofias de marketing, a orientação para o Cliente significa que o propósito da empresa è
+  vender o que o mercado deseja e não o que a fabrica produz. (...........)
+  `, a: new aln(`verdadeiro`, 0), b: new aln(`Falso`), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/19`, testRef: `0`, tema: `asaA`,
+    prg: `20. Não são apenas os actores e forças externas do ambiente de marketing que afectam a capacidade da Gestão de desenvolver e manter bons relacionamentos com os seus consumidores. (...........)
+  Boa sorte e bom trabalho!
+  `, a: new aln(`verdadeiro`), b: new aln(`Falso`, 0), c: new aln(``), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
+/// Es2
+
+let es2_t1_21 = [
+  new Prg({
+    cadNome: `Es2`, pId: `/0`, testRef: ``, tema: ``,
+    prg: `1. No âmbito da Gestão de Configuração e Mudança de Software, ao conjunto de um ou mais itens de configuração identificados para uso, independentemente das suas versões, dá-se o nome de: (10 P)`, a: new aln(` Baseline`), b: new aln(` Metadados. `), c: new aln(` Relatório de status.`), d: new aln(` Release request.`, 0), e: new aln(` Biblioteca.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/1`, testRef: ``, tema: ``,
+    prg: `2. A aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de atender aos seus requisitos denomina-se: (10 P)`, a: new aln(`Gestão de Recursos. `), b: new aln(`Gestão do Conhecimento. `), c: new aln(`Gestão de Projetos. `, 0), d: new aln(`Gestão de Risco. `), e: new aln(`Gestão Contábil Financeiro. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/2`, testRef: ``, tema: ``,
+    prg: `3. Os componentes do escopo, que correspondem a fatores considerados verdadeiros para o sucesso do projeto, são: (10 P)`, a: new aln(`As descrições das características. `), b: new aln(`As justificativas. `), c: new aln(`As entregas. `), d: new aln(`Os objetivos. `, 0), e: new aln(`As premissas. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/3`, testRef: ``, tema: ``,
+    prg: `4. Os projetos de software devem ter sua qualidade avaliada, e para tanto, selecionaram-se fatores indicados na norma ISO 9126, que identifica alguns atributos importantes da qualidade, dentre os quais, a (assinale a opção correct: (10 P) `, a: new aln(`Eficiência, que representa a facilidade com que o software pode ser transferido entre ambientes computacionais. `), b: new aln(`Eficiência, que representa a facilidade com que o software pode ser transferido entre ambientes computacionais. `), c: new aln(`Manutenibilidade, que representa o período de tempo em que o software esteja disponível para uso. `), d: new aln(`Funcionalidade, que representa a facilidade com que o software pode ser transferido entre ambientes computacionais. `), e: new aln(`Confiabilidade, que representa o período de tempo em que o software esteja disponível para uso. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/4`, testRef: ``, tema: ``,
+    prg: `5. Assinale as alternativas correctas em relação a qualidade de software: (10 P)`, a: new aln(`Entende-se como o uso de métricas para desenvolver estratégias para a melhoria do processo de software. `, 0), b: new aln(`É o conjunto de actividades que garante que cada produto de trabalho da engenharia de software exiba adequada qualidade. `, 0), c: new aln(`Entende-se como actividades de segurança em cada projecto de software. `), d: new aln(`É a conformidade de requisitos funcionais a padrões de desenvolvimento. `, 0), e: new aln(`Encontra-se definida pela norma NBR ISO 9000:2005 e pelo glossário do IEEE. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/5`, testRef: ``, tema: ``,
+    prg: `6. Abaixo são apresentados os 4 passos para realizar uma SQA estatística e criar um processo adaptativo de engenharia de software. Analise os passos e assinale a opção que representa a ordem correcta dos factos: (10 P)1-Considerar que 20% do código tem 80% dos defeitos. 2-Depurar o código até a sua causa subjacente. 3-Colectar e categorizar os defeitos de software encontrados. 4-Corrigir os problemas que causaram os defeitos. `, a: new aln(` 2, 3, 1, 4. `), b: new aln(` 3, 2, 4, 1. `), c: new aln(` 3, 1, 2, 4 `), d: new aln(`3, 2, 1, 4. `, 0), e: new aln(`1, 4, 3, 2.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/6`, testRef: ``, tema: ``,
+    prg: `7. Para a capacitação de uma organização, segundo o Capability Maturity Model (CMM), a maturidade do processo de software é avaliada de acordo com os seguintes níveis (assinale a opção correct: (5 P)`, a: new aln(`Inicial; Definido; Repetitivo; Gerenciado; Optimizado. `), b: new aln(`Inicial; Definido; Gerenciado; Repetitivo; Optimizado. `), c: new aln(`Inicial; Repetitivo; Definido; Gerenciado; Optimizado. `, 0), d: new aln(`Inicial; Definido; Repetitivo; Optimizado. Gerenciado. `), e: new aln(`Inicial; Gerenciado; Repetitivo; Definido; Optimizado. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/7`, testRef: ``, tema: ``,
+    prg: `8. Quanto às métricas de software, os papéis de medição podem ser considerados osseguintes (assinale os verdadeiros): (20 P)`, a: new aln(`Caracterizar `, 0), b: new aln(` Corrigir `), c: new aln(` Avaliar `, 0), d: new aln(`Prever `, 0), e: new aln(` Aperfeiçoar `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/8`, testRef: ``, tema: ``,
+    prg: `9. A fase do ciclo de vida dos testes de software, que define que: “A elaboração e revisão de casos de testes e de roteiros de testes deverão ser construídos e modificados em função das mudanças solicitadas pelo Cliente, bem como pelo próprio aperfeiçoamento do processo de testes, para ampliação da sua cobertura.”, é denominada de (indique a opção correct: (5 P)`, a: new aln(`Planeamento `), b: new aln(`Preparação `), c: new aln(`Execução `), d: new aln(`Especificação `, 0), e: new aln(`Manutenção `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/9`, testRef: ``, tema: ``,
+    prg: `10.Em relação às métricas de produto de software, assinale as alternativas correctas: (20 P)`, a: new aln(`Métricas diretas – são observados atributos como custo e esforço (nrº de linhas de código produzidas, quantidade de defeitos encontrados).`, 0), b: new aln(`Métricas indiretas – medem o quanto o software se adequa às exigências implícitas e explícitas do cliente (correctitude, manutenibilidade, integridade, usabilidad`), c: new aln(`Métricas de produto e produtividade – medem características do software (representação, execução e saída do produto). `, 0), d: new aln(`Métricas públicas – colectam e avaliam informações sobre defeitos do projeto, tentando descobrir indicadores.`, 0), e: new aln(`Métricas de qualidade e métricas técnicas –. medem a eficiência, confiabilidade, qualidade, funcionalidade.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/10`, testRef: ``, tema: ``,
+    prg: `11.Em relação às características e aos objetivos de projetos, assinale as opções corretas: (20 P)`, a: new aln(`Cada projeto cria produto, serviço ou resultado único. `, 0), b: new aln(`Na definição do projeto, estabelece-se o objetivo principal, relacionado à consecução de determinada(s) meta(s) e cuja execução pode ser indefinida no tempo. `), c: new aln(`No projeto, a data de início é flexível, o importante é a obtenção de seus objetivos. `), d: new aln(`A flexibilidade quanto aos fins a serem atingidos com a execução de um projeto, contribui para o processo de tomada de decisão. `, 0), e: new aln(`Segundo Summerville (2011) um projecto de software consiste de actividades e artefactos. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `/11`, testRef: ``, tema: ``,
+    prg: `15.O Guia PMBOK fornece 5 grupos de Processos que são típicas em quase todas áreas de projetos, nomeadamente: `, a: new aln(`Processos de Iniciação;   Processos de Planeamento;   Processos de Execução;   Processos de Monitoramento e Controlo;   Processos de Encerramento. `, 0), b: new aln(`Processos de Iniciação;   Processos de Monitoramento e Controlo;   Processos de Planeamento;   Processos de Encerramento. `), c: new aln(`Processos de Iniciação;   Processos de Execução;   Processos de Monitoramento;   Processos de Encerramento. `), d: new aln(``), e: new aln(``), imgs: [], fim: ""
+  })
+];
+
+let es2_t1_22 =
+  [
+    new Prg({
+      cadNome: `Es2`, pId: `/0`, testRef: ``, tema: `asaA`,
+      prg: `1. No âmbito da Gestão de Configuração e Mudança de Software, ao conjunto de um ou mais itens de configuração identificados para uso, independentemente das suas versões, dá-se o nome de: (0,5) `, a: new aln(` Baseline `), b: new aln(` Metadados.  `), c: new aln(` Metadados.  `), d: new aln(` Release request. `, 0), e: new aln(` Biblioteca. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/1`, testRef: ``, tema: `asaA`,
+      prg: `2. A aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de atender aos seus requisitos denomina-se: (0,5) `, a: new aln(` Gestão de Recursos.  `), b: new aln(` Gestão do Conhecimento.  `), c: new aln(` Gestão de Projetos.  `, 0), d: new aln(` Gestão de Risco.  `), e: new aln(` Gestão Contábil Financeiro. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/2`, testRef: ``, tema: `asaA`,
+      prg: `3. Os componentes do escopo, que correspondem a fatores considerados verdadeiros para o sucesso do projeto, são: (0,5)  `, a: new aln(` As descrições das características.  `), b: new aln(` As justificativas.  `), c: new aln(` As entregas.  `), d: new aln(` Os objetivos.  `, 0), e: new aln(` As premissas. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/3`, testRef: ``, tema: `asaA`,
+      prg: `4. Quanto às métricas de software, os papéis de medição podem ser considerados os seguintes:   `, a: new aln(` Corrigir, Caracterizar, Prever, Avaliar.  `), b: new aln(` Avaliar, Depurar, Melhorar, Prever.  `), c: new aln(` Aperfeiçoar, Caracterizar, Prever, Compilar.  `), d: new aln(` Caracterizar, Prever, Avaliar, Aperfeiçoar.  `, 0), e: new aln(` Compactar, Aperfeiçoar, Caracterizar, Prever. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/4`, testRef: ``, tema: `asaA`,
+      prg: `5. O CVS (Concurrent Version System) é um sistema de controle de versão Open Source. No que respeita às terminologias utilizadas pelo CVS, leia os trechos a seguir: (0,5)_______ é o envio das modificações feitas pelo usuário ao repositório CVS. _______ é a numeração atribuída pelo CVS a cada modificação de um arquivo. _______ é uma ramificação no desenvolvimento, usada para descrever o processo de divisão dos arquivos de um projeto em linhas de desenvolvimento independentes. Assinale a alternativa que preencha corretamente, de cima para baixo, as lacunas dos trechos acima.  `, a: new aln(` Checkout - Release - Branch.  `), b: new aln(` Commit - Revision – Branch.  `, 0), c: new aln(` Update - Revision – Merge.  `), d: new aln(` Commit - Checkin – Hijack.  `), e: new aln(` Update - Checkin – Merge. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/5`, testRef: ``, tema: `asaA`,
+      prg: `6. Para a capacitação de uma organização, segundo o Capability Maturity Model (CMM), a maturidade do processo de software é avaliada de acordo com os seguintes níveis: (0,5) `, a: new aln(` Inicial; Definido; Repetitivo; Gerenciado; Optimizado.  `), b: new aln(` Inicial; Definido; Gerenciado; Repetitivo; Optimizado. `), c: new aln(` Inicial; Repetitivo; Definido; Gerenciado; Optimizado.  `, 0), d: new aln(` Inicial; Definido; Repetitivo; Optimizado. Gerenciado. `), e: new aln(` Inicial; Gerenciado; Repetitivo; Definido; Optimizado. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/6`, testRef: ``, tema: `asaA`,
+      prg: `7. Alguns atributos importantes indicados na norma ISO 9126 para a avaliação da qualidade dos projetos de software, podem ser definidos como: (0,5) `, a: new aln(` Usabilidade, que avalia se o tempo de execução e os recursos são compatíveis com o nível de desempenho do sistema.  `), b: new aln(` Eficiência, que representa a facilidade com que o software pode ser transferido entre ambientes computacionais.  `), c: new aln(` Manutenibilidade, que representa o período de tempo em que o software esteja disponível para uso.  `), d: new aln(` Funcionalidade, que representa a facilidade com que o software pode ser transferido entre ambientes computacionais.  `), e: new aln(` Confiabilidade, que representa o período de tempo em que o software esteja disponível para uso. `, 0), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/7`, testRef: ``, tema: `asaA`,
+      prg: `8. Abaixo são apresentados os 4 passos para realizar uma SQA estatística e criar um processo adaptativo de engenharia de software. Analise os passos e assinale a opção que representa a ordem correcta dos factos:  `, a: new aln(` 2, 3, 1, 4.  `), b: new aln(` 3, 2, 1, 4.   `), c: new aln(` 3, 1, 2, 4.   `), d: new aln(` 3, 2, 4, 1.   `, 0), e: new aln(` 1, 4, 3, 2. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/8`, testRef: ``, tema: `asaA`,
+      prg: `9. Em relação às métricas de produto de software, assinale a alternativa correta: (1,0) `, a: new aln(` Métricas indiretas – medem o quanto o software se adequa às exigências implícitas e explícitas do cliente (correctitude, manutenibilidade, integridade, usabilidad. `), b: new aln(` Métricas de produto e produtividade – medem características do software (representação, execução, entrada e saída do produto).  `, 0), c: new aln(` Métricas diretas – são observados atributos como custo e esforço (nrº de linhas de código produzidas, quantidade de defeitos encontrados).  `, 0), d: new aln(` Métricas públicas – colectam e avaliam informações sobre características do projeto, tentando descobrir indicadores. `, 0), e: new aln(` Métricas de qualidade e métricas técnicas – medem a eficiência, a confiabilidade, a qualidade e a funcionalidade.`), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/9`, testRef: ``, tema: `asaA`,
+      prg: `10. Em relação às características e aos objetivos de projetos, é correto que: (1,0) `, a: new aln(` Na definição do projeto, estabelece-se o objetivo principal, relacionado à consecução de determinada(s) meta(s) e cuja execução pode ser indefinida no tempo.  `), b: new aln(` No projeto, a data de início é flexível, o importante é a obtenção de seus objetivos.  `), c: new aln(` A flexibilidade quanto aos fins a serem atingidos com a execução de um projeto, contribui para o processo de tomada de decisão.  `, 0), d: new aln(` Cada projeto cria produto, serviço ou resultado diversificado.  `), e: new aln(` Segundo Summerville (2011) um projecto de software consiste de objetivos, actividades e artefactos. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/10`, testRef: ``, tema: `asaA`,
+      prg: `12. A Gestão de Configuração de  Software e o Processo de Gestão de Mudança, baseiam se nos seguintes padrões: `, a: new aln(` IEEE (padrões ANSI/IEEE 730-1984 e 983-1986).  `), b: new aln(` ISO 9000-3 (NBR 9000-3).  `), c: new aln(` DoD-STD-2167 (Department of Defense Standard 2167A), que aborda o desenvolvimento de software.  `, 0), d: new aln(` IEEE/IEA 12207, que une práticas comerciais com padrões DFD.  `), e: new aln(` SPICE – Software Process Improvement and Capability determination (ISO / IEC 15504).`), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/11`, testRef: ``, tema: `asaA`,
+      prg: `13. É verdadeiro que: (1,0) `, a: new aln(` Entre as disciplinas da engenharia de software, inclui-se a gestão de configurações, que, aliada à memória humana em pequenos projetos, consegue evitar que artefatos corrigidos reapareçam durante o desenvolvimento do projeto.  `), b: new aln(` No Subversion, um projeto pronto para ser testado e considerado como uma versão estável, é copiado para uma pasta branch e fica congelado para que seja lançado em produção.  `), c: new aln(` Segundo o SWEBOK, a gestão de configuração de software tem por objetivo garantir e manter a integridade do software por meio da gestão e controlo das mudanças, evoluções e manutenções dos itens a serem geridos.  `, 0), d: new aln(` Englobando a gestão do projeto e do seu produto, a gestão da qualidade do projeto aplica-se a todos os projetos, dependendo da natureza do produto.  `), e: new aln(` Uma parte essencial no projeto é a gestão do recurso humano, que é considerado ilimitado. Em virtude disso, o PMBOK define quatro processos que estabelecem os tipos de profissionais, a hierarquia e a função de cada um deles dentro do projeto antes e durante a execução. Esses processos são: avaliação de recursos humanos; contrato ou mobilização da equipa do projeto; desenvolvimento da equipa do projeto; e gestão da equipa de projeto. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/12`, testRef: ``, tema: `asaA`,
+      prg: `14. A fase do ciclo de vida dos testes de software, que define que: “A elaboração e revisão de casos de testes e de roteiros de testes deverão ser construídos e modificados em função das mudanças solicitadas pelo Cliente, bem como pelo próprio aperfeiçoamento do processo de testes, para ampliação da sua cobertura”, é denominada de …………. (1,0) `, a: new aln(` Planeamento  `), b: new aln(` Preparação  `), c: new aln(` Execução  `), d: new aln(` Especificação  `, 0), e: new aln(` Manutenção `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/13`, testRef: ``, tema: `asaA`,
+      prg: `15. Sendo as métricas de software formas de quantificar o esforço necessário para a construção de um sistema de software, é correto afirmar que: (1,0) `, a: new aln(` Um indicador é parte de uma métrica.  `), b: new aln(` Custo, funcionalidade e número de erros são métricas indiretas.  `), c: new aln(` A métrica de pontos de função só pode ser calculada com o código terminado.  `), d: new aln(` Linhas de código, esforço e memória são métricas diretas.  `, 0), e: new aln(` Métricas de produtividade indicam o quanto o software atende aos requisitos. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/14`, testRef: ``, tema: `asaA`,
+      prg: `16. O Subversion ou simplesmente SVN é uma ferramenta de controlo de versão de projeto muito poderosa que permite, além do desenvolvimento colaborativo a partir de um repositório único, o merge de conteúdo, armazenamento de logs e geração de estatísticas diversas. Dentre as boas práticas, toda revisão deve ser comentada para facilitar o entendimento das alterações realizadas. Além disso, o código no diretório trunk deve sempre estar pronto para ser compilado e colocado em produção, se necessário. Nesse sentido, uma ferramenta de Integração Contínua deve ser utilizada para a geração de builds de teste a cada commit em todas as noites ao longo da semana. Uma dessas ferramentas é conhecida por: (1,0) `, a: new aln(` TestControl.  `), b: new aln(` CommitControl.  `), c: new aln(` DataControl.  `), d: new aln(` CruiseControl.  `, 0), e: new aln(` BranchControl. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/15`, testRef: ``, tema: `asaA`,
+      prg: `17. Relativamente às ferramentas de Gestão da Qualidade (nomeadamente: I. PDCA; II. CASE; III. 5W1H), cujo objetivo é a melhoria de processos, analise as afirmações a seguir e selecione a alternativa tecnicamente correta: (1,0) `, a: new aln(` Apenas as afirmativas II e III são tecnicamente verdadeiras.  `), b: new aln(` Apenas a afirmativa I é tecnicamente verdadeira.  `, 0), c: new aln(` Apenas as afirmativas I e III são tecnicamente verdadeiras.  `), d: new aln(` As afirmativas I, II e III são tecnicamente verdadeiras.  `), e: new aln(` Apenas as afirmativas I e II são tecnicamente verdadeiras. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/16`, testRef: ``, tema: `asaA`,
+      prg: `18. Considerando o padrão de métricas de software IEEE/ANSI, assinale na tabela abaixo a alternativa que preenche corretamente as lacunas no texto seguinte: 
+  ,
+  ,1) ______ é um lapso humano que resulta em um software incorreto. 
+  ,
+  ,2) ________é uma condição acidental que provoca uma unidade do sistema a não operar da forma necessária. 
+  ,
+  ,3) _______é uma anomalia no produto. 
+  ,
+  ,4) _______ ocorre quando uma unidade funcional de um sistema relacionado a um software não mais consegue desempenhar as funções necessárias ou deixa de operar dentro dos limites especificados.  `, a: new aln(` Falta – Erro – Defeito – Falha.  `), b: new aln(` Defeito – Falha - Falta – Erro. `), c: new aln(` Erro – Defeito – Falta – Falha.  `), d: new aln(` Erro – Falta – Defeito – Falha.  `, 0), e: new aln(` Falta – Falha - Erro – Defeito. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/17`, testRef: ``, tema: `asaA`,
+      prg: `19. Sistemas de controlo de versões são ferramentas essenciais na gestão de tecnologia da informação de empresas, em especial em empresas desenvolvedoras de software. Estes sistemas têm o intuito de: (1,0) `, a: new aln(` Alocar recursos específicos para o desenvolvimento de diferentes versões do sistema.  `), b: new aln(` Calcular as funcionalidades do sistema, incluindo cálculos de pontos de função.  `), c: new aln(` Identificar uma alteração específica efetuada num código fonte.  `, 0), d: new aln(` Controlar as versões dos diversos softwares adquiridos pela empresa.  `), e: new aln(` Estimar o custo e o tempo de desenvolvimento de uma versão específica de um sistema. `), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/18`, testRef: ``, tema: `asaA`,
+      prg: `20. Durante o desenvolvimento de software existem diversas categorias de testes que é necessário realizar, como por exemplo: (0,5) `, a: new aln(` Teste de integração (verifica produtos que foram mal testados e lançados ao mercado, corrigindo os problemas quando os utilizadores já têm acesso a aplicação). Teste de funcionalidade (verifica se as funcionalidades descritas na especificação de requisitos são executadas pelo sistema integrado). `), b: new aln(` Teste de esforço (avalia o desempenho do software durante a sua execução, no contexto do sistema integrado). Teste de funcionalidade (verifica se as funcionalidades descritas na especificação de requisitos são executadas pelo sistema integrado.  `), c: new aln(` Teste de desempenho (avalia o desempenho de softwares, especialmente embutidos e de tempo real, durante a sua execução, no contexto do sistema integrado). Teste de unidade (avalia a funcionalidade dos componentes para os diversos tipos de entradas). `, 0), d: new aln(` Teste de aceitação (verifica se os componentes funcionam conjuntamente como especificado no desenho do sistem. Teste de usabilidade (avalia os limites do uso do software sob as condições normais de utilização). `), e: new aln(` Teste de unidade (avalia a funcionalidade dos componentes para os diversos tipos de entradas). Teste de aceitação (verifica se os componentes funcionam conjuntamente como especificado no desenho do sistem.`), imgs: [], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/19`, testRef: ``, tema: `asaA`,
+      prg: `21. Embora o padrão IEEE Std 730-2014 (IEEE Standard for Software Quality Assurance Processes) seja focado no projeto, ele também se refere a algumas atividades a nível organizacional, ou seja, enfatiza que o escopo desta norma é um único projeto que é executado dentro de uma organização. A figura abaixo ilustra a relação entre o trabalho realizado a nível organizacional versus o trabalho realizado a nível do projeto ao longo do tempo. Preencha as lacunas identificadas pelas letras:  `, a: new aln(` A)Negociar contractos,  B)Execução do Projeto de software, C)Atividades do Peojeto, D)Planeamento de SQA ,E)Atividades e tarefas SQA, F)Enceramento de SQA `, 0), b: new aln(`A) Execução do Projeto de software B) Atividades e tarefas SQA C) Negociar contratos D) Planeamento de SQA E) Atividades do Projeto `), c: new aln(` A) Negociar contratos B) Planeamento de SQA C) Execução do Projeto de software D) Atividades do Projeto E) Atividades e tarefas SQA `), d: new aln(` A) Planeamento de SQA B) Atividades e tarefas SQA C) Execução do Projeto de software D) Atividades do Projeto E) Negociar contratos `), e: new aln(`A) Atividades do Projeto B) Negociar contratos C) Planeamento de SQA D) Atividades e tarefas SQA E) Execução do Projeto de software`), imgs: [[require('../testespics/es2/t1/es2_t1_22_p21.jpeg')]], fim: ""
+    }),
+    new Prg({
+      cadNome: `Es2`, pId: `/20`, testRef: ``, tema: `asaA`,
+      prg: `22. _______________ é um método padronizado que determina o tamanho do software por meio de seus requisitos funcionais, considerando as funcionalidades a serem implementadas. Foi desenvolvido para ser aplicado independente da linguagem de programação e tecnologias utilizadas.,
+  , Qual das alternativas ao lado, completa corretamente a lacuna? (0,5) `, a: new aln(` Sistema de Administração dos Recursos de Tecnologia da Informação.  `), b: new aln(` Counting Practices Manual (CPM).  `), c: new aln(` Métrica de qualidade.  `), d: new aln(` Análise de Pontos de Função (APF)  `, 0), e: new aln(` COCOMO. `), imgs: [], fim: ""
+    })
+  ];
 let bd1t2 = [bd22, bd19, bd18];
 let bd1t1 = [bd16, bd15, bd14];
-let bd2t2 = [bd2_t2_23, bd2_r_22, bd2_t2_22, bd2_r_16, bd2_t2_16, bd2_r_14];
+let bd2t2 = [mkEx1, bd2_t2_23, bd2_r_22, bd2_t2_22, bd2_r_16, bd2_t2_16, bd2_r_14];
 let bd2t1 = [bd2_t1_23, bd2_t1_19];
 
 let esTs1 = [es14, es15];
-let esTs2 = [es_t2_22, es_t2_21, es_mt2_17];
+let esTs2 = [es_t2_22, es_t2_21, es_mt2_17, es1_ex_23, es1_ex_21, es1_ex_20, es1_ex2_20];
+
+let es2T1 = [es2_t1_21, es2_t1_22];
+
 let IaTs1 = [ia_t1_23];
 let IaTs2 = [ia_t2_23, ia_t2_22];
-export { bd1t2, esTs1, bd1t1, bd2t2, bd2t1, esTs2, IaTs1, IaTs2 };
+
+
+let mk1t1 = [mk1t1];
+export { bd1t2, esTs1, bd1t1, bd2t2, bd2t1, esTs2, IaTs1, IaTs2, mk1t1, es2T1 };

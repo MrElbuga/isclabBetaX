@@ -182,8 +182,9 @@ function sortear(lista) {
   let newP = [];
 
   /*
-  console.log("Etsa:");
-  console.log(lista.length);*/
+  console.log("Etsa:");*/
+  //console.log("Listax:" + lista.length);
+  //console.log(lista[0]);
 
   for (let z = 0; z < lista.length; z++) {
     let id = z;

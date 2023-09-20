@@ -12,6 +12,7 @@ function CadData(nome) {
 let cad_Bd1 = CadData("Bd1");
 let cad_Bd2 = CadData("Bd2");
 let cad_Es1 = CadData("Es1");
+let cad_Es2 = CadData("Es2");
 let cad_IA = CadData("IA");
 
 
@@ -39,12 +40,18 @@ cad_Bd2.T1nomes.push(...tsdata.tnomes_BD2T1);
 
 
 //ES1
-cad_Es1.Teste2.push(...bd1Tdata.esTs2);
+cad_Es1.Teste2.push(...bd1Tdata.es2T1);
 cad_Es1.T2Nomes.push(...tsdata.tnomesES1T2);
+
+//ES2
+
+cad_Es2.Teste2.push(...bd1Tdata.es2T1);
+cad_Es2.T2Nomes.push(...tsdata.tnomesES2T1);
+
 
 //console.log(cad_Es1.Teste1);
 
-let allCads = [cad_Bd2, cad_Bd1, cad_Es1, cad_IA];
+let allCads = [cad_Bd2, cad_Bd1, cad_Es1, cad_Es2, cad_IA];
 let curr_temas = [];
 let finalTest = [];
 
@@ -62,7 +69,7 @@ function collect_Temas(lista) {
             }
         })
     });
-    console.log(nlista);
+    //console.log(nlista);
     return nlista;
 }
 
@@ -86,6 +93,10 @@ finalTest = RandLab.randomizerStart(aleatorio, tudox, choosenT, tamanho);
 
 function getTemas() {
     //curr_temas = collect_Temas(cad_Bd1.Teste1);
+
+    if (curr_temas.length < 0) {
+        curr_temas = ['nada'];
+    }
 
     return curr_temas;
 }
