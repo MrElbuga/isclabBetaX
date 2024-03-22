@@ -250,21 +250,21 @@ export default function App() {
     const handleAppStateChange = (nextAppState) => {
       if (nextAppState === 'active') {
 
-        Ola();
-        //  setCount((prevCount) => prevCount + 1);
+        // Ola();
+        setCount((prevCount) => prevCount + 1);
       }
 
-      // console.log("Status: " + cnt)
+      console.log("Status: " + cnt)
     };
 
     // Add event listener for app state changes
     AppState.addEventListener('change', handleAppStateChange);
 
-    /*
+
     // Remove event listener when component unmounts
     return () => {
       AppState.removeEventListener('change', handleAppStateChange);
-    };*/
+    };
   });
 
   // State to store count value
