@@ -3429,7 +3429,7 @@ let es_mt2_17 = [
 ];
 
 let es14 = [new Prg({
-  cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `Testex`,
+  cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `por definir...`,
   prg: `Catch fire?`, a: new aln(`o relacionamento, em termos de máximo, entre País Origem, Setor e Tempo é tipo l : 1 :N.
         ,`), b: new aln(`uma associação do tipo N:N origina uma nova tabela que herda os atributos da associação 
         ,e cujo identificador pode ser composto 
@@ -3444,14 +3444,14 @@ let es14 = [new Prg({
         ,`), imgs: [require('../testespics/teste2bd/teste19.1.jpg')], fim: ""
 }),
 new Prg({
-  cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `normalizacaoT`,
+  cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `por definir...`,
   prg: `Battle through heavens?`, a: new aln(` a`), b: new aln(`b`, 0), c: new aln(`c`), d: new aln(``), e: new aln(` São exemplos de tabelas derivadas: Tempo = {Ano, Investe} e Setor = {NomePaís,
         , DesignaçãoSector, Ano, Montante}. 
         ,`), imgs: [require('../testespics/teste2bd/teste19.1.jpg')], fim: ""
 }),
 ];
 let es15 = [new Prg({
-  cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `Testex`,
+  cadNome: `ES1`, pId: `19/0`, testRef: `19`, tema: `por definir...`,
   prg: `outro man`, a: new aln(`BTT`), b: new aln(`Henkkaku`, 0), c: new aln(``), d: new aln(`Henkaku`), e: new aln(``),
   imgs: [], fim: ""
 }),
@@ -3463,7 +3463,81 @@ new Prg({
 }),
 ];
 
+let esT1_22 = [
+  new Prg({
+    cadNome: `Es1`, pId: `22/0`, testRef: `22`, tema: `ciclo de vida do desenvolvimento de sistemas`,
+    prg: `1. Durante a fase inicial do ciclo de vida do desenvolvimento de sistemas, a tarefa de investigação que determina a probabilidade de sucesso do sistema proposto e propicia uma avaliação superficial da área técnica, econômica e comportamental do projeto, sendo decisivamente importante para o processo do desenvolvimento de sistemas, é chamada de:`, a: new aln(`  Estudo de viabilidade. `, 0), b: new aln(` Análise de equilíbrio. `), c: new aln(` Design lógico do sistema. `), d: new aln(` Estudo de caso. `), e: new aln(` Análise de requisitos. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/1`, testRef: `22`, tema: `ciclo de vida do desenvolvimento de sistemas`,
+    prg: `2. "Técnica que faz o levantamento de ideias, onde cada uma das ideias sugeridas pode ser combinada na proposta de uma nova. Atividade de livre imaginação que deve ser tratada sem críticas ou debates". O texto descreve a técnica de elicitação de requisitos denominada:`, a: new aln(` Reunião. `), b: new aln(` JAD. `), c: new aln(` Questionário. `), d: new aln(` Brainstorming. `, 0), e: new aln(` Entrevista. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/2`, testRef: `22`, tema: `ciclo de vida do desenvolvimento de sistemas`,
+    prg: `3. Como modelo evolucionário de processo de software, uma característica da prototipagem é:`, a: new aln(` Configurar um processo interativo e rápido de desenvolvimento. `, 0), b: new aln(` Iniciar o processo de desenvolvimento pela implantação e pelos testes. `), c: new aln(` Não depender do estabelecimento e da definição de requisitos. `), d: new aln(` Gerar uma primeira versão do sistema completa e isenta de erros. `), e: new aln(` Descartar a participação do cliente no processo de desenvolvimento e de implantação. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/3`, testRef: `22`, tema: `por definir...`,
+    prg: `4. Identifique as afirmações verdadeiras: (1,5V)`, a: new aln(` Os requisitos não funcionais restringem o sistema que está sendo desenvolvido e o processo de desenvolvimento que deve ser usado e estão, frequentemente, relacionados às propriedades emergentes do sistema, de modo que se aplicam ao sistema na sua totalidade. `, 0), b: new aln(` A prototipação não é considerada uma técnica usada para validação de requisitos, pois ocorre na fase final do processo de desenvolvimento, representando a entrega do sistema aos utilizadores finais e clientes. `), c: new aln(` Pode-se considerar que a entrada para o estudo de viabilidade consiste em um conjunto preliminar de requisitos de negócios, um esboço da descrição do sistema e como esse sistema pretende apoiar os processos de negócios. `, 0), d: new aln(` O desenvolvimento em espiral baseia-se numa implementação inicial, expondo o resultado aos comentários do utilizador e refinando-o por meio de diversas versões, até que seja desenvolvido um sistema adequado. `, 0), e: new aln(` No desenvolvimento em cascata, os passos são ordenados em sequência e executados até a etapa final de teste, mesmo que o cliente esteja insatisfeito com determinado resultado intermediário. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/4`, testRef: `22`, tema: `por definir...`,
+    prg: `4. Identifique as afirmações verdadeiras: (1,5V)`, a: new aln(` Os requisitos não funcionais restringem o sistema que está sendo desenvolvido e o processo de desenvolvimento que deve ser usado e estão, frequentemente, relacionados às propriedades emergentes do sistema, de modo que se aplicam ao sistema na sua totalidade. `), b: new aln(` A prototipação não é considerada uma técnica usada para validação de requisitos, pois ocorre na fase final do processo de desenvolvimento, representando a entrega do sistema aos utilizadores finais e clientes. `), c: new aln(` Pode-se considerar que a entrada para o estudo de viabilidade consiste em um conjunto preliminar de requisitos de negócios, um esboço da descrição do sistema e como esse sistema pretende apoiar os processos de negócios. `), d: new aln(` O desenvolvimento em espiral baseia-se numa implementação inicial, expondo o resultado aos comentários do utilizador e refinando-o por meio de diversas versões, até que seja desenvolvido um sistema adequado. `), e: new aln(` No desenvolvimento em cascata, os passos são ordenados em sequência e executados até a etapa final de teste, mesmo que o cliente esteja insatisfeito com determinado resultado intermediário. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/5`, testRef: `22`, tema: `por definir...`,
+    prg: `4. Identifique as afirmações verdadeiras: (1,5V)`, a: new aln(` Os requisitos não funcionais restringem o sistema que está sendo desenvolvido e o processo de desenvolvimento que deve ser usado e estão, frequentemente, relacionados às propriedades emergentes do sistema, de modo que se aplicam ao sistema na sua totalidade. `, 0), b: new aln(` A prototipação não é considerada uma técnica usada para validação de requisitos, pois ocorre na fase final do processo de desenvolvimento, representando a entrega do sistema aos utilizadores finais e clientes. `), c: new aln(` Pode-se considerar que a entrada para o estudo de viabilidade consiste em um conjunto preliminar de requisitos de negócios, um esboço da descrição do sistema e como esse sistema pretende apoiar os processos de negócios. `), d: new aln(` O desenvolvimento em espiral baseia-se numa implementação inicial, expondo o resultado aos comentários do utilizador e refinando-o por meio de diversas versões, até que seja desenvolvido um sistema adequado. `, 0), e: new aln(` No desenvolvimento em cascata, os passos são ordenados em sequência e executados até a etapa final de teste, mesmo que o cliente esteja insatisfeito com determinado resultado intermediário. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/6`, testRef: `22`, tema: `por definir...`,
+    prg: `7. Considerando os conceitos de sistemas de informação, tecnologia da informação e engenharia de software, podemos afirmar que…: (1V)`, a: new aln(` Segundo Karl Bertalanffy, Sistema é um objeto de qualquer tipo, constituído de componentes interindependentes e inter-relacionados com o todo, com funções cujos resultados pertencem a cada componente. `), b: new aln(` O sistema de informação permite agregar valor às organizações, uma vez que se trata de um recurso valioso que repercute em todos os níveis da estrutura organizacional: estratégico, operacional e administrativo. `, 0), c: new aln(` Por ser inadequada, a utilização de protótipos para a validação dos requisitos não funcionais deve ser descartada. `), d: new aln(` A única técnica utilizada para levantamento de requisitos junto aos stakeholders do projeto são as entrevistas fechadas, em que o analista de requisitos regista as necessidades e as transforma em requisitos para a construção do sistema. `), e: new aln(` Dos sistemas de informação fazem parte elementos como: dados, informações, recursos materiais e tecnológicos, recursos humanos e procedimentos. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/7`, testRef: `22`, tema: `por definir...`,
+    prg: `8. Em Engenharia de Software temos o Desenvolvimento em Espiral, onde cada loop da espiral é dividido em quatro setores abaixo apresentados. Analise e a seguir assinale a alternativa que apresenta os conceitos corretos (a, b, c, d ou . I. Desenvolvimento de integração: O software que não puder ser comprado será desenvolvido, e os componentes e sistemas COTS (Commercial Off-The-Shelf) serão integrados, a fim de criar um sistema. A integração de sistemas, nesse modelo, pode ser parte do processo de desenvolvimento, em vez de uma atividade separada. II. Definição de objetivos: São definidos os objetivos específicos para essa fase do projeto. São identificadas as restrições para o processo e o produto, e é preparado um plano de gestão detalhado. São identificados os riscos do projeto e, dependendo dos riscos, poderão ser planeadas estratégias alternativas. III. Planeamento: O projeto é revisto e é tomada uma decisão sobre continuar com o próximo loop da espiral. Se a decisão for continuar, serão traçados os planos para a próxima fase do projeto. IV. Avaliação e redução de riscos: Para cada um dos riscos de projeto identificados, é realizada uma análise detalhada e são tomadas providências para reduzir esses riscos. Por exemplo, se houver um risco de os requisitos serem inadequados, poderá ser desenvolvido um protótipo. Nota: II - a identificação de riscos ocorre na fase de avaliação e redução de riscos; III - um protótipo é produzido logo no início, para ajudar a identificar requisitos,independente de qualquer risco.`, a: new aln(` Apenas I e II `), b: new aln(` I, II, III e IV `), c: new aln(` Apenas II, III e IV. `), d: new aln(` Apenas IV `), e: new aln(` Apenas III. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/8`, testRef: `22`, tema: `por definir...`,
+    prg: `9. Cada processo de desenvolvimento de software tem as suas particularidades, entretanto, podem-se destacar atividades que são comuns à maioria dos processos. Assim sendo, assinale o que é correto. `, a: new aln(` A análise tem como foco construir uma estratégia de solução. Os modelos construídos nessa fase devem ser verificados e validados. A verificação tem como objetivo assegurar que as necessidades do cliente são atendidas pelo sistema, enquanto a validação tem o objetivo de analisar se os modelos estão em conformidade com os requisitos definidos. `), b: new aln(` O levantamento de requisitos tem como objetivo compreender o problema a ser resolvido e identificar necessidades. Os requisitos podem ser funcionais, que definem as funcionalidades do sistema, ou não funcionais, que não estão relacionados às funcionalidades. `, 0), c: new aln(` O projeto produz uma descrição computacional do software sem restrições de tecnologia, ou seja, aspectos físicos e dependentes de implementação não são considerados. `), d: new aln(` Na fase de implementação, o sistema é codificado, ou seja, a descrição computacional obtida na fase de projeto é traduzida para código executável, por meio do uso de uma ou mais linguagens de programação. `), e: new aln(` Na fase de implantação, o sistema é testado, empacotado, distribuído e instalado no ambiente do cliente. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/9`, testRef: `22`, tema: `por definir...`,
+    prg: `10. Muito utilizada pelos engenheiros de software, a prototipação consiste na(o) … (1V)[imagem]`, a: new aln(` Análise dos custos e dos riscos de desenvolvimento, com base nos requisitos iniciais. `), b: new aln(` Decisão de prosseguir ou não na direção de um sistema concluído, com base nos comentários do cliente. `, 0), c: new aln(` Coleta inicial dos requisitos e no planeamento do projeto, com base no grupo de programadores envolvidos. `), d: new aln(` Procedimento estruturado que avalia os requisitos finais de um sistema em fase de testes. `), e: new aln(` Processo que capacita o desenvolvedor a criar um modelo do software que será implementado. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/10`, testRef: `22`, tema: `por definir...`,
+    prg: `11. Requisitos não funcionais são agrupados em 3 grandes subgrupos. Um deles possui a seguinte  definição: A definição apresentada refere-se ao subgrupo requisitos … (1V) [imagem abaixo!]`, a: new aln(` Internos. `), b: new aln(` De produto. `, 0), c: new aln(` Externos. `), d: new aln(` Extrapolados. `), e: new aln(` Organizacionais. `), imgs: [[require('../testespics/es1/t1/t1_22_11.jpeg')]], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/11`, testRef: `22`, tema: `ciclo de vida do desenvolvimento de sistemas`,
+    prg: `12. A respeito de requisitos no contexto de engenharia de software, assinale a alternativa que apresenta um requisito de utilizador. (1V)`, a: new aln(` No último dia útil de cada mês, deve ser gerado um resumo dos medicamentos prescritos, os respetivos custos e as prescrições de cada clínica. `), b: new aln(` Após as 17h30 do último dia útil do mês, o sistema deve gerar automaticamente o relatório para impressão. `), c: new aln(` O sistema deve gerar relatórios gerenciais mensais que mostrem o custo dos medicamentos prescritos por cada clínica durante aquele mês. `, 0), d: new aln(` Se os medicamentos estão disponíveis em diferentes unidades de dosagem, devem ser criados relatórios separados para cada unidade. `), e: new aln(` O acesso aos relatórios de custos deve ser restrito a usuários autorizados por uma lista de controle de gerenciamento de acesso. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `22/12`, testRef: `22`, tema: `ciclo de vida do desenvolvimento de sistemas`,
+    prg: `13. No que se refere ao modelo de desenvolvimento em Cascata (Waterfall Model) definido como um modelo de desenvolvimento sequencial, assinale a(s) afirmativa(s) correta(s)? `, a: new aln(` O modelo em cascata ou clássico também pode ser conhecido como "Bottom-UP". `), b: new aln(` As fases do modelo são como uma cascata, mantendo o fluxo do trabalho de cima para baixo, não podendo voltar às fases iniciais, mas somente seguir um fluxo constante para a frente (como uma cascat. `, 0), c: new aln(` Este modelo está defasado e não é mais utilizado, tendo sido descontinuado desde a década de 90. `), d: new aln(` A saída produzida em cada fase será utilizada como entrada da fase seguinte, tornando o modelo em cascata um modelo simples de entender e controlar. `, 0), e: new aln(` As fases do modelo em cascata, segundo Royce, seguem a seguinte ordem: (1) Definição de Requisitos, (2) Verificação, (3) Projeto, (4) Implementação e (5) Manutenção. `), imgs: [], fim: ""
+  })
+]
 
+let esT1_23 = [
+  new Prg({
+    cadNome: `Es1`, pId: `0/0`, testRef: `0`, tema: ``,
+    prg: `1. Dentro da Engenharia de Software, encontramos uma gama de conceitos. Com base nisso, analise e assinale a(s) afirmação(ções) correta(s) sobre Processos de Software.`, a: new aln(`Podemos definir um processo de software como um conjunto de atividades relacionadas quelevam à produção de um produto de software. `, 0), b: new aln(`A definição das funcionalidades do software e as restrições ao seu funcionamento são atividadesexcluídas do processo de software. `), c: new aln(`A validação de software também é uma atividade presente no processo de software.`, 0), d: new aln(`Os processos de software são complexos e, como todos os processos intelectuais e criativos, dependem de pessoas para tomar decisões e fazer julgamentos.Não existe um processo ideal, a maioria das organizações desenvolveseus próprios processos de desenvolvimento de software. `, 0), e: new aln(`No desenvolvimento em cascata, os passos são ordenados em sequência e executados até a etapa final de teste, mesmo que o cliente esteja insatisfeito com determinado resultado`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `0/1`, testRef: `0`, tema: ``,
+    prg: `2. "É baseado na idéia de desenvolvimento de uma implementação inicial, expondo o resultado aos comentários do utilizador e refinando esse resultado por meio de diversas versões, até que seja desenvolvido um sistema adequado". 
+  
+  No âmbito do processo de software, trata-se de...`, a: new aln(`Modelo em cascata.`), b: new aln(`Desenvolvimento em espiral.`), c: new aln(`Desenvolvimento evolucionário. `, 0), d: new aln(`Programação estruturada.`), e: new aln(`Engenharia de software baseada em componentes. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `0/2`, testRef: `0`, tema: ``,
+    prg: `3. Considerando os conceitos de sistemas de informação e de tecnologia da informação, assinale os itens verdadeiros:`, a: new aln(`Segundo Karl Bertalanffy Sistema é um objeto de qualquer tipo, constituído de componentes inter-relacionados com o todo e inter-dependentes, com funções cujos resultados pertencem a cada componente.`), b: new aln(`O sistema de informação permite agregar valor às organizações, uma vez que se trata de um recurso valioso e repercute em todos os níveis da estrutura organizacional: estratégico, operacional e administrativo.`), c: new aln(`A tomada de decisão nas organizações é facilitada pela utilização da tecnologia da informação, que permite criar, administrar e manter a gestão da informação de uma instituição por meio de dispositivos para acesso, operação e armazenamento de dados.`, 0), d: new aln(`O conceito de "Informação" é definido como o tratamento e organização dos dados para definir o conhecimento empresarial.`), e: new aln(`Dos sistemas de informação fazem parte elementos como: dados, informações, recursos X materiais e tecnológicos, recursos humanos e procedimentos.`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es1`, pId: `0/3`, testRef: `0`, tema: ``,
+    prg: `4. A Engenharia de Software ... (assinale a(s) afirmação(ões) correcta(s):`, a: new aln(`Não visa o desenvolvimento de teorias e fundamentações, preocupando-se unicamente com as práticas de desenvolvimento de software.`), b: new aln(`Tem como foco o tratamento dos aspectos de desenvolvimento de software, abstraindo-se dossistemas baseados em computadores, incluindo hardware e software.`), c: new aln(`Tem como métodos as abordagens estruturadas para o desenvolvimento de software que incluem os modelos de software, notações, regras e maneiras de desenvolvimento.`, 0), d: new aln(`Segue principios, tais como, o da Abstração, que identifica os aspectos importantes sem ignoraros detalhes e o da Composição, que agrupa as atividades em um único processo para distribuiçãoaos especialistas.`, 0), e: new aln(`Define que o modelo de prototipagem deve, necessariamente. descartar os protótipos construídos, dessa forma,essas metodologias costumam ser mais dispendiosas.`), imgs: [], fim: ""
+  })
+]
 
 //Exame
 
@@ -4859,7 +4933,7 @@ let bd1t1 = [bd16, bd15, bd14];
 let bd2t2 = [mkEx1, bd2_t2_23, bd2_r_22, bd2_t2_22, bd2_r_16, bd2_t2_16, bd2_r_14];
 let bd2t1 = [bd2_t1_23, bd2_t1_19];
 
-let esTs1 = [es14, es15];
+let esTs1 = [esT1_23, esT1_22, es14, es15];
 let esTs2 = [es_t2_22, es_t2_21, es_mt2_17, es1_ex_23, es1_ex_21, es1_ex_20, es1_ex2_20];
 
 let es2T1 = [es2_t1_21, es2_t1_22];

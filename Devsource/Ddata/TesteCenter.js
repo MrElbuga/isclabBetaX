@@ -40,8 +40,10 @@ cad_Bd2.T1nomes.push(...tsdata.tnomes_BD2T1);
 
 
 //ES1
-cad_Es1.Teste2.push(...bd1Tdata.es2T1);
+cad_Es1.Teste2.push(...bd1Tdata.esTs2);
+cad_Es1.Teste1.push(...bd1Tdata.esTs1);
 cad_Es1.T2Nomes.push(...tsdata.tnomesES1T2);
+cad_Es1.T1nomes.push(...tsdata.tnomesES1T1);
 
 //ES2
 
@@ -54,7 +56,8 @@ cad_Es2.T2Nomes.push(...tsdata.tnomesES2T2);
 
 //console.log(cad_Es1.Teste1);
 
-let allCads = [cad_Bd2, cad_Bd1, cad_Es1, cad_Es2, cad_IA];
+let allCads = [cad_Bd2, cad_Es1, cad_IA];
+//let allCads = [cad_Bd2, cad_Bd1, cad_Es1, cad_Es2, cad_IA];
 let curr_temas = [];
 let finalTest = [];
 
@@ -87,7 +90,7 @@ curr_temas = collect_Temas(cad_Bd2.Teste2);
 
 console.log("curr_temas");
 
-console.log(curr_temas);
+//console.log(curr_temas);
 
 let choosenT = [...curr_temas];
 
@@ -146,9 +149,9 @@ function setTama(booleano) {
 
 function updateTest() {
     finalTest = RandLab.randomizerStart(aleatorio, tudox, choosenT, tamanho);
-    console.log("COnsul: " + JSON.stringify(finalTest));
+    /*console.log("COnsul: " + JSON.stringify(finalTest));
     console.log("tUDOXX: " + JSON.stringify(tudox.length));
-    console.log("CHOOSEN: " + JSON.stringify(choosenT));
+    console.log("CHOOSEN: " + JSON.stringify(choosenT));*/
     return finalTest;
 }
 

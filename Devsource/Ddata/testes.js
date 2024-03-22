@@ -58,6 +58,8 @@ let tnomes_IAT2 = [
 
 // ES1
 let tnomesES1T1 = [
+  newTesteData(2023),
+  newTesteData(2022),
   newTesteData(2015),
   newTesteData(2014),
 ];

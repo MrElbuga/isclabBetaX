@@ -11,15 +11,14 @@ import {
   TouchableOpacity,
   FlatList,
   SafeAreaView,
-  Image,
-  Modal,
+  Image, Platform,
+  Modal, AppState
 } from "react-native";
 
 //import RespUi from './Devsource/components/respUi';
 import estilo, { normalize } from "./Devsource/estilo";
 //Dados
 import { sortear } from "./Devsource/Ddata/dados";
-import { todos, tnomes } from "./Devsource/Ddata/testes";
 import RespUi from "./Devsource/components/respUi";
 import BtnIndex from "./Devsource/components/btnIndex";
 import ImgUi from "./Devsource/components/imgUi";
@@ -122,7 +121,7 @@ export default function App() {
 
   useEffect(() => {
 
-    console.log("Curasx!");
+    // console.log("Curasx!");
     sync_Materia();
 
     setCust_testes(TScenter.getTemas());
@@ -150,14 +149,10 @@ export default function App() {
 
 
 
-
-
-
   ///Name checer
   useEffect(() => {
 
-
-    pergtrack();
+    // pergtrack();
 
     if (cur_cad.Teste1.length < 1) {
 
@@ -231,22 +226,47 @@ export default function App() {
       today.getFullYear();
 
     if (
-      today.getDate() >= 15 &&
-      parseInt(today.getMonth() + 1) == 8 &&
-      today.getFullYear() >= parseInt("2023")
+      today.getDate() > 22 &&
+      parseInt(today.getMonth() + 1) == 3 &&
+      today.getFullYear() >= parseInt("2024")
     ) {
       setTesting(false);
       BackHandler.exitApp();
     }
 
-    if (today.getFullYear() > parseInt("2023")) {
+    if (today.getFullYear() >= parseInt("2024")) {
       setTesting(false);
+      console.log('Ecra activoYYY');
       BackHandler.exitApp();
 
 
     }
   };
   //Ola();
+
+  //Status checker
+  useEffect(() => {
+    // Increment count whenever the app becomes active
+    const handleAppStateChange = (nextAppState) => {
+      if (nextAppState === 'active') {
+
+        Ola();
+        //  setCount((prevCount) => prevCount + 1);
+      }
+
+      // console.log("Status: " + cnt)
+    };
+
+    // Add event listener for app state changes
+    AppState.addEventListener('change', handleAppStateChange);
+
+    /*
+    // Remove event listener when component unmounts
+    return () => {
+      AppState.removeEventListener('change', handleAppStateChange);
+    };*/
+  });
+
   // State to store count value
 
   const incrementCount = () => {
@@ -455,7 +475,7 @@ export default function App() {
 
 
     } else {
-      console.log("custo");
+      //console.log("custo");
       setCTDados(customData);
     }
 
@@ -1116,8 +1136,8 @@ export default function App() {
                   fontWeight: "bold",
                 }}
               >
-                Ver 0.3.1
-                -Rever Por Temas-
+                Ver Beta: 0.3
+
               </Text>
             </View>
           </Modal>
