@@ -45,8 +45,11 @@ cad_Es1.T2Nomes.push(...tsdata.tnomesES1T2);
 
 //ES2
 
-cad_Es2.Teste2.push(...bd1Tdata.es2T1);
-cad_Es2.T2Nomes.push(...tsdata.tnomesES2T1);
+cad_Es2.Teste1.push(...bd1Tdata.es2T1);
+cad_Es2.Teste2.push(...bd1Tdata.es2T2);
+
+cad_Es2.T1nomes.push(...tsdata.tnomesES2T1);
+cad_Es2.T2Nomes.push(...tsdata.tnomesES2T2);
 
 
 //console.log(cad_Es1.Teste1);

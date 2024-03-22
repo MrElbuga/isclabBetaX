@@ -81,6 +81,14 @@ let tnomesES2T1 =
     newTesteData(2022)
   ]
 
+let tnomesES2T2 =
+  [
+    newTesteData(2023),
+    newTesteData(2022, "R"),
+    newTesteData(2022),
+  ]
+
+
 //arrayMixado
 
 //Mix 1
@@ -194,4 +202,4 @@ function testar() {
 
 let todos = [Bd.bd22, Bd.bd19, Bd.bd18, Bd.bd16, Bd.bd15, Bd.bd14];
 
-export { todos, tnomes_BD1T2 as tnomes, tnomesES1T1, tnomes_BD2T1, tnomes_BD1T1, testar, tnomesES1T2, tnomes_BD2T2, tnomes_IAT1, tnomes_IAT2, tnomesES2T1 };
+export { todos, tnomes_BD1T2 as tnomes, tnomesES1T1, tnomes_BD2T1, tnomes_BD1T1, testar, tnomesES1T2, tnomes_BD2T2, tnomes_IAT1, tnomes_IAT2, tnomesES2T1, tnomesES2T2 };

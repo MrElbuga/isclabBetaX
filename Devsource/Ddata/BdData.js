@@ -4603,6 +4603,257 @@ let es2_t1_22 =
   , Qual das alternativas ao lado, completa corretamente a lacuna? (0,5) `, a: new aln(` Sistema de Administração dos Recursos de Tecnologia da Informação.  `), b: new aln(` Counting Practices Manual (CPM).  `), c: new aln(` Métrica de qualidade.  `), d: new aln(` Análise de Pontos de Função (APF)  `, 0), e: new aln(` COCOMO. `), imgs: [], fim: ""
     })
   ];
+
+//ES2 teste 2
+
+let es2_t2_23 = [
+  new Prg({
+    cadNome: `Bd1`, pId: `0/0`, testRef: `0`, tema: ``,
+    prg: `1. Com base na Estrutura Analítica de Projeto (EAP) na figura abaixo, assinale a alternativa correta. (1 V)`, a: new aln(` É uma das ferramentas que o gerente de projeto dispõe para representar o escopo do projeto. `, 0), b: new aln(` Como essa EAP representa a sequência das atividades num projeto, conclui-se que a atividade S será realizada depois de R. `, 0), c: new aln(` "U" representa uma tarefa resumo. `), d: new aln(` "P" e "Q" são realizados em paralelo. `), e: new aln(` A EAP representa as mesmas informações de um cronograma. `), imgs: [require('../testespics/es2/t2/es2_t2_22_p1.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/1`, testRef: `0`, tema: ``,
+    prg: `2. No contexto da distribuição geográfica da computação em nuvem, a respeito de regiões e zonas de disponibilidade, é correto afirmar que: (1 V)`, a: new aln(` As zonas de disponibilidade e regiões correspondem ao mesmo conceito, mas as primeiras nunca ficam indisponíveis e, portanto, possuem assinatura mais cara que a segunda. `), b: new aln(` As zonas de disponibilidade são locais isolados dentro de cada região. `, 0), c: new aln(` Uma região corresponde a um país, e uma zona de disponibilidade a um estado, província ou cidade. `), d: new aln(` Uma região corresponde a um continente, e uma zona de disponibilidade a um país. `), e: new aln(` São abstrações lógicas para dividir recursos alocados aos clientes da computação em nuvem pelo mundo, pois o data center de cada provedor de nuvem fica no país da matriz. Uma região está contida em uma zona de disponibilidade. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/2`, testRef: `0`, tema: ``,
+    prg: `3. Analise as afirmativas a seguir sobre gestão de projetos e marque a alternativa correta. I- O gerente de projeto é indicado formalmente pela primeira vez no documento conhecido como declaração preliminar do escopo do projeto. II- Os principais stakeholders (pessoas, organizações e empresas que vão ser impactados com o decorrer do projeto) devem ser listados no documento conhecido como TAP (termo de abertura do projeto). (0,5 V)`, a: new aln(` Ambas as afirmativas estão corretas. `), b: new aln(` Somente a afirmativa I está correta. `), c: new aln(` Somente a afirmativa Il está correta. `, 0), d: new aln(` Nenhuma das afirmativas está correta. `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/3`, testRef: `0`, tema: ``,
+    prg: `4. De acordo com o PMBOK 6ª edição, os gerentes de projeto precisam empregar ações/comportamentos divididos em 2 aspectos para alcançarem o sucesso junto às equipes com as quais trabalham, encontrando o seu ezquilíbrio para cada situação. Esses aspectos e algumas ações/comportamentos a eles ligados são: (0,5 V)
+  
+  -Aspecto 1: Influência direta usando o poder posicional; Foco em sistemas e estruturas; Apoio em controles; Foco em metas de curto prazo; Pergunta como e quando; Foco nos resultados; Foco em questões operacionais e solução de problemas. 
+  
+  − Aspecto 2: Influência como guia e colaborador usando o poder relacional; Foco em relacionamento com pessoas; Apoio baseado em inspirar confiança; Foco em visão de longo alcance;
+  
+   Pergunta o quê e porquê; Foco no horizonte; Foco em visão, alinhamento, motivação e inspiração. 
+  
+  Os aspetos 1 e 2 correspondem, correta e respectivamente, a: 
+  
+  `, a: new aln(` Estratégia e Planejamento. `), b: new aln(` Gestão e Liderança. `, 0), c: new aln(` Liderança e Organização. `), d: new aln(` Competência Técnica e Capacidade de Negociação. `), e: new aln(` Estratégia e Competência Técnica. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/4`, testRef: `0`, tema: ``,
+    prg: `5. A gestão bem sucedida de projetos de software começa com uma estimativa precisa do esforço de desenvolvimento. O esforço é entendido como: (0,5 V)`, a: new aln(` O custo e tempo de desenvolvimento que são estimados, usando-se apenas uma experiência do profissional envolvido. `), b: new aln(` A quantidade de horas de trabalho a ser executada nas atividades de desenvolvimento do projeto que entregará, ao seu final, o produto/serviço de software. `, 0), c: new aln(` Uma das principais atividades do planeamento de software. `), d: new aln(` Uma funcionalidade provida pelo software ao utilizador para processamento de dados. `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/5`, testRef: `0`, tema: ``,
+    prg: `6. Assinale a opção que indica o processo do PMBOK 6 que monitora e regista resultados da execução de atividades de gestão da qualidade para avaliar o desempenho e garantir que as saídas do projeto sejam completas, corretas e atendam às expectativas do cliente. (1 V)`, a: new aln(` Validar a qualidade das entregas `), b: new aln(` Gerenciar a qualidade `, 0), c: new aln(` Controlar a qualidade `), d: new aln(` Garantir a qualidade `), e: new aln(` Planear a gestão da qualidade `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/6`, testRef: `0`, tema: ``,
+    prg: `7. De acordo com o PMBOK, 6a edição, a definição “[...] é um esforço temporário empreendido para criar um produto, serviço ou resultado único.” corresponde a: (1 V)`, a: new aln(` Mudança política. `), b: new aln(` Demanda de mercado. `), c: new aln(` Projeto.`, 0), d: new aln(` Gestão. `), e: new aln(` Lançamentodo projeto. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/7`, testRef: `0`, tema: ``,
+    prg: `8. Sobre o PMBOK (Project Management Body of Knowledge Guid, considere as seguintes afirmações: (1 V)
+  
+  1- O "Termo de Abertura" é criado para a formalização do início do projeto, dentro de um dos processos do grupo de processos "Iniciação". 
+  
+  2- A área de conhecimento “Gestão do escopo do projeto" inclui os processos para planear, estimar e realizar o projeto dentro do prazo planeado. 
+  
+  3- O grupo de processos de "Monitoramento e Controlo" tem como objetivo desenvolver um plano de ação que permita a todos os interessados compreender claramente o trabalho que será realizado. 
+  
+  4- A identificação de riscos é um dos processos do grupo de processos de "Execução". 
+  
+  5- O sequenciamento de atividades é um dos processos do grupo de processos de "Planeamento".
+  
+   Assinale a alternativa correta. `, a: new aln(` As afirmativas 1, 2, 3, 4 e 5 são verdadeiras. `), b: new aln(` Somente as afirmativas 2, 3 e 4 são verdadeiras. `), c: new aln(` Somente as afirmativas 1, 4 e 5 são verdadeiras. `), d: new aln(` Somente as afirmativas 2 e 3 são verdadeiras. `), e: new aln(` Somente as afirmativas 1 e 5 são verdadeiras. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/8`, testRef: `0`, tema: ``,
+    prg: `9. Todos os projetos têm partes interessadas que são afetadas ou podem afetar o projeto de forma mais ou menos significativa, a depender do tipo de influência. Pesquisas acadêmicas e análises de desastres em projetos com alta visibilidade destacam a importância de uma abordagem estruturada para identificação, priorização e engajamento das partes interessadas. O PMBOK estabelece um processo específico de desenvolvimento de abordagens para envolver as partes interessadas do projeto, com base nas suas necessidades, expectativas, interesses e potencial impacto. Algumas das ferramentas técnicas de representação de dados indicada para esse processo são: (1 V)`, a: new aln(` Fluxogramas. `, 0), b: new aln(` Diagramas de afinidades.`, 0), c: new aln(` Diagramas de caso de uso.`), d: new aln(` Mapeamento mental. `, 0), e: new aln(` Diagramas de dispersão. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/9`, testRef: `0`, tema: ``,
+    prg: `10. Dentre os processos que fazem parte da área de conhecimento de gestão do tempo (mais recentemente conhecido como gestão do cronogram no âmbito de gestão de projetos, existe um que visa identificar e documentar as relações de dependência entre as atividades. Esse processo é: (1 V)`, a: new aln(` Definir as atividades. `), b: new aln(` Sequenciar as atividades. `, 0), c: new aln(` Desenvolver o cronograma. `), d: new aln(` Elaborar o EAP. `), e: new aln(` Especificar as atividades, `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/10`, testRef: `0`, tema: ``,
+    prg: `11. Analise o gráfico do ciclo de vida de um projeto proposto pelo guia PMBOK. Sobre as fases do ciclo de vida de um projeto, assinale a seguir a afirmação correta: (0,5 V)`, a: new aln(` O termo de abertura é instituído após a etapa de organização e preparação. `), b: new aln(` A fase de execução do trabalho é onde se verifica o menor emprego de recursos. `), c: new aln(` O arquivamento dos documentos do projeto é realizado na fase de execução do trabalho. `), d: new aln(` Os custos de mudança tendem a aumentar conforme o andamento do projeto.`, 0), e: new aln(` O desenho do gráfico demonstra um atraso na fase de encerramento. `), imgs: [require('../testespics/es2/t2/es2_t2_22_p11.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/11`, testRef: `0`, tema: ``,
+    prg: `12. O PMBOK apresenta várias áreas/planos de gestão para um projeto. Cada área/plano é segmentada(o) em processos cujos fluxos de dados possuem entradas, ferramentas técnicas e saídas.
+  
+   No Plano de Gestão de Escopo existe um processo denominado Validar Escopo, que é executado para: (1 V)`, a: new aln(` Formalizar a aceitação das entregas concluídas do projeto. `), b: new aln(` Subdividir as entregas e o trabalho do projeto em componentes menores e mais facilmente gerenciáveis. `), c: new aln(` Monitorar o status do escopo do projeto e do produto e gerenciar as mudanças feitas na linha de base do escopo. `), d: new aln(` Determinar, documentar e gerenciar as necessidades e requisitos das partes interessadas a fim de atender aos objetivos do projeto. `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/12`, testRef: `0`, tema: ``,
+    prg: `13. De acordo com o PMBOK (Project Management Book of Knowledg, o processo que está inserido no grupo de processos de execução e que tem como função assegurar a coleta, a criação, a distribuição, o armazenamento, a recuperação, a gestão, o monitoramento e a disposição final das informações do projeto, de forma oportuna e adequada, é: (1 V)`, a: new aln(` Adquirir recursos. `), b: new aln(` Gerenciar a equipe. `), c: new aln(` Gerenciar a qualidade. `), d: new aln(` Gerenciar as comunicações. `), e: new aln(` Gerenciar o conhecimento do projeto. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/13`, testRef: `0`, tema: ``,
+    prg: `14. A melhoria do processo de software decorre nos seguintes estágios: (1 V)`, a: new aln(` Análise do processo atual para avaliação e identificação de gargalos e pontos fracos.`, 0), b: new aln(`  Mitigação das fraquezas identificadas.`), c: new aln(` Medição dos atributos do processo atual para aprimoramentos futuros. `, 0), d: new aln(` Consolidação dos processos em melhores práticas e modelos de qualidade. `), e: new aln(` Implementação das mudanças identificadas na análise. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/14`, testRef: `0`, tema: ``,
+    prg: `15. Quanto a gestão de projetos, temos como uma das suas áreas de conhecimento a gestão de escopo. Relacione as colunas a seguir: (1 V)I. Planear a gestão do escopo II. Coletar os requisitos III. Criar a EAP A. Define e documenta as necessidades das partes interessadas. B. Define e documenta como o escopo será definido, validado e controlado. C. Subdivide os produtos e o trabalho em componentes mais gerenciáveis. Assinale a alternativa que apresenta a relação correta entre as Colunas 1 e 2. `, a: new aln(` I-C, II-B, III-A `), b: new aln(` I-A, II-B, III-C `), c: new aln(` I-B, II-A, III-C `, 0), d: new aln(` I-C, II-A, III-B `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/15`, testRef: `0`, tema: ``,
+    prg: `16. A figura representa a melhoria do processo de software, ande a mudança decorre através dos processos e atividades abaixo. Os processos e/ou atividades A, B, C e D em falta, correspondem respetivamente a: (1 V)`, a: new aln(` Modelo de Processo; Plano de Treinamento; Priorizar aprimoramentos; Modelo de Processo revisto. `), b: new aln(` Plano de Treinamento; Priorizar aprimoramentos; Modelo de Processo; Modelo de Processo revisto. `), c: new aln(` Priorizar aprimoramentos; Modelo de Processo; Plano de Treinamento; Modelo de Processo revisto. `, 0), d: new aln(` Modelo de Processo revisto; Priorizar aprimoramentos; Modelo de Processo; Plano de Treinamento. `), e: new aln(``), imgs: [require('../testespics/es2/t2/es2_t2_22_p16.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/16`, testRef: `0`, tema: ``,
+    prg: `17. “Os padrões de projeto tornam mais fácil reutilizar soluções e arquiteturas bem-sucedidas para construir softwares orientados a objetos, de forma mais flexível e fácil de manter.”  https://www.devmedia.com.br/conheca-os-padroes-de-projeto/957/ (Nov.2018) (1 V)Abaixo assinale quais são padrões de projeto comportamentais? `, a: new aln(` Command, Observer e Interator. `, 0), b: new aln(` Singleton, Visitor e State. `), c: new aln(` Prototype, Adapter e Bridge. `), d: new aln(` Memento, Builder e Mediator. `), e: new aln(` Proxy, Singleton e Decorator. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/17`, testRef: `0`, tema: ``,
+    prg: ` 18. Sobre a gestão de riscos no contexto da gestão de projetos de software, julgue verdadeira (V) ou falsa (F) cada uma das afirmações abaixo e assinale ao lado a sequência correta: (1 V)I. A categoria de riscos de projeto envolve os riscos que afetam o cronograma ou os recursos de projeto. II. A categoria de riscos de produto envolve riscos que afetam a qualidade ou o desempenho do software que está sendo desenvolvido. III. A categoria de riscos de negócio envolve riscos que afetam a organização que desenvolve ou adquire o software. A sequência correta é: `, a: new aln(` I - V; II - F; III - F. `), b: new aln(` I - F; II - F; III - V. `), c: new aln(` I - V; II - V; III - V. `, 0), d: new aln(` I - F; II - V; III - F. `), e: new aln(` I - V; II - V; III - F. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/18`, testRef: `0`, tema: ``,
+    prg: `19. O CVT pode ser esquematizado em sete estágios distintos, onde cada estágio do ciclo representa uma série de circunstâncias pelas quais toda tecnologia tem que passar no período da sua existência, nomeadamente: (1 V)`, a: new aln(` Percursores, Evolução, Desenvolvimento, Maturidade, Pretendentes, Obsolescência, Antiguidade. `), b: new aln(` Percursores, Invenção, Desenvolvimento, Maturidade, Pretendentes, Obsolescência, Antiguidade. `, 0), c: new aln(` Percursores, Evolução, Desenvolvimento, Maturidade, Pretendentes, Antiguidade, Obsolescência. `), d: new aln(` Invenção, Percursores, Desenvolvimento, Pretendentes, Maturidade, Obsolescência, Antiguidade. `), e: new aln(` Percursores, Invenção, Pretendentes, Desenvolvimento, Maturidade, Obsolescência, Antiguidade. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/19`, testRef: `0`, tema: ``,
+    prg: `20. As opções a seguir exemplificam aplicações da tecnologia conhecida como “internet das coisas” (IoT), a qual possibilita conectar objetos do nosso dia a dia à rede mundial de computadores, à exceção de uma.
+  
+  [Imagem abaixo]
+  
+   Assinale-a. (1 V)`, a: new aln(`Tênis inteligente `), b: new aln(` CD player portátil `, 0), c: new aln(` Óculos conectados `), d: new aln(` Refrigerador High Tech `), e: new aln(` Smart TV`), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/20`, testRef: `0`, tema: ``,
+    prg: `21. O modelo de MPS.BR (Melhoria de Processo do Software Brasileiro) segue as principais abordagens internacionais para definição, avaliação e melhoria de processos de software para atender de forma adequada ao contexto das empresas brasileiras. Sobre esse modelo, é correto afirmar que: (1 V)`, a: new aln(` Foi criado no Uruguai para atender ao MERCOSUL e melhorado no Brasil pela Petrobras. `), b: new aln(` Não possui forte interação Universidade-Empresa. `), c: new aln(` Possui avaliação anual das empresas implantadas. `), d: new aln(` Seu principal ponto fraco é não possuir compatibilidade plena com CMMI e com normas ISO/IEC. `), e: new aln(` Possui sete níveis de maturidade, o que possibilita uma implantação mais gradual e adequada a pequenas empresas. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/21`, testRef: `0`, tema: ``,
+    prg: `22. Analise as seguintes afirmativas sobre a gestão de projetos alinhada às práticas do PMI.
+  
+  I. Escopo é o número de unidades de trabalho necessárias para completar um conjunto de atividades. 
+  
+  II. Encerramento administrativo representa a produção, coleta e disseminação de informações para formalizar a conclusão do projeto.
+  
+   III. Evento de risco representa uma ocorrência que pode afetar o projeto, tanto para melhor, quanto para pior. Marque a alternativa CORRETA: `, a: new aln(` Apenas as afirmativas I e II são verdadeiras. `), b: new aln(` Apenas as afirmativas I e III são verdadeiras. `), c: new aln(` Todas as afirmativas são verdadeiras. `), d: new aln(` Apenas as afirmativas II e III são verdadeiras. `, 0), e: new aln(` Todas as afirmativas são falsas. `), imgs: [], fim: ""
+  })
+];
+
+
+let es2_r_23 = [
+  new Prg({
+    cadNome: `Es2`, pId: `2/0`, testRef: `2`, tema: ``,
+    prg: `1. Em Engenharia de Software são corretos os seguintes conceitos: (1,0 V)`, a: new aln(` Elicitação, modelagem, negociação e gestão, são as fases em que decorre a engenharia de requisitos. `, 0), b: new aln(` O papel do SQA (Software Quality Assuranc é monitorar como a equipe de desenvolvimento de software quantifica as suas atividades. `), c: new aln(` A Teoria V define que teste de software é uma atividade de verificação, validação e viabilidade (V&V&V). `), d: new aln(` O modelo de medição Goal-Question-Metric (GQM) proposto por Basili, consiste de três passos: Definir os objetivos; Formular as questões e Identificar as métricas de melhoria de processo. `, 0), e: new aln(` Medições de processo e de produto podem ser usadas para quantificar perdas e ganhos de melhoria do processo. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `2/1`, testRef: `2`, tema: ``,
+    prg: `2. Para melhorar a qualidade do software deve-se, primeiro, melhorar os atributos do processo que serão usados na produção do mesmo, tais como…? (1,0 V)`, a: new aln(` Modularidade `), b: new aln(` Robustez `, 0), c: new aln(` Integridade `), d: new aln(` Confiança `, 0), e: new aln(` Visibilidade `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `2/2`, testRef: `2`, tema: ``,
+    prg: `3. É verdadeiro que: (1,0 V)`, a: new aln(` A fase de mudança, na melhoria de processo de software, possui 5 etapas principais: identificação das melhorias, priorização de melhorias, introdução da mudanças, treinamento e ajustes. `, 0), b: new aln(` De acordo com Rodney Brooks, diretor do Laboratório de Inteligência Artificial e Ciência da Computação do MIT, a qualidade do software é garantida por certas características tais como, funcionalidade, confiabilidade, manutenibilidade e eficiência. `), c: new aln(` As métricas públicas e as privadas constituem categorias de métricas de produto de software cuja função é caracterizar, avaliar, prever e aperfeiçoar o processo de software. `, 0), d: new aln(` No modelo cascata a engenharia de requisitos é aplicada na fase de testes ao sistema. `), e: new aln(` Reengenharia de Software é a necessidade se adaptar um sistema existente, quando esse já não corresponde eficientemente aos requisitos da organização, corrigindo erros, adicionando novas funcionalidades, melhorando a performance e o desempenho, adaptando-o à novas plataformas de hardware e de software. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `2/3`, testRef: `2`, tema: ``,
+    prg: `4. O processo de Gestão de Configuração de Software é definido por quatro funções básicas, a saber: (1,0 V)`, a: new aln(` Armazenagem, Utilização, Alteração e Personalização. `), b: new aln(` Classificação, Agrupamento, Utilização e Manipulação. `), c: new aln(` Identificação, Documentação, Controlo e Auditoria. `, 0), d: new aln(` Públicas, Privadas, Atribuídas e Herdadas. `), e: new aln(` Utilização, Sistema, Ambiente e Desempenho. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `2/4`, testRef: `2`, tema: ``,
+    prg: `5. Analise a veracidade das afirmações (V, X e Z) sobre Gestão de projetos de software: 
+  
+  V - Uma boa gestão de projetos de software é essencial, caso os projetos de engenharia de software devam ser desenvolvidos no prazo e dentro do orçamento.
+  
+   X - A gestão de software é igual a outras gestões de engenharia. Os processos de software são tão maduros quanto os processos de engenharia tradicionais. 
+  
+  Z - Atualmente, a gestão de riscos é reconhecida como uma das menos importantes tarefas de gestão de projetos, a qual envolve a identificação e a avaliação dos riscos do projeto para estabelecer a probabilidade de que eles ocorram e as consequências para o projeto caso esses riscos ocorram. 
+  
+  Deve-se fazer planos para evitar, gerir ou lidar com riscos suscetíveis quando, e se, eles surgirem. Escolha a alternativa correta: (1,0 V)`, a: new aln(` V e X são falsas; Z é verdadeira. `), b: new aln(` X e Z são falsas; V é verdadeira. `), c: new aln(` V, X e Z são falsas. `, 0), d: new aln(` Z e V são falsas; X é verdadeira. `), e: new aln(` V, X e Z são verdadeiras. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `2/5`, testRef: `2`, tema: ``,
+    prg: `6. Um dos primeiros passos para controlar a mudança é identificar os itens de software a serem controlados. Isso envolve, entre outros elementos, entender que a configuração de software se trata de uma: (1,0 V)`, a: new aln(` Agregação ou item de hardware ou software ou ambos projetados para serem geridos como uma única entidade. `), b: new aln(` Instância identificada de um item de software. `), c: new aln(` Versão específica de um item que foi acordada como tal. `), d: new aln(` Versão formalmente aprovada de um item que é formalmente designado e corrigido em um momento específico durante o ciclo de vida do item. `, 0), e: new aln(` Característica funcional e física do hardware ou software, conforme estabelecido na documentação técnica ou obtido em um produto. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `2/6`, testRef: `2`, tema: ``,
+    prg: `7. Com base no guia PMBOK, assinale a opção correta, acerca dos processos de iniciação e de planeamento de projetos. (0,5 V) `, a: new aln(` A elaboração da estrutura analítica do projeto faz parte do processo denominado definir escopo. `), b: new aln(` Segurança, performance e confiabilidade são exemplos de requisitos funcionais do projeto. `), c: new aln(` O nível mais elevado da estrutura analítica do projeto é denominado de pacote de trabalho. `, 0), d: new aln(` No processo de planear a gestão do escopo, não se deve descartar a possibilidade de criação de um comitê de controlo de mudanças. `), e: new aln(` Com a finalidade de primar pela satisfação do cliente, o responsável pela execução do projeto deve entregar mais do que o solicitado pelo cliente. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `2/7`, testRef: `2`, tema: ``,
+    prg: `8. A Gestão de Configuração de Software e o Processo de Gestão de Mudança, baseiam-se nos seguintes padrões: (1,0 V)`, a: new aln(` IEEE (padrões ANSI/IEEE 730-1984 e 983-1986). `), b: new aln(` ISO 9000-3 (NBR 9000-3). `), c: new aln(` DoD-STD-2167 (Department of Defense Standard 2167A), que aborda o desenvolvimento de software. `, 0), d: new aln(` SPICE – Software Process Improvement and Capability determination (ISO / IEC 15504). `), e: new aln(` IEEE/IEA 12207, que une práticas comerciais com padrões DoD. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `2/8`, testRef: `2`, tema: ``,
+    prg: `9. Abaixo são apresentados os 4 passos para realizar uma SQA estatística e criar um processo adaptativo de engenharia de software. 
+  
+  Analise os passos e assinale a opção que representa a ordem correcta dos factos: (0,5 V)
+  
+  1- Considerar que 20% do código tem 80% dos defeitos. 
+  
+  2- Depurar o código até a sua causa subjacente. 
+  
+  3- Colectar e categorizar os defeitos de software. 
+  
+  4- Corrigir os problemas que causaram os defeitos. `, a: new aln(` 2, 3, 1, 4. `), b: new aln(` 3, 2, 4, 1. `), c: new aln(` 3, 2, 1, 4. `, 0), d: new aln(` 3, 1, 2, 4. `), e: new aln(` 1, 4, 3, 2. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `2/9`, testRef: `2`, tema: ``,
+    prg: `10. Na gestão da qualidade do projeto, a comparação de práticas de projetos reais ou planeados, com as de projetos comparáveis, para identificar as melhores práticas, gerar ideias para melhorias e fornecer uma base para medir o desempenho, é denominada: (0,5 V)`, a: new aln(` Diagrama de Afinidades. `), b: new aln(` Projeto de Experimentos. `), c: new aln(` Benchmarking. `, 0), d: new aln(` Fluxograma. `), e: new aln(` Amostragem Estatística.`), imgs: [], fim: ""
+  })
+]
+
+let es2_t2_22 = [
+  new Prg({
+    cadNome: `Es2`, pId: `0/0`, testRef: `0`, tema: ``,
+    prg: `1. De acordo com o PMBOK 6ª edição, os gerentes de projeto precisam empregar ações/comportamentos divididos em 2 aspectos para alcançarem o sucesso junto às equipes com as quais trabalham, encontrando o seu ezquilíbrio para cada situação. Esses aspectos e algumas ações/comportamentos a eles ligados são: (0,5 V)− Aspecto 1: Influência direta usando o poder posicional; Foco em sistemas e estruturas; Apoio em controles; Foco em metas de curto prazo; Pergunta como e quando; Foco nos resultados; Foco em questões operacionais e solução de problemas. − Aspecto 2: Influência como guia e colaborador usando o poder relacional; Foco em relacionamento com pessoas; Apoio baseado em inspirar confiança; Foco em visão de longo alcance; Pergunta o quê e porquê; Foco no horizonte; Foco em visão, alinhamento, motivação e inspiração. Os aspetos 1 e 2 correspondem, correta e respectivamente, a: `, a: new aln(` Estratégia e Planejamento. `), b: new aln(` Gestão e Liderança. `, 0), c: new aln(` Liderança e Organização. `), d: new aln(` Competência Técnica e Capacidade de Negociação. `), e: new aln(` Estratégia e Competência Técnica. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/1`, testRef: `0`, tema: ``,
+    prg: `2. Analise as afirmativas a seguir sobre gestão de projetos e marque a alternativa correta. I- O gerente de projeto é indicado formalmente pela primeira vez no documento conhecido como declaração preliminar do escopo do projeto. II- Os principais stakeholders (pessoas, organizações e empresas que vão ser impactados com o decorrer do projeto) devem ser listados no documento conhecido como TAP (termo de abertura do projeto). (0,5 V)`, a: new aln(` Ambas as afirmativas estão corretas. `), b: new aln(` Somente a afirmativa I está correta. `), c: new aln(` Somente a afirmativa Il está correta. `, 0), d: new aln(` Nenhuma das afirmativas está correta. `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/2`, testRef: `0`, tema: ``,
+    prg: `3. A gestão bem sucedida de projetos de software começa com uma estimativa precisa do esforço de desenvolvimento. O esforço é entendido como: (0,5 V)`, a: new aln(` O custo e tempo de desenvolvimento que são estimados, usando-se apenas uma experiência do profissional envolvido. `), b: new aln(` A quantidade de horas de trabalho a ser executada nas atividades de desenvolvimento do projeto que entregará, ao seu final, o produto/serviço de software. `, 0), c: new aln(` Uma das principais atividades do planeamento de software. `), d: new aln(` Uma funcionalidade provida pelo software ao utilizador para processamento de dados. `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/3`, testRef: `0`, tema: ``,
+    prg: `4. Assinale a opção que indica o processo do PMBOK 6 que monitora e regista resultados da execução de atividades de gestão da qualidade para avaliar o desempenho e garantir que as saídas do projeto sejam completas, corretas e atendam às expectativas do cliente. (1 V)`, a: new aln(` Validar a qualidade das entregas `), b: new aln(` Gerenciar a qualidade `, 0), c: new aln(` Controlar a qualidade `), d: new aln(` Garantir a qualidade `), e: new aln(` Planear a gestão da qualidade `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/4`, testRef: `0`, tema: ``,
+    prg: `5. Todos os projetos têm partes interessadas que são afetadas ou podem afetar o projeto de forma mais ou menos significativa, a depender do tipo de influência. Pesquisas acadêmicas e análises de desastres em projetos com alta visibilidade destacam a importância de uma abordagem estruturada para identificação, priorização e engajamento das partes interessadas. O PMBOK estabelece um processo específico de desenvolvimento de abordagens para envolver as partes interessadas do projeto, com base nas suas necessidades, expectativas, interesses e potencial impacto. Algumas das ferramentas técnicas de representação de dados indicada para esse processo são: (1 V)`, a: new aln(` Fluxogramas. `, 0), b: new aln(` Diagramas de afinidades.`, 0), c: new aln(` Diagramas de caso de uso.`), d: new aln(` Mapeamento mental. `, 0), e: new aln(` Diagramas de dispersão. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/5`, testRef: `0`, tema: ``,
+    prg: `6. Analise as seguintes afirmativas sobre a gestão de projetos alinhada às práticas do PMI.I. Escopo é o número de unidades de trabalho necessárias para completar um conjunto de atividades. II. Encerramento administrativo representa a produção, coleta e disseminação de informações para formalizar a conclusão do projeto. III. Evento de risco representa uma ocorrência que pode afetar o projeto, tanto para melhor, quanto para pior. Marque a alternativa CORRETA: `, a: new aln(` Apenas as afirmativas I e II são verdadeiras. `), b: new aln(` Apenas as afirmativas I e III são verdadeiras. `), c: new aln(` Todas as afirmativas são verdadeiras. `), d: new aln(` Apenas as afirmativas II e III são verdadeiras. `, 0), e: new aln(` Todas as afirmativas são falsas. `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/6`, testRef: `0`, tema: ``,
+    prg: `7. Analise o gráfico do ciclo de vida de um projeto proposto pelo guia PMBOK. Sobre as fases do ciclo de vida de um projeto, assinale a seguir a afirmação correta: (0,5 V)`, a: new aln(` O termo de abertura é instituído após a etapa de organização e preparação. `), b: new aln(` A fase de execução do trabalho é onde se verifica o menor emprego de recursos. `), c: new aln(` O arquivamento dos documentos do projeto é realizado na fase de execução do trabalho. `), d: new aln(` Os custos de mudança tendem a aumentar conforme o andamento do projeto.`, 0), e: new aln(` O desenho do gráfico demonstra um atraso na fase de encerramento. `), imgs: [require('../testespics/es2/t2/es2_t2_22_p11.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/7`, testRef: `0`, tema: ``,
+    prg: `8. Dentre os processos que fazem parte da área de conhecimento de gestão do tempo (mais recentemente conhecido como gestão do cronogram no âmbito de gestão de projetos, existe um que visa identificar e documentar as relações de dependência entre as atividades. Esse processo é: (1 V)`, a: new aln(` Definir as atividades. `), b: new aln(` Sequenciar as atividades. `, 0), c: new aln(` Desenvolver o cronograma. `), d: new aln(` Elaborar o EAP. `), e: new aln(` Especificar as atividades, `), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/8`, testRef: `0`, tema: ``,
+    prg: `9. O PMBOK apresenta várias áreas/planos de gestão para um projeto. Cada área/plano é segmentada(o) em processos cujos fluxos de dados possuem entradas, ferramentas técnicas e saídas. No Plano de Gestão de Escopo existe um processo denominado Validar Escopo, que é executado para: (1 V)`, a: new aln(` Formalizar a aceitação das entregas concluídas do projeto. `), b: new aln(` Subdividir as entregas e o trabalho do projeto em componentes menores e mais facilmente gerenciáveis. `), c: new aln(` Monitorar o status do escopo do projeto e do produto e gerenciar as mudanças feitas na linha de base do escopo. `), d: new aln(` Determinar, documentar e gerenciar as necessidades e requisitos das partes interessadas a fim de atender aos objetivos do projeto. `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/9`, testRef: `0`, tema: ``,
+    prg: `10. A melhoria do processo de software decorre nos seguintes estágios: (1 V)`, a: new aln(` Análise do processo atual para avaliação e identificação de gargalos e pontos fracos.`, 0), b: new aln(`  Medição dos atributos do processo atual para aprimoramentos futuros. `), c: new aln(` Consolidação dos processos em melhores práticas e modelos de qualidade. `, 0), d: new aln(` Implementação das mudanças identificadas na análise. `, 0), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/10`, testRef: `0`, tema: ``,
+    prg: `11. De acordo com o PMBOK (Project Management Book of Knowledg, o processo que está inserido no grupo de processos de execução e que tem como função assegurar a coleta, a criação, a distribuição, o armazenamento, a recuperação, a gestão, o monitoramento e a disposição final das informações do projeto, de forma oportuna e adequada, é: (1 V)`, a: new aln(` Adquirir recursos. `), b: new aln(` Gerenciar a equipe. `), c: new aln(` Gerenciar a qualidade. `), d: new aln(` Gerenciar as comunicações. `), e: new aln(` Gerenciar o conhecimento do projeto. `, 0), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/11`, testRef: `0`, tema: ``,
+    prg: `12. Quanto a gestão de projetos, temos como uma das suas áreas de conhecimento a gestão de escopo. Relacione as colunas a seguir: (1 V)I. Planear a gestão do escopo II. Coletar os requisitos III. Criar a EAP A. Define e documenta como o escopo será definido, validado e controladoB. Define e documenta como o escopo será definido, validado e controlado. C. Subdivide os produtos e o trabalho em componentes mais gerenciáveis. Assinale a alternativa que apresenta a relação correta entre as Colunas 1 e 2. `, a: new aln(` I-C, II-B, III-A `), b: new aln(` I-A, II-B, III-C `, 0), c: new aln(` I-B, II-A, III-C `), d: new aln(` I-C, II-A, III-B `), e: new aln(``), imgs: [], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/12`, testRef: `0`, tema: ``,
+    prg: `13. A figura representa a melhoria do processo de software, ande a mudança decorre através dos processos e atividades abaixo. 
+  
+  Os processos e/ou atividades A, B, C e D em falta, correspondem respetivamente a: (1 V)`, a: new aln(` Modelo de Processo; Plano de Treinamento; Priorizar aprimoramentos; Modelo de Processo revisto. `), b: new aln(` Plano de Treinamento; Priorizar aprimoramentos; Modelo de Processo; Modelo de Processo revisto. `), c: new aln(` Priorizar aprimoramentos; Modelo de Processo; Plano de Treinamento; Modelo de Processo revisto. `, 0), d: new aln(` Modelo de Processo revisto; Priorizar aprimoramentos; Modelo de Processo; Plano de Treinamento. `), e: new aln(``), imgs: [require('../testespics/es2/t2/es2_t2_22_p16.jpeg')], fim: ""
+  }),
+  new Prg({
+    cadNome: `Es2`, pId: `0/13`, testRef: `0`, tema: ``,
+    prg: `14. De acordo com o PMBOK, 6a edição, a definição “[...] é um esforço temporário empreendido para criar um produto, serviço ou resultado único.” corresponde a: (1 V)`, a: new aln(` Mudança política. `), b: new aln(` Demanda de mercado. `), c: new aln(` Projeto.`, 0), d: new aln(` Gestão. `), e: new aln(` Lançamentodo projeto. `), imgs: [], fim: ""
+  })
+]
+
 let bd1t2 = [bd22, bd19, bd18];
 let bd1t1 = [bd16, bd15, bd14];
 let bd2t2 = [mkEx1, bd2_t2_23, bd2_r_22, bd2_t2_22, bd2_r_16, bd2_t2_16, bd2_r_14];
@@ -4612,10 +4863,11 @@ let esTs1 = [es14, es15];
 let esTs2 = [es_t2_22, es_t2_21, es_mt2_17, es1_ex_23, es1_ex_21, es1_ex_20, es1_ex2_20];
 
 let es2T1 = [es2_t1_21, es2_t1_22];
+let es2T2 = [es2_t2_23, es2_r_23, es2_t2_22];
 
 let IaTs1 = [ia_t1_23];
 let IaTs2 = [ia_t2_23, ia_t2_22];
 
 
 let mk1t1 = [mk1t1];
-export { bd1t2, esTs1, bd1t1, bd2t2, bd2t1, esTs2, IaTs1, IaTs2, mk1t1, es2T1 };
+export { bd1t2, esTs1, bd1t1, bd2t2, bd2t1, esTs2, IaTs1, IaTs2, mk1t1, es2T1, es2T2 };
