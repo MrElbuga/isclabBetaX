@@ -232,13 +232,19 @@ export default function App() {
     ) {
       setTesting(false);
       BackHandler.exitApp();
+    } else {
+      setTesting(true);
+
     }
 
-    if (today.getFullYear() >= parseInt("2024")) {
+    if (today.getFullYear() >= parseInt("2025")) {
       setTesting(false);
       console.log('Ecra activoYYY');
       BackHandler.exitApp();
 
+
+    } else {
+      setTesting(true);
 
     }
   };
@@ -250,7 +256,7 @@ export default function App() {
     const handleAppStateChange = (nextAppState) => {
       if (nextAppState === 'active') {
 
-        // Ola();
+        Ola();
         setCount((prevCount) => prevCount + 1);
       }
 
