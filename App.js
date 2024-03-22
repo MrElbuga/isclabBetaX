@@ -261,10 +261,7 @@ export default function App() {
     AppState.addEventListener('change', handleAppStateChange);
 
 
-    // Remove event listener when component unmounts
-    return () => {
-      AppState.removeEventListener('change', handleAppStateChange);
-    };
+
   });
 
   // State to store count value
