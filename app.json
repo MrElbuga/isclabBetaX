@@ -5,20 +5,11 @@
     "icon": "./Devsource/testespics/Isclablogo.png",
     "version": "1.0.0",
     "orientation": "portrait",
-    "splash": {
-      "image": "./Devsource/testespics/pt.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#000000"
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
     "android": {
-      "package": "com.isclabbetaX", "splash": {
-        "image": "./Devsource/testespics/pt.png",
-        "resizeMode": "contain",
-        "backgroundColor": "#000000"
-      },
+      "package": "com.isclabbetaX",
       "adaptiveIcon": {
         "foregroundImage": "./Devsource/testespics/Isclablogo.png",
         "backgroundColor": "#000000"
