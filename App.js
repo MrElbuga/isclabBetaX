@@ -215,7 +215,7 @@ export default function App() {
 
   //Data
 
-  const Ola = () => {
+  const fechaExp = () => {
     var today = new Date();
     let date = "";
     date =
@@ -232,9 +232,6 @@ export default function App() {
     ) {
       setTesting(false);
       BackHandler.exitApp();
-    } else {
-      setTesting(true);
-
     }
 
     if (today.getFullYear() >= parseInt("2025")) {
@@ -243,12 +240,8 @@ export default function App() {
       BackHandler.exitApp();
 
 
-    } else {
-      setTesting(true);
-
     }
   };
-  //Ola();
 
   //Status checker
   useEffect(() => {
@@ -256,7 +249,7 @@ export default function App() {
     const handleAppStateChange = (nextAppState) => {
       if (nextAppState === 'active') {
 
-        Ola();
+        // fechaExp();
         setCount((prevCount) => prevCount + 1);
       }
 
@@ -313,17 +306,6 @@ export default function App() {
 
   }
 
-  function pergtrack() {
-
-    setTimeout(() => {
-
-
-      Ola();
-      /* setCounterI(counterI + 1);
-       console.log(counterI);*/
-    }, 50);
-
-  }
 
   function setPergOrg(org) {
 
@@ -405,7 +387,6 @@ export default function App() {
     setIbindex(nr);
     setIndex(nr);
     setCurAns(Curr_Tdados[nr].currA);
-    //console.log("ola: " + nr);
     if (typeof Curr_Tdados[nr].imgs == "object") {
       setTimg(Curr_Tdados[nr].imgs);
     } else {
