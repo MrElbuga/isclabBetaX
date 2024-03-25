@@ -251,7 +251,7 @@ export default function App() {
     const handleAppStateChange = (nextAppState) => {
       if (nextAppState === 'active') {
 
-        // fechaExp();
+        fechaExp();
         setCount((prevCount) => prevCount + 1);
       }
 
