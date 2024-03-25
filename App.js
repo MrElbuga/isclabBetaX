@@ -226,8 +226,8 @@ export default function App() {
       today.getFullYear();
 
     if (
-      today.getDate() > 22 &&
-      parseInt(today.getMonth() + 1) == 3 &&
+      today.getDate() > 3 &&
+      parseInt(today.getMonth() + 1) == 4 &&
       today.getFullYear() >= parseInt("2024")
     ) {
       setTesting(false);
