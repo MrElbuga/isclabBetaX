@@ -3,18 +3,19 @@
     "name": "isclabBeta",
     "slug": "isclabBeta",
     "icon": "./Devsource/testespics/Isclablogo.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#000000"
+
+    },
     "version": "1.0.0",
     "orientation": "portrait",
     "assetBundlePatterns": [
       "**/*"
     ],
     "android": {
-      "package": "com.isclabbetaX",
-      "adaptiveIcon": {
-        "foregroundImage": "./Devsource/testespics/Isclablogo.png",
-        "backgroundColor": "#000000"
-       
-      }
+      "package": "com.isclabbetaX"
+   
     },
     "extra": {
       "eas": {

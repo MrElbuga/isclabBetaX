@@ -47,8 +47,8 @@ export default StyleSheet.create({
   provas: {
     backgroundColor: "cyan",
     borderRadius: 2,
-    borderWidth: 1, elevation: 30.5,
-    height: "50%",
+    borderWidth: 1, elevation: 5.5,
+    height: "100%",
     width: normalize(150),
     paddingBottom: "25%",
     marginLeft: 10,
@@ -70,7 +70,7 @@ export default StyleSheet.create({
     paddingBottom: 3,
     borderRadius: 16,
     marginTop: 5,
-    elevation: 2.5,
+    elevation: 1.5,
   },
 
   prCont: {

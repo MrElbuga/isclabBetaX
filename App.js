@@ -70,7 +70,7 @@ export default function App() {
 
   const [isTsSuf, setTsSuf] = useState(false);
   const [isTssing, setTssing] = useState(false);
-  const [isShowCad, setShowCad] = useState(true);
+  const [isShowCad, setShowCad] = useState(false);
 
   const [curTestNomes, setCurTestNomes] = useState(cur_cad.T1nomes);
 
@@ -92,6 +92,8 @@ export default function App() {
 
   //Timmer
   const [seconds, setSeconds] = useState(0);
+  const [vez, setVez] = useState(0);
+  const [isShowAviso, setShowAviso] = useState(true);
   const [counterI, setCounterI] = useState(0);
 
   useEffect(() => {
@@ -525,19 +527,21 @@ export default function App() {
                   textAlign: 'center'
                 }}
               >
-                Escolha {cadMenuString} {test_type}
+                Escolha {isShowCad ? cadMenuString : ''} {isShowCad ? '' : "o seu " + test_type + ' de ' + cur_cad.Nome}
               </Text>
-              <Button
-                title="Voltar"
-                onPress={() => {
-                  setVprovas(false);
-                }}
-              ></Button>
+              {vez != 0 &&
+                <Button
+                  title="Voltar"
+                  onPress={() => {
+                    setVprovas(false);
+                  }}
+                ></Button>
+              }
 
               {!isShowCad &&
                 <FlatList
                   horizontal={true}
-                  style={{ borderColor: 'pink', borderWidth: 2, flexGrow: 0, backgroundColor: 'pink' }}
+                  style={{ borderColor: 'pink', borderWidth: 5, flexGrow: 0, backgroundColor: 'pink' }}
                   contentContainerStyle={{ height: 30 }}
                   data={testViwList}
                   renderItem={({ item, index }) => {
@@ -553,51 +557,60 @@ export default function App() {
                 />
               }
 
-              <FlatList
-                horizontal={true}
-                data={studyArray}
-                extraData={studyArray}
-                ref={cadRef}
-                ItemSeparatorComponent={() => <View style={{ width: normalize(5) }} />}
+              <View style={{ flex: 1, width: '100%', backgroundColor: 'red' }}>
+                <FlatList
+                  style={{ height: '60%', flexGrow: 0, backgroundColor: 'red' }}
 
-                renderItem={({ item, index }) => {
-                  return (
-                    <TouchableOpacity
-                      onPress={() => {
+                  horizontal={true}
+                  data={studyArray}
+                  extraData={studyArray}
+                  ref={cadRef}
+                  ItemSeparatorComponent={() => <View style={{ width: normalize(5) }} />}
 
-                        if (isShowCad == false) {
-                          setTesteI(index);
-                          nameUpdate(studyArray[index].Numero);
-                          setTssing(false);
-                          scrollToTop(Bindex_Ref);
-                          set_testDispName(test_type + " :");
-                          novo(index);
-                        } else {
-                          setTesteI(0);
+                  renderItem={({ item, index }) => {
+                    return (
+                      <TouchableOpacity
+                        onPress={() => {
 
-                          setcur_cad(TScenter.allCads[index]);
-                          TScenter.setTudox(TScenter.allCads[index]);
-                          setShowCad(false);
-                        }
-                      }}
-                    >
-                      <View style={{ paddingTop: "15%", flex: 1 }}>
-                        <View style={estilo.provas}>
-                          {isShowCad == false &&
-                            <Text style={estilo.provasTxt}>
-                              {cur_cad.Nome}-{studyArray[index].Numero}
-                            </Text>}
+                          if (isShowCad == false) {
+                            setTesteI(index);
+                            nameUpdate(studyArray[index].Numero);
+                            setTssing(false);
+                            scrollToTop(Bindex_Ref);
+                            set_testDispName(test_type + " :");
+                            novo(index);
+                            if (vez < 1) {
+                              setVez(1);
 
-                          {isShowCad == true &&
-                            <Text style={estilo.provasTxt}>
-                              {studyArray[index].Nome}
-                            </Text>}
+                            }
+                          } else {
+                            setTesteI(0);
+
+                            setcur_cad(TScenter.allCads[index]);
+                            TScenter.setTudox(TScenter.allCads[index]);
+                            setShowCad(false);
+                          }
+                        }}
+                      >
+                        <View style={{ paddingTop: "8%", flex: 1 }}>
+                          <View style={estilo.provas}>
+                            {isShowCad == false &&
+                              <Text style={estilo.provasTxt}>
+                                {cur_cad.Nome}-{studyArray[index].Numero}
+                              </Text>}
+
+                            {isShowCad == true &&
+                              <Text style={estilo.provasTxt}>
+                                {studyArray[index].Nome}
+                              </Text>}
+                          </View>
                         </View>
-                      </View>
-                    </TouchableOpacity>
-                  );
-                }}
-              />
+                      </TouchableOpacity>
+                    );
+                  }}
+                />
+              </View>
+
 
               {!isShowCad && curTestNomes.length < 1 && <View style={{
                 position: 'absolute',
@@ -608,14 +621,18 @@ export default function App() {
 
               </View>}
 
-              <Button
+              {vez != 0 && <Button
 
-                title="Trocar Cadeira"
+                style={{ height: 400 }}
+
+                title={!isShowCad ? "Trocar Cadeira" : "Trocar de Teste"}
                 onPress={() => {
                   scrollToTop(cadRef);
                   setShowCad(!isShowCad);
                 }}
               ></Button>
+
+              }
             </View>
           </Modal>
 
@@ -1066,6 +1083,88 @@ export default function App() {
             </View>
           </Modal>
 
+
+          {/* Menu de Aviso */}
+
+          <Modal visible={isShowAviso}>
+            <View style={[estilo.container, { borderTopLeftRadius: 2 }]}>
+
+
+              <View style={{
+                borderRadius: 40, borderWidth: 3, backgroundColor: 'red', height: '50%', width: "98%",
+                marginLeft: normalize(8), marginRight: normalize(8)
+              }}>
+                <View style={{ borderRadius: 40, flex: 1, borderColor: 'white', borderWidth: 2, backgroundColor: 'red', padding: 20 }}>
+
+                  <Text
+                    style={{
+                      bottom: "5%",
+                      fontSize: normalize(26),
+                      fontWeight: 'bold',
+                      borderBottomWidth: 2,
+                      fontWeight: "bold",
+                      color: 'black',
+                      alignSelf: 'center'
+                    }}
+                  >
+                    Aviso!
+                  </Text>
+                  <View style={{ borderRadius: 20, height: '70%', borderColor: 'black', borderWidth: 2, backgroundColor: 'red' }}>
+
+                    <Text
+                      style={{
+                        fontSize: normalize(15),
+                        fontWeight: 'bold', height: '100%',
+                        borderWidth: 1.4,
+                        borderColor: 'white',
+                        fontWeight: "bold",
+                        borderRadius: 20,
+                        padding: 10,
+                        color: 'black'
+                      }}
+                    >
+
+                      1.Na versão actual do Aplicativo,aceita apenas uma alínea correta por pergunta (caso a pergunta tenha +1 alínea correcta),
+                      diferente da folha de exercício original!
+
+                      Ao repetir o teste (segunda ou n rodadas), sugere-se q escolha as demais correctas.
+                      principalmente os de BD.....
+
+
+                      <Text style={{ color: 'white' }}>
+                        e Nem todas cadeiras tem temas disponiveis para testes customizados.
+                      </Text>
+
+
+                    </Text>
+                  </View>
+
+                  <TouchableOpacity style={{
+                    backgroundColor: 'blue', width: normalize(100), padding: 10,
+                    borderRadius: 20, alignSelf: "center", marginTop: 6
+                  }}
+
+                    onPress={() => {
+                      setShowCad(true);
+                      setShowAviso(false);
+
+                    }}
+
+                  >
+                    <Text style={{
+                      color: 'white', fontWeight: '900',
+                      fontSize: normalize(18),
+                    }}>
+                      Entendido
+                    </Text>
+                  </TouchableOpacity>
+
+                </View>
+              </View>
+            </View>
+
+          </Modal>
+
           {/* Menu pause*/}
           <Modal visible={tl_ponto}>
             <View style={[estilo.container, { borderTopLeftRadius: 2 }]}>
@@ -1077,8 +1176,10 @@ export default function App() {
                   fontWeight: "bold",
                 }}
               >
-                Pontuacao: {pontos} de {Curr_Tdados.length - 1}
+                Sua pontuacao: {pontos} de {Curr_Tdados.length - 1}
               </Text>
+
+
 
               <Button
                 title="Ver  Correccao   "
@@ -1120,7 +1221,7 @@ export default function App() {
                   fontWeight: "bold",
                 }}
               >
-                Ver Beta: 0.3
+                Versao Alpha: 0.2 (descontinuado)
 
               </Text>
             </View>
@@ -1130,7 +1231,7 @@ export default function App() {
             <Text
               style={[estilo.texto, { fontWeight: "900", alignSelf: "center" }]}
             >
-              {testDispName} {nometeste}
+              {cur_cad.Nome}  {testDispName}  {nometeste}
             </Text>
             <ScrollView
               style={{
