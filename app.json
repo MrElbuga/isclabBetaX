@@ -17,8 +17,10 @@
       "package": "com.isclabbetaX"
    
     },
-    "extra": {
-    
+   "extra": {
+      "eas": {
+        "projectId": "26173611-765b-45fe-b72a-8edca1e73b99"
+      }
     }
   }
 }
