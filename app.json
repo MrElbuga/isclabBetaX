@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "isclabBeta",
-    "slug": "isclabBeta",
+    "name": "IsclabAlpha",
+    "slug": "isclabalpha",
     "icon": "./Devsource/testespics/Isclablogo.png",
     "splash": {
       "image": "./assets/splash.png",
@@ -19,7 +19,7 @@
     },
    "extra": {
       "eas": {
-        "projectId": "26173611-765b-45fe-b72a-8edca1e73b99"
+        "projectId": "e4d38258-2ee2-4a8c-96e9-160807bb15fc"
       }
     }
   }
